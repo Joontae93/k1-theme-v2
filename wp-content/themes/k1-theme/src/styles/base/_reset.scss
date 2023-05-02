@@ -1,0 +1,58 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts/variables" as v;
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+body {
+	font-size: 1.6rem;
+	box-sizing: border-box;
+}
+
+:root {
+	--font-headings: #{v.$font-headings};
+	--font-body: #{v.$font-body};
+	--font-serif: #{v.$font-serif};
+
+	--color-purple: #{v.$color-purple};
+	--color-purple--light: #{v.$color-purple--light};
+	--color-purple--dark: #{v.$color-purple--dark};
+
+	--color-blue: #{v.$color-blue};
+	--color-blue--light: #{v.$color-blue--light};
+	--color-blue--dark: #{v.$color-blue--dark};
+
+	--color-darkblue: #{v.$color-darkblue};
+	--color-darkblue--light: #{v.$color-darkblue--light};
+
+	--color-green: #{v.$color-green};
+	--color-green--light: #{v.$color-green--light};
+	--color-green--dark: #{v.$color-green--dark};
+
+	--color-orange: #{v.$color-orange};
+	--color-orange--light: #{v.$color-orange--light};
+
+	--color-brown: #{v.$color-brown};
+	--color-brown--dark: #{v.$color-brown--dark};
+	--color-brown--alt: #{v.$color-brown--alt};
+
+	--color-red: #{v.$color-red};
+	--color-red--dark: #{v.$color-red--dark};
+
+	--color-black: #{v.$color-black};
+
+	--color-off-white: #{v.$color-off-white}; // super lightorange?
+	--color-off-white--green: #{v.$color-off-white--green}; // super lightgreen?
+	--color-off-white--blue: #{v.$color-off-white--blue}; // super lightblue?
+	--color-off-white--purple: #{v.$color-off-white--purple};
+}
