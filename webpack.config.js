@@ -2,7 +2,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const path = require('path');
 const defaultConfig = require('@wordpress/scripts/config/webpack.config.js');
 
-const THEME_NAME = 'starter-theme';
+const THEME_NAME = 'k1-theme';
 const THEME_DIR = `/wp-content/themes/${THEME_NAME}`;
 
 function snakeToCamel(str) {
@@ -17,7 +17,7 @@ function snakeToCamel(str) {
  *
  * NOTE: MAKE SURE TO IMPORT SCSS IN APP.JSX AND !!NOT!! BELOW
  */
-const appNames = ['front-page'];
+const appNames = [];
 
 /**
  * For SCSS files (no leading `_`)
@@ -36,9 +36,7 @@ module.exports = {
 			if (appNames.length > 0) {
 				appNames.forEach((appName) => {
 					const appNameOutput = snakeToCamel(appName);
-					entries[
-						appNameOutput
-					] = `.${THEME_DIR}/src/js/${appName}/App.jsx`;
+					entries[appNameOutput] = `.${THEME_DIR}/src/js/${appName}/App.jsx`;
 				});
 			}
 			if (styleSheets.length > 0) {
@@ -61,11 +59,7 @@ module.exports = {
 		...defaultConfig.plugins,
 		new BundleAnalyzerPlugin({
 			analyzerMode: 'static',
-			reportFilename: path.join(
-				__dirname,
-				'bundle-analyzer',
-				'report.html',
-			),
+			reportFilename: path.join(__dirname, 'bundle-analyzer', 'report.html'),
 			openAnalyzer: false,
 		}),
 	],

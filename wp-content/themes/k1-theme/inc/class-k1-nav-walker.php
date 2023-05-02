@@ -9,7 +9,7 @@
  * @author KJ Roelke
  */
 
-class CNO_Nav_Walker extends Walker_Nav_Menu {
+class K1_Nav_Walker extends Walker_Nav_Menu {
 	private $current_item;
 	private $dropdown_menu_alignment_values = [
 		'dropdown-menu-start',

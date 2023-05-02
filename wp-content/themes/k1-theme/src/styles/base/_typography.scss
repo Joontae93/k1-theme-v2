@@ -1,8 +1,7 @@
-@use "../abstracts/variables" as v;
-@import url(https://use.typekit.net/jky5sek.css);
+@use '../abstracts/variables' as v;
 
 body {
-	color: v.$color-black;
+	color: black;
 	font-family: v.$font-body;
 
 	a {
@@ -15,12 +14,10 @@ body {
 	}
 
 	p {
-
 		@extend .text-content;
 	}
 
 	li {
-
 		@extend .text-content;
 	}
 
@@ -37,7 +34,6 @@ body {
 
 h1,
 .h1 {
-
 	@extend %heading;
 	font-size: 4em;
 	text-transform: uppercase;
@@ -45,7 +41,6 @@ h1,
 
 h2,
 .h2 {
-
 	@extend %heading;
 	font-size: 3em;
 	text-transform: uppercase;
@@ -53,7 +48,6 @@ h2,
 
 h3,
 .h3 {
-
 	@extend %heading;
 	font-size: 2.4em;
 	text-transform: capitalize;
@@ -61,7 +55,6 @@ h3,
 
 h4,
 .h4 {
-
 	@extend %heading;
 	font-size: 1.75em;
 }
@@ -70,12 +63,10 @@ h5,
 .h5,
 h6,
 .h6 {
-
 	@extend %heading;
 }
 
 .headline {
-
 	@extend %heading;
 }
 %subheadline {
@@ -85,6 +76,5 @@ h6,
 }
 
 .subheadline {
-
 	@extend %subheadline;
 }

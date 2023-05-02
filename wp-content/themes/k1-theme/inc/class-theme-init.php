@@ -12,8 +12,8 @@
 
 class ThemeInit {
 	function __construct() {
-		add_action('wp_enqueue_scripts', array($this, 'enqueue_cno_scripts'));
-		add_action('after_setup_theme', array($this, 'register_cno_menus'));
+		add_action('wp_enqueue_scripts', array($this, 'enqueue_k1_scripts'));
+		add_action('after_setup_theme', array($this, 'register_k1_menus'));
 		add_theme_support('post-thumbnails');
 		$this->disable_discussion();
 		add_action('init', array($this, 'alter_post_types'));
@@ -21,7 +21,7 @@ class ThemeInit {
 	/**
 	 * Adds scripts with the appropriate dependencies
 	 */
-	function enqueue_cno_scripts() {
+	function enqueue_k1_scripts() {
 		// Get modification time. Enqueue files with modification date to prevent browser from loading cached scripts and styles when file content changes.
 		$modified_styles = date('YmdHi', filemtime(get_stylesheet_directory() . '/dist/global.css'));
 		$modified_scripts = date('YmdHi', filemtime(get_stylesheet_directory() . '/dist/global.js'));
@@ -29,7 +29,7 @@ class ThemeInit {
 
 		wp_enqueue_style('main', get_template_directory_uri() . '/dist/global.css', array(), $modified_styles);
 		wp_enqueue_script('main', get_template_directory_uri() . '/dist/global.js', array(), $modified_scripts, true);
-		wp_localize_script('main', 'cnoSiteData', array('rootUrl' => home_url()));
+		wp_localize_script('main', 'k1SiteData', array('rootUrl' => home_url()));
 
 		// if (!is_admin_bar_showing()) {
 		$this->remove_wordpress_styles(array('classic-theme-styles', 'wp-block-library', 'dashicons', 'global-styles'));
@@ -42,7 +42,7 @@ class ThemeInit {
 		foreach ($handles as $handle) wp_dequeue_style($handle);
 	}
 
-	function register_cno_menus() {
+	function register_k1_menus() {
 		register_nav_menus(array(
 			'primary_menu' => __('Primary Menu', 'cno'),
 			'mobile_menu' => __('Mobile Menu', 'cno'),
