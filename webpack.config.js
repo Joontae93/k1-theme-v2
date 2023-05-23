@@ -31,6 +31,7 @@ module.exports = {
 		entry: function () {
 			const entries = {
 				global: `.${THEME_DIR}/src/index.js`,
+				vendors: `.${THEME_DIR}/src/styles/vendors/vendors.scss`,
 			};
 
 			if (appNames.length > 0) {

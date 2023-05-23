@@ -1,16 +1,12 @@
-// Include parts of Bootstrap
-@use "./vendors/bs-custom";
-// @use './vendors/css-animations/animate.min.css';
-
 // Base Theme Styles
-@use "./base/reset";
-@use "./base/base";
-@use "./base/typography";
+@use './base/reset';
+@use './base/base';
+@use './base/typography';
 
 // Components
-@use "./components/header";
-@use "./components/hamburger";
-@use "./components/footer";
-@use "./components/buttons";
-@use "./components/php-content-sections";
+@use './components/header';
+@use './components/hamburger';
+@use './components/footer';
+@use './components/buttons';
+@use './components/php-content-sections';
 // @use './components/slider';

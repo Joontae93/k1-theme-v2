@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The helper functions to use
  * 
@@ -14,10 +13,11 @@
  * @param array $deps Optional array of dependencies.
  */
 function k1_enqueue_page_style(string $id, array $deps = array('main')) {
+	$total_deps = array_merge($deps,array('main'));
     wp_enqueue_style(
         $id,
         get_stylesheet_directory_uri() . "/dist/{$id}.css",
-        $deps,
+        $total_deps,
         filemtime(get_stylesheet_directory() . "/dist/{$id}.css")
     );
 }

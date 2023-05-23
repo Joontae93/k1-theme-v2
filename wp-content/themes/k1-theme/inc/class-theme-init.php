@@ -1,16 +1,9 @@
 <?php
 
-/**
- * Functions, Hooks and/or Filters the theme needs to run.
- * 
- * @since 1.3
- */
-
-# ========================
-# Handle Styles & Scripts
-# =======================
-
-class ThemeInit {
+require_once get_template_directory() . '/inc/component-classes/class-content-sections.php';
+require_once get_template_directory() . '/inc/class-k1-nav-walker.php';
+require_once get_template_directory() . '/inc/theme-functions.php';
+class Theme_Init {
 	function __construct() {
 		add_action('wp_enqueue_scripts', array($this, 'enqueue_k1_scripts'));
 		add_action('after_setup_theme', array($this, 'register_k1_menus'));
@@ -27,7 +20,8 @@ class ThemeInit {
 		$modified_scripts = date('YmdHi', filemtime(get_stylesheet_directory() . '/dist/global.js'));
 
 
-		wp_enqueue_style('main', get_template_directory_uri() . '/dist/global.css', array(), $modified_styles);
+		wp_enqueue_style('vendors', get_template_directory_uri() . '/dist/vendors.css', array() );
+		wp_enqueue_style('main', get_template_directory_uri() . '/dist/global.css', array('vendors'), $modified_styles);
 		wp_enqueue_script('main', get_template_directory_uri() . '/dist/global.js', array(), $modified_scripts, true);
 		wp_localize_script('main', 'k1SiteData', array('rootUrl' => home_url()));
 
