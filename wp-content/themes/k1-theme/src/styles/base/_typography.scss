@@ -28,22 +28,22 @@ body {
 }
 
 %heading {
-	font-family: v.$font-headings;
-	font-weight: 600;
+	font-family: v.$font-poppins;
+	font-weight: 700;
 }
 
 h1,
 .h1 {
-	@extend %heading;
+	font-family: v.$font-roie;
 	font-size: 4em;
-	text-transform: uppercase;
+	text-transform: lowercase;
 }
 
 h2,
 .h2 {
 	@extend %heading;
 	font-size: 3em;
-	text-transform: uppercase;
+	color: v.$color-grey;
 }
 
 h3,
@@ -70,7 +70,7 @@ h6,
 	@extend %heading;
 }
 %subheadline {
-	font-family: v.$font-headings;
+	font-family: v.$font-poppins;
 	font-weight: 400;
 	font-size: 1.35em;
 }

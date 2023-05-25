@@ -1,29 +1,32 @@
-@use "../abstracts/functions" as fn;
-@use "../abstracts/variables" as v;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/variables' as v;
 %btn {
 	border: 2px solid transparent;
-	padding: 1rem 1.375rem;
 	display: inline-block;
 	font-size: 1em;
 	font-weight: 500;
 	transform: translateY(0);
 	text-transform: uppercase;
-	transition: fn.transition((background-color, border-color, transform, box-shadow, color));
+	transition: fn.transition(
+		(background-color, border-color, transform, box-shadow, color)
+	);
 
 	&:hover {
 		box-shadow: 2px 4px 8px rgba(black, 0.35);
 		transform: translateY(-4px);
 	}
 }
+%pill-btn {
+	@extend %btn;
+	border-radius: 999px;
+	padding: 0.5em 1em;
+}
 
 .btn {
-
-	@extend %btn;
+	@extend %pill-btn;
 
 	&__primary {
-
 		&--fill {
-
 			@extend .btn;
 			background-color: v.$color-primary;
 			color: white;
@@ -35,7 +38,7 @@
 			&:hover,
 			&:active,
 			&:focus {
-				background-color: transparent;
+				background-color: white;
 				border-color: v.$color-primary;
 				color: v.$color-primary;
 

@@ -1,10 +1,16 @@
 @import url('https://use.typekit.net/yfb4lum.css');
+@font-face {
+	font-family: 'Roie';
+	src: url('../assets/fonts/Roie.ttf') format('truetype');
+}
 
 /* ////////////
 // TYPOGRAPHY
 ///////////// */
-$font-headings: sans-serif;
-$font-body: 'poppins', sans-serif;
+$font-roie: 'Roie', sans-serif;
+$font-poppins: 'poppins', sans-serif;
+$font-headings: $font-roie;
+$font-body: $font-poppins;
 
 /* //////////
 // COLORS
@@ -27,3 +33,4 @@ $color-primary--darkest: $color-academy-green;
 // MISC.
 /////////// */
 $transition--standard: 0.3s ease;
+$color-secondary: $color-academy-green;

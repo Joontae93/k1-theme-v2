@@ -10,8 +10,7 @@ $content = new Content_Sections();
 get_header(); ?>
 <main class="site-content">
 	<?php $content->hero_section( get_the_ID() ); ?>
-	<section id="problem">
-	</section>
+	<?php get_template_part( 'template-parts/content', 'stakes' ); ?>
 	<section id="cta"></section>
 	<aside id="testimonial-slider"></aside>
 	<section id="plan"></section>
