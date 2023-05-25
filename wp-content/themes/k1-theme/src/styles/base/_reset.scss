@@ -23,7 +23,8 @@ body {
 	--font-headings: #{v.$font-headings};
 	--font-body: #{v.$font-body};
 	--color-primary: #{v.$color-primary};
-	--color-primary--light: #{v.$color-primary--light};
 	--color-primary--dark: #{v.$color-primary--dark};
-	--color-secondary: #{v.$color-secondary};
+	--color-primary--darkest: #{v.$color-primary--darkest};
+	--color-grey: #{v.$color-grey};
+	--color-grey--light: #{v.$color-grey--light};
 }

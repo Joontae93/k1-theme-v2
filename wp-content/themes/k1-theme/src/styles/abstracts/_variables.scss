@@ -10,17 +10,18 @@ $font-body: 'poppins', sans-serif;
 // COLORS
 /////////// */
 
-$color-green: #0f7b61;
-$color-green--light: #139e7e;
-$color-green--dark: #085642;
+/* K1 Greens */
+$color-k1-green: #00ae83;
+$color-k1-green--dark: #00644b;
+$color-academy-green: #2e3636;
 
-$color-orange--light: #e57005;
+/* Utilities */
+$color-grey: #4b4b4b;
+$color-grey--light: #dbdbdb;
 
-// set arbitrary, initial props so theme doesn't break
-$color-primary: $color-green;
-$color-primary--light: $color-green--light;
-$color-primary--dark: $color-green--dark;
-$color-secondary: $color-orange--light;
+$color-primary: $color-k1-green;
+$color-primary--dark: $color-k1-green--dark;
+$color-primary--darkest: $color-academy-green;
 
 /* //////////
 // MISC.
