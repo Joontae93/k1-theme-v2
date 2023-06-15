@@ -33,7 +33,7 @@ wp_head();
 					<a class="d-inline-block" href="<?php echo esc_url(site_url()); ?>" class="logo" aria-label="to Home Page">
 						<?php echo file_get_contents('wp-content/themes/k1-theme/src/assets/K1-Logo-v2.svg'); ?>
 						<figure class="logo-image d-inline-block m-0">
-							<h1>
+							<h1 style="display:none">
 								<?php echo bloginfo('name'); ?>
 							</h1>
 						</figure>

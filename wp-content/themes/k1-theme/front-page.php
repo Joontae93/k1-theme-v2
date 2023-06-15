@@ -7,7 +7,7 @@
  */
 
 $content = new Content_Sections();
-k1_enqueue_page_assets( 'front-page' );
+k1_enqueue_page_assets( 'frontPage' );
 
 get_header(); ?>
 <main class="site-content">
@@ -19,7 +19,7 @@ get_header(); ?>
 		<div class="hero__content container-fluid d-flex align-items-stretch">
 			<div class="row">
 				<div class="col-2 d-flex flex-column">
-					<img src="./assets/images/heroimgleft.svg" class="mt-auto">
+					<img src="<?php k1_get_image_asset_url( 'heroimgleft', 'svg' ); ?>" class="mt-auto">
 				</div>
 				<div class="col d-flex flex-column justify-content-center">
 					<div class="container">
@@ -34,7 +34,7 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="col-4 d-flex flex-column">
-					<img src="./assets/images/heroimgright.svg">
+					<img src="<?php k1_get_image_asset_url( 'heroimgright', 'svg' ); ?>">
 				</div>
 			</div>
 		</div>

@@ -12,7 +12,9 @@ $current_year = date( "Y" );
 	<div class="container">
 		<div class="row mb-5">
 			<div class="col-4">
-				<a href="/" class="h1">Logo</a>
+				<a href="/" class="h1">
+					<figure class="logo"><?php echo file_get_contents('wp-content/themes/k1-theme/src/assets/K1-Logo-v2.svg'); ?></figure>
+				</a>
 				<div class="socials">
 					<div class="row">
 						<div class="col-4">Facebook</div>
@@ -26,7 +28,7 @@ $current_year = date( "Y" );
 					<div class="col-lg-4">
 						<nav class="footer-nav" id="footer-nav-1">
 							<ul>
-								<li><a href="#">About Us</a></li>
+								<li><a href="/about">About Us</a></li>
 								<li><a href="#">Join the Team</a></li>
 								<li><a href="#">Transparency in Coverage</a></li>
 							</ul>

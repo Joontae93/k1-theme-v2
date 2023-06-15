@@ -84,7 +84,6 @@ function k1_enqueue_page_assets( string $id, array $deps = array() ) {
 	);
 
 	$deps = wp_parse_args( $deps, $default_deps );
-
 	k1_enqueue_page_style( $id, $deps['styles'] );
 	k1_enqueue_page_script( $id, $deps['scripts'] );
 }
