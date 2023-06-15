@@ -23,8 +23,9 @@ wp_head();
 		<div class="navbar container-fluid gx-5 py-4 d-flex justify-content-between">
 			<div class="row justify-content-between">
 				<div class="col-2">
-					<div class="hamburger d-flex flex-column justify-content-evenly align-items-center">
-						<span class="hamburger__lines"></span>
+					<div class="hamburger position-fixed btn d-lg-none d-flex flex-column justify-content-evenly align-items-center" data-bs-toggle="offcanvas"
+						 data-bs-target="#mobileMainMenu" aria-controls="mobileMainMenu">
+						<span class=" hamburger__lines"></span>
 						<span class="hamburger__lines"></span>
 						<span class="hamburger__lines"></span>
 					</div>
@@ -39,19 +40,6 @@ wp_head();
 						</figure>
 					</a>
 				</div>
-				<nav id="main-nav" style="display:none;">
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location'  => 'primary_menu',
-							'menu_class'      => 'navbar__menu p-0 m-0 d-inline-flex',
-							'container'       => 'nav',
-							'container_class' => 'navbar d-none d-lg-flex align-items-center',
-							'walker'          => new K1_Nav_Walker(),
-						)
-					);
-					?>
-				</nav>
 			</div>
 			<div class="col-5 d-flex justify-content-center align-items-center">
 				<a href="#" class="header__social-icon mx-1">Facebook</a>
@@ -61,3 +49,4 @@ wp_head();
 			</div>
 		</div>
 	</header>
+	<?php get_template_part('template-parts/nav','mobile-menu'); ?>

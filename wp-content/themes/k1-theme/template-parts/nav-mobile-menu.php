@@ -4,12 +4,6 @@
  */
 
 ?>
-<div class="hamburger btn d-lg-none d-inline-flex flex-column justify-content-evenly align-items-stretch" data-bs-toggle="offcanvas" data-bs-target="#mobileMainMenu"
-	 aria-controls="mobileMainMenu">
-	<span class=" hamburger__line"></span>
-	<span class="hamburger__line"></span>
-	<span class="hamburger__line"></span>
-</div>
 <div class="offcanvas offcanvas-end px-3" tabindex="-1" id="mobileMainMenu" aria-labelledby="mobileMainMenuLabel">
 	<div class="offcanvas__header">
 		<h5 class="offcanvas__title headline" id="mobileMainMenuLabel">Navigation</h5>
