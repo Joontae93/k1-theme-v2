@@ -6,6 +6,26 @@
  */
 
 /**
+ * Gets an image asset from `src/assets/images`
+ *
+ * @param string $file the name of the iamge
+ * @param string $extension the filetype
+ * @param string $folder the folder to add (defaults to empty string). If nested, leave off closing '/'
+ * @param bool   $echo echo / return toggle
+ */
+function k1_get_image_asset_url( string $file, string $extension, string $folder = '', $echo = true ) {
+	if ( empty( $folder ) ) {
+		$url = get_template_directory_uri() . "/src/assets/images/{$file}.{$extension}";
+	}
+	$url = get_template_directory_uri() . "/src/assets/images/{$folder}/{$file}.{$extension}";
+	if ( $echo ) {
+		echo $url;
+	} else {
+		return $url;
+	}
+}
+
+/**
  * Enqueues the page style.
  *
  * @param string $id The id you set in webpack.config.js.

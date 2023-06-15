@@ -17,7 +17,7 @@ function snakeToCamel(str) {
  *
  * NOTE: MAKE SURE TO IMPORT SCSS IN APP.JSX AND !!NOT!! BELOW
  */
-const appNames = [];
+const appNames = ['front-page'];
 
 /**
  * For SCSS files (no leading `_`)

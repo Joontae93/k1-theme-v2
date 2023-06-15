@@ -1,36 +1,64 @@
 <?php
-
 /**
  * Basic Footer Template
- * 
+ *
  * @since 1.0
- * 
  */
 
-$current_year = date("Y");
+// phpcs:ignore
+$current_year = date( "Y" );
 ?>
-<footer class="footer bg-primary py-5 container-fluid gx-5 text-white text-center d-flex flex-column align-items-center">
-	<?php wp_nav_menu(
-		array(
-			'theme_location' => 'footer_menu',
-			'menu_class' => 'navbar__menu p-0 m-0 d-inline-flex',
-			'container' => 'nav',
-			'container_class' => 'footer-nav navbar',
-		)
-	);
-	?>
-	<a href="<?php echo esc_url(site_url()) ?>" class="logo">
-		<figure class="logo-img d-inline-block">
-			<span aria-label="to Home Page">
-				<?php echo bloginfo('name') ?>
-			</span>
-		</figure>
-	</a>
-	<div id="copyright">
-		<?php echo "&copy;&nbsp; {$current_year} Choctaw Nation of Oklahoma. All Rights Reserved."; ?>
+<footer class="bg-primary--dark pt-5">
+	<div class="container">
+		<div class="row mb-5">
+			<div class="col-4">
+				<a href="/" class="h1">Logo</a>
+				<div class="socials">
+					<div class="row">
+						<div class="col-4">Facebook</div>
+						<div class="col-4">Instagram</div>
+						<div class="col-4">LinkedIn</div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="row">
+					<div class="col-lg-4">
+						<nav class="footer-nav" id="footer-nav-1">
+							<ul>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Join the Team</a></li>
+								<li><a href="#">Transparency in Coverage</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-lg-4">
+						<nav class="footer-nav" id="footer-nav-2">
+							<ul>
+								<li><a href="#">Our Services</a></li>
+								<li><a href="#">Staffing</a></li>
+								<li><a href="#">Academy</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-lg-4">
+						<nav class="footer-nav" id="footer-nav-3">
+							<ul>
+								<li><a href="#">Free Resources</a></li>
+								<li><a href="#">Podcast</a></li>
+								<li><a href="#">Go Initiatives</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center text-center">
+			<div id="copyright">&copy; <?php echo $current_year; ?> Kingdom One<br /> All Rights Reserved</div>
+		</div>
 	</div>
+	<?php wp_footer(); ?>
 </footer>
-<? wp_footer(); ?>
 </body>
 
 </html>

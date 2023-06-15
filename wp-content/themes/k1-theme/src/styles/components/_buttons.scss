@@ -53,3 +53,22 @@
 a.btn {
 	text-decoration: none;
 }
+
+.pill-btn {
+	@extend %pill-btn;
+	&__fill {
+		&--primary {
+			@extend %pill-btn;
+			color: white;
+			background-color: v.$color-primary;
+		}
+	}
+	&__outline {
+		&--white {
+			@extend %pill-btn;
+			color: white;
+			border-color: white;
+			background-color: transparent;
+		}
+	}
+}
