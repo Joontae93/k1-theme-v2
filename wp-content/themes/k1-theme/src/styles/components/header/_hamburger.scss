@@ -1,13 +1,12 @@
-@use '../abstracts/mixins' as m;
-@use '../abstracts/variables' as v;
-
 .hamburger {
-	width: 5rem;
-	gap: 1rem;
+	width: 7rem;
+	gap: 1.5rem;
+	top: 10%;
+	left: 5rem;
 	cursor: pointer;
 
 	&__lines {
-		border: 2px solid white;
+		border: 2px solid var(--color-primary);
 		display: block;
 		border-radius: 1rem;
 

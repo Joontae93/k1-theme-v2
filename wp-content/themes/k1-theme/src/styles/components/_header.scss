@@ -1,7 +1,6 @@
-@use '../abstracts/functions' as fn;
-@use '../abstracts/variables' as v;
-@use '../abstracts/mixins' as m;
-@use './buttons';
+@use './header/hamburger';
+@use './header/navbar';
+@use './header/offcanvas';
 
 .header {
 	position: absolute;
@@ -15,77 +14,6 @@
 	}
 
 	a {
-		color: white;
-	}
-}
-
-#main-nav {
-	display: none;
-}
-.navbar {
-	align-items: center;
-
-	a {
-		transition: fn.transition(color);
-		text-decoration: none;
-
-		&:not(:has(h1)) {
-			text-transform: uppercase;
-		}
-	}
-
-	&__menu {
-		list-style: none;
-		padding: unset;
-	}
-}
-
-.menu-item {
-	padding: 10px;
-	margin: 0 10px;
-	display: inline-block;
-	border-bottom: 2px solid transparent;
-	transition: fn.transition(border-color);
-
-	a {
-		color: white;
-	}
-
-	&:hover {
-		border-color: white;
-		cursor: pointer;
-
-		a {
-			color: white;
-		}
-	}
-
-	&.cta {
-		@extend .btn__primary--fill;
-	}
-}
-
-.mobile-navbar {
-	@extend .navbar;
-}
-
-.offcanvas {
-	padding-top: 2rem;
-	background-color: v.$color-secondary;
-
-	&__header {
-		@include m.displayFlex(row, flex-start, center);
-		padding: 2rem 1rem;
-
-		.btn-close {
-			margin-left: auto;
-			color: white;
-		}
-	}
-
-	&__title {
-		font-size: 1.35em;
-		text-transform: uppercase;
 		color: white;
 	}
 }

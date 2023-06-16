@@ -21,12 +21,12 @@ class Theme_Init {
 	 */
 	public function enqueue_k1_scripts() {
 		// Get modification time. Enqueue files with modification date to prevent browser from loading cached scripts and styles when file content changes.
-		$modified_styles  = date( 'YmdHi', filemtime( get_stylesheet_directory() . '/dist/global.css' ) );
-		$modified_scripts = date( 'YmdHi', filemtime( get_stylesheet_directory() . '/dist/global.js' ) );
+		$modified_styles  = gmdate( 'YmdHi', filemtime( get_stylesheet_directory() . '/dist/global.css' ) );
+		$modified_scripts = gmdate( 'YmdHi', filemtime( get_stylesheet_directory() . '/dist/global.js' ) );
 
-		wp_enqueue_style( 'vendors', get_template_directory_uri() . '/dist/vendors.css', array(), false );
+		wp_enqueue_style( 'vendors', get_template_directory_uri() . '/dist/vendors.css', array(), '1.0' );
 		wp_enqueue_style( 'main', get_template_directory_uri() . '/dist/global.css', array( 'vendors' ), $modified_styles );
-		
+
 		wp_enqueue_script( 'main', get_template_directory_uri() . '/dist/global.js', array(), $modified_scripts, true );
 		wp_localize_script( 'main', 'k1SiteData', array( 'rootUrl' => home_url() ) );
 
