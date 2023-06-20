@@ -4,10 +4,8 @@
 @use '../abstracts/variables' as v;
 
 .header {
-	position: absolute;
-	z-index: 900;
 	width: 100%;
-	background-color: rgba(v.$color-primary--dark, 0.75);
+	background-color: var(--color-primary--dark);
 	color: white;
 
 	.row {
