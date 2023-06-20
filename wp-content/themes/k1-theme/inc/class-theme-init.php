@@ -25,12 +25,12 @@ class Theme_Init {
 		$modified_scripts = gmdate( 'YmdHi', filemtime( get_stylesheet_directory() . '/dist/global.js' ) );
 
 		// JS
-		wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/dist/vendors/global/bootstrap.js', array(), $modified_scripts, true );
-		wp_enqueue_script( 'fontawesome', get_template_directory_uri() . '/dist/vendors/global/fontawesome.js', array(), false, true );
+		wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/dist/vendors/bootstrap.js', array(), $modified_scripts, true );
+		wp_enqueue_script( 'fontawesome', get_template_directory_uri() . '/dist/vendors/fontawesome.js', array(), '1.0', false );
 		wp_enqueue_script( 'main', get_template_directory_uri() . '/dist/global.js', array( 'bootstrap', 'fontawesome' ), $modified_scripts, true );
 
 		// CSS
-		wp_enqueue_style( 'vendors', get_template_directory_uri() . '/dist/vendors.css', array(), '1.0' );
+		wp_enqueue_style( 'vendors', get_template_directory_uri() . '/dist/vendors/vendors.css', array(), '1.0' );
 		wp_enqueue_style( 'main', get_template_directory_uri() . '/dist/global.css', array( 'vendors' ), $modified_styles );
 		wp_localize_script( 'main', 'k1SiteData', array( 'rootUrl' => home_url() ) );
 

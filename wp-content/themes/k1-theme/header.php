@@ -46,9 +46,16 @@ wp_head();
 				</div>
 
 				<div class="col-5 d-flex justify-content-center align-items-center">
-					<a href="#" class="header__social-icon mx-1">Facebook</a>
-					<a href="#" class="header__social-icon mx-1">Instagram</a>
-					<a href="#" class="header__social-icon mx-1">LinkedIn</a>
+					<?php
+					$socials = array(
+						array('link' => 'https://facebook.com/kingdomone','fontawesome_id' => 'facebook'),
+						array('link' => 'https://instagram.com/kingdomone','fontawesome_id' => 'instagram'),
+						array('link' => 'https://linkedin.com/in/kingdomone','fontawesome_id' => 'linkedin'),
+					);
+					foreach ( $socials as $social) {
+						echo "<a href='{$social['link']}' target='_blank' rel='noopener noreferrer' class='header__social-icon mx-3'><i class='fa-brands fa-{$social['fontawesome_id']}'></i></a>";
+					}
+					?>
 					<div class="cta pill-btn mx-1">Get Started</div>
 				</div>
 			</div>

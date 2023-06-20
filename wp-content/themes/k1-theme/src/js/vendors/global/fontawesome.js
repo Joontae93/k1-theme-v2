@@ -1,7 +1,11 @@
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
-import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import {
+	faFacebook,
+	faInstagram,
+	faLinkedin,
+} from '@fortawesome/free-brands-svg-icons';
 
-library.add(faFacebook, faInstagram);
+library.add(faFacebook, faInstagram, faLinkedin);
 
 /**
  * Replaces any existing <i> tags with <svg>
