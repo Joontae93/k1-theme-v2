@@ -24,10 +24,14 @@ class Theme_Init {
 		$modified_styles  = gmdate( 'YmdHi', filemtime( get_stylesheet_directory() . '/dist/global.css' ) );
 		$modified_scripts = gmdate( 'YmdHi', filemtime( get_stylesheet_directory() . '/dist/global.js' ) );
 
+		// JS
+		wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/dist/vendors/global/bootstrap.js', array(), $modified_scripts, true );
+		wp_enqueue_script( 'fontawesome', get_template_directory_uri() . '/dist/vendors/global/fontawesome.js', array(), false, true );
+		wp_enqueue_script( 'main', get_template_directory_uri() . '/dist/global.js', array( 'bootstrap', 'fontawesome' ), $modified_scripts, true );
+
+		// CSS
 		wp_enqueue_style( 'vendors', get_template_directory_uri() . '/dist/vendors.css', array(), '1.0' );
 		wp_enqueue_style( 'main', get_template_directory_uri() . '/dist/global.css', array( 'vendors' ), $modified_styles );
-
-		wp_enqueue_script( 'main', get_template_directory_uri() . '/dist/global.js', array(), $modified_scripts, true );
 		wp_localize_script( 'main', 'k1SiteData', array( 'rootUrl' => home_url() ) );
 
 		$this->remove_wordpress_styles( array( 'classic-theme-styles', 'wp-block-library', 'dashicons', 'global-styles' ) );
@@ -44,7 +48,7 @@ class Theme_Init {
 		}
 	}
 
-	function register_k1_menus() {
+	public function register_k1_menus() {
 		register_nav_menus(
 			array(
 				'primary_menu' => __( 'Primary Menu', 'cno' ),

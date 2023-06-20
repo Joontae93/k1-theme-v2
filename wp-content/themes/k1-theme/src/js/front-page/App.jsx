@@ -1,5 +1,5 @@
 import '../../styles/pages/front-page.scss';
-import { newSlider } from '../swiper';
+import { newSlider } from '../vendors/swiper';
 
 (function () {
 	function initSlider() {
