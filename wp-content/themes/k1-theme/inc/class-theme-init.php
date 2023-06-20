@@ -21,13 +21,17 @@ class Theme_Init {
 	 */
 	public function enqueue_k1_scripts() {
 		// Get modification time. Enqueue files with modification date to prevent browser from loading cached scripts and styles when file content changes.
-		$modified_styles  = date( 'YmdHi', filemtime( get_stylesheet_directory() . '/dist/global.css' ) );
-		$modified_scripts = date( 'YmdHi', filemtime( get_stylesheet_directory() . '/dist/global.js' ) );
+		$modified_styles  = gmdate( 'YmdHi', filemtime( get_stylesheet_directory() . '/dist/global.css' ) );
+		$modified_scripts = gmdate( 'YmdHi', filemtime( get_stylesheet_directory() . '/dist/global.js' ) );
 
-		wp_enqueue_style( 'vendors', get_template_directory_uri() . '/dist/vendors.css', array(), false );
+		// JS
+		wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/dist/vendors/bootstrap.js', array(), $modified_scripts, true );
+		wp_enqueue_script( 'fontawesome', get_template_directory_uri() . '/dist/vendors/fontawesome.js', array(), '1.0', false );
+		wp_enqueue_script( 'main', get_template_directory_uri() . '/dist/global.js', array( 'bootstrap', 'fontawesome' ), $modified_scripts, true );
+
+		// CSS
+		wp_enqueue_style( 'vendors', get_template_directory_uri() . '/dist/vendors/vendors.css', array(), '1.0' );
 		wp_enqueue_style( 'main', get_template_directory_uri() . '/dist/global.css', array( 'vendors' ), $modified_styles );
-		
-		wp_enqueue_script( 'main', get_template_directory_uri() . '/dist/global.js', array(), $modified_scripts, true );
 		wp_localize_script( 'main', 'k1SiteData', array( 'rootUrl' => home_url() ) );
 
 		$this->remove_wordpress_styles( array( 'classic-theme-styles', 'wp-block-library', 'dashicons', 'global-styles' ) );
@@ -44,7 +48,7 @@ class Theme_Init {
 		}
 	}
 
-	function register_k1_menus() {
+	public function register_k1_menus() {
 		register_nav_menus(
 			array(
 				'primary_menu' => __( 'Primary Menu', 'cno' ),

@@ -78,3 +78,12 @@ h6,
 .subheadline {
 	@extend %subheadline;
 }
+
+.white-stroke {
+	@extend %subheadline;
+	text-transform: uppercase;
+	color: transparent;
+	-webkit-text-stroke: 1px white;
+	font-size: 3em;
+	font-weight: 700;
+}

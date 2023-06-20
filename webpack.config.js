@@ -1,6 +1,7 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const path = require('path');
 const defaultConfig = require('@wordpress/scripts/config/webpack.config.js');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const THEME_NAME = 'k1-theme';
 const THEME_DIR = `/wp-content/themes/${THEME_NAME}`;
@@ -31,7 +32,9 @@ module.exports = {
 		entry: function () {
 			const entries = {
 				global: `.${THEME_DIR}/src/index.js`,
-				vendors: `.${THEME_DIR}/src/styles/vendors/vendors.scss`,
+				'vendors/fontawesome': `.${THEME_DIR}/src/js/vendors/global/fontawesome.js`,
+				'vendors/bootstrap': `.${THEME_DIR}/src/js/vendors/global/bootstrap.js`,
+				'vendors/vendors': `.${THEME_DIR}/src/styles/vendors/vendors.scss`,
 			};
 
 			if (appNames.length > 0) {
@@ -64,4 +67,19 @@ module.exports = {
 			openAnalyzer: false,
 		}),
 	],
+	optimization: {
+		...defaultConfig.optimization,
+		minimize: true, // Enable code minification
+		minimizer: [
+			new TerserPlugin({
+				parallel: true,
+				extractComments: true,
+				terserOptions: {
+					...defaultConfig.optimization.minimizer[0].options.terserOptions,
+					keep_fnames: false, // Remove unused function names
+					keep_classnames: false, // Remove unused class names
+				},
+			}),
+		],
+	},
 };
