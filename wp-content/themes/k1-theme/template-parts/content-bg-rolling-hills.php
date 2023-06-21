@@ -15,19 +15,30 @@ $background_image = k1_get_image_asset_url( 'bg-rolling-hills', 'svg', 'bg-image
 						love.</span>
 					<a class="pill-btn__fill--primary" href="#">Get Started</a>
 				</div>
-				<div class="scoll-reveal text-white" style="opacity:0;">
-					<div class="scroll-reveal__item">
-						<img src="./assets/images/healthygrowth.svg" alt="" class="scroll-reveal__icon">
-						<h3 class="headline">Healthy Growth</h3>
-					</div>
-					<div class="scroll-reveal__item">
-						<img src="./assets/images/staffculture.svg" alt="" class="scroll-reveal__icon">
-						<h3 class="headline">Courageous Staff Culture</h3>
-					</div>
-					<div class="scroll-reveal__item">
-						<img src="./assets/images/education.svg" alt="" class="scroll-reveal__icon">
-						<h3 class="headline">Education that sparks vision</h3>
-					</div>
+				<div class="scoll-reveal text-white">
+					<?php
+					$scroll_items = array(
+						array(
+							'image' => 'healthygrowth',
+							'text'  => 'Healthy Growth',
+						),
+						array(
+							'image' => 'staffculture',
+							'text'  => 'Courageous Staff Culture',
+						),
+						array(
+							'image' => 'education',
+							'text'  => 'Education that sparks vision',
+						),
+					);
+					foreach ( $scroll_items as $index => $item ) {
+						$url = k1_get_image_asset_url( $item['image'], 'svg', '', false );
+						echo "<div class='scroll-reveal__item' data-aos='fade-in'>
+						<img src='{$url}' class='scroll-reveal__icon' data-aos='fade-right'>
+						<h3 class='headline' data-aos='fade-right'>{$item['text']}</h3>
+					</div>";
+					}
+					?>
 				</div>
 			</div>
 		</div>
