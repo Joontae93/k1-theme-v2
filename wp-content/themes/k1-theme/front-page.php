@@ -19,7 +19,7 @@ get_header(); ?>
 		<div class="hero__content container-fluid d-flex align-items-stretch">
 			<div class="row">
 				<div class="col-2 d-flex flex-column">
-					<img src="<?php k1_get_image_asset_url( 'heroimgleft', 'svg' ); ?>" class="mt-auto">
+					<img src="<?php k1_get_image_asset_url( 'heroimgleft', 'svg' ); ?>" class="mt-auto" />
 				</div>
 				<div class="col d-flex flex-column justify-content-center">
 					<div class="container">
@@ -38,7 +38,7 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-		<aside class="quick-sell">
+		<aside class="quick-sell py-5">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-lg-3 d-flex flex-column justify-content-center align-items-center">IMAGE!</div>
@@ -48,20 +48,21 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
-
 		</aside>
 	</section>
+
 	<section class="selling-points">
 		<div class="container">
 			<div class="row">
-				<div class="col-4">
+				<div class="selling-points__figures col-4">
 					<img src="<?php k1_get_image_asset_url( 'brokenleaves', 'png' ); ?>">
 					<div class="script-values">
 						<?php
 						$values = array( 'Calling', 'Connection', 'Courage', 'Culture' );
-						foreach ( $values as $value ) {
-							$url = k1_get_image_asset_url( $value, 'svg', 'script-words', false );
-							echo "<img src='{$url}' class='script-values__value' data-aos='fade-in' />";
+						foreach ( $values as $index => $value ) {
+							$delay = ( $index + 50 ) * ( $index + 1 );
+							$url   = k1_get_image_asset_url( $value, 'svg', 'script-words', false );
+							echo "<img src='{$url}' class='script-values__value' data-aos='fade-down' data-aos-delay='{$delay}' />";
 						}
 						?>
 					</div>
