@@ -33,7 +33,7 @@ $swiper_slides = array(
 extract( $args );
 ?>
 
-<aside class="testimonials text-center">
+<aside class="testimonials text-center py-5">
 	<div class="swiper" id="testimonials-swiper">
 		<div class="swiper-wrapper">
 			<?php foreach ( $swiper_slides as $slide ) : ?>

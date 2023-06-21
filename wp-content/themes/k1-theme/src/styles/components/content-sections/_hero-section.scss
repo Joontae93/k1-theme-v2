@@ -1,13 +1,12 @@
-@use "../../abstracts/mixins" as m;
-@use "../../abstracts/variables" as v;
+@use '../../abstracts/mixins' as m;
+@use '../../abstracts/variables' as v;
 
 .hero {
-	height: 60rem;
-
+	position: relative;
+	height: 60vh;
 	@include m.displayFlex(column, center, center);
 
 	.col {
-
 		@include m.displayFlex(column, flex-start, stretch);
 	}
 

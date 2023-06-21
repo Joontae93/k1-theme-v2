@@ -1,5 +1,9 @@
 @use '../abstracts/variables' as v;
 
+%base-text {
+	font-family: v.$font-body;
+	font-size: 1.35em;
+}
 body {
 	color: black;
 	font-family: v.$font-body;
@@ -9,16 +13,15 @@ body {
 	}
 
 	.text-content {
-		font-family: v.$font-body;
-		font-size: 1.35em;
+		@extend %base-text;
 	}
 
-	p {
-		@extend .text-content;
+	p:not(.text-content p) {
+		@extend %base-text;
 	}
 
-	li {
-		@extend .text-content;
+	li:not(.text-content li) {
+		@extend %base-text;
 	}
 
 	.small,
@@ -77,4 +80,13 @@ h6,
 
 .subheadline {
 	@extend %subheadline;
+}
+
+.white-stroke {
+	@extend %subheadline;
+	text-transform: uppercase;
+	color: transparent;
+	-webkit-text-stroke: 1px white;
+	font-size: 3em;
+	font-weight: 700;
 }

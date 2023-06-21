@@ -1,3 +1,4 @@
-import './styles/main.scss';
-import { Offcanvas } from 'bootstrap';
-import './js/dropdownNav';
+// Styles
+import '../src/styles/main.scss';
+
+

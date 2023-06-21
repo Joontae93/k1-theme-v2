@@ -8,7 +8,9 @@ $background_image = k1_get_image_asset_url( 'bglastsection', 'png', 'bg-images',
 <section class="final-cta" style="background-image:url('<?php echo $background_image; ?>');">
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-2">Leafy image</div>
+			<div class="col-2">
+				<img src="<?php k1_get_image_asset_url( 'three-leaves', 'svg', 'leaves' ); ?>" class="final-cta__leaves" />
+			</div>
 			<div class="col-8 text-center py-5">
 				<h2 class="text-white">The first step towards health can feel a little daunting.</h2>
 				<span class="subheadline white-stroke my-5">Get Started today</span>

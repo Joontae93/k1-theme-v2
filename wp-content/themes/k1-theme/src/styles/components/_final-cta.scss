@@ -6,7 +6,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 
-	&__content {
-		width: 70vw;
+	&__leaves {
+		transform: scale(-1, 1);
 	}
 }
