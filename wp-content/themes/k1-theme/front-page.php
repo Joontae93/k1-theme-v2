@@ -56,6 +56,15 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-4">
 					<img src="<?php k1_get_image_asset_url( 'brokenleaves', 'png' ); ?>">
+					<div class="script-values">
+						<?php
+						$values = array( 'Calling', 'Connection', 'Courage', 'Culture' );
+						foreach ( $values as $value ) {
+							$url = k1_get_image_asset_url( $value, 'svg', 'script-words', false );
+							echo "<img src='{$url}' class='script-values__value' data-aos='fade-in' />";
+						}
+						?>
+					</div>
 				</div>
 				<div class="col">
 					<h2 class="headline">Ministry is <span class="text-primary d-block">Complex</span></h2>
