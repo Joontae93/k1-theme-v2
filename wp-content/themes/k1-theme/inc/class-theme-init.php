@@ -51,9 +51,9 @@ class Theme_Init {
 	public function register_k1_menus() {
 		register_nav_menus(
 			array(
-				'primary_menu' => __( 'Primary Menu', 'cno' ),
-				'mobile_menu'  => __( 'Mobile Menu', 'cno' ),
-				'footer_menu'  => __( 'Footer Menu', 'cno' ),
+				'primary_menu' => __( 'Primary Menu', 'k1' ),
+				'mobile_menu'  => __( 'Mobile Menu', 'k1' ),
+				'footer_menu'  => __( 'Footer Menu', 'k1' ),
 			)
 		);
 	}
@@ -90,7 +90,7 @@ class Theme_Init {
 		);
 	}
 	private function disable_post_type_support( $post_type ) {
-		$supports = array( 'editor', 'comments', 'trackbacks', 'revisions', 'author' );
+		$supports = array( 'comments', 'trackbacks', 'revisions' );
 		foreach ( $supports as $support ) {
 			if ( post_type_supports( $post_type, $support ) ) {
 				remove_post_type_support( $post_type, $support );

@@ -1,6 +1,7 @@
 @use '../abstracts/mixins' as m;
 @use '../abstracts/variables' as v;
-@use '../components/swiper';
+@use '../components/swipers/brands';
+@use '../components/swipers/testimonials';
 
 @mixin full-size {
 	height: 100%;
@@ -117,8 +118,4 @@
 			}
 		}
 	}
-}
-
-.testimonials {
-	height: 60rem;
 }

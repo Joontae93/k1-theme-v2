@@ -1,14 +1,12 @@
-<?php
-
+<?php // phpcs:ignore
 /**
- * CNO Nav Walker
+ * K1 Nav Walker
  * based on Bootscore's Navwalker
  *
  * @link https://github.com/bootscore/bootscore/blob/main/inc/class-bootstrap-5-navwalker.php
  * @since 1.2
  * @author KJ Roelke
  */
-
 class K1_Nav_Walker extends Walker_Nav_Menu {
 	private $current_item;
 	private $dropdown_menu_alignment_values = array(
