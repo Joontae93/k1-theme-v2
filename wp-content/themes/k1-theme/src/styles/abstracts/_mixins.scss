@@ -37,6 +37,10 @@
 @mixin background-layers {
 	@include absolute_100;
 
+	&--color {
+		@include absolute_100;
+		z-index: 1;
+	}
 	&--lower {
 		@include absolute_100;
 		z-index: 1;
