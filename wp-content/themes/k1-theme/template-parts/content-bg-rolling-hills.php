@@ -4,15 +4,15 @@
  */
 
 $background_image = k1_get_image_asset_url( 'bg-rolling-hills', 'svg', 'bg-images', false );
+extract( $args );
 ?>
 <section class="the-plan bg-rolling-hills" id="healthy-growth" style="background-image:url('<?php echo $background_image; ?>')">
 	<div class="container">
 		<div class="row">
 			<div class="col align-items-stretch">
 				<div class="the-plan__content">
-					<h2 class="text-white">Begin the journey of healthy growth today!</h2>
-					<span class="subheadline text-white">We'd love to partner with you and your team to help manage those tasks keeping you from the parts of ministry you
-						love.</span>
+					<h2 class="text-white"><?php echo $headline; ?></h2>
+					<span class="subheadline text-white"><?php echo $subheadline; ?></span>
 					<a class="pill-btn__fill--primary" href="#">Get Started</a>
 				</div>
 				<div class="scoll-reveal text-white">

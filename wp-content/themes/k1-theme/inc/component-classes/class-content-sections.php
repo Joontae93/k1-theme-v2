@@ -26,27 +26,27 @@ class Content_Sections extends Content_Components {
 	 * );
 	 * ```
 	 */
-	public function hero_section( int $post_id = null, $echo = true, array ...$args ) {
+	public function hero_section( int $post_id = null, $echo = true, array $args = array() ) {
 		if ( empty( $post_id ) ) {
 			extract( $args );
 		} else {
 			$hero = get_field( 'hero', $post_id );
 			extract( $hero );
 		}
-		$markup_start  = $has_background_image ? "<section id='hero' class='w-100 py-5' style='background-image:url({$background_image})'>" : "<section id='hero' class='w-100 py-5' style='background-color:black;'>";
-		$markup_start .= "
-        <div class='container'>
-            <div class='row my-5'>
-                <div class='col text-center py-5'>";
 		$headline      = $alternate_headline ?? get_the_title( $post_id );
+		$markup_start  = $has_background_image ? "<section id='hero' class='hero w-100 py-5' style='background-image:url({$background_image})'>" : "<section id='hero' class='w-100 py-5' style='background-color:var(--color-primary--dark);'>";
+		$markup_start .= "
+        <div class='hero__content container d-flex align-items-center'>
+            <div class='row my-5'>
+                <div class='col py-5'>";
 		$markup_inner  = $this->headline(
 			$headline,
 			false,
 			array(
 				'headline_element'    => 'h1',
-				'headline_class'      => 'hero__headline headline mb-5',
+				'headline_class'      => 'hero__content--headline headline mb-5',
 				'subheadline_content' => $subheadline,
-				'subheadline_class'   => 'hero__subheadline subheadline',
+				'subheadline_class'   => 'hero__content--subheadline subheadline white-stroke',
 			)
 		);
 
@@ -55,7 +55,7 @@ class Content_Sections extends Content_Components {
 				array(
 					'text'       => $cta_options['cta_text'],
 					'link'       => $cta_options['cta_link'],
-					'html_class' => 'hero__btn btn__primary--fill mt-5',
+					'html_class' => 'hero__content--btn btn__primary--fill mt-5',
 				),
 				false,
 			);

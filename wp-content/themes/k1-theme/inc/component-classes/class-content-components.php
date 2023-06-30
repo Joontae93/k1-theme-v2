@@ -7,8 +7,6 @@
  * @author KJ Roelke
  * @version 1.0.0
  */
-
-
 class Content_Components {
 	/**
 	 * A headline element that has lots of optional parameters in the $args array.
