@@ -50,8 +50,15 @@ get_header(); ?>
 		'template-parts/content',
 		'bg-rolling-hills',
 		array(
+			'id'          => 'healthy-growth',
+			'class'       => 'the-plan',
 			'headline'    => 'Courageous, Healthy & Effective',
 			'subheadline' => 'Our Tools, Training & Talent deliver the expertise you need to develop a healthy ministry. ',
+			'cta'         => array(
+				'text' => 'Get Started',
+				'link' => '/get-started',
+			),
+			'row_2'       => 'big text area',
 		)
 	);
 	?>
