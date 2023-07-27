@@ -1,7 +1,4 @@
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const path = require('path');
 const defaultConfig = require('@wordpress/scripts/config/webpack.config.js');
-const TerserPlugin = require('terser-webpack-plugin');
 
 const THEME_NAME = 'k1-theme';
 const THEME_DIR = `/wp-content/themes/${THEME_NAME}`;
@@ -13,16 +10,16 @@ function snakeToCamel(str) {
 }
 
 /**
- * For JSX folders (located `~/src/js/folder-name/App.jsx)`)
- * Array of strings modeled after folder names (e.g. 'about-choctaw')
+ * For Typescript files (located `~/src/js/folder-name/index.ts)`)
+ * Array of strings modeled after folder names (e.g. 'about-kingdom-one')
  *
- * NOTE: MAKE SURE TO IMPORT SCSS IN APP.JSX AND !!NOT!! BELOW
+ * NOTE: Make sure to import scss files in TS file and not below.
  */
-const appNames = ['front-page'];
+const jsFiles = ['front-page', 'hr-page'];
 
 /**
  * For SCSS files (no leading `_`)
- * Array of strings modeled after scss names (e.g. 'we-are-choctaw')
+ * Array of strings modeled after scss names (e.g. 'we-are-kingdom-one')
  *  */
 const styleSheets = []; // for scss only
 
@@ -37,12 +34,13 @@ module.exports = {
 				'vendors/vendors': `.${THEME_DIR}/src/styles/vendors/vendors.scss`,
 			};
 
-			if (appNames.length > 0) {
-				appNames.forEach((appName) => {
-					const appNameOutput = snakeToCamel(appName);
-					entries[appNameOutput] = `.${THEME_DIR}/src/js/${appName}/App.jsx`;
+			if (jsFiles.length > 0) {
+				jsFiles.forEach((jsFile) => {
+					const jsFileOutput = snakeToCamel(jsFile);
+					entries[jsFileOutput] = `.${THEME_DIR}/src/js/${jsFile}/index.ts`;
 				});
 			}
+
 			if (styleSheets.length > 0) {
 				styleSheets.forEach((styleSheet) => {
 					const styleSheetOutput = snakeToCamel(styleSheet);
@@ -58,28 +56,5 @@ module.exports = {
 			path: __dirname + `${THEME_DIR}/dist`,
 			filename: `[name].js`,
 		},
-	},
-	plugins: [
-		...defaultConfig.plugins,
-		new BundleAnalyzerPlugin({
-			analyzerMode: 'static',
-			reportFilename: path.join(__dirname, 'bundle-analyzer', 'report.html'),
-			openAnalyzer: false,
-		}),
-	],
-	optimization: {
-		...defaultConfig.optimization,
-		minimize: true, // Enable code minification
-		minimizer: [
-			new TerserPlugin({
-				parallel: true,
-				extractComments: true,
-				terserOptions: {
-					...defaultConfig.optimization.minimizer[0].options.terserOptions,
-					keep_fnames: false, // Remove unused function names
-					keep_classnames: false, // Remove unused class names
-				},
-			}),
-		],
 	},
 };
