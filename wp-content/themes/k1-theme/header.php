@@ -3,7 +3,6 @@
  * Basic Header Template
  */
 
-wp_head();
 ?>
 
 <!DOCTYPE html>
@@ -13,9 +12,7 @@ wp_head();
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>
-		<?php echo $post->post_title . " | " .  get_bloginfo( 'name' ); ?>
-	</title>
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -32,8 +29,18 @@ wp_head();
 						</h1>
 					</a>
 				</div>
-				<div class="col-5 d-flex justify-content-center align-items-center">
-					<div class="cta pill-btn mx-1">Get Started</div>
+				<div class="col d-flex justify-content-end align-items-center">
+					<div class="w-auto d-flex justify-content-center align-items-center me-5">
+						<a href="/get-started" class="btn__primary--fill cta pill-btn mx-1">Get Started</a>
+					</div>
+					<div class="h-100 me-5 d-flex align-items-center justify-content-center">
+						<div class="hamburger d-flex flex-column justify-content-evenly align-items-center" data-bs-toggle="offcanvas" data-bs-target="#mobileMainMenu"
+							 aria-controls="mobileMainMenu">
+							<span class=" hamburger__lines"></span>
+							<span class="hamburger__lines"></span>
+							<span class="hamburger__lines"></span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

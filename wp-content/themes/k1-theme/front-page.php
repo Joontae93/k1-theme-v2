@@ -62,6 +62,30 @@ get_header(); ?>
 		)
 	);
 	?>
+	<?php
+	get_template_part(
+		'template-parts/content',
+		'core-services',
+		array(
+			array(
+				'title' => 'hr',
+				'items' => array( 'Staffing', 'Staffing', 'Staffing', 'Staffing', 'Staffing', 'Staffing', 'Staffing' ),
+			),
+			array(
+				'title' => 'finance',
+				'items' => array( 'Payroll', 'Payroll', 'Payroll', 'Payroll', 'Payroll', 'Payroll', 'Payroll' ),
+			),
+			array(
+				'title' => 'marcom',
+				'items' => array( 'Graphic Design', 'Graphic Design', 'Graphic Design', 'Graphic Design', 'Graphic Design' ),
+			),
+			array(
+				'title' => 'staffing',
+				'items' => array( 'Hiring', 'Hiring', 'Hiring' ),
+			),
+		)
+	);
+	?>
 	<?php get_template_part( 'template-parts/swiper', 'testimonials' ); ?>
 	<?php get_template_part( 'template-parts/swiper', 'brands' ); ?>
 	<section class="problems">
