@@ -22,40 +22,17 @@ wp_head();
 	<header class="header py-3" id="site-header">
 		<div class="navbar container-fluid gx-5 py-4">
 			<div class="row justify-content-between">
-				<div class="col-2">
-					<div class="row">
-						<div class="col-6">
-							<div class="hamburger position-fixed d-flex flex-column justify-content-evenly align-items-center" data-bs-toggle="offcanvas" data-bs-target="#mobileMainMenu"
-								 aria-controls="mobileMainMenu">
-								<span class=" hamburger__lines"></span>
-								<span class="hamburger__lines"></span>
-								<span class="hamburger__lines"></span>
-							</div>
-						</div>
-						<div class="col-6">
-							<a class="d-inline-block" href="<?php echo esc_url(site_url()); ?>" class="logo" aria-label="to Home Page">
-								<?php echo file_get_contents('wp-content/themes/k1-theme/src/assets/K1-Logo-v2.svg'); ?>
-								<figure class="logo-image d-inline-block m-0">
-									<h1 style="display:none">
-										<?php echo bloginfo('name'); ?>
-									</h1>
-								</figure>
-							</a>
-						</div>
-					</div>
+				<div class="col-6">
+					<a class="d-inline-flex align-items-center" href="<?php echo esc_url( site_url() ); ?>" class="logo" aria-label="to Home Page">
+						<figure class="logo-image d-inline-block m-0">
+							<?php echo file_get_contents('wp-content/themes/k1-theme/src/assets/K1-Logo-v2.svg'); ?>
+						</figure>
+						<h1 class="site-title d-block">
+							<?php echo bloginfo('name'); ?>
+						</h1>
+					</a>
 				</div>
-
 				<div class="col-5 d-flex justify-content-center align-items-center">
-					<?php
-					$socials = array(
-						array('link' => 'https://facebook.com/kingdomone','fontawesome_id' => 'facebook'),
-						array('link' => 'https://instagram.com/kingdomone','fontawesome_id' => 'instagram'),
-						array('link' => 'https://linkedin.com/in/kingdomone','fontawesome_id' => 'linkedin'),
-					);
-					foreach ( $socials as $social) {
-						echo "<a href='{$social['link']}' target='_blank' rel='noopener noreferrer' class='header__social-icon mx-3'><i class='fa-brands fa-{$social['fontawesome_id']}'></i></a>";
-					}
-					?>
 					<div class="cta pill-btn mx-1">Get Started</div>
 				</div>
 			</div>
