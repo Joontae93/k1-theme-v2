@@ -1,0 +1,19 @@
+@use '../../abstracts/mixins' as m;
+.core-services {
+	&__background {
+		@include m.background-layers;
+
+		&--lower {
+			background: url(../../assets/images/bg-images/processandpricing-bg.png)
+				center/cover no-repeat;
+		}
+
+		&--upper {
+			background-color: rgba(black, 0.6);
+		}
+	}
+
+	&__content {
+		z-index: 9;
+	}
+}

@@ -25,7 +25,6 @@ main {
 }
 
 .col {
-	@include m.displayFlex(column);
 	position: relative;
 	height: auto;
 }

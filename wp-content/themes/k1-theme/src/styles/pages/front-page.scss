@@ -2,6 +2,7 @@
 @use '../abstracts/variables' as v;
 @use '../components/swipers/brands';
 @use '../components/swipers/testimonials';
+@use '../components/content-sections/core-services';
 
 @mixin full-size {
 	height: 100%;
