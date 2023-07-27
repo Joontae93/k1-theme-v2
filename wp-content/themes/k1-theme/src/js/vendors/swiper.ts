@@ -1,9 +1,8 @@
 import Swiper from 'swiper';
-import Navigation from 'swiper';
-import Pagination from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
 import { SwiperOptions } from 'swiper/types/swiper-options';
 
 const defaultArgs = {
@@ -36,9 +35,10 @@ const defaultArgs = {
 /**
  *
  * @param {HTMLElement} el the element to create a slider on
+ * @param {SwiperOptions} args Swiper Options
  * @returns swiper instance
  */
-export function newSlider(el, args = {}) {
+export function newSlider(el: HTMLElement, args: SwiperOptions = {}): Swiper {
 	const newArgs = Object.assign({}, defaultArgs, args);
 	const swiper = new Swiper(el, newArgs);
 	return swiper;
