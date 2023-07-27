@@ -2,6 +2,7 @@
 # https://github.com/github/gitignore/blob/main/WordPress.gitignore
 
 /node_modules
+.vscode/*
 
 # Core
 #
