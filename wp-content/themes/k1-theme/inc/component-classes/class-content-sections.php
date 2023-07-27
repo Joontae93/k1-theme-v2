@@ -2,8 +2,6 @@
 /**
  * A Component Class that displays content a few different ways. All methods have an $args bypass and an $echo control where `false` returns the markup and `true` echoes the markup. The $args array also shows expected parameters.
  *
- * @param bool $acf class-wide control to use acf fields or standard WordPress field lookups (e.g. `get_field` vs `get_the_excerpt`). If true, excerpt will be set with `get_field('archive_content',$id)`. Defaults `true`
- *
  * @author KJ Roelke
  * @version 1.0.0
  */
@@ -14,18 +12,19 @@ class Content_Sections extends Content_Components {
 	 * Gets the Hero `<section>` with class 'hero'. Optional Background Image or color.
 	 *
 	 * @param array $args Expects an associative array:
-	 * ```
-	 * $args = array(
+	 * ```php
+	 *  $args = array(
 	 * 'has_background_image' => bool,
-	 * 'background_image' => ?string the URL for CSS `background-image`,
-	 * 'headline' => string,
-	 * 'subheadline' => ?string,
-	 * 'has_cta' => bool,
-	 * 'cta_link' => ?string the url
-	 * 'cta_text' => string
+	 * 'background_image'     => ?string the URL for CSS `background-image`,
+	 * 'headline'             => string,
+	 * 'subheadline'          => ?string,
+	 * 'has_cta'              => bool,
+	 * 'cta_link'             => ?string the url,
+	 * 'cta_text'             => string,
 	 * );
 	 * ```
 	 */
+
 	public function hero_section( int $post_id = null, $echo = true, array $args = array() ) {
 		if ( empty( $post_id ) ) {
 			extract( $args );
@@ -33,35 +32,14 @@ class Content_Sections extends Content_Components {
 			$hero = get_field( 'hero', $post_id );
 			extract( $hero );
 		}
-		$headline      = $alternate_headline ?? get_the_title( $post_id );
-		$markup_start  = $has_background_image ? "<section id='hero' class='hero w-100 py-5' style='background-image:url({$background_image})'>" : "<section id='hero' class='w-100 py-5' style='background-color:var(--color-primary--dark);'>";
-		$markup_start .= "
-        <div class='hero__content container d-flex align-items-center'>
-            <div class='row my-5'>
-                <div class='col py-5'>";
-		$markup_inner  = $this->headline(
-			$headline,
-			false,
-			array(
-				'headline_element'    => 'h1',
-				'headline_class'      => 'hero__content--headline headline mb-5',
-				'subheadline_content' => $subheadline,
-				'subheadline_class'   => 'hero__content--subheadline subheadline white-stroke',
-			)
-		);
-
-		if ( $has_cta ) {
-			$markup_inner .= $this->cta_button(
-				array(
-					'text'       => $cta_options['cta_text'],
-					'link'       => $cta_options['cta_link'],
-					'html_class' => 'hero__content--btn btn__primary--fill mt-5',
-				),
-				false,
-			);
+		$headline = $alternate_headline ?? get_the_title( $post_id );
+		$markup   = '<section class="hero d-flex align-items-center" id="hero">';
+		if ( ! isset( $background_image ) ) {
+			$background_image = null;
 		}
-		$markup_end = '</div></div></div></section>';
-		$markup     = "{$markup_start}{$markup_inner}{$markup_end}";
+		$markup .= $this->get_hero_background( $has_background_image, $color, $color_direction, $background_image );
+		$markup .= $this->get_hero_content( $headline, $subheadline, $has_cta, $cta_options );
+		$markup .= '</section>';
 
 		if ( $echo ) {
 			echo $markup;

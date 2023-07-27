@@ -28,12 +28,14 @@ class Content_Components {
 			'headline_class'      => 'headline',
 			'subheadline_element' => 'span',
 			'subheadline_class'   => 'subheadline',
+			'subheadline_content' => '',
 		);
 
 		$options = array_merge( $default, ...$args );
 		extract( $options );
-
-		$markup = "<{$headline_element} class='{$headline_class}'>{$headline}</{$headline_element}>";
+		$headline            = esc_textarea( $headline );
+		$markup              = "<{$headline_element} class='{$headline_class}'>{$headline}</{$headline_element}>";
+		$subheadline_content = acf_esc_html( $subheadline_content );
 		if ( ! empty( $subheadline_content ) ) {
 			$markup .= "<{$subheadline_element} class='{$subheadline_class}'>{$subheadline_content}</{$subheadline_element}>";
 		}
@@ -64,12 +66,13 @@ class Content_Components {
 			'is_external' => false,
 		);
 		$options = array_merge( $default, $options );
-
 		extract( $options );
-
+		$link = esc_url( $link );
+		$text = esc_textarea( $text );
 		if ( empty( $link ) ) {
 			$markup = "<button class='{$html_class}'>{$text}</button>";
 		} else {
+
 			$markup = ( $is_external ) ? "<a href='{$link}' target='_blank' rel='noopener noreferrer' class='{$html_class}'>{$text}</a>" : "<a href='{$link}' class='{$html_class}'>{$text}</a>";
 		}
 
@@ -91,6 +94,7 @@ class Content_Components {
 	public function bulleted_list( array $list_items, string $item_class = '', string $list_type = 'ul', bool $echo = true ) {
 		$markup = "<{$list_type}>";
 		foreach ( $list_items as $item ) {
+			$item    = acf_esc_html( $item );
 			$markup .= empty( $item_class ) ? "<li>{$item}</li>" : "<li class='{$item_class}'>{$item}</li>";
 		}
 		$markup .= "</{$list_type}>";
@@ -99,5 +103,50 @@ class Content_Components {
 		} else {
 			return $markup;
 		}
+	}
+
+	/** Generates the Lower layer of the hero section */
+	protected function get_hero_background( bool $has_background_image, string $color, string $color_direction, string|null $background_image = '' ):string {
+		$class  = $has_background_image ? "hero__background color-{$color_direction}" : 'hero__background';
+		$markup = "<div class='{$class}'>";
+		if ( $has_background_image ) {
+			$markup .= "<div class='hero__background--color' style='background-color:var(--color-{$color})'></div><div class='hero__background--lower' style='background-image:url({$background_image})'></div>";
+		} else {
+			$markup .= '<div class="hero__background--lower" style="background-color:var(--color-primary--dark);"></div>';
+		}
+		if ( $has_background_image ) {
+			$markup .= '<div class="hero__background--upper"></div>';
+		}
+		$markup .= '</div>';
+		return $markup;
+	}
+
+	/** Gets the content layer of the Hero Section */
+	protected function get_hero_content( string $headine, string $subheadline, bool $has_cta, array $cta_options = array() ) : string {
+		$leaves  = k1_get_image_asset_url( 'three-leaves', 'svg', 'leaves', false );
+		$markup  = "<div class='hero__content container d-flex align-items-stretch'><div class='row'><div class='col-10 position-relative d-flex flex-column'>
+				<img src='{$leaves}' class='hero__content--leaves' />";
+		$markup .= $this->headline(
+			$headine,
+			false,
+			array(
+				'headline_element'    => 'h1',
+				'headline_class'      => 'hero__content--headline headline mb-5',
+				'subheadline_content' => $subheadline,
+				'subheadline_class'   => 'hero__content--subheadline subheadline white-stroke',
+			)
+		);
+		if ( $has_cta ) {
+			$markup .= $this->cta_button(
+				array(
+					'text'       => $cta_options['cta_text'],
+					'link'       => $cta_options['cta_link'],
+					'html_class' => 'hero__content--btn btn__primary--fill mt-5',
+				),
+				false
+			);
+		}
+		$markup .= '</div></div></div>';
+		return $markup;
 	}
 }
