@@ -17,7 +17,7 @@
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   
       &--lower {
-        background: url(../../assets/images/bg-images/hrpage-bg.svg) center/cover no-repeat;
+        background: url(../../assets/images/bg-images/marketing-bg.svg) center/cover no-repeat;
       }
   
       &--upper {
@@ -33,22 +33,6 @@
       &--headline {
         color: white;
       }
-    }
-  }
-
-  .costs {
-
-    > .container {
-      margin-left: -2vh !important;
-
-      > .row > .col-6 > h2 {
-        margin-top: 5vh;
-        margin-bottom: 5vh;
-      }
-    }
-
-    &__content {
-      padding-left: 5vw;
     }
   }
 
@@ -105,7 +89,7 @@
     @include m.background-layers;
   
     &--lower {
-      background: url(../../assets/images/bg-images/valuesbg.png) center/cover no-repeat;
+      background: url(../../assets/images/marketingchange.svg) center/cover no-repeat;
     }
   
     &--upper {
@@ -117,10 +101,19 @@
     z-index: 400;
 
     > div.row {
-      margin-bottom: 10vh !important;
+      margin-bottom: 6vh !important;
     }
 
   }
+}
+
+.other-cta {
+    h2 {
+        margin-bottom: 1vh;
+    }
+    h4, p {
+        margin-bottom: 3vh;
+    }
 }
 
 .leaf-adjustment {
@@ -140,4 +133,30 @@
         transform: transformY(-15rem);
       }
     }
+  }
+
+  .first-cta {  
+    &__background {
+      @include m.background-layers;
+  
+      &--lower {
+        background: url(../../assets/images/sellingpointsbg.png) right/cover no-repeat;
+      }
+  
+      &--upper {
+        background-color: rgba(black, 0.6);
+      }
+    }
+  
+    &__content {
+      z-index: 9;
+    }
+  }
+
+  .affiliations {
+    background-color: v.$color-primary--dark;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
   }

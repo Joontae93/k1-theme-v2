@@ -12,23 +12,23 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <img src="./assets/images/ignored.svg">
+                        <img src="<?php k1_get_image_asset_url( 'ignored', 'svg' ); ?>">
                         <p>Being ignored</p>
                     </div>
                     <div class="col">
-                        <img src="./assets/images/socialmedia.svg">
+                        <img src="<?php k1_get_image_asset_url( 'socialmedia', 'svg' ); ?>">
                         <p>Being ignored</p>
                     </div>
                     <div class="col">
-                        <img src="./assets/images/noguests.svg">
+                        <img src="<?php k1_get_image_asset_url( 'noguests', 'svg' ); ?>">
                         <p>Being ignored</p>
                     </div>
                     <div class="col">
-                        <img src="./assets/images/lastminute.svg">
+                        <img src="<?php k1_get_image_asset_url( 'lastminute', 'svg' ); ?>">
                         <p>Being ignored</p>
                     </div>
                     <div class="col">
-                        <img src="./assets/images/unclearcommunication.svg">
+                        <img src="<?php k1_get_image_asset_url( 'unclearcommunication', 'svg' ); ?>">
                         <p>Being ignored</p>
                     </div>
                 </div>
@@ -83,27 +83,42 @@
 				</div>
 			</div>
 		</section>
-        <?php get_template_part("template-parts/content", "core-services", array()); ?>
+        <?php
+            get_template_part(
+            'template-parts/content',
+            'core-services',
+            array(
+                array(
+                    'title' => '',
+                    'items' => array( 'Graphic Design', 'Web Design', 'Web Design', 'Web Development' ),
+                ),
+                array(
+                    'title' => '',
+                    'items' => array( 'Marketing', 'Communications', 'Copy Writing', 'Video Production' ),
+                ),
+            )
+        );
+	    ?>
         <section>
             <div class="container">
                 <div class="row text-center">
                     <div class="col-2"></div>
                     <div class="col-sm-12 col-lg-4">
-                        <img src="./assets/images/21percent.svg">
+                        <img src="<?php k1_get_image_asset_url( '21percent', 'svg' ); ?>">
                         <p>21% of websites <br> report trouble <br> with low traffic.</p>
                     </div>
                     <div class="col-sm-12 col-lg-4">
-                        <img src="./assets/images/51percent.svg">
+                        <img src="<?php k1_get_image_asset_url( '51percent', 'svg' ); ?>">
                         <p>In North America, 51.2% of <br> web traffic comes from <br> mobile devices.</p>
                     </div>
                     <div class="col-2"></div>
                     <div class="col-2"></div>
                     <div class="col-sm-12 col-lg-4">
-                        <img src="./assets/images/47percent.svg">
+                        <img src="<?php k1_get_image_asset_url( '47percent', 'svg' ); ?>">
                         <p>47% of users won't wait <br> longer than two seconds <br> for a website to load.</p>
                     </div>
                     <div class="col-sm-12 col-lg-4">
-                        <img src="./assets/images/88percent.svg">
+                        <img src="<?php k1_get_image_asset_url( '88percent', 'svg' ); ?>">
                         <p>Including videos on a <br> website can increase time <br> spent on the page by 88%.</p>
                     </div>
                     <div class="col-2"></div>
@@ -123,7 +138,7 @@
 				</div>
 				<div class="row">
 					<div class="col-2">
-						<img src="/src/assets/images/assessment.svg">
+						<img src="<?php k1_get_image_asset_url( 'assessment', 'svg' ); ?>">
 					</div>
 					<div class="col-2"></div>
 					<div class="col-8">
@@ -133,7 +148,7 @@
 				</div>
 				<div class="row">
 					<div class="col-2">
-						<img src="/src/assets/images/plan.svg">
+						<img src="<?php k1_get_image_asset_url( 'plan', 'svg' ); ?>">
 					</div>
 					<div class="col-2"></div>
 					<div class="col-8">
@@ -143,7 +158,7 @@
 				</div>
 				<div class="row">
 					<div class="col-2">
-						<img src="/src/assets/images/marketingframework.svg">
+						<img src="<?php k1_get_image_asset_url( 'marketingframework', 'svg' ); ?>">
 					</div>
 					<div class="col-2"></div>
 					<div class="col-8">
@@ -154,20 +169,6 @@
 			</div>
 		</section>
        <?php get_template_part("template-parts/swiper", "brands"); ?>
-        <section class="final-cta">
-			<div class="container">
-				<div class="row text-center">
-                    <div class="col-2"></div>
-					<div class="col-8">
-						<h2 class="text-white">The first step towards health can feel a little daunting.</h2>
-						<span class="subheadline white-stroke my-5">Get Started today</span>
-						<p class="text-white">Getting help is a sign of strength and courage. It helps avoid the heartache of burnout, resignation, and failure. Here's to a brighter ministry
-							future where you are supported, equipped, and encouraged to grow.</p>
-						<a class="pill-btn__fill--primary mt-5" href="#">Get Started</a>
-					</div>
-                    <div class="col-2"></div>
-				</div>
-			</div>
-		</section>
+       <?php get_template_part("template-parts/content", "final-cta") ?>
 </main>
 <?php get_footer(); ?>
