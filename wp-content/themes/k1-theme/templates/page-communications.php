@@ -1,3 +1,7 @@
+<?php 
+    /** Marketing & Communications Content */
+    k1_enqueue_page_assets("communications");
+?>
 <section class="problems">
             <div class="container">
                 <div class="row text-center">

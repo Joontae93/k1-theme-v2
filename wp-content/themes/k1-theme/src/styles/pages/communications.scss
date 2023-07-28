@@ -1,0 +1,143 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+@use '../components/front-page/quick-sell';
+@use '../components/swiper';
+
+@mixin full-size {
+	height: 100%;
+	width: 100%;
+}
+
+.hero {
+    position: relative;
+    padding-bottom: 55vh;
+  
+    &__background {
+      @include m.background-layers;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  
+      &--lower {
+        background: url(../../assets/images/bg-images/hrpage-bg.svg) center/cover no-repeat;
+      }
+  
+      &--upper {
+        background-color: rgba(black, 0.6);
+      }
+    }
+  
+    &__content {
+      transform: translateY(30%);
+    }
+  
+    &__text {
+      &--headline {
+        color: white;
+      }
+    }
+  }
+
+  .costs {
+
+    > .container {
+      margin-left: -2vh !important;
+
+      > .row > .col-6 > h2 {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+      }
+    }
+
+    &__content {
+      padding-left: 5vw;
+    }
+  }
+
+  .core-services {  
+    &__background {
+      @include m.background-layers;
+  
+      &--lower {
+        background: url(../../assets/images/bg-images/processandpricing-bg.png) center/cover no-repeat;
+      }
+  
+      &--upper {
+        background-color: rgba(black, 0.6);
+      }
+    }
+  
+    &__content {
+      z-index: 9;
+    }
+  }
+
+.problems {
+  &__background {
+    @include m.background-layers;
+
+    &--lower {
+      background: url(../../assets/images/bg-images/problems-bg.jpg) center/cover no-repeat;
+    }
+
+    &--upper {
+      background-color: rgba(black, 0.6);
+    }
+  }
+
+  &__content {
+    z-index: 9;
+
+    > div > div > h3 {
+      margin-top: 3vh; 
+    }
+  }
+}
+
+.testimonials {
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+}
+
+.threesteps {
+  position: relative;
+  padding-bottom: 4rem;
+  
+  &__background {
+    @include m.background-layers;
+  
+    &--lower {
+      background: url(../../assets/images/bg-images/valuesbg.png) center/cover no-repeat;
+    }
+  
+    &--upper {
+      background-color: rgba(#4B4B4B, 0.9);
+    }
+  }
+
+  &__content {
+    z-index: 400;
+
+    > div.row {
+      margin-bottom: 10vh !important;
+    }
+
+  }
+}
+
+.leaf-adjustment {
+
+    &--left {
+      transform: translateX(-20rem);
+  
+      & img {
+        transform: translateY(-5rem);
+      }
+    }
+
+    &--right {
+      transform: transformX(-20rem);
+  
+      &img {
+        transform: transformY(-15rem);
+      }
+    }
+  }
