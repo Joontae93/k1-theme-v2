@@ -1,7 +1,8 @@
 <?php 
     /** Marketing & Communications Content */
     k1_enqueue_page_assets("communications");
-?>
+    get_header(); ?>
+<main>
 <section class="problems">
             <div class="container">
                 <div class="row text-center">
@@ -168,3 +169,5 @@
 				</div>
 			</div>
 		</section>
+</main>
+<?php get_footer(); ?>
