@@ -36,24 +36,6 @@
     }
   }
 
-  .core-services {  
-    &__background {
-      @include m.background-layers;
-  
-      &--lower {
-        background: url(../../assets/images/bg-images/processandpricing-bg.png) center/cover no-repeat;
-      }
-  
-      &--upper {
-        background-color: rgba(black, 0.6);
-      }
-    }
-  
-    &__content {
-      z-index: 9;
-    }
-  }
-
 .problems {
   &__content {
     z-index: 9;
@@ -71,32 +53,6 @@
 .testimonials {
   margin-top: 5vh;
   margin-bottom: 10vh;
-}
-
-.threesteps {
-  position: relative;
-  padding-bottom: 4rem;
-  
-  &__background {
-    @include m.background-layers;
-  
-    &--lower {
-      background: url(../../assets/images/marketingchange.svg) center/cover no-repeat;
-    }
-  
-    &--upper {
-      background-color: rgba(#4B4B4B, 0.9);
-    }
-  }
-
-  &__content {
-    z-index: 400;
-
-    > div.row {
-      margin-bottom: 6vh !important;
-    }
-
-  }
 }
 
 .other-cta {
