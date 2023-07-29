@@ -36,24 +36,23 @@
     }
   }
 
-.problems {
-  &__content {
-    z-index: 9;
-
-    > div > img > p{
-      margin-top: 3vh; 
+  .first-cta {  
+    &__background {
+      @include m.background-layers;
+  
+      &--lower {
+        background: url(../../assets/images/sellingpointsbg.png) right/cover no-repeat;
+      }
+  
+      &--upper {
+        background-color: rgba(black, 0.6);
+      }
+    }
+  
+    &__content {
+      z-index: 9;
     }
   }
-
-  &__cta {
-    margin-top: 5vh;
-  }
-}
-
-.testimonials {
-  margin-top: 5vh;
-  margin-bottom: 10vh;
-}
 
 .other-cta {
     h2 {
@@ -81,30 +80,4 @@
         transform: transformY(-15rem);
       }
     }
-  }
-
-  .first-cta {  
-    &__background {
-      @include m.background-layers;
-  
-      &--lower {
-        background: url(../../assets/images/sellingpointsbg.png) right/cover no-repeat;
-      }
-  
-      &--upper {
-        background-color: rgba(black, 0.6);
-      }
-    }
-  
-    &__content {
-      z-index: 9;
-    }
-  }
-
-  .affiliations {
-    background-color: v.$color-primary--dark;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
   }

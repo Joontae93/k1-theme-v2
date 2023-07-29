@@ -8,6 +8,7 @@
         <div class="row text-center">
             <div class="col-12">
                 <h2 class="text-primary">is your marketing</h2>
+                <br><br>
             </div>
         </div>
         <div class="row problems__content text-center">
@@ -34,6 +35,7 @@
             </div>
             <div class="col-1"></div>
         </div>
+        <br><br>
         <div class="row problems__cta text-center">
             <div class="col-12">
                 <p>Marketing and communication for ministry takes a lot of work.<br> Let's avoid appearing desperate and needy by constantly posting event information. Let's showcase your ministry strengths to make an eternal impact on people's lives!</p>
@@ -78,8 +80,11 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<h2 class="text-primary">We Know What It Feels Like</h2>
+                        <br>
 						<h4>Working hard for an event, product, or service and have marketing <br> fail to promote it to the right people takes a toll on you.</h4>
+                        <br>
 						<p>We can teach and implement a story-based framework like the <br> ones we've created for dozens of ministries that helped them gain <br> confidence in their messaging and results with their launches.</p>
+                        <br><br>
                         <a class="pill-btn__fill--primary" href="#">Get Started</a>
 					</div>
 				</div>
