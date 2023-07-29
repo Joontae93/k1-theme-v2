@@ -4,42 +4,44 @@
     get_header(); ?>
 <main>
 <section class="problems">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-12">
-                        <h2 class="text-primary">is your marketing</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <img src="<?php k1_get_image_asset_url( 'ignored', 'svg' ); ?>">
-                        <p>Being ignored</p>
-                    </div>
-                    <div class="col">
-                        <img src="<?php k1_get_image_asset_url( 'socialmedia', 'svg' ); ?>">
-                        <p>Being ignored</p>
-                    </div>
-                    <div class="col">
-                        <img src="<?php k1_get_image_asset_url( 'noguests', 'svg' ); ?>">
-                        <p>Being ignored</p>
-                    </div>
-                    <div class="col">
-                        <img src="<?php k1_get_image_asset_url( 'lastminute', 'svg' ); ?>">
-                        <p>Being ignored</p>
-                    </div>
-                    <div class="col">
-                        <img src="<?php k1_get_image_asset_url( 'unclearcommunication', 'svg' ); ?>">
-                        <p>Being ignored</p>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <div class="col-12">
-                        <p>Marketing and communication for ministry takes a lot of work.<br> Let's avoid appearing desperate and needy by constantly posting event information. Let's showcase your ministry strengths to make an eternal impact on people's lives!</p>
-                    </div>
-                </div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="text-primary">is your marketing</h2>
             </div>
-        </section>
-        <section class="first-cta">
+        </div>
+        <div class="row problems__content text-center">
+            <div class="col-1"></div>
+            <div class="col-sm-12 col-lg-2">
+                <img src="<?php k1_get_image_asset_url( 'ignored', 'svg' ); ?>">
+                <p>Being ignored</p>
+            </div>
+            <div class="col-sm-12 col-lg-2">
+                <img src="<?php k1_get_image_asset_url( 'socialmedia', 'svg' ); ?>">
+                <p>No Social Media <br> Presence</p>
+            </div>
+            <div class="col-sm-12 col-lg-2">
+                <img src="<?php k1_get_image_asset_url( 'noguests', 'svg' ); ?>">
+                <p>No New Guests</p>
+            </div>
+            <div class="col-sm-12 col-lg-2">
+                <img src="<?php k1_get_image_asset_url( 'lastminute', 'svg' ); ?>">
+                <p>Last-Minute <br> Commmunication <br> Changes</p>
+            </div>
+            <div class="col-sm-12 col-lg-2">
+                <img src="<?php k1_get_image_asset_url( 'unclearcommunication', 'svg' ); ?>">
+                <p>No Clear <br> Communication <br> Framework</p>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row problems__cta text-center">
+            <div class="col-12">
+                <p>Marketing and communication for ministry takes a lot of work.<br> Let's avoid appearing desperate and needy by constantly posting event information. Let's showcase your ministry strengths to make an eternal impact on people's lives!</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="first-cta">
             <div class="first-cta__background">
 				<div class="first-cta__background--lower"></div>
 				<div class="first-cta__background--upper"></div>

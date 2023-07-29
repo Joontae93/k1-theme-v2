@@ -55,24 +55,16 @@
   }
 
 .problems {
-  &__background {
-    @include m.background-layers;
-
-    &--lower {
-      background: url(../../assets/images/bg-images/problems-bg.jpg) center/cover no-repeat;
-    }
-
-    &--upper {
-      background-color: rgba(black, 0.6);
-    }
-  }
-
   &__content {
     z-index: 9;
 
-    > div > div > h3 {
+    > div > img > p{
       margin-top: 3vh; 
     }
+  }
+
+  &__cta {
+    margin-top: 5vh;
   }
 }
 
