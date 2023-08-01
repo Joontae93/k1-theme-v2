@@ -1,3 +1,4 @@
+@use '../abstracts/mixins' as m;
 .bg-color-primary {
 	background-color: var(--color-primary);
 	color: white;
@@ -28,4 +29,8 @@
 .text-roie {
 	font-family: var(--font-headings) !important;
 	letter-spacing: 0.2em;
+}
+
+.clip-color-left {
+	@include m.clip-path('left');
 }

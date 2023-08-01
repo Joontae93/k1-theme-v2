@@ -11,24 +11,7 @@ k1_enqueue_page_assets( 'frontPage' );
 
 get_header(); ?>
 <main class="site-content">
-	<?php
-	$content->hero_section( get_the_ID() );
-	// get_template_part(
-	// 'template-parts/content',
-	// 'bg-rolling-hills',
-	// array(
-	// 'id'          => 'healthy-growth',
-	// 'class'       => 'the-plan',
-	// 'headline'    => 'Courageous, Healthy & Effective',
-	// 'subheadline' => 'Our Tools, Training & Talent deliver the expertise you need to develop a healthy ministry. ',
-	// 'cta'         => array(
-	// 'text' => 'Get Started',
-	// 'link' => '/get-started',
-	// ),
-	// 'row_2'       => 'Expert Guidance with a Kingdom One Ministry Partner Expert Guidance with a Kingdom One Ministry Partner Expert Guidance with a Kingdom One Ministry Partner Expert Guidance with a Kingdom One Ministry Partner Expert Guidance with a Kingdom One Ministry Partner ',
-	// )
-	// );
-	?>
+	<?php $content->hero_section( get_the_ID() ); ?>
 	<aside class="top-talent-groups container">
 		<div class="row justify-content-center">
 			<?php
@@ -58,8 +41,29 @@ get_header(); ?>
 			?>
 		</div>
 	</aside>
+	<section class="stakes">
+		<div class="stakes__background clip-color-left">
+			<div class="stakes__background--color"></div>
+			<div class="stakes__background--lower" style="background-image:url('<?php k1_get_image_asset_url( 'k1-retreat-01', 'png', 'bg-images' ); ?>');"></div>
+			<div class="stakes__background--upper"></div>
+		</div>
+		<div class="stakes__content py-5">
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col d-flex flex-column text-center text-white">
+						<h2 class="headline text-white">relationship first</h2>
+						<span class="subheadline d-block mt-3 mb-5">Don't let ministry pain points stop you from fulfilling your calling. At Kingdom One, we help ministries reduce turnover,
+							find
+							quality
+							candidates and assist with hiring & transitions. Transform your ministry work environment to be more courageous, healthy & effective with our HR, finance, and
+							strategic experts. </span>
+					</div>
+				</div>
+				<?php get_template_part( 'template-parts/swiper', 'front-page-stakes' ); ?>
+			</div>
+		</div>
+	</section>
 	<?php
-
 	get_template_part(
 		'template-parts/content',
 		'core-services',

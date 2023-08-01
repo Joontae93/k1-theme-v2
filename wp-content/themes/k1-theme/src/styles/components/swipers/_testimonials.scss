@@ -1,7 +1,7 @@
 @use './abstracts';
 @use './base';
 
-#testimonials-swiper {
+:where(#testimonials-swiper) {
 	.swiper-slide {
 		@extend %slides;
 		border: 2px solid black;
