@@ -17,6 +17,7 @@
 		}
 	}
 }
+
 .top-talent-groups {
 	padding: 6.5rem 0;
 	.icon {
@@ -36,6 +37,75 @@
 		}
 	}
 }
+
+.stakes {
+	$frame-left: 49%;
+	$frame-right: 86%;
+	$frame-top: 34%;
+	$frame-bottom: 90%;
+
+	$static-top-left: 0% 0%;
+	$static-top-right: 0% 100%;
+	$static-bottom-right: 100% 100%;
+	$static-bottom-left: 100% 0%;
+	$static-alignment: $frame-left 100%;
+
+	$frame-top-left: $frame-left $frame-top;
+	$frame-top-right: $frame-right $frame-top;
+	$frame-bottom-left: $frame-left $frame-bottom;
+	$frame-bottom-right: $frame-right $frame-bottom;
+
+	$window: polygon(
+		$static-top-left,
+		$static-top-right,
+		$static-alignment,
+		$frame-top-left,
+		$frame-right $frame-top,
+		$frame-bottom-right,
+		$frame-bottom-left,
+		$static-alignment,
+		$static-bottom-right,
+		$static-bottom-left
+	);
+	&__background {
+		@include m.background-layers;
+
+		&--color {
+			background-color: var(--color-primary--dark);
+		}
+
+		&--upper {
+			background-color: rgba(black, 0.35);
+		}
+	}
+
+	&__content {
+		position: relative;
+		z-index: 4;
+		clip-path: $window;
+
+		&--background {
+			background-color: #fef1db;
+			border-radius: 1rem;
+			padding: 3rem;
+
+			.mask {
+				background-color: transparent;
+				mask-clip: border-box;
+			}
+		}
+	}
+
+	.swiper {
+		height: 45rem;
+		&-stakes-pagination {
+			&-bullet-active {
+				background-color: var(--color-primary);
+			}
+		}
+	}
+}
+
 .selling-points {
 	&__figures {
 		position: relative;

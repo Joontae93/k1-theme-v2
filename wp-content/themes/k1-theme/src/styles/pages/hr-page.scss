@@ -28,10 +28,10 @@
 	&__background {
 		@include m.background-layers;
 
-		&--lower {
-			background: url(../../assets/images/bg-images/problems-bg.jpg)
-				center/cover no-repeat;
-		}
+		// &--lower {
+		// 	background: url(../../assets/images/bg-images/problems-bg.jpg)
+		// 		center/cover no-repeat;
+		// }
 
 		&--upper {
 			background-color: rgba(black, 0.6);
@@ -59,10 +59,10 @@
 	&__background {
 		@include m.background-layers;
 
-		&--lower {
-			background: url(../../assets/images/bg-images/valuesbg.png) center/cover
-				no-repeat;
-		}
+		// &--lower {
+		// 	background: url(../../assets/images/bg-images/valuesbg.png) center/cover
+		// 		no-repeat;
+		// }
 
 		&--upper {
 			background-color: rgba(#4b4b4b, 0.9);
