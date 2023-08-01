@@ -8,7 +8,7 @@
 // phpcs:ignore
 $current_year = date( "Y" );
 ?>
-<footer class="bg-primary--dark pt-5">
+<footer class="bg-color-primary--dark pt-5 pb-3">
 	<div class="container">
 		<div class="row mb-5">
 			<div class="col-4">

@@ -65,12 +65,13 @@
 
 		&--headline {
 			color: white;
-			letter-spacing: 1.8;
+			// letter-spacing: 1.8;
 			font-family: v.$font-roie;
 		}
 
 		&--subheadline {
 			font-size: 4rem;
+			color: white;
 		}
 
 		&--btn {

@@ -124,16 +124,16 @@ class Content_Components {
 	/** Gets the content layer of the Hero Section */
 	protected function get_hero_content( string $headine, string $subheadline, bool $has_cta, array $cta_options = array() ) : string {
 		$leaves  = k1_get_image_asset_url( 'three-leaves', 'svg', 'leaves', false );
-		$markup  = "<div class='hero__content container d-flex align-items-stretch'><div class='row'><div class='col-10 position-relative d-flex flex-column'>
+		$markup  = "<div class='hero__content container d-flex align-items-stretch'><div class='row'><div class='position-relative d-flex flex-column'>
 				<img src='{$leaves}' class='hero__content--leaves' />";
 		$markup .= $this->headline(
 			$headine,
 			false,
 			array(
 				'headline_element'    => 'h1',
-				'headline_class'      => 'hero__content--headline headline mb-5',
+				'headline_class'      => 'hero__content--headline headline mb-5 display-1',
 				'subheadline_content' => $subheadline,
-				'subheadline_class'   => 'hero__content--subheadline subheadline white-stroke',
+				'subheadline_class'   => 'hero__content--subheadline subheadline',
 			)
 		);
 		if ( $has_cta ) {

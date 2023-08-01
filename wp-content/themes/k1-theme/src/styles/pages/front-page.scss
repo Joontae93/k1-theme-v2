@@ -8,36 +8,34 @@
 	height: 100%;
 	width: 100%;
 }
-
 .hero {
-	position: relative;
-	padding-bottom: 4rem;
-	min-height: 80rem;
-	display: block;
-	height: unset;
-
-	&__background {
-		@include m.background-layers;
-		clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-
-		&--lower {
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-		}
-
-		&--upper {
-			background-color: rgba(black, 0.65);
-		}
-	}
-
-	&__text {
-		&--headline {
-			color: white;
+	&__content {
+		&--subheadline {
+			color: var(--color-primary);
+			font-size: 1.5em;
+			line-height: 1.5;
 		}
 	}
 }
+.top-talent-groups {
+	padding: 6.5rem 0;
+	.icon {
+		@include m.displayFlex(column, $cross: center);
 
+		&__svg {
+			$size: 15rem;
+			width: $size;
+			height: $size;
+			margin-bottom: 2rem;
+		}
+		&__label {
+			color: var(--color-grey);
+			font-size: 2em;
+			text-align: center;
+			font-weight: 700;
+		}
+	}
+}
 .selling-points {
 	&__figures {
 		position: relative;

@@ -1,7 +1,8 @@
 @use '../abstracts/mixins' as m;
 @use '../abstracts/variables' as v;
-@use '../components/front-page/quick-sell';
-@use '../components/swiper';
+// @use '../components/front-page/quick-sell';
+@use '../components/swipers/testimonials';
+@use '../components/swipers/brands';
 
 @mixin full-size {
 	height: 100%;
@@ -9,75 +10,77 @@
 }
 
 .hero {
-    position: relative;
-    padding-bottom: 55vh;
-  
-    &__background {
-      @include m.background-layers;
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-  
-      &--lower {
-        background: url(../../assets/images/bg-images/marketing-bg.svg) center/cover no-repeat;
-      }
-  
-      &--upper {
-        background-color: rgba(black, 0.6);
-      }
-    }
-  
-    &__content {
-      transform: translateY(30%);
-    }
-  
-    &__text {
-      &--headline {
-        color: white;
-      }
-    }
-  }
+	position: relative;
+	padding-bottom: 55vh;
 
-  .first-cta {  
-    &__background {
-      @include m.background-layers;
-  
-      &--lower {
-        background: url(../../assets/images/sellingpointsbg.png) right/cover no-repeat;
-      }
-  
-      &--upper {
-        background-color: rgba(black, 0.6);
-      }
-    }
-  
-    &__content {
-      z-index: 9;
-    }
-  }
+	&__background {
+		@include m.background-layers;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+
+		&--lower {
+			background: url(../../assets/images/bg-images/marketing-bg.svg)
+				center/cover no-repeat;
+		}
+
+		&--upper {
+			background-color: rgba(black, 0.6);
+		}
+	}
+
+	&__content {
+		transform: translateY(30%);
+	}
+
+	&__text {
+		&--headline {
+			color: white;
+		}
+	}
+}
+
+.first-cta {
+	&__background {
+		@include m.background-layers;
+
+		&--lower {
+			background: url(../../assets/images/sellingpointsbg.png) right/cover
+				no-repeat;
+		}
+
+		&--upper {
+			background-color: rgba(black, 0.6);
+		}
+	}
+
+	&__content {
+		z-index: 9;
+	}
+}
 
 .other-cta {
-    h2 {
-        margin-bottom: 1vh;
-    }
-    h4, p {
-        margin-bottom: 3vh;
-    }
+	h2 {
+		margin-bottom: 1vh;
+	}
+	h4,
+	p {
+		margin-bottom: 3vh;
+	}
 }
 
 .leaf-adjustment {
+	&--left {
+		transform: translateX(-20rem);
 
-    &--left {
-      transform: translateX(-20rem);
-  
-      & img {
-        transform: translateY(-5rem);
-      }
-    }
+		& img {
+			transform: translateY(-5rem);
+		}
+	}
 
-    &--right {
-      transform: transformX(-20rem);
-  
-      &img {
-        transform: transformY(-15rem);
-      }
-    }
-  }
+	&--right {
+		transform: transformX(-20rem);
+
+		&img {
+			transform: transformY(-15rem);
+		}
+	}
+}
