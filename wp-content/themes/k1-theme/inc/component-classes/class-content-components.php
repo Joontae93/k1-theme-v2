@@ -58,10 +58,10 @@ class Content_Components {
 	 * }
 	 * @param bool  $echo Whether to echo or return the markup (default: true)
 	 */
-	public function cta_button( array $options, bool $echo = true ) {
+	public function cta_button( array $options = array(), bool $echo = true ) {
 		$default = array(
-			'text'        => 'Learn More',
-			'link'        => '',
+			'text'        => 'Get Started',
+			'link'        => '/get-started',
 			'html_class'  => 'btn__primary--fill',
 			'is_external' => false,
 		);
