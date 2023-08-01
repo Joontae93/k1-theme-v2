@@ -12,21 +12,21 @@ k1_enqueue_page_assets( 'frontPage' );
 get_header(); ?>
 <main class="site-content">
 	<?php
-	$content->hero_section(get_the_ID());
+	$content->hero_section( get_the_ID() );
 	// get_template_part(
-	// 	'template-parts/content',
-	// 	'bg-rolling-hills',
-	// 	array(
-	// 		'id'          => 'healthy-growth',
-	// 		'class'       => 'the-plan',
-	// 		'headline'    => 'Courageous, Healthy & Effective',
-	// 		'subheadline' => 'Our Tools, Training & Talent deliver the expertise you need to develop a healthy ministry. ',
-	// 		'cta'         => array(
-	// 			'text' => 'Get Started',
-	// 			'link' => '/get-started',
-	// 		),
-	// 		'row_2'       => 'Expert Guidance with a Kingdom One Ministry Partner Expert Guidance with a Kingdom One Ministry Partner Expert Guidance with a Kingdom One Ministry Partner Expert Guidance with a Kingdom One Ministry Partner Expert Guidance with a Kingdom One Ministry Partner ',
-	// 	)
+	// 'template-parts/content',
+	// 'bg-rolling-hills',
+	// array(
+	// 'id'          => 'healthy-growth',
+	// 'class'       => 'the-plan',
+	// 'headline'    => 'Courageous, Healthy & Effective',
+	// 'subheadline' => 'Our Tools, Training & Talent deliver the expertise you need to develop a healthy ministry. ',
+	// 'cta'         => array(
+	// 'text' => 'Get Started',
+	// 'link' => '/get-started',
+	// ),
+	// 'row_2'       => 'Expert Guidance with a Kingdom One Ministry Partner Expert Guidance with a Kingdom One Ministry Partner Expert Guidance with a Kingdom One Ministry Partner Expert Guidance with a Kingdom One Ministry Partner Expert Guidance with a Kingdom One Ministry Partner ',
+	// )
 	// );
 	?>
 	<aside class="top-talent-groups container">
@@ -50,16 +50,16 @@ get_header(); ?>
 					'file'  => 'staffing',
 				),
 			);
-			foreach($icons as $icon) {
+			foreach ( $icons as $icon ) {
 				$filename = "tg-{$icon['file']}-icon";
-				$svg = k1_get_svg_asset($filename, true, false);
+				$svg      = k1_get_svg_asset( $filename, true, false );
 				echo "<div class='icon col'><img class='icon__svg' src='{$svg}' /><span class='icon__label'>{$icon['title']}</span></div>";
 			}
 			?>
 		</div>
 	</aside>
 	<?php
-	
+
 	get_template_part(
 		'template-parts/content',
 		'core-services',
@@ -95,7 +95,7 @@ get_header(); ?>
 	<?php
 	get_template_part( 'template-parts/swiper', 'testimonials' );
 	get_template_part( 'template-parts/swiper', 'brands' );
-	get_template_part( 'template-parts/content', 'three-steps');
+	get_template_part( 'template-parts/content', 'three-steps' );
 	get_template_part( 'template-parts/content', 'final-cta' );
 	?>
 </main>
