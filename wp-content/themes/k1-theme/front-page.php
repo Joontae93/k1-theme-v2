@@ -63,6 +63,17 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
+	<section class="community">
+		<div class="container">
+			<div class="row">
+				<h2 class="headline mt-5 text-white">Community, Tools &amp; Knowledge</h2>
+				<?php k1_get_svg_asset( 'leaves-4' ); ?>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 subheadline">Our Tools, Training & Talent deliver the expertise you need to develop a healthy ministry.</div>
+			</div>
+		</div>
+	</section>
 	<?php
 	get_template_part(
 		'template-parts/content',

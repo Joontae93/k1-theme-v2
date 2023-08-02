@@ -3,11 +3,16 @@
 
 .hero {
 	position: relative;
-	padding-top: 15.6rem;
-	padding-bottom: 4rem;
-	min-height: 80rem;
 	display: block;
 	height: unset;
+	padding-top: 30rem;
+	padding-bottom: 4rem;
+
+	@include m.media-breakpoint-up(lg) {
+		min-height: 80rem;
+		padding-top: 15.6rem;
+		padding-bottom: 4rem;
+	}
 
 	&__background {
 		@include m.background-layers;

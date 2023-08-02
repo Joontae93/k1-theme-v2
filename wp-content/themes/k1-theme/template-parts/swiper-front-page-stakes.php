@@ -5,7 +5,7 @@ $content = new Content_Components();
 ?>
 <div class="stakes__content--background row mb-5">
 	<div class="row align-items-stretch">
-		<div class="col-6">
+		<div class="col col-lg-6">
 			<div class="swiper" id="stakes">
 				<div class="swiper-stakes-pagination"></div>
 				<div class="swiper-wrapper">
@@ -40,7 +40,7 @@ $content = new Content_Components();
 				</div>
 			</div>
 		</div>
-		<div class="col-6 mask" style="border-radius:1rem;border:2px solid var(--color-grey);"><span class="bg-warning my-auto">MASK
+		<div class="d-none d-lg-block col-lg-6 mask" style="border-radius:1rem;border:2px solid var(--color-grey);"><span class="bg-warning my-auto">MASK
 				ME</span>
 			<?php $content->cta_button( array( 'html_class' => 'btn__primary--fill mb-3' ) ); ?>
 		</div>

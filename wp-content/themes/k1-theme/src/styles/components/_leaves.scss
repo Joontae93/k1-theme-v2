@@ -1,0 +1,15 @@
+#leaves-4 {
+	.a,
+	.c {
+		fill: none;
+	}
+	.b {
+		clip-path: url(#a);
+	}
+	.c {
+		stroke: inherit;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 6px;
+	}
+}
