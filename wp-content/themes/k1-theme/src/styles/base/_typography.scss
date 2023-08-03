@@ -4,6 +4,7 @@
 	font-family: v.$font-body;
 	font-size: 1.35em;
 }
+
 body {
 	color: black;
 	font-family: v.$font-body;
@@ -16,7 +17,7 @@ body {
 		@extend %base-text;
 	}
 
-	p:not(.text-content p) {
+	p:where(:not(.text-content p)) {
 		@extend %base-text;
 	}
 
@@ -31,7 +32,8 @@ body {
 }
 
 %heading {
-	font-family: v.$font-poppins;
+	// font-family: v.$font-poppins;
+	font-family: v.$font-roie;
 	font-weight: 700;
 }
 

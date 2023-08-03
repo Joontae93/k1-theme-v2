@@ -5,6 +5,21 @@
  * @since 1.3
  */
 
+function k1_get_svg_asset(string $file,bool $as_image_src = false,bool $echo = true) {
+	
+	$svg = file_get_contents(get_template_directory() . '/src/assets/svgs/' . $file . '.svg');
+	if ($as_image_src) {
+		$svg = 'data:image/svg+xml;base64,' . base64_encode($svg);
+	}
+	
+	if ( $echo ) {
+		echo $svg;
+	} else {
+		return $svg;
+	}
+	
+}
+
 /**
  * Gets an image asset from `src/assets/images`
  *

@@ -8,7 +8,7 @@
 // phpcs:ignore
 $current_year = date( "Y" );
 ?>
-<footer class="bg-primary--dark pt-5">
+<footer class="bg-color-primary--dark pt-5 pb-3">
 	<div class="container">
 		<div class="row mb-5">
 			<div class="col-4">
@@ -17,9 +17,9 @@ $current_year = date( "Y" );
 				</a>
 				<div class="socials">
 					<div class="row">
-						<div class="col-4">Facebook</div>
-						<div class="col-4">Instagram</div>
-						<div class="col-4">LinkedIn</div>
+						<div class="col-4"><i class='fa-brands fa-facebook'></i></div>
+						<div class="col-4"><i class='fa-brands fa-instagram'></i></div>
+						<div class="col-4"><i class='fa-brands fa-linkedin'></i></div>
 					</div>
 				</div>
 			</div>

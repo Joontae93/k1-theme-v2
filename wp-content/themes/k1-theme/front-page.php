@@ -11,57 +11,125 @@ k1_enqueue_page_assets( 'frontPage' );
 
 get_header(); ?>
 <main class="site-content">
-	<?php get_template_part( 'template-parts/front-page/section', 'hero' ); ?>
-
-	<section class="selling-points">
-		<div class="container">
-			<div class="row">
-				<div class="selling-points__figures col-4">
-					<img src="<?php k1_get_image_asset_url( 'brokenleaves', 'png' ); ?>">
-					<div class="script-values">
-						<?php
-						$values = array( 'Calling', 'Connection', 'Courage', 'Culture' );
-						foreach ( $values as $index => $value ) {
-							$delay = ( $index + 50 ) * ( $index + 1 );
-							$url   = k1_get_image_asset_url( $value, 'svg', 'script-words', false );
-							echo "<img src='{$url}' class='script-values__value' data-aos='fade-down' data-aos-delay='{$delay}' />";
-						}
-						?>
+	<?php $content->hero_section( get_the_ID() ); ?>
+	<aside class="top-talent-groups container">
+		<div class="row justify-content-center">
+			<?php
+			$icons = array(
+				array(
+					'title' => 'H.R.',
+					'file'  => 'hr',
+				),
+				array(
+					'title' => 'Finance',
+					'file'  => 'finance',
+				),
+				array(
+					'title' => 'Marketing & Communications',
+					'file'  => 'marcom',
+				),
+				array(
+					'title' => 'Staffing',
+					'file'  => 'staffing',
+				),
+			);
+			foreach ( $icons as $icon ) {
+				$filename = "tg-{$icon['file']}-icon";
+				$svg      = k1_get_svg_asset( $filename, true, false );
+				echo "<div class='icon col'><img class='icon__svg' src='{$svg}' /><span class='icon__label'>{$icon['title']}</span></div>";
+			}
+			?>
+		</div>
+	</aside>
+	<section class="stakes">
+		<div class="stakes__background clip-color-left">
+			<div class="stakes__background--color"></div>
+			<div class="stakes__background--lower" style="background-image:url('<?php k1_get_image_asset_url( 'k1-retreat-01', 'png', 'bg-images' ); ?>');"></div>
+			<div class="stakes__background--upper"></div>
+		</div>
+		<div class="stakes__content py-5">
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col d-flex flex-column text-center text-white">
+						<h2 class="headline text-white">relationship first</h2>
+						<span class="subheadline d-block mt-3 mb-5">Don't let ministry pain points stop you from fulfilling your calling. At Kingdom One, we help ministries reduce turnover,
+							find
+							quality
+							candidates and assist with hiring & transitions. Transform your ministry work environment to be more courageous, healthy & effective with our HR, finance, and
+							strategic experts. </span>
 					</div>
 				</div>
-				<div class="col">
-					<h2 class="headline">Ministry is <span class="text-primary d-block">Complex</span></h2>
-					<div class="row selling-points__underlines">
-						<div class="col">
-							<hr class="selling-points__underlines--line-1">
-						</div>
-						<div class="col-2">
-							<hr class="selling-points__underlines--line-2">
-						</div>
-						<div class="col-4"></div>
-					</div>
-					<p>Are you ready to simplify? Our approach is simple; we use marketplace tools, resources, and experience with a heart for healthy ministry.</p>
-				</div>
+				<?php get_template_part( 'template-parts/swiper', 'front-page-stakes' ); ?>
 			</div>
 		</div>
 	</section>
-	<?php
-	get_template_part(
-		'template-parts/content',
-		'bg-rolling-hills',
-		array(
-			'id'          => 'healthy-growth',
-			'class'       => 'the-plan',
-			'headline'    => 'Courageous, Healthy & Effective',
-			'subheadline' => 'Our Tools, Training & Talent deliver the expertise you need to develop a healthy ministry. ',
-			'cta'         => array(
-				'text' => 'Get Started',
-				'link' => '/get-started',
-			),
-			'row_2'       => 'big text area',
-		)
-	);
-	?>
+	<section class="community">
+		<div class="container">
+			<div class="row">
+				<h2 class="headline mt-5 text-white">Community, Tools &amp; Knowledge</h2>
+				<?php k1_get_svg_asset( 'leaves-4' ); ?>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 subheadline">Our Tools, Training & Talent deliver the expertise you need to develop a healthy ministry.</div>
+			</div>
+		</div>
+		<div class="community__grid--container">
+			<div class="community__grid col-lg-10">
+				<?php
+				$grid_items = array(
+					array(
+						'svg'  => 'compass',
+						'text' => 'Expert Guidance with a Kingdom One Ministry Partner',
+					),
+					array(
+						'svg'  => 'restroom',
+						'text' => 'Sexual Harrassment Prevention Training',
+					),
+					array(
+						'svg'  => 'justice',
+						'text' => 'AB-506 Child Safety & Mandated Reporting Compliance Training',
+					),
+					array(
+						'svg'  => 'git-network',
+						'text' => 'HR Ministry Network Conference Online Course',
+					),
+					array(
+						'svg'  => 'sitemap',
+						'text' => 'Talent Planning &amp; Organizational Leveling',
+					),
+					array(
+						'svg'  => 'search-dollar',
+						'text' => 'Annual Compensation Survey Report',
+					),
+					array(
+						'svg'  => 'profile',
+						'text' => 'Staffing Searches',
+					),
+					array(
+						'svg'  => 'medical',
+						'text' => 'Benefits, Insurance &amp; Total Rewards',
+					),
+					array(
+						'svg'  => 'group-add',
+						'text' => 'Ministry Cohorts',
+					),
+					array(
+						'svg'  => 'plus-circle',
+						'text' => 'And so much more...',
+					),
+				);
+				foreach ( $grid_items as $item ) {
+					$markup  = "<div class='community__grid--item'><div class='community__grid-item-content'>";
+					$markup .= k1_get_svg_asset( 'front-page-icon-' . $item['svg'], false, false );
+					$markup .= "<p class='community__grid-item-content--text'>{$item['text']}</p>";
+					$markup .= '</div></div>';
+					echo $markup;
+				}
+				?>
+
+			</div>
+		</div>
+	</section>
 	<?php
 	get_template_part(
 		'template-parts/content',
@@ -86,52 +154,30 @@ get_header(); ?>
 		)
 	);
 	?>
-	<?php get_template_part( 'template-parts/swiper', 'testimonials' ); ?>
-	<?php get_template_part( 'template-parts/swiper', 'brands' ); ?>
-	<section class="problems">
-		<div class="container text-center">
-			<div class="row justify-content-center mb-5">
-				<div class="col-10">
-					<h2>Has ministry gotten <span class="text-primary">complicated</span> for you and your team?
-					</h2>
-					<p class="subheadline my-5">Ministry life is a complicated life! Can we get an "amen"? While industry best practices and guidance is an excellent start, the pursuit
-						of
-						becoming courageous,
-						healthy, and effective is nuanced. Our team is ready to partner with you in a 1:1 capacity to assess and coach you forward thoroughly.</p>
-				</div>
+	<aside class='text-callout py-5'>
+		<div class="container">
+			<div class="row">
+				<h2 class="col text-center display-3">We're using our marketplace and ministry expertise to help ministries become more <span class="text-primary">Courageous,
+						Healthy & Effective</span></h2>
 			</div>
-			<div class="row my-5">
-				<?php
-				$steps = array(
-					array(
-						'image'       => k1_get_image_asset_url( 'resources', 'svg', echo: false ),
-						'headline'    => 'Grab some free resources',
-						'subheadline' => 'Get to know us with free tools education, and resources',
-					),
-					array(
-						'image'       => k1_get_image_asset_url( 'tools', 'svg', echo: false ),
-						'headline'    => 'Grab tools &amp; Courses',
-						'subheadline' => 'Grab a tool or course to sharpen your expertise',
-					),
-					array(
-						'image'       => k1_get_image_asset_url( 'talents', 'svg', echo: false ),
-						'headline'    => 'Grab some talents',
-						'subheadline' => 'Grab some talents to help get the work done',
-					),
-				);
-				?>
-				<?php foreach ( $steps as $step ) : ?>
-				<div class="col-lg-4">
-					<img src="<?php echo $step['image']; ?>">
-					<h3><?php echo $step['headline']; ?></h3>
-					<p><?php echo $step['subheadline']; ?></p>
-				</div>
-				<?php endforeach; ?>
-			</div>
-			<a class="pill-btn__fill--primary mt-auto" href="#">Get Started</a>
 		</div>
-	</section>
-	<?php get_template_part( 'template-parts/content', 'final-cta' ); ?>
+	</aside>
+
+	<?php
+	get_template_part( 'template-parts/swiper', 'testimonials' );
+	get_template_part( 'template-parts/swiper', 'brands' );
+	get_template_part(
+		'template-parts/content',
+		'three-steps',
+		array(
+			'with_header' => true,
+			'header_args' => array(
+				'headline'    => 'Decide to make a ministry change',
+				'subheadline' => "Your role isn't easy (we know, we've been there!), but your job is so necessary to your Ministry's Health. Our mission is to build healthy people & strategies that help the Church thrive so you never have to second guess your ministry efforts. Our pricing allows ministries of all sizes to participate in Kingdom One. Visit our pricing page to learn more about the costs and process. ",
+			),
+		)
+	);
+	?>
 </main>
 
 <?php get_footer(); ?>

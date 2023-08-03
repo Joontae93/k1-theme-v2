@@ -1,7 +1,7 @@
 @use './abstracts';
 @use './base';
 
-#staff-swiper {
+:where(#staff-swiper) {
 	.swiper-slide {
 		@extend %slides;
 	}

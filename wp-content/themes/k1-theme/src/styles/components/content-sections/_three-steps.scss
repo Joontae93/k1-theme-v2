@@ -1,0 +1,27 @@
+@use '../../abstracts/mixins' as m;
+
+.threesteps {
+    position: relative;
+    padding-bottom: 4rem;
+    
+    &__background {
+      @include m.background-layers;
+    
+      &--lower {
+        background: url(../../assets/images/marketingchange.svg) center/cover no-repeat;
+      }
+    
+      &--upper {
+        background-color: rgba(#4B4B4B, 0.9);
+      }
+    }
+  
+    &__content {
+      z-index: 400;
+  
+      > div.row {
+        margin-bottom: 6vh !important;
+      }
+  
+    }
+  }

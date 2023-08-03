@@ -24,11 +24,10 @@
 				<h2 class="text-white text-roie">core services</h2>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col d-flex justify-content-evenly">
+		<div class="row justify-content-around">
 				<?php
 				foreach ( $args as $list ) {
-					echo '<div class="d-flex flex-column">';
+					echo '<div class="col-md-6 col-lg-3 d-flex flex-column">';
 					if ( $list['title'] ) {
 						echo "<h3 class='text-roie text-white mt-5 text-lowercase'>{$list['title']}</h3>";
 					}
@@ -41,7 +40,6 @@
 
 				}
 				?>
-			</div>
 		</div>
 		<div class="row justify-content-center">
 			<a class="pill-btn__fill--primary w-auto" href="/get-started">Get Started</a>

@@ -20,17 +20,18 @@
 		<div class="navbar container-fluid gx-5 py-4">
 			<div class="row justify-content-between">
 				<div class="col-6">
-					<a class="d-inline-flex align-items-center" href="<?php echo esc_url( site_url() ); ?>" class="logo" aria-label="to Home Page">
+					<a class="d-inline-flex flex-column flex-lg-row justify-content-center justify-content-lg-start align-items-center" href="<?php echo esc_url( site_url() ); ?>"
+					   class="logo" aria-label="to Home Page">
 						<figure class="logo-image d-inline-block m-0">
 							<?php echo file_get_contents('wp-content/themes/k1-theme/src/assets/K1-Logo-v2.svg'); ?>
 						</figure>
-						<h1 class="site-title d-block">
+						<h1 class="site-title d-block text-center">
 							<?php echo bloginfo('name'); ?>
 						</h1>
 					</a>
 				</div>
 				<div class="col d-flex justify-content-end align-items-center">
-					<div class="w-auto d-flex justify-content-center align-items-center me-5">
+					<div class="d-none w-auto d-lg-flex justify-content-center align-items-center me-5">
 						<a href="/get-started" class="btn__primary--fill cta pill-btn mx-1">Get Started</a>
 					</div>
 					<div class="h-100 me-5 d-flex align-items-center justify-content-center">

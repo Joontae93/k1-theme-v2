@@ -18,6 +18,9 @@ get_header(); ?>
 		case ( 'hr' ):
 			get_template_part( 'templates/page', 'hr' );
 			break;
+		case ( 'communications' ):
+			get_template_part( 'templates/page', 'communications' );
+			break;
 		default:
 			echo 'hello';
 	}

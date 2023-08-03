@@ -4,7 +4,7 @@
 section {
 	position: relative;
 
-	&:not(.hero) {
+	&:where(:not(.hero)) {
 		padding: 6.5rem 0;
 	}
 }
@@ -16,6 +16,7 @@ figure {
 main {
 	position: relative;
 }
+
 .container {
 	position: relative;
 }
@@ -27,4 +28,8 @@ main {
 .col {
 	position: relative;
 	height: auto;
+}
+
+footer {
+	margin-top: -1px;
 }

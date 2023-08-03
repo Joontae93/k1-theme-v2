@@ -3,11 +3,16 @@
 
 .hero {
 	position: relative;
-	padding-top: 15.6rem;
-	padding-bottom: 4rem;
-	min-height: 80rem;
 	display: block;
 	height: unset;
+	padding-top: 30rem;
+	padding-bottom: 4rem;
+
+	@include m.media-breakpoint-up(lg) {
+		min-height: 80rem;
+		padding-top: 15.6rem;
+		padding-bottom: 4rem;
+	}
 
 	&__background {
 		@include m.background-layers;
@@ -27,27 +32,11 @@
 		}
 
 		&.color-right {
-			.hero__background--color {
-				clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 90%);
-			}
-			.hero__background--lower {
-				clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-			}
-			.hero__background--upper {
-				clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-			}
+			@include m.clip-path('right-bottom');
 		}
 
 		&.color-left {
-			.hero__background--color {
-				clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-			}
-			.hero__background--lower {
-				clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 90%);
-			}
-			.hero__background--upper {
-				clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 90%);
-			}
+			@include m.clip-path('left-bottom');
 		}
 	}
 
@@ -65,12 +54,12 @@
 
 		&--headline {
 			color: white;
-			letter-spacing: 1.8;
 			font-family: v.$font-roie;
 		}
 
 		&--subheadline {
 			font-size: 4rem;
+			color: white;
 		}
 
 		&--btn {
