@@ -10,6 +10,7 @@
 	transition: fn.transition(
 		(background-color, border-color, transform, box-shadow, color)
 	);
+	width: auto;
 
 	&:hover {
 		box-shadow: 2px 4px 8px rgba(black, 0.35);

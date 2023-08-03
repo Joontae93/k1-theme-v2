@@ -1,49 +1,62 @@
 <?php
 /**
- * Content Part: Three Steps
+ * Content Section: Final CTA
+ *
+ * $args = array(
+ * 'with_header' => boolean,
+ * 'header_args' => array(
+ *   'headline' => string,
+ *   'subheadline' => string,
+ *   ),
+ * )
  */
 
+extract( $args );
+$content = new Content_Sections();
 ?>
-<section class="threesteps">
-			<div class="threesteps__background">
-				<div class="threesteps__background--lower"></div>
-				<div class="threesteps__background--upper"></div>
-			</div>
-			<div class="container threesteps__content">
-				<div class="row text-center">
-					<div class="col d-flex justify-content-center align-items-center">
-						<h2 class="h1 headline text-white">Are You Ready To Make <br> A Positive Marketing Change?</h2>
-					</div>
+<section class="three-steps">
+	<div class="three-steps__background clip-color-left-top">
+		<div class="three-steps__background--color"></div>
+		<div class="three-steps__background--lower" style="background-image:url('<?php k1_get_image_asset_url( 'josh-calabrese-XXpbdU_31Sg-unsplash', 'jpg', 'bg-images' ); ?>');"></div>
+		<div class="three-steps__background--upper"></div>
+	</div>
+	<div class="three-steps__content container">
+		<?php
+		if ( $with_header ) {
+			extract( $header_args );
+			echo "<h2 class='headline text-white mt-5'>{$headline}</h2><p class='subheadline text-white my-5'>{$subheadline}</p>";
+		}
+		?>
+		<div class="three-steps__steps row justify-content-around">
+			<?php
+			$default_steps = array(
+				array(
+					'svg'         => 'three-steps-icon-step-1',
+					'headline'    => 'Grab Some Free Resources',
+					'subheadline' => 'Get to know us with free tools, education and resources',
+				),
+				array(
+					'svg'         => 'three-steps-icon-step-2',
+					'headline'    => 'Grab Tools &amp; Courses',
+					'subheadline' => 'Grab a tool or course to sharpen your expertise',
+				),
+				array(
+					'svg'         => 'three-steps-icon-step-3',
+					'headline'    => 'Grab Some Talents',
+					'subheadline' => 'Grab some talents to help get the work done',
+				),
+			);
+			?>
+			<?php foreach ( $default_steps as $step ) : ?>
+				<div class="three-steps__steps--step-1 col-lg-4 my-5 my-lg-0">
+					<?php k1_get_svg_asset( $step['svg'] ); ?>
+					<h3 class="headline text-white text-center"><?php echo $step['headline']; ?></h3>
+					<span class="subheadline text-white text-center"><?php echo $step['subheadline']; ?></span>
 				</div>
-				<div class="row">
-					<div class="col-2">
-						<img src="<?php k1_get_image_asset_url( 'assessment', 'svg' ); ?>">
-					</div>
-					<div class="col-2"></div>
-					<div class="col-8">
-						<h3 class="text-primary">Take a Marketing and Communications <br> assessment to evaluate your Marcom efforts.</h3>
-						<h4 class="text-white">This free quick assessment is the jump start to help identify where to update your marketing and comms efforts.</h4>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-2">
-						<img src="<?php k1_get_image_asset_url( 'plan', 'svg' ); ?>">
-					</div>
-					<div class="col-2"></div>
-					<div class="col-8">
-						<h3 class="text-primary">Create a plan with Kingdom One Marcom</h3>
-						<h4 class="text-white">Visit the Kingdom One get started page and set up a time to meet with a ministry marketing partner and plan for your design, website, social media, and marketing for your ministry! Let's go!</h4>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-2">
-						<img src="<?php k1_get_image_asset_url( 'marketingframework', 'svg' ); ?>">
-					</div>
-					<div class="col-2"></div>
-					<div class="col-8">
-						<h3 class="text-primary">Enjoy your new marketing framework that <br> makes ministry marketing 100x easier.</h3>
-						<h4 class="text-white">Moving from a broken marketing system to an effective lead machine is joyful and gives you more capacity to work on the ministry you love.</h4>
-					</div>
-				</div>
-			</div>
-		</section>
+			<?php endforeach; ?>
+		</div>
+		<div class="row flex-column justify-content-center align-items-center">
+			<?php $content->cta_button(); ?>
+		</div>
+	</div>
+</section>

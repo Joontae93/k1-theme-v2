@@ -17,9 +17,9 @@ $current_year = date( "Y" );
 				</a>
 				<div class="socials">
 					<div class="row">
-						<div class="col-4">Facebook</div>
-						<div class="col-4">Instagram</div>
-						<div class="col-4">LinkedIn</div>
+						<div class="col-4"><i class='fa-brands fa-facebook'></i></div>
+						<div class="col-4"><i class='fa-brands fa-instagram'></i></div>
+						<div class="col-4"><i class='fa-brands fa-linkedin'></i></div>
 					</div>
 				</div>
 			</div>

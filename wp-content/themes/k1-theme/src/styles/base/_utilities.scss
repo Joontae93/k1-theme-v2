@@ -34,3 +34,7 @@
 .clip-color-left {
 	@include m.clip-path('left');
 }
+
+.clip-color-left-top {
+	@include m.clip-path('left-top');
+}

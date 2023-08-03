@@ -17,7 +17,7 @@ body {
 		@extend %base-text;
 	}
 
-	p:not(.text-content p) {
+	p:where(:not(.text-content p)) {
 		@extend %base-text;
 	}
 
