@@ -21,6 +21,9 @@ get_header(); ?>
 		case ( 'communications' ):
 			get_template_part( 'templates/page', 'communications' );
 			break;
+		case ( 'pricing' ):
+			get_template_part( 'templates/page', 'pricing' );
+			break;
 		default:
 			echo 'hello';
 	}
