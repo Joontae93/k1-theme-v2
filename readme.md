@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.1
+
+- Updated the homepage sliders to look less dumb (still not perfect)
+
 ## v0.2.0
 
 - Introduced Changelog
