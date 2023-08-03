@@ -1,9 +1,11 @@
 @use './abstracts';
 @use './base';
 
-:where(#brands-swiper) {
+#brands-swiper {
+	max-height: unset;
+
 	.swiper-slide {
-		border: 2px solid white;
 		padding: 3rem;
+		height: unset;
 	}
 }

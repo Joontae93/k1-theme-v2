@@ -12,6 +12,7 @@ export const brandsSlider = () => {
 				nextEl: '.swiper-brands-button-next',
 				prevEl: '.swiper-brands-button-prev',
 			},
+			autoHeight: false,
 		});
 	}
 };

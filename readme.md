@@ -1,3 +1,6 @@
-# Project Overview
+# Changelog
 
-Builder a starter theme that works well.
+## v0.2.0
+
+- Introduced Changelog
+- **Breaking Change:** Moved Swipers template files to folder inside of `template-parts`

@@ -59,7 +59,7 @@ get_header(); ?>
 							strategic experts. </span>
 					</div>
 				</div>
-				<?php get_template_part( 'template-parts/swiper', 'front-page-stakes' ); ?>
+				<?php get_template_part( 'template-parts/sliders/swiper', 'front-page-stakes' ); ?>
 			</div>
 		</div>
 	</section>
@@ -164,8 +164,8 @@ get_header(); ?>
 	</aside>
 
 	<?php
-	get_template_part( 'template-parts/swiper', 'testimonials' );
-	get_template_part( 'template-parts/swiper', 'brands' );
+	get_template_part( 'template-parts/sliders/swiper', 'testimonials' );
+	get_template_part( 'template-parts/sliders/swiper', 'brands' );
 	get_template_part(
 		'template-parts/content',
 		'three-steps',
