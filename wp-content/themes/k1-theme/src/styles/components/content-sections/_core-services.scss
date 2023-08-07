@@ -4,8 +4,8 @@
 		@include m.background-layers;
 
 		&--lower {
-			background: url(../../assets/images/bg-images/processandpricing-bg.png)
-				center/cover no-repeat;
+			background-position: center;
+			background-size: cover;
 		}
 
 		&--upper {

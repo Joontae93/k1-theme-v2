@@ -15,11 +15,7 @@ extract( $args );
 $content = new Content_Sections();
 ?>
 <section class="three-steps">
-	<div class="three-steps__background clip-color-left-top">
-		<div class="three-steps__background--color"></div>
-		<div class="three-steps__background--lower" style="background-image:url('<?php k1_get_image_asset_url( 'josh-calabrese-XXpbdU_31Sg-unsplash', 'jpg', 'bg-images' ); ?>');"></div>
-		<div class="three-steps__background--upper"></div>
-	</div>
+	<?php $content->get_color_background_layers( 'three-steps', 'left-top', array( 'josh-calabrese-XXpbdU_31Sg-unsplash', 'jpg' ) ); ?>
 	<div class="three-steps__content container">
 		<?php
 		if ( $with_header ) {
@@ -48,11 +44,11 @@ $content = new Content_Sections();
 			);
 			?>
 			<?php foreach ( $default_steps as $step ) : ?>
-				<div class="three-steps__steps--step-1 col-lg-4 my-5 my-lg-0">
-					<?php k1_get_svg_asset( $step['svg'] ); ?>
-					<h3 class="headline text-white text-center"><?php echo $step['headline']; ?></h3>
-					<span class="subheadline text-white text-center"><?php echo $step['subheadline']; ?></span>
-				</div>
+			<div class="three-steps__steps--step-1 col-lg-4 my-5 my-lg-0">
+				<?php k1_get_svg_asset( $step['svg'] ); ?>
+				<h3 class="headline text-white text-center"><?php echo $step['headline']; ?></h3>
+				<span class="subheadline text-white text-center"><?php echo $step['subheadline']; ?></span>
+			</div>
 			<?php endforeach; ?>
 		</div>
 		<div class="row flex-column justify-content-center align-items-center">
