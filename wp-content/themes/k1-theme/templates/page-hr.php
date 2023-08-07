@@ -108,17 +108,14 @@ get_template_part(
 		</div>
 	</div>
 </section>
-<?php get_template_part( 'template-parts/sliders/swiper', 'testimonials' ); ?>
-<section class="three-steps my-5">
-	<?php $content->get_color_background_layers( 'three-steps', 'zig-zag-left', array( 'three-steps-bg', 'webp' ) ); ?>
-	<div class="container three-steps__content position-relative z-3 py-5">
-		<div class="row text-center">
-			<div class="col d-flex justify-content-center align-items-center">
-				<h2 class="h1 headline text-white">Let's Partner Together To <br> Grow Your Ministry's Capacity!</h2>
-			</div>
-		</div>
-		<?php
-		$rows = array(
+<?php
+get_template_part( 'template-parts/sliders/swiper', 'testimonials' );
+get_template_part(
+	'template-parts/content',
+	'three-steps',
+	array(
+		'headline' => "Let's Partner Together To <br /> Grow Your Ministry's Capacity!",
+		'rows'     => array(
 			array(
 				'svg'         => 'above-reproach-lady-justice-step-1',
 				'headline'    => 'Commit to creating a safe place for <br> your people - <a>Get Above Reproach</a>.',
@@ -142,7 +139,7 @@ get_template_part(
 			array(
 				'svg'         => 'rocket-step-3',
 				'headline'    => 'Get connected. Partner with our HR <br> industry experts to amplify your work <br> at <a
-				href="https://www.kingdomone.co/get-started/">kingdomone.co/Get-Started</a>.',
+				href="/get-started/">kingdomone.co/Get-Started</a>.',
 				'subheadline' => 'Ministry is complicated. Can we get an “amen”? While industry best practices and guidance is an excellent start, the pursuit of becoming
 				courageous, healthy, and effective is nuanced. Our league of extraordinary gentlemen and women is ready to partner with you in a 1:1 capacity to assess and coach you
 				forward thoroughly.',
@@ -151,17 +148,10 @@ get_template_part(
 					'text' => 'Get Started',
 				),
 			),
-		);
-		foreach ( $rows as $row ) {
-			echo '<div class="row my-5"><div class="col-2">';
-			k1_get_svg_asset( $row['svg'] );
-			$headline    = acf_esc_html( $row['headline'] );
-			$subheadline = acf_esc_html( $row['subheadline'] );
-			echo "</div><div class='col-lg-10 d-flex flex-column'><h3 class='text-primary'>{$headline}</h3><span class='text-white subheadline d-block'>{$subheadline}</span><a href='{$row['cta']['url']}' target='_blank' rel='noopener noreferrer' class='btn__primary--fill my-5 align-self-start'>{$row['cta']['text']}</a></div></div>";
-		}
-		?>
-	</div>
-</section>
+		),
+	)
+);
+?>
 <section class="final-cta">
 	<?php $content->get_color_background_layers( 'final-cta', 'left-top', array( 'final-cta-bg', 'webp' ) ); ?>
 	<div class="container">

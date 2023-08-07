@@ -131,6 +131,43 @@ get_template_part(
 		</div>
 	</div>
 </section>
-<?php get_template_part( 'template-parts/content', 'three-steps' ); ?>
-<?php get_template_part( 'template-parts/sliders/swiper', 'brands' ); ?>
-<?php get_template_part( 'template-parts/content', 'final-cta' ); ?>
+<?php
+get_template_part(
+	'template-parts/content',
+	'three-steps',
+	array(
+		'headline'           => "Let's Partner Together To <br /> Grow Your Ministry's Capacity!",
+		'bg_image_file_name' => 'marcom-three-steps-bg',
+		'rows'               => array(
+			array(
+				'svg'         => 'marcom-assessment-step-1',
+				'headline'    => 'Take a Marketing and Communications assessment to evaluate your Marcom efforts.',
+				'subheadline' => 'This free quick assessment is the jump start to help identify where to update your marketing and comms efforts.',
+				'cta'         => array(
+					'url'  => '',
+					'text' => 'Enroll Now',
+				),
+			),
+			array(
+				'svg'         => 'icon-checklist-step-2',
+				'headline'    => 'Create a plan with Kingdom One Marcom',
+				'subheadline' => "Visit the kingdom one get started page and set up a time to meet with a ministry marketing partner and plan for your design, website, social media, and marketing for your ministry! Let's go!",
+				'cta'         => array(
+					'url'  => '',
+					'text' => 'Get Started',
+				),
+			),
+			array(
+				'svg'         => 'rocket-step-3',
+				'headline'    => 'Enjoy your new marketing framework that makes ministry marketing 100x easier.',
+				'subheadline' => 'Moving from a broken marketing system to an effective lead machine is joyful and gives you more capacity to work on the ministry you love. ♥♥♥',
+				'cta'         => array(
+					'url'  => '',
+					'text' => 'Get Started',
+				),
+			),
+		),
+	)
+);
+get_template_part( 'template-parts/sliders/swiper', 'brands' );
+get_template_part( 'template-parts/content', 'final-cta' );
