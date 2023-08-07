@@ -12,7 +12,7 @@
  * );
  */
 
- $content = new Content_Sections();
+$content = new Content_Sections();
 ?>
 <section class="core-services">
 	<div class="core-services__background">
@@ -38,14 +38,11 @@
 					echo "<li class='text-white'>{$item}</li>";
 				}
 				echo '</ul></div>';
-
 			}
 			?>
 		</div>
 		<div class="row justify-content-center">
 			<a class="pill-btn__fill--primary w-auto" href="/get-started">Get Started</a>
-			<!-- <div class="d-flex justify-content-center">
-			</div> -->
 		</div>
 	</div>
 </section>

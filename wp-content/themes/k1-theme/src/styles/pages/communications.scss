@@ -1,86 +1,135 @@
 @use '../abstracts/mixins' as m;
 @use '../abstracts/variables' as v;
-// @use '../components/front-page/quick-sell';
+@use '../components/content-sections/core-services';
+@use '../components/content-sections/three-steps';
 @use '../components/swipers/testimonials';
 @use '../components/swipers/brands';
 
-@mixin full-size {
-	height: 100%;
-	width: 100%;
-}
-
 .hero {
-	position: relative;
-	padding-bottom: 55vh;
+	padding-bottom: 8rem;
 
 	&__background {
 		@include m.background-layers;
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-
-		&--lower {
-			// background: url(../../assets/images/bg-images/marketing-bg.svg)
-			// center/cover no-repeat;
-		}
-
-		&--upper {
-			background-color: rgba(black, 0.6);
-		}
-	}
-
-	&__content {
-		transform: translateY(30%);
-	}
-
-	&__text {
-		&--headline {
-			color: white;
-		}
 	}
 }
 
-.first-cta {
+.problems {
+	svg {
+		margin-bottom: 2rem;
+	}
+}
+
+.marcom-frameworks {
 	&__background {
 		@include m.background-layers;
 
-		&--lower {
-			// background: url(../../assets/images/sellingpointsbg.png) right/cover
-			// no-repeat;
-		}
-
-		&--upper {
-			background-color: rgba(black, 0.6);
+		&--color {
+			background-color: var(--color-primary);
 		}
 	}
-
-	&__content {
-		z-index: 9;
+	#leaves-3 {
+		transform: rotate(0) scaleY(-1);
+		stroke: var(--color-primary);
 	}
 }
 
-.other-cta {
-	h2 {
-		margin-bottom: 1vh;
+.statistics {
+	svg {
+		margin-bottom: 2rem;
 	}
-	h4,
-	p {
-		margin-bottom: 3vh;
+}
+// SVGs
+
+%base_green_icons {
+	$size: 8rem;
+	height: $size;
+	width: $size;
+	.a {
+		fill: none;
+	}
+	.c {
+		fill: var(--color-primary);
 	}
 }
 
-.leaf-adjustment {
-	&--left {
-		transform: translateX(-20rem);
+%base_stat_icon {
+	.a {
+		fill: none;
+	}
+	.c {
+		fill: var(--color-grey);
+	}
+	.d,
+	.e {
+		fill: var(--color-primary);
+	}
+	.e {
+		font-size: 5rem;
+		font-family: v.$font-roie;
+	}
+}
 
-		& img {
-			transform: translateY(-5rem);
+.marcom-icon {
+	:where(&#ignored) {
+		@extend %base_green_icons;
+		.b {
+			clip-path: url(#ignored-a);
+		}
+	}
+	:where(&#last-minute-changes) {
+		@extend %base_green_icons;
+		.b {
+			clip-path: url(#last-minute-changes-a);
+		}
+	}
+	:where(&#no-guests) {
+		@extend %base_green_icons;
+		.b {
+			clip-path: url(#no-guests-a);
+		}
+	}
+	:where(&#social-media) {
+		@extend %base_green_icons;
+		.b {
+			clip-path: url(#social-media-a);
+		}
+	}
+	:where(&#unclear-communication) {
+		@extend %base_green_icons;
+		.b {
+			clip-path: url(#unclear-communication-a);
 		}
 	}
 
-	&--right {
-		transform: transformX(-20rem);
+	:where(&#stat-21) {
+		@extend %base_stat_icon;
 
-		&img {
-			transform: transformY(-15rem);
+		.b {
+			clip-path: url(#stat-21-a);
+		}
+	}
+
+	:where(&#stat-47) {
+		@extend %base_stat_icon;
+
+		.b {
+			clip-path: url(#stat-47-a);
+		}
+	}
+
+	:where(&#stat-51) {
+		@extend %base_stat_icon;
+
+		.b {
+			clip-path: url(#stat-51-a);
+		}
+	}
+
+	:where(&#stat-88) {
+		@extend %base_stat_icon;
+
+		.b {
+			clip-path: url(#stat-88-a);
 		}
 	}
 }

@@ -1,0 +1,48 @@
+#leaves-4 {
+	stroke: white;
+	.a,
+	.c {
+		fill: none;
+	}
+	.b {
+		clip-path: url(#a);
+	}
+	.c {
+		stroke: inherit;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 6px;
+	}
+}
+#leaves-3 {
+	transform: rotate(180deg);
+	stroke: white;
+	.cls-1,
+	.cls-3 {
+		fill: none;
+	}
+
+	.cls-2 {
+		clip-path: url(#clip-path);
+	}
+
+	.cls-3 {
+		stroke: inherit;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 6px;
+	}
+}
+
+#icon-healthy-growth {
+	fill: var(--color-primary);
+	.a {
+		fill: none;
+	}
+	.b {
+		clip-path: url(#icon-healthy-growth-a);
+	}
+	.c {
+		fill: inherit;
+	}
+}

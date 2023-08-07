@@ -1,5 +1,13 @@
 # Changelog
 
+## v.0.3.0
+
+- Cleaned up Marcom Page
+- Refactored and renamed template sections
+- Re-export and optimize SVGs
+- Added 'zig-zag-right' color clip path utility class
+- Rebuild 'content-three-steps' template part
+
 ## v0.2.2
 
 - Re-initialized the Pricing Page
