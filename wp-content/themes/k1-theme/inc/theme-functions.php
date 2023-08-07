@@ -1,13 +1,20 @@
-<?php
+<?php //phpcs:ignore
 /**
  * The helper functions to use
  *
  * @since 1.3
  */
 
-function k1_get_svg_asset(string $file,bool $as_image_src = false,bool $echo = true) {
-	
-	$svg = file_get_contents(get_template_directory() . '/src/assets/svgs/' . $file . '.svg');
+
+
+/** Gets SVG from `~/assets/svgs`
+ *
+ * @param string $file  the filename
+ * @param bool   $as_image_src base-encode svg or return pure svg code
+ * @param bool   $echo echo/return toggle
+ */
+function k1_get_svg_asset( string $file, bool $as_image_src = false, bool $echo = true ) {	
+	$svg = file_get_contents( get_template_directory() . '/src/assets/svgs/' . $file . '.svg' );
 	if ($as_image_src) {
 		$svg = 'data:image/svg+xml;base64,' . base64_encode($svg);
 	}

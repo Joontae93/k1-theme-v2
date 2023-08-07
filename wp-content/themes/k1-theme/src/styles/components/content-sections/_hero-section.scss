@@ -43,13 +43,11 @@
 	&__content {
 		z-index: 4;
 
-		&--leaves {
+		#leaves-3 {
 			position: absolute;
 			top: -5rem;
-			left: -10rem;
-			width: 10rem;
-			transform: rotateZ(180deg);
-			transform-origin: center;
+			left: -1rem;
+			width: 100%;
 		}
 
 		&--headline {

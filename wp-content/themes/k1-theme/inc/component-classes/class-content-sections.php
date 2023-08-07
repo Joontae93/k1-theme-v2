@@ -48,7 +48,6 @@ class Content_Sections extends Content_Components {
 		}
 	}
 
-
 	/**
 	 * Generate two-column layout with text and media
 	 *
@@ -140,7 +139,7 @@ class Content_Sections extends Content_Components {
 	 * 'subheadline_content'     => ?string the subheadline content,
 	 * ```
 	 */
-	public function vertical_card( string $image_src, string $headline, string $excerpt, bool $echo = true, array ...$args ) {
+	public function vertical_card( string $image_src, string $headline, string $excerpt, bool $echo = true, array $args = array() ) {
 		$headline_args = array(
 			'headline_class'      => 'vertical-card__title',
 			'subheadline_element' => 'p',
@@ -148,7 +147,7 @@ class Content_Sections extends Content_Components {
 			'subheadline_content' => $excerpt,
 		);
 
-		$options = array_merge( $headline_args, ...$args );
+		$options = array_merge( $headline_args, $args );
 		extract( $options );
 		$card_image        = "<figure class='vertical-card__image'><img src={$image_src} /></figure>";
 		$card_text_content = "<div class='vertical-card__content'>{$this->headline($headline, false,$options)}</div>";
@@ -158,5 +157,28 @@ class Content_Sections extends Content_Components {
 		} else {
 			return $markup;
 		}
+	}
+
+	/** Generates the background layers for slanted backgrounds
+	 *
+	 * @link `~/src/styles/abstracts/mixins` see `background-layers` & `clip-path` mixins for associated SCSS params
+	 *
+	 * @param string $class the classname to prefix the CSS BEM-style classes with
+	 * @param string $direction the direction of the clip path ( "right-bottom", "right-top", "left-bottom", "left-top", "left", "right" )
+	 * @param array  $bg_image args for `k1_get_image_asset_url( string $file, string $extension)`
+	 */
+	public function get_color_background_layers( string $class, string $direction, array $bg_image = array() ) {
+		$layers  = "<div class='{$class}__background clip-color-{$direction}'>";
+		$layers .= "<div class='{$class}__background--color'></div>";
+
+		if ( empty( $bg_image ) ) {
+			$layers .= "<div class='{$class}__background--lower'></div>";
+		} else {
+			$url     = k1_get_image_asset_url( $bg_image[0], $bg_image[1], 'bg-images', false );
+			$layers .= "<div class='{$class}__background--lower'" . 'style="background-image:url(' . "'{$url}'" . ')"></div>';
+			$layers .= "<div class='{$class}__background--upper'></div>";
+		}
+		$layers .= '</div>';
+		echo $layers;
 	}
 }

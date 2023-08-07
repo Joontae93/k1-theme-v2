@@ -1,21 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="147.637" height="185.88" viewBox="0 0 147.637 185.88">
+<svg xmlns="http://www.w3.org/2000/svg" id='leaves-3' viewBox="0 0 147.637 185.88">
   <defs>
-    <style>
-      .cls-1, .cls-3 {
-        fill: none;
-      }
-
-      .cls-2 {
-        clip-path: url(#clip-path);
-      }
-
-      .cls-3 {
-        stroke: #fff;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 6px;
-      }
-    </style>
     <clipPath id="clip-path">
       <rect id="Rectangle_168" data-name="Rectangle 168" class="cls-1" width="147.637" height="185.88"/>
     </clipPath>

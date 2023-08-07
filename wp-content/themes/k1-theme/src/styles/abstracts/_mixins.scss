@@ -35,16 +35,21 @@
 	left: 0;
 }
 
-@mixin background-layers($color: black, $opacity: 0.35) {
+@mixin background-layers($color: black, $opacity: 0.35, $has-overlay: true) {
 	@include absolute_100;
 
 	&--color {
 		@include absolute_100;
 		z-index: 1;
 	}
+
 	&--lower {
 		@include absolute_100;
-		z-index: 1;
+		@if ($has-overlay) {
+			z-index: 1;
+		} @else {
+			z-index: 2;
+		}
 	}
 
 	&--upper {

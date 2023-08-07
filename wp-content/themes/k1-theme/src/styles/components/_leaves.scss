@@ -13,3 +13,21 @@
 		stroke-width: 6px;
 	}
 }
+#leaves-3 {
+	transform: rotate(180deg);
+	.cls-1,
+	.cls-3 {
+		fill: none;
+	}
+
+	.cls-2 {
+		clip-path: url(#clip-path);
+	}
+
+	.cls-3 {
+		stroke: inherit;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 6px;
+	}
+}
