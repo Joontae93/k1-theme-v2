@@ -1,0 +1,107 @@
+@use '../../abstracts/mixins' as m;
+.threesteps {
+	&__background {
+		@include m.background-layers(#4b4b4b, 0.9);
+
+		&--color {
+			background-color: var(--color-primary);
+		}
+
+		&--lower {
+			background-size: cover;
+			background-position: center;
+		}
+	}
+
+	&__content {
+	}
+}
+
+.threesteps-svg {
+	:where(&#lady-justice) {
+		.a {
+			fill: #fff;
+			stroke: #fff;
+			stroke-width: 2px;
+		}
+		.b {
+			clip-path: url(#a);
+		}
+	}
+
+	:where(&#lady-justice-step-1) {
+		.a,
+		.c {
+			fill: #fff;
+		}
+		.a {
+			stroke: #fff;
+			stroke-width: 2px;
+		}
+		.b {
+			clip-path: url(#a);
+		}
+		.d {
+			fill: #00644b;
+			font-size: 33px;
+			font-family: Poppins-Bold, Poppins;
+			font-weight: 700;
+		}
+		.e {
+			filter: url(#b);
+		}
+	}
+
+	:where(&#hr-inventory) {
+		.a {
+			fill: #fff;
+		}
+		.b {
+			clip-path: url(#a);
+		}
+	}
+
+	:where(&#hr-inventory-step-2) {
+		.a {
+			fill: #fff;
+		}
+		.b {
+			fill: #00644b;
+			font-size: 33px;
+			font-family: Poppins-Bold, Poppins;
+			font-weight: 700;
+		}
+		.c {
+			clip-path: url(#c);
+		}
+		.d {
+			filter: url(#a);
+		}
+	}
+
+	:where(&#rocket) {
+		.a {
+			fill: #fff;
+		}
+		.b {
+			clip-path: url(#a);
+		}
+	}
+	:where(&#rocket-step-3) {
+		.a {
+			fill: #fff;
+		}
+		.b {
+			clip-path: url(#a);
+		}
+		.c {
+			fill: #00644b;
+			font-size: 33px;
+			font-family: Poppins-Bold, Poppins;
+			font-weight: 700;
+		}
+		.d {
+			filter: url(#b);
+		}
+	}
+}

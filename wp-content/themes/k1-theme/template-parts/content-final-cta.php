@@ -1,6 +1,8 @@
 <?php
 /**
  * Final CTA Template Part
+ *
+ * $args = array()
  */
 
 $content = new Content_Sections();
@@ -17,7 +19,7 @@ $content = new Content_Sections();
 				<span class="subheadline white-stroke my-5 d-block">GET STARTED TODAY</span>
 				<p class="text-white">Getting help is a sign of strength and courage. It helps avoid <br> the heartache of burnout, resignation, and failure. Here's to a brighter
 					ministry future where you are supported, equipped. and encouraged to grow. </p>
-				<a class="btn__primary--fill mt-5" href="/get-started">Get Started</a>
+				<?php $content->cta_button(); ?>
 			</div>
 		</div>
 	</div>

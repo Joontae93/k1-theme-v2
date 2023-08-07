@@ -1,97 +1,28 @@
 @use '../abstracts/mixins' as m;
 @use '../abstracts/variables' as v;
-// @use '../components/front-page/quick-sell';
 @use '../components/swipers/testimonials';
 @use '../components/content-sections/core-services';
+@use '../components/content-sections/threesteps';
+@use '../components/equipment';
 
-@mixin full-size {
-	height: 100%;
-	width: 100%;
+.hero {
+	&__content {
+		&--subheadline {
+			font-size: 2.5rem;
+			line-height: 1.8;
+		}
+	}
 }
 
 .costs {
-	> .container {
-		margin-left: -2vh !important;
+	&__image {
+		aspect-ratio: 4 / 3;
 
-		> .row > .col-6 > h2 {
-			margin-top: 5vh;
-			margin-bottom: 5vh;
+		&--image {
+			object-fit: contain;
 		}
 	}
-
-	&__content {
-		padding-left: 5vw;
-	}
-}
-
-.problems {
-	&__background {
+	.clip-color-right {
 		@include m.background-layers;
-
-		// &--lower {
-		// 	background: url(../../assets/images/bg-images/problems-bg.jpg)
-		// 		center/cover no-repeat;
-		// }
-
-		&--upper {
-			background-color: rgba(black, 0.6);
-		}
-	}
-
-	&__content {
-		z-index: 9;
-
-		> div > div > h3 {
-			margin-top: 3vh;
-		}
-	}
-}
-
-.testimonials {
-	margin-top: 5vh;
-	margin-bottom: 10vh;
-}
-
-.threesteps {
-	position: relative;
-	padding-bottom: 4rem;
-
-	&__background {
-		@include m.background-layers;
-
-		// &--lower {
-		// 	background: url(../../assets/images/bg-images/valuesbg.png) center/cover
-		// 		no-repeat;
-		// }
-
-		&--upper {
-			background-color: rgba(#4b4b4b, 0.9);
-		}
-	}
-
-	&__content {
-		z-index: 400;
-
-		> div.row {
-			margin-bottom: 10vh !important;
-		}
-	}
-}
-
-.leaf-adjustment {
-	&--left {
-		transform: translateX(-20rem);
-
-		& img {
-			transform: translateY(-5rem);
-		}
-	}
-
-	&--right {
-		transform: transformX(-20rem);
-
-		&img {
-			transform: transformY(-15rem);
-		}
 	}
 }

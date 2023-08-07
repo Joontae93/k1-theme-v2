@@ -9,14 +9,20 @@ $font-body: $font-poppins;
 /* //////////
 // CLIP PATHS
 /////////// */
-$lift-left-bottom: polygon(0 0, 100% 0, 100% 100%, 0% 90%);
-$lift-right-bottom: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+$height: 5%;
+$drop: calc(0% + $height);
+$lift: calc(100% - $height);
+$lift-left-bottom: polygon(0 0, 100% 0, 100% 100%, 0% $lift);
+$lift-right-bottom: polygon(0 0, 100% 0, 100% $lift, 0% 100%);
 
-$drop-left-top: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-$drop-right-top: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+$drop-left-top: polygon(0 $drop, 100% 0, 100% 100%, 0 100%);
+$drop-right-top: polygon(0 0, 100% $drop, 100% 100%, 0 100%);
 
-$drop-left: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
-$drop-right: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+$drop-left: polygon(0 $drop, 100% 0, 100% 100%, 0 $lift);
+$drop-right: polygon(0 0, 100% $drop, 100% $lift, 0 100%);
+
+$zig-color-left: polygon(0 $drop, 100% 0, 100% $lift, 0 100%);
+$zag-color-right: polygon(0 0, 100% $drop, 100% 100%, 0 $lift);
 
 /* //////////
 // COLORS

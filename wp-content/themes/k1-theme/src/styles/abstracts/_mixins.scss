@@ -38,12 +38,12 @@
 @mixin background-layers($color: black, $opacity: 0.35, $has-overlay: true) {
 	@include absolute_100;
 
-	&--color {
+	& > :nth-child(1) {
 		@include absolute_100;
 		z-index: 1;
 	}
 
-	&--lower {
+	& > :nth-child(2) {
 		@include absolute_100;
 		@if ($has-overlay) {
 			z-index: 1;
@@ -52,7 +52,7 @@
 		}
 	}
 
-	&--upper {
+	& > :nth-child(3) {
 		@include absolute_100;
 		background-color: rgba($color, $opacity);
 		z-index: 2;
@@ -154,6 +154,22 @@
 		@if ($has-overlay) {
 			& > :nth-child(3) {
 				clip-path: v.$drop-right;
+			}
+		}
+	}
+
+	@if ('zig-zag-left' == $direction) {
+		& > :nth-child(1) {
+			clip-path: v.$zag-color-right;
+		}
+
+		& > :nth-child(2) {
+			clip-path: v.$zig-color-left;
+		}
+
+		@if ($has-overlay) {
+			& > :nth-child(3) {
+				clip-path: v.$zig-color-left;
 			}
 		}
 	}

@@ -43,3 +43,7 @@
 .clip-color-left-top {
 	@include m.clip-path('left-top');
 }
+
+.clip-color-zig-zag-left {
+	@include m.clip-path('zig-zag-left');
+}
