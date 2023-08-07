@@ -1,7 +1,8 @@
 @use '../abstracts/mixins' as m;
 @use '../abstracts/variables' as v;
 
-%section_padding {
+%section_style {
+	position: relative;
 	padding: 6.5rem 0;
 }
 
@@ -9,12 +10,12 @@ section {
 	position: relative;
 
 	&:where(:not(.hero)) {
-		@extend %section_padding;
+		@extend %section_style;
 	}
 }
 
 aside {
-	@extend %section_padding;
+	@extend %section_style;
 }
 
 figure {

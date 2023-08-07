@@ -109,9 +109,9 @@ get_template_part(
 	</div>
 </section>
 <?php get_template_part( 'template-parts/sliders/swiper', 'testimonials' ); ?>
-<section class="threesteps my-5">
-	<?php $content->get_color_background_layers( 'threesteps', 'zig-zag-left', array( 'three-steps-bg', 'webp' ) ); ?>
-	<div class="container threesteps__content position-relative z-3 py-5">
+<section class="three-steps my-5">
+	<?php $content->get_color_background_layers( 'three-steps', 'zig-zag-left', array( 'three-steps-bg', 'webp' ) ); ?>
+	<div class="container three-steps__content position-relative z-3 py-5">
 		<div class="row text-center">
 			<div class="col d-flex justify-content-center align-items-center">
 				<h2 class="h1 headline text-white">Let's Partner Together To <br> Grow Your Ministry's Capacity!</h2>
@@ -160,8 +160,6 @@ get_template_part(
 			echo "</div><div class='col-lg-10 d-flex flex-column'><h3 class='text-primary'>{$headline}</h3><span class='text-white subheadline d-block'>{$subheadline}</span><a href='{$row['cta']['url']}' target='_blank' rel='noopener noreferrer' class='btn__primary--fill my-5 align-self-start'>{$row['cta']['text']}</a></div></div>";
 		}
 		?>
-
-
 	</div>
 </section>
 <section class="final-cta">

@@ -47,3 +47,7 @@
 .clip-color-zig-zag-left {
 	@include m.clip-path('zig-zag-left');
 }
+
+.clip-color-zig-zag-right {
+	@include m.clip-path('zig-zag-right');
+}
