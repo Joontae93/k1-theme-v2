@@ -1,70 +1,77 @@
 @use '../abstracts/mixins' as m;
 @use '../abstracts/variables' as v;
-// @use '../components/front-page/quick-sell';
 
-@mixin full-size {
-	height: 100%;
-	width: 100%;
-}
+.talent-description {
+	#leaves-3 {
+		stroke: var(--color-primary);
+	}
 
-.talent-description li {
-	margin-bottom: 5rem;
-
-	&::marker {
-		color: v.$color-primary;
+	li::marker {
+		color: var(--color-primary);
 		font-size: 1.4em;
+	}
+
+	.row:nth-child(2) {
+		svg {
+			width: 100%;
+			object-fit: contain;
+			height: 50rem;
+		}
 	}
 }
 
 .services-calculator {
-	background-color: #2e3636;
-	margin-bottom: 10rem;
-
 	&__background {
-		@include m.background-layers;
+		@include m.background-layers($has-overlay: false);
+
+		&--color {
+			background-color: var(--color-grey--light);
+		}
 
 		&--lower {
-			background-color: #707070;
-			clip-path: polygon(0 20%, 100% 0, 100% 100%, 100% 100%, 0 80%);
+			background-color: var(--color-primary--darkest);
 		}
+	}
 
-		&--upper {
-			background-color: #2e3636;
-			clip-path: polygon(0 0, 100% 20%, 100% 80%, 80% 100%, 0 100%);
-		}
+	%content_base {
+		position: relative;
+		z-index: 2;
 	}
 
 	&__content {
-		transform: translateY(20%);
-	}
+		@extend %content_base;
 
-	&__text {
-		&--headline {
-			color: white;
+		&--headline-container {
+			#leaves-3 {
+				display: none;
+
+				@include m.media-breakpoint-up(md) {
+					transform: rotate(220deg) scaleX(-1);
+					display: block;
+					stroke: white;
+					width: 10rem;
+					position: absolute;
+					top: 0;
+					left: 60%;
+				}
+
+				@include m.media-breakpoint-up(lg) {
+					left: 80%;
+				}
+
+				@include m.media-breakpoint-up(xl) {
+					left: 70%;
+				}
+			}
 		}
+	}
+	&__calculator {
+		@extend %content_base;
 	}
 }
 
 .our-services {
-	& h2 {
-		margin-bottom: -5rem;
-	}
-}
-
-.leaf-adjustment {
-	&--left {
-		transform: translateX(-20rem);
-
-		& img {
-			transform: translateY(-5rem);
-		}
-	}
-
-	&--right {
-		transform: translateX(-20rem);
-
-		& img {
-			transform: translateY(-15rem);
-		}
+	#leaves-3 {
+		stroke: var(--color-primary);
 	}
 }

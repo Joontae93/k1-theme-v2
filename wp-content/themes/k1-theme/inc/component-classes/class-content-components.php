@@ -22,7 +22,7 @@ class Content_Components {
 	 * 'subheadline_content'     => ?string the subheadline content,
 	 * ```
 	 */
-	public function headline( string $headline, bool $echo = true, array ...$args ) {
+	public function headline( string $headline, bool $echo = true, array $args = array() ) {
 		$default = array(
 			'headline_element'    => 'h2',
 			'headline_class'      => 'headline',
@@ -31,7 +31,7 @@ class Content_Components {
 			'subheadline_content' => '',
 		);
 
-		$options = array_merge( $default, ...$args );
+		$options = array_merge( $default, $args );
 		extract( $options );
 		$headline            = esc_textarea( $headline );
 		$markup              = "<{$headline_element} class='{$headline_class}'>{$headline}</{$headline_element}>";
@@ -123,9 +123,7 @@ class Content_Components {
 
 	/** Gets the content layer of the Hero Section */
 	protected function get_hero_content( string $headine, string $subheadline, bool $has_cta, array $cta_options = array() ) : string {
-		$leaves  = k1_get_image_asset_url( 'three-leaves', 'svg', 'leaves', false );
-		$markup  = "<div class='hero__content container d-flex align-items-stretch'><div class='row'><div class='position-relative d-flex flex-column'>
-				<img src='{$leaves}' class='hero__content--leaves' />";
+		$markup  = "<div class='hero__content container d-flex align-items-stretch'><div class='row'><div class='col-1 align-self-start h-auto position-relative d-none d-md-block'>" . k1_get_svg_asset( 'leaves-3', false, false ) . "</div><div class='position-relative d-flex flex-column col-11'>";
 		$markup .= $this->headline(
 			$headine,
 			false,

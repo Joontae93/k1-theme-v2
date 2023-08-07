@@ -64,6 +64,7 @@ a.btn {
 			background-color: v.$color-primary;
 		}
 	}
+
 	&__outline {
 		&--white {
 			@extend %pill-btn;
