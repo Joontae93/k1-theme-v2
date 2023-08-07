@@ -1,6 +1,7 @@
 <?php
 /**
- * Content Section: Final CTA
+ * Content Section: Equipment
+ * Description: 3 column icon + text for Resources, Tools and Talents
  *
  * $args = array(
  * 'with_header' => boolean,
@@ -14,37 +15,37 @@
 extract( $args );
 $content = new Content_Sections();
 ?>
-<section class="three-steps">
-	<?php $content->get_color_background_layers( 'three-steps', 'left-top', array( 'josh-calabrese-XXpbdU_31Sg-unsplash', 'jpg' ) ); ?>
-	<div class="three-steps__content container">
+<section class="equipment">
+	<?php $content->get_color_background_layers( 'equipment', 'zig-zag-left', array( 'josh-calabrese-XXpbdU_31Sg-unsplash', 'jpg' ) ); ?>
+	<div class="equipment__content container">
 		<?php
 		if ( $with_header ) {
 			extract( $header_args );
 			echo "<h2 class='headline text-white mt-5'>{$headline}</h2><p class='subheadline text-white my-5'>{$subheadline}</p>";
 		}
 		?>
-		<div class="three-steps__steps row justify-content-around">
+		<div class="equipment__steps row justify-content-around">
 			<?php
 			$default_steps = array(
 				array(
-					'svg'         => 'three-steps-icon-step-1',
+					'svg'         => 'equipment-icon-step-1',
 					'headline'    => 'Grab Some Free Resources',
 					'subheadline' => 'Get to know us with free tools, education and resources',
 				),
 				array(
-					'svg'         => 'three-steps-icon-step-2',
+					'svg'         => 'equipment-icon-step-2',
 					'headline'    => 'Grab Tools &amp; Courses',
 					'subheadline' => 'Grab a tool or course to sharpen your expertise',
 				),
 				array(
-					'svg'         => 'three-steps-icon-step-3',
+					'svg'         => 'equipment-icon-step-3',
 					'headline'    => 'Grab Some Talents',
 					'subheadline' => 'Grab some talents to help get the work done',
 				),
 			);
 			?>
 			<?php foreach ( $default_steps as $step ) : ?>
-			<div class="three-steps__steps--step-1 col-lg-4 my-5 my-lg-0">
+			<div class="equipment__steps--step-1 col-lg-4 my-5 my-lg-0">
 				<?php k1_get_svg_asset( $step['svg'] ); ?>
 				<h3 class="headline text-white text-center"><?php echo $step['headline']; ?></h3>
 				<span class="subheadline text-white text-center"><?php echo $step['subheadline']; ?></span>

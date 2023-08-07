@@ -164,7 +164,7 @@ class Content_Sections extends Content_Components {
 	 * @link `~/src/styles/abstracts/mixins` see `background-layers` & `clip-path` mixins for associated SCSS params
 	 *
 	 * @param string $class the classname to prefix the CSS BEM-style classes with
-	 * @param string $direction the direction of the clip path ( "right-bottom", "right-top", "left-bottom", "left-top", "left", "right" )
+	 * @param string $direction the direction of the clip path ( "right-bottom", "right-top", "left-bottom", "left-top", "left", "right", "zig-zag-left" )
 	 * @param array  $bg_image args for `k1_get_image_asset_url( string $file, string $extension)`
 	 */
 	public function get_color_background_layers( string $class, string $direction, array $bg_image = array() ) {
