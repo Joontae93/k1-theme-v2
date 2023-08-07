@@ -42,11 +42,7 @@ get_header(); ?>
 		</div>
 	</aside>
 	<section class="stakes">
-		<div class="stakes__background clip-color-left">
-			<div class="stakes__background--color"></div>
-			<div class="stakes__background--lower" style="background-image:url('<?php k1_get_image_asset_url( 'k1-retreat-01', 'png', 'bg-images' ); ?>');"></div>
-			<div class="stakes__background--upper"></div>
-		</div>
+		<?php $content->get_color_background_layers( 'stakes', 'left', array( 'k1-retreat-01', 'png' ) ); ?>
 		<div class="stakes__content py-5">
 			<div class="container">
 				<div class="row mb-5">
@@ -162,7 +158,6 @@ get_header(); ?>
 			</div>
 		</div>
 	</aside>
-
 	<?php
 	get_template_part( 'template-parts/sliders/swiper', 'testimonials' );
 	get_template_part( 'template-parts/sliders/swiper', 'brands' );
@@ -179,5 +174,4 @@ get_header(); ?>
 	);
 	?>
 </main>
-
 <?php get_footer(); ?>
