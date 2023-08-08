@@ -7,7 +7,7 @@ $content = new Content_Components();
 	<div class="row align-items-stretch">
 		<div class="col col-lg-6">
 			<div class="swiper" id="stakes">
-				<div class="swiper-stakes-pagination"></div>
+				<div class="swiper-pagination swiper-stakes-pagination"></div>
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<h3 class="headline w-75">Our Relationship First Approach Provides:</h3>
