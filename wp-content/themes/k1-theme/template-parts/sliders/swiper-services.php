@@ -1,60 +1,112 @@
-<div class="swiper text-center" id="services-swiper">
-	<div class="swiper-wrapper d-flex justify-content-center">
-		<div class="swiper-slide">
-			<img src="<?php k1_get_image_asset_url( 'hr', 'png', 'logos' ); ?>">
-			<h3 class="text-primary">HUMAN RESOURCES</h3>
-			<p>blurb blurb blurb</p>
-			<a class="pill-btn__fill--primary" href="#">LEARN MORE</a>
+<?php
+/**
+ * Services Swiper (as seen on /communications)
+ */
+
+$slides = array(
+	array(
+		'svg'         => 'hr',
+		'headline'    => 'Human Resources',
+		'subheadline' => 'blurb blurb blurb',
+		'cta'         => array(
+			'url'         => '#',
+			'text'        => 'Learn More',
+			'is_external' => false,
+		),
+	),
+	array(
+		'svg'         => 'staffing',
+		'headline'    => 'Staffing',
+		'subheadline' => 'blurb blurb blurb',
+		'cta'         => array(
+			'url'         => '#',
+			'text'        => 'Learn More',
+			'is_external' => false,
+		),
+	),
+	array(
+		'svg'         => 'finance',
+		'headline'    => 'Finance',
+		'subheadline' => 'blurb blurb blurb',
+		'cta'         => array(
+			'url'         => '#',
+			'text'        => 'Learn More',
+			'is_external' => false,
+		),
+	),
+	array(
+		'svg'         => 'marcom',
+		'headline'    => 'Communications',
+		'subheadline' => 'blurb blurb blurb',
+		'cta'         => array(
+			'url'         => '#',
+			'text'        => 'Learn More',
+			'is_external' => false,
+		),
+	),
+	array(
+		'svg'         => 'worship',
+		'headline'    => 'Worship',
+		'subheadline' => 'blurb blurb blurb',
+		'cta'         => array(
+			'url'         => '#',
+			'text'        => 'Learn More',
+			'is_external' => false,
+		),
+	),
+	array(
+		'svg'         => 'online',
+		'headline'    => 'Web Development',
+		'subheadline' => 'blurb blurb blurb',
+		'cta'         => array(
+			'url'         => '#',
+			'text'        => 'Learn More',
+			'is_external' => false,
+		),
+	),
+	array(
+		'svg'         => 'video',
+		'headline'    => 'video',
+		'subheadline' => 'blurb blurb blurb',
+		'cta'         => array(
+			'url'         => '#',
+			'text'        => 'Learn More',
+			'is_external' => false,
+		),
+	),
+	array(
+		'svg'         => 'it',
+		'headline'    => 'I.T.',
+		'subheadline' => 'blurb blurb blurb',
+		'cta'         => array(
+			'url'         => '#',
+			'text'        => 'Learn More',
+			'is_external' => false,
+		),
+	),
+);
+?>
+<div class="swiper" id="services-swiper">
+	<div class="swiper-wrapper">
+		<?php foreach ( $slides as $slide ) : ?>
+		<div class="swiper-slide d-flex flex-column align-items-center">
+			<?php k1_get_svg_asset( 'services-icon-' . $slide['svg'] ); ?>
+			<h3 class="headline text-primary text-uppercase text-center my-3">
+				<?php echo $slide['headline']; ?>
+			</h3>
+			<p class="text-lg-center mb-5">
+				<?php echo $slide['subheadline']; ?>
+			</p>
+			<?php
+			$has_cta = ! empty( $slide['cta']['url'] );
+			if ( $has_cta ) {
+				extract( $slide['cta'] );
+				echo "<a href='{$url}' class='btn__primary--fill mt-auto'" . ( $is_external ? "target='_blank' rel='noopener noreferrer'>" : '>' ) . "{$text}</a>";
+			}
+			?>
 		</div>
-		<div class="swiper-slide">
-			<img src="<?php k1_get_image_asset_url( 'staffing', 'png', 'logos' ); ?>">
-			<h3 class="text-primary">STAFFING</h3>
-			<p>blurb blurb blurb</p>
-			<a class="pill-btn__fill--primary" href="#">LEARN MORE</a>
-		</div>
-		<div class="swiper-slide">
-			<img src="<?php k1_get_image_asset_url( 'finance', 'png', 'logos' ); ?>">
-			<h3 class="text-primary">FINANCE</h3>
-			<p>blurb blurb blurb</p>
-			<a class="pill-btn__fill--primary" href="#">LEARN MORE</a>
-		</div>
-		<div class="swiper-slide">
-			<img src="<?php k1_get_image_asset_url( 'communications', 'png', 'logos' ); ?>">
-			<h3 class="text-primary">COMMUNICATIONS</h3>
-			<p>blurb blurb blurb</p>
-			<a class="pill-btn__fill--primary" href="#">LEARN MORE</a>
-		</div>
-		<div class="swiper-slide">
-			<img src="<?php k1_get_image_asset_url( 'worship', 'png', 'logos' ); ?>">
-			<h3 class="text-primary">WORSHIP</h3>
-			<p>blurb blurb blurb</p>
-			<a class="pill-btn__fill--primary" href="#">LEARN MORE</a>
-		</div>
-		<div class="swiper-slide">
-			<img src="<?php k1_get_image_asset_url( 'video', 'png', 'logos' ); ?>">
-			<h3 class="text-primary">VIDEO</h3>
-			<p>blurb blurb blurb</p>
-			<a class="pill-btn__fill--primary" href="#">LEARN MORE</a>
-		</div>
-		<div class="swiper-slide">
-			<img src="<?php k1_get_image_asset_url( 'web', 'png', 'logos' ); ?>">
-			<h3 class="text-primary">WEB DEVELOPMENT</h3>
-			<p>blurb blurb blurb</p>
-			<a class="pill-btn__fill--primary" href="#">LEARN MORE</a>
-		</div>
-		<div class="swiper-slide">
-			<img src="<?php k1_get_image_asset_url( 'i.t', 'png', 'logos' ); ?>">
-			<h3 class="text-primary">I.T</h3>
-			<p>blurb blurb blurb</p>
-			<a class="pill-btn__fill--primary" href="#">LEARN MORE</a>
-		</div>
-		<div class="swiper-slide">
-			<img src="<?php k1_get_image_asset_url( 'worship', 'png', 'logos' ); ?>">
-			<h3 class="text-primary">RANDOM</h3>
-			<p>blurb blurb blurb</p>
-			<a class="pill-btn__fill--primary" href="#">LEARN MORE</a>
-		</div>
+		<?php endforeach; ?>
 	</div>
-	<div class="swiper-button-prev"></div>
-	<div class="swiper-button-next"></div>
+	<div class="swiper-button-services-prev swiper-button-prev"></div>
+	<div class="swiper-button-services-next swiper-button-next"></div>
 </div>
