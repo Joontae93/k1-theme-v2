@@ -1,0 +1,84 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+@use '../components/front-page/quick-sell';
+@use '../components/swiper';
+
+@mixin full-size {
+  height: 100%;
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  padding-bottom: 55vh;
+
+  &__background {
+    @include m.background-layers;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 80%, 0 100%);
+
+    &--lower {
+      background: url(../../assets/images/bg-images/getstarted--hero.jpg) center/cover no-repeat;
+    }
+
+    &--upper {
+      background-color: rgba(black, 0.6);
+    }
+  }
+
+  &__content {
+    transform: translateY(60%);
+  }
+
+  &__text {
+    &--headline {
+      color: white;
+    }
+  }
+}
+
+.quotes {
+    background-color: #00644B;
+}
+
+.problems {
+    position: relative;
+    padding-bottom: 25vh;
+  
+    &__background {
+      @include m.background-layers;
+  
+      &--lower {
+        background: url(/src/assets/images/bg-images/problems-bg.jpg) center/cover no-repeat;
+      }
+
+      &--upper {
+        background-color: rgba(black, 0.7);
+      }
+    }
+
+    &__content {
+        z-index: 2;
+    }
+  }
+
+.first-section {
+  background: url(/src/assets/images/bg-images/green-bg.png);
+}
+
+.leaf-adjustment {
+  &--left {
+    transform: translateX(-20rem);
+
+    & img {
+      transform: translateY(-5rem);
+    }
+  }
+
+  &--right {
+    transform: translateX(-20rem);
+
+    & img {
+      transform: translateY(-15rem);
+    }
+  }
+}
