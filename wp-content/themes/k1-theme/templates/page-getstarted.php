@@ -18,34 +18,35 @@ k1_enqueue_page_assets( 'getstarted' );
 		</section>
 
         <aside class="quotes row">
+		<?php $content->get_color_background_layers( 'quotes', 'zig-zag-right', array( 'k1-retreat-01', 'webp' ) ); ?>
             <div class="swiper text-center" id="quotes-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="/src/assets/images/quoteimg.png"><br><br>
+                        <img src="<?php k1_get_image_asset_url('quoteimg', 'png')?>"><br><br>
                         <p class="text-white">this is the place where an awesome quote from someone that we have been able to serve would go.</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="/src/assets/images/quoteimg.png"><br><br>
+                        <img src="<?php k1_get_image_asset_url('quoteimg', 'png')?>"><br><br>
                         <p class="text-white">blurb testing blurb</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="/src/assets/images/quoteimg.png"><br><br>
+                        <img src="<?php k1_get_image_asset_url('quoteimg', 'png')?>"><br><br>
                         <p class="text-white">blurb blurb testing</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="/src/assets/images/quoteimg.png"><br><br>
+                        <img src="<?php k1_get_image_asset_url('quoteimg', 'png')?>"><br><br>
                         <p class="text-white">blurb blurb testing</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="/src/assets/images/quoteimg.png"><br><br>
+                        <img src="<?php k1_get_image_asset_url('quoteimg', 'png')?>"><br><br>
                         <p class="text-white">blurb blurb testing</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="/src/assets/images/quoteimg.png"><br><br>
+                        <img src="<?php k1_get_image_asset_url('quoteimg', 'png')?>"><br><br>
                         <p class="text-white">blurb blurb testing</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="/src/assets/images/quoteimg.png"><br><br>
+                        <img src="<?php k1_get_image_asset_url('quoteimg', 'png')?>"><br><br>
                         <p class="text-white">blurb blurb testing</p>
                     </div>
                 </div>
@@ -63,6 +64,7 @@ k1_enqueue_page_assets( 'getstarted' );
 			</div>
 		</section>
         <section class="problems">
+		<?php $content->get_color_background_layers( 'problems', 'left-top', array( 'final-cta-bg', 'webp' ) ); ?>
             <div class="problems__background">
 				<div class="problems__background--lower"></div>
 				<div class="problems__background--upper"></div>
@@ -80,17 +82,17 @@ k1_enqueue_page_assets( 'getstarted' );
 				</div>
 				<div class="row my-5">
 					<div class="col-lg-4">
-						<img src="./assets/images/resources.svg"><br><br>
+						<img src="<?php k1_get_image_asset_url('resources', 'svg')?>"><br><br>
 						<h3 class="text-white">Grab Some Free <br> Resources</h3><br>
 						<p class="text-white">Get to know us with free tools, <br> education, and resources</p>
 					</div>
 					<div class="col-lg-4">
-						<img src="./assets/images/tools.svg"><br><br>
+						<img src="<?php k1_get_image_asset_url('tools', 'svg')?>"><br><br>
 						<h3 class="text-white">Grab Tools & <br> Courses</h3><br>
 						<p class="text-white">Grab a tool or course to <br> sharpen your expertise</p>
 					</div>
 					<div class="col-lg-4">
-						<img src="./assets/images/talents.svg"><br><br>
+						<img src="<?php k1_get_image_asset_url('talents', 'svg')?>"><br><br>
 						<h3 class="text-white">Grab Some <br> Talents</h3><br>
 						<p class="text-white">Grab some talents to help get <br> the work done</p>
 					</div>
