@@ -1,0 +1,113 @@
+@use '../../abstracts/mixins' as m;
+
+.ways-to-give {
+	%leaves {
+		--size: 8rem;
+		width: var(--size);
+		height: var(--size);
+		position: absolute;
+		top: 0;
+	}
+	%leaves--left {
+		@extend %leaves;
+		@include m.media-breakpoint-up(xxl) {
+			left: -5rem;
+		}
+	}
+	%leaves--right {
+		@extend %leaves;
+	}
+	#leaves-2 {
+		@extend %leaves--left;
+		stroke: white;
+		transform: scale(-1);
+	}
+	#leaves-3 {
+		@extend %leaves--right;
+	}
+	#leaves-4 {
+		@extend %leaves--left;
+	}
+}
+
+.ways-to-give-icon {
+	:where(&#step-1) {
+		.a {
+			fill: none;
+		}
+		.b {
+			fill: #dbdbdb;
+		}
+		.c {
+			clip-path: url(#step-1-a);
+		}
+		.d {
+			fill: #00ae83;
+		}
+		.e {
+			fill: #fff;
+		}
+		.f {
+			fill: #00644b;
+			font-size: 33px;
+			font-family: Poppins-Bold, Poppins;
+			font-weight: 700;
+		}
+		.g {
+			filter: url(#step-1-b);
+		}
+	}
+
+	:where(&#step-2) {
+		.a {
+			fill: none;
+		}
+		.b {
+			fill: #dbdbdb;
+		}
+		.c {
+			clip-path: url(#step-2-a);
+		}
+		.d {
+			fill: #00ae83;
+		}
+		.e {
+			fill: #fff;
+		}
+		.f {
+			fill: #00644b;
+			font-size: 33px;
+			font-family: Poppins-Bold, Poppins;
+			font-weight: 700;
+		}
+		.g {
+			filter: url(#step-2-b);
+		}
+	}
+	:where(&#step-3) {
+		.a {
+			fill: none;
+		}
+		.b {
+			fill: #dbdbdb;
+		}
+		.c {
+			clip-path: url(#step-3-a);
+		}
+		.d {
+			fill: #00ae83;
+		}
+		.e {
+			fill: #fff;
+		}
+		.f {
+			fill: #00644b;
+			font-size: 33px;
+			font-family: Poppins-Bold, Poppins;
+			font-weight: 700;
+		}
+		.g {
+			filter: url(#step-3-b);
+		}
+	}
+}
