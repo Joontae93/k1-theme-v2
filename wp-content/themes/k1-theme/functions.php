@@ -7,7 +7,7 @@
  */
 
 // Load Required Files
-require_once get_template_directory() . '/inc/class-theme-init.php';
+require_once get_template_directory() . '/inc/theme/class-theme-init.php';
 
 // Init Theme
 $k1_theme = new Theme_Init();

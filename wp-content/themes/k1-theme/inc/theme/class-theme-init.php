@@ -11,9 +11,9 @@ class Theme_Init extends K1_Theme_Cleaner {
 
 	/** Loads required files */
 	private function load_files() {
-		require_once get_template_directory() . '/inc/component-classes/class-content-sections.php';
-		require_once get_template_directory() . '/inc/class-k1-nav-walker.php';
-		require_once get_template_directory() . '/inc/theme-functions.php';
+		require_once dirname( __FILE__, 2 ) . '/component-classes/class-content-sections.php';
+		require_once dirname( __FILE__ ) . '/class-k1-nav-walker.php';
+		require_once dirname( __FILE__ ) . '/theme-functions.php';
 	}
 
 	/**
