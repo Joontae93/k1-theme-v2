@@ -8,6 +8,7 @@
 
 require_once get_template_directory() . '/inc/component-classes/class-content-components.php';
 class Content_Sections extends Content_Components {
+
 	/**
 	 * Gets the Hero `<section>` with class 'hero'. Optional Background Image or color.
 	 *
@@ -51,72 +52,96 @@ class Content_Sections extends Content_Components {
 	/**
 	 * Generate two-column layout with text and media
 	 *
-	 * @param array $options {
-	 *     The options for the two-column layout
-	 *
-	 *     @var string $headline        (required) The headline text
-	 *     @var string $content         (required) The content text
-	 *     @var string $content_wrapper The wrapper element for the content (default: 'p')
-	 *     @var string $content_class   The CSS class for the content (default: 'text-content')
-	 *     @var string|null $cta_text   The call-to-action button text (optional)
-	 *     @var string|null $cta_link   The call-to-action button link (optional)
-	 *     @var string $media_type      The type of media ('photo' or 'video') (default: 'photo')
-	 *     @var bool $reverse           Whether to reverse the order of columns (default: false)
-	 *     @var string|null $image_src  The image source URL (only used for 'photo' media_type) (optional)
-	 * }
+	 * @param array $options The options for the two-column layout
+	 * ```php
+	 * $options = array(
+	 *  'split'            => array( 6, 6 ),
+	 *  'headline'         => '',
+	 *  'headline_element' => 'h2',
+	 *  'headline_class'   => 'headline',
+	 *  'content'          => '',
+	 *  'content_wrapper'  => 'div',
+	 *  'content_class'    => 'mb-5',
+	 *  'cta'              => array ?? null,
+	 *  'cta_class'        => 'btn__primary--fill',
+	 *  'media_type'       => 'photo' | 'video' | 'svg'
+	 *  'reverse'          => false,
+	 *  'image'            => null | array,
+	 * );
+	 * ```
 	 * @param bool  $echo Whether to echo or return the markup (default: true)
 	 *
 	 * @return string The markup for the two-column layout
 	 */
 	public function two_col_text_and_media( array $options, bool $echo = true ) {
 		$default = array(
-			'headline'        => '',
-			'content'         => '',
-			'content_wrapper' => 'p',
-			'content_class'   => 'text-content mb-5',
-			'cta_text'        => null,
-			'cta_link'        => null,
-			'cta_external'    => false,
-			'cta_class'       => 'cta__btn btn__primary--fill mt-5 align-self-start',
-			'media_type'      => 'photo',
-			'reverse'         => false,
-			'image_src'       => null,
+			'split'            => array( 6, 6 ),
+			'headline'         => '',
+			'headline_element' => '',
+			'headline_class'   => '',
+			'content'          => '',
+			'content_wrapper'  => 'div',
+			'content_class'    => 'mb-5',
+			'cta'              => null,
+			'cta_class'        => 'btn__primary--fill',
+			'media_type'       => 'photo',
+			'reverse'          => false,
+			'image'            => null,
 		);
 
 		$options = array_merge( $default, $options );
 
 		extract( $options );
+		$container_classes = 'two-col row justify-content-between align-items-center' . ( $reverse ? ' flex-row-reverse' : '' );
+		$container_start   = "<div class='{$container_classes}'>";
+		$div_end           = '</div>';
+		$col_1_start       = "<div class='two-col__col-1 col-lg-{$split[0]} position-relative" . ( 'svg' === $media_type ? ' align-self-start' : '' ) . "'>";
+		$col_2_start       = "<div class='two-col__col-2 col-lg-{$split[1]}'>";
+		$col_1_content     = '';
 
-		$container_start = $reverse ? '<div class="row flex-row-reverse two-col">' : '<div class="row two-col">';
-		$div_end         = '</div>';
-		$col_start_1     = '<div class="col-lg-6 two-col__media">';
-		$col_start_2     = '<div class="col-lg-6 two-col__content">';
-		$col_1_content   = '';
-		if ( $media_type === 'photo' && $image_src ) {
-			$col_1_content = "<figure class='two-col__media--container'><img src={$image_src} /></figure>";
-		} elseif ( $media_type === 'video' ) {
-			$col_1_content = "<figure class='two-col__media--container'>Video!</figure>";
+		if ( $image ) {
+			if ( 'svg' === $media_type ) {
+				$col_1_content = $image;
+			} elseif ( 'photo' === $media_type ) {
+				$col_1_content  = "<figure class='two-col__image'>";
+				$alt            = esc_attr( $image['alt'] );
+				$srcset         = wp_get_attachment_image_srcset( $image['ID'] );
+				$col_1_content .= "<img src={$image['sizes']['two-col']} alt='{$alt}'} srcset='{$srcset}' />";
+				$col_1_content .= '</figure>';
+			}
+		} elseif ( 'video' === $media_type ) {
+			$col_1_content = "<figure class='two-col__video'>Video!</figure>";
 		}
+
 		$headline_args = array(
 			'subheadline_content' => $content,
 			'subheadline_element' => $content_wrapper,
 			'subheadline_class'   => $content_class,
 		);
+
+		if ( ! empty( $headline_element ) ) {
+			$headline_args['headline_element'] = $headline_element;
+		}
+
+		if ( ! empty( $headline_class ) ) {
+			$headline_args['headline_class'] = $headline_class;
+		}
 		$col_2_content = $this->headline( $headline, false, $headline_args );
 
-		if ( ! empty( $cta_text ) ) {
+		if ( $cta ) {
 			$btn_options    = array(
-				'text'        => $cta_text,
-				'link'        => $cta_link,
-				'is_external' => $cta_external,
+				'text'        => esc_textarea( $cta['title'] ),
+				'link'        => esc_url( $cta['url'] ),
+				'is_external' => $cta['target'] ?? false,
 				'html_class'  => $cta_class,
 			);
 			$col_2_content .= $this->cta_button( $btn_options, false );
 		}
+
 		$markup = "
         {$container_start}
-            {$col_start_1}{$col_1_content}{$div_end}
-            {$col_start_2}{$col_2_content}{$div_end}
+            {$col_1_start}{$col_1_content}{$div_end}
+            {$col_2_start}{$col_2_content}{$div_end}
         {$div_end}";
 
 		if ( $echo ) {

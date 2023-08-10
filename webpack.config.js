@@ -15,7 +15,13 @@ function snakeToCamel(str) {
  *
  * NOTE: Make sure to import scss files in TS file and not below.
  */
-const jsFiles = ['front-page', 'hr-page', 'communications', 'pricing'];
+const jsFiles = [
+	'front-page',
+	'hr-page',
+	'communications',
+	'pricing',
+	'k1-about',
+];
 
 /**
  * For SCSS files (no leading `_`)
