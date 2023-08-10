@@ -31,6 +31,12 @@
 	font-family: var(--font-headings) !important;
 	letter-spacing: 0.2em;
 }
+.text-poppins {
+	font-family: var(--font-body) !important;
+}
+.text-primary--dark {
+	color: var(--color-primary--dark);
+}
 
 .clip-color-left {
 	@include m.clip-path('left');

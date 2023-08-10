@@ -3,170 +3,234 @@
  * Page: About
  */
 
+k1_enqueue_page_assets( 'k1About' );
+$content = new Content_Sections();
 ?>
-<section class="mission-slate">
+<section class="empathy">
+	<!-- TODO: #36 talk to tim about photo display -->
 	<div class="container">
-		<div class="row">
-			<div class="col">
-				<h2 class="h1 headline leaf-adjustment--left"><img src="/src/assets/images/greenthreeleaves.png">mission slate 23-24</h2>
-				<p>Zombie ipsum reversus ab viral inferno, nam rick Grimes malum cerebro. De <br> carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel <br> maleficia? De
-					apocalypsi gorger omero undead survivor dictum mauris. Hi<br> mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi <br> dentevil vultus comedat
-					cerebella viventium.</p>
-			</div>
-			<div class="container mt-5 mb-5">
-				<div class="row">
-					<div class="col-lg-12">
-						<ul class="timeline">
-							<li>
-								<h3 class="h1 headline">Quarter 1</h3>
-							</li>
-							<li>
-								<h2 class="subheadline"><span class="text-primary">2023 HR Ministry Network Conference</span></h2>
-								<p>The HR Ministry Network Launched with a Conference tailored for HR and Finance Ministry Professionals. Get access to the sessions at
-									https://Kingdomone.Academy</p>
-							</li>
-							<li>
-								<h3 class="h1 headline">Quarter 2</h3>
-							</li>
-							<li>
-								<h2 class="subheadline"><span class="text-primary">Kingdom One Retirement 403(b)9</span></h2>
-								<p>Retirement is a key aspect of Total Rewards and Staff Compensation. We offer a 403(b)9 so your staff can retire in comfort.
-									https://www.kingdomone.co/k1-403b9</p>
-							</li>
-							<li>
-								<h2 class="subheadline"><span class="text-primary">Spark Compensation Survey</span></h2>
-								<p>Spark Compensation Survey is here to help ministry recruiters and finance teams build compensation philosophies that work.
-									https://kingdomone.co/compensation</p>
-							</li>
-							<li>
-								<h2 class="subheadline"><span class="text-primary">Leadership Development - Coming Soon</span></h2>
-								<p>In life and ministry, character matters. This leadership developments incorporates character into performance and culture.</p>
-							</li>
-							<li>
-								<h3 class="h1 headline">Quarter 3</h3>
-							</li>
-							<li>
-								<h2 class="subheadline"><span class="text-primary">Spark Staffing 2.0</span></h2>
-								<p>Your favorite Ministry Staffing site is getting some upgrades. https://sparkstaffing.co</p>
-							</li>
-							<li>
-								<h2 class="subheadline"><span class="text-primary">Legal Update for 2024 - Coming Soon</span></h2>
-								<p>We keep you in the loop for California 2024 legal updates that impact your ministry.</p>
-							</li>
-						</ul>
-					</div>
+		<?php
+		$content->two_col_text_and_media(
+			array(
+				'split'          => array( 4, 8 ),
+				'headline'       => 'we understand',
+				'headline_class' => 'headline text-primary',
+				'media_type'     => 'svg',
+				'image'          => k1_get_svg_asset( 'leaves-4', false, false ),
+				'content'        => '<p><b>Leading a ministry is complex and high stakes. A few wrong decisions can lead to organizational stall-out and frustration.</b></p><p>Leading a ministry is complex and high stakes. A few wrong decisions can lead to organizational stall-out and frustration.</p>',
+				'cta'            => array(
+					'title' => 'Get Started',
+					'url'   => '/get-started',
+				),
+			)
+		);
+		?>
+	</div>
+</section>
+<section class="authority">
+	<div class="container">
+		<?php
+		$args             = array(
+			'split'          => array( 4, 8 ),
+			'reverse'        => true,
+			'headline'       => "the numbers don't lie",
+			'headline_class' => 'headline text-primary',
+			'media_type'     => 'svg',
+			'image'          => k1_get_svg_asset( 'leaves-4', false, false ),
+		);
+		$args['content']  = "<p><b>The church should be the healthiest, safest and most courageous organization on the planet, <span class='color-primary'>and it's not.</span></b></p>";
+		$args['content'] .= $content->bulleted_list(
+			array(
+				'70% of Pastors have lower self-esteem since joining the ministry',
+				'70% of Pastors fight depression',
+				"50% of Ministry Leaders would leave the ministry but can't find another job",
+				'80% of Pastors believe ministry has a negative effect on family, and 33% siting the occupation as hazardous to overall well-being',
+				'80% of Ministry spouses feel neglected and underappreciated',
+				'70% of Pastors don’t have a good marriage, 38% are divorced or in the process of divorce.',
+				'41% of Pastors display anger problems reported by spouses',
+				'50% of Pastors watch pornography',
+				'50% of Pastors report inappropriate sexual behavior with someone in the church.',
+			),
+			'',
+			'ul',
+			false
+		);
+		$content->two_col_text_and_media( $args );
+		?>
+		<div class="row my-5">
+			<h2 class="headline text-lg-center">Pastors and Ministry Leaders are not the Problems</h2>
+			<p class="text-lg-center">The American Church is suffering from an unhealthy understanding of organizational structure. The Kingdom One method has helped over 65 ministries,
+				camps, schools, and non-profits find courage, health & effectiveness in ministry. </p>
+		</div>
+	</div>
+</section>
+<section class="choose-one">
+	<?php $content->get_color_background_layers( 'choose-one', 'zig-zag-right', array( 'about-choose-one-bg', 'webp' ) ); ?>
+	<div class="choose-one__content position-relative z-2">
+		<div class="container">
+			<div class="row align-items-end">
+				<div class="col-lg-3">
+					<?php k1_get_svg_asset( 'icon-status-quo-sign' ); ?>
+				</div>
+				<div class="col position-relative">
+					<h2 class="text-primary">You can only choose one.</h2>
+					<p class="text-white">We find that ministry leaders often suffer from overwhelm, exhaustion & lack of clarity. Imagine receiving help from other ministry leaders you
+						trust; how would that shape your ministry? Our people, knowledge, and tools are ministry-tested and pastor approved. </p>
+					<?php k1_get_svg_asset( 'leaves-3' ); ?>
 				</div>
 			</div>
+		</div>
+	</div>
+</section>
+<section class="ministry-plan">
+	<div class="ministry-plan__content container">
+		<div class="row justify-content-center">
+			<h2 class='headline mt-5 text-center'>Your Healthy Ministry Plan <span class="text-primary">Starts Here</span></h2>
+		</div>
+		<div class="ministry-plan__steps row justify-content-evenly my-5">
+			<?php
+			$default_steps = array(
+				array(
+					'svg'         => 'icon-checklist-step-1',
+					'headline'    => 'Take Our Assessment',
+					'subheadline' => 'Take our Healthy Ministry Assessment today to find your ministry quality score.',
 
+				),
+				array(
+					'svg'         => 'icon-handshake-step-2',
+					'headline'    => 'Meet with a Ministry Partner',
+					'subheadline' => 'Meet with a Kingdom One ministry partner to review your assessment and build a custom plan to grow your ministry efforts.',
+
+				),
+				array(
+					'svg'         => 'icon-growth-step-3',
+					'headline'    => 'Build Towards Health',
+					'subheadline' => 'Build your ministry towards health with our team, training, and tools, so you can get back to the ministry you love.',
+
+				),
+			);
+			?>
+			<?php foreach ( $default_steps as $index => $step ) : ?>
+			<?php $step_level = $index + 1; ?>
+			<div class="<?php echo "ministry-plan__steps--step-{$step_level}"; ?> col-lg-4 my-5 my-lg-0 d-flex flex-column align-items-center text-primary--dark">
+				<?php k1_get_svg_asset( $step['svg'] ); ?>
+				<h3 class="text-poppins text-center align-self-stretch mt-5 mb-3"><?php echo $step['headline']; ?></h3>
+				<span class="subheadline text-center align-self-stretch"><?php echo $step['subheadline']; ?></span>
+			</div>
+			<?php endforeach; ?>
+		</div>
+		<div class="row flex-column justify-content-center align-items-center">
+			<?php $content->cta_button(); ?>
 		</div>
 	</div>
 </section>
 <section class="values">
-	<div class="values__background">
-		<div class="values__background--lower"></div>
-		<div class="values__background--upper"></div>
+	<?php $content->get_color_background_layers( 'values', 'zig-zag-left', array( 'values-bg', 'webp' ) ); ?>
+	<div class="container py-5 my-5 values__content z-2">
+		<div class="row justify-content-center">
+			<div class="values__content--header text-center position-relative my-5">
+				<h2 class="h1 headline text-primary">our values</h2>
+				<?php k1_get_svg_asset( 'leaves-3' ); ?>
+			</div>
+		</div>
+		<?php
+		// TODO: #35 Debug first icon
+		$values = array(
+			array(
+				'svg'         => 'relationship-first',
+				'headline'    => 'Relationship First',
+				'subheadline' => 'We invested deeply & intentionally to grow relationships that generate trust & transparency.',
+			),
+			array(
+				'svg'         => 'ready-to-grow',
+				'headline'    => 'Ready To Grow',
+				'subheadline' => 'We attract, develop, disciple and train the current and future church. Actively develop and refine tools, materials, networks and resources that are helpful to church leaders both inside and outside of Kingdom One.',
+			),
+			array(
+				'svg'         => 'deep-work',
+				'headline'    => 'Deep Work',
+				'subheadline' => 'We roll up our sleeves and step into the trenches with ministry teams. The quality and excellence of our work is matched by our willingness to challenge the status quo and do the hard work that produces lasting health.',
+			),
+			array(
+				'svg'         => 'health',
+				'headline'    => 'In Pursuit of Health',
+				'subheadline' => 'We seek to overcome distraction, burnout and the superficial. We cultivate organizational and personal health to run with perseverance the race marked out for us, fixing our eyes on Jesus.',
+			),
+			array(
+				'svg'         => 'no-silos',
+				'headline'    => 'No Silos, Egos or Turf Wars',
+				'subheadline' => 'We refuse to let pride ruin our ministry or Christ’s church. We collaborate to bring harmony, humility, and unity because we are better together.',
+			),
+			array(
+				'svg'         => 'fun',
+				'headline'    => 'Fans of Fun',
+				'subheadline' => 'Fun is non-negotiable. We foster an environment where we can keep levity and fun at the heart of what we do.',
+			),
+		);
+		foreach ( $values as $index => $value ) :
+			$is_even   = 0 === $index % 2;
+			$row_class = $is_even ? 'row' : 'row flex-row-reverse';
+			echo "<div class='{$row_class} justify-content-center my-5'>";
+			echo "<div class='col-lg-2'>" . k1_get_svg_asset( 'values-' . $value['svg'], false, false ) . '</div>';
+			$col_class = ! $is_even ? 'text-lg-end' : '';
+			?>
+		<div class="<?php echo $col_class; ?> mt-5 mt-lg-0 col-lg-8 d-flex flex-column justify-content-center">
+			<h3 class="text-white">
+				<?php echo $value['headline']; ?>
+			</h3>
+			<span class="h4 text-primary">
+				<?php echo $value['subheadline']; ?>
+			</span>
+		</div>
+		<?php echo '</div>'; ?>
+		<?php endforeach; ?>
 	</div>
-	<div class="container values__content">
-		<div class="row">
-			<div class="col d-flex justify-content-center align-items-center">
-				<h2 class="h1 headline text-primary leaf-adjustment--right">our values<img src="/src/assets/images/rightorientationgreenleaves.png"></h2>
+</section>
+<section class="staff">
+	<div class="container">
+		<div class="row justify-content-center">
+			<?php k1_get_svg_asset( 'leaves-3' ); ?>
+			<h2 class="display-1 w-auto headline text-primary my-5 text-center">our leadership team</h2>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row my-5 py-5">
+			<div class="swiper" id="staff-swiper">
+				<div class="swiper-wrapper">
+					<?php
+					$staff = array(
+						array( 'img' => k1_get_image_asset_url( 'tester', 'png', 'staff', false ) ),
+						array( 'img' => k1_get_image_asset_url( 'tester', 'png', 'staff', false ) ),
+						array( 'img' => k1_get_image_asset_url( 'tester', 'png', 'staff', false ) ),
+						array( 'img' => k1_get_image_asset_url( 'tester', 'png', 'staff', false ) ),
+					);
+					foreach ( $staff as $person ) {
+						echo "<div class='swiper-slide'><img class='ratio ratio-1x1' src='{$person['img']}' /></div>";
+					}
+					?>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-3">
-				<img src="/src/assets/images/relationship.png">
-			</div>
-			<div class="col d-flex justify-content-center align-items-stretch">
-				<h3 class="text-white">Relationship First</h3>
-				<h4 class="text-primary">We invested deeply & intentionally to grow relationships that generate trust & transparency.</h4>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col d-flex justify-content-center">
-				<h3 class="text-white">Ready to Grow</h3>
-				<h4 class="text-primary">We invested deeply & intentionally to grow relationships that generate trust & transparency.</h4>
-			</div>
-			<div class="col-3">
-				<img src="/src/assets/images/readytogrow.png">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-3">
-				<img src="/src/assets/images/deepwork.png">
-			</div>
-			<div class="col justify-content-center align-items-stretch">
-				<h3 class="text-white">Deep Work</h3>
-				<h4 class="text-primary">We invested deeply & intentionally to grow relationships that generate trust & transparency.</h4>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col d-flex justify-content-center align-items-stretch">
-				<h3 class="text-white">In Pursuit of Health</h3>
-				<h4 class="text-primary">We invested deeply & intentionally to grow relationships that generate trust & transparency.</h4>
-			</div>
-			<div class="col-3">
-				<img src="/src/assets/images/pursuitofhealth.png">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-3">
-				<img src="/src/assets/images/silos.png">
-			</div>
-			<div class="col justify-content-center align-items-stretch">
-				<h3 class="text-white">No Silos, Egos or Turf Wars</h3>
-				<h4 class="text-primary">We invested deeply & intentionally to grow relationships that generate trust & transparency.</h4>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col d-flex justify-content-center align-items-stretch">
-				<h3 class="text-white">Fans of Fun</h3>
-				<h4 class="text-primary">We invested deeply & intentionally to grow relationships that generate trust & transparency.</h4>
-			</div>
-			<div class="col-3">
-				<img src="/src/assets/images/fansoffun.png">
-			</div>
+		<div class="row py-5">
+			<div class="swiper-pagination"></div>
 		</div>
 	</div>
 </section>
-<aside class="staff text-center">
-	<div class="row">
-		<h2 class="h1 headline my-5"><span class="text-primary"><img src="/src/assets/images/greenthreeleaves.png">our team</span></h2>
-	</div>
-	<div class="swiper" id="staff-swiper">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide">
-				<img src="./assets/images/staff/tester.png">
-			</div>
-			<div class="swiper-slide">
-				<img src="./assets/images/staff/tester.png">
-			</div>
-			<div class="swiper-slide">
-				<img src="./assets/images/staff/tester.png">
-			</div>
-			<div class="swiper-slide">
-				<img src="./assets/images/staff/tester.png">
-			</div>
-			<div class="swiper-slide">
-				<img src="./assets/images/staff/tester.png">
-			</div>
-			<div class="swiper-slide">
-				<img src="./assets/images/staff/tester.png">
-			</div>
-		</div>
-		<div class="swiper-pagination"></div>
-		<div class="swiper-button-prev"></div>
-		<div class="swiper-button-next"></div>
-	</div>
-</aside>
 <section class="final-cta">
+	<?php $content->get_color_background_layers( 'final-cta', 'left-top', array( 'final-cta-bg', 'webp' ) ); ?>
 	<div class="container">
-		<div class="final-cta__content row d-flex justify-content-center">
-			<div class="col-12 text-center py-5">
-				<h2 class="text-white">Are You On Board For The Mission?<img src="/src/assets/images/sparksymbol.png"></h2>
-				<span class="subheadline white-stroke my-5">JOIN OUR TEAM</span>
-				<p class="text-white">Zombie ipsum reversus ab viral inferno, nam rick Grimes <br> malum cerebro. De carne lumbering animata corpora <br> quaeritis. Summus brains sit​​,
-					morbo vel maleficia? De<br>apocalypsi gorger omero undead survivor dictum mauris.</p>
-				<a class="pill-btn__fill--primary mt-5" href="#">Get Started</a>
+		<div class="final-cta__content d-flex row justify-content-center">
+			<div class="d-none d-lg-flex col-2 align-items-center">
+				<?php k1_get_svg_asset( 'leaves-3' ); ?>
+			</div>
+			<div class="col text-center py-5">
+				<h2 class="text-white">Your Healthy Ministry Plan Starts Here</h2>
+				<span class="subheadline white-stroke my-5 d-block">Join our team</span>
+				<p class="text-white">Our greatest asset is our people. Are you looking to join a courageous team who wants to bring ministry health to the globe? We are looking for
+					tenacious, loving, and agile leaders to join the disruption…it’s a healthy one, we promise 😉</p>
+				<?php $content->cta_button( array( 'text' => 'Join Our Team' ) ); ?>
 			</div>
 		</div>
 	</div>
