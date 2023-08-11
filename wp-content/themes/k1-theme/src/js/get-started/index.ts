@@ -1,4 +1,5 @@
 import '../../styles/pages/get-started.scss';
-import { quotesSlider } from '../vendors/swipers/quotes-slider';
 
-quotesSlider();
+import { testimonialsSlider } from '../vendors/swipers/testimonials-slider';
+
+testimonialsSlider();
