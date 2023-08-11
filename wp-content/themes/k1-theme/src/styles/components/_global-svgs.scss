@@ -5,7 +5,7 @@
 		fill: none;
 	}
 	.b {
-		clip-path: url(#a);
+		clip-path: url(#leaves-4-a);
 	}
 	.c {
 		stroke: inherit;
@@ -17,16 +17,14 @@
 #leaves-3 {
 	transform: rotate(180deg);
 	stroke: white;
-	.cls-1,
-	.cls-3 {
+	.a,
+	.c {
 		fill: none;
 	}
-
-	.cls-2 {
-		clip-path: url(#clip-path);
+	.b {
+		clip-path: url(#leaves-3-a);
 	}
-
-	.cls-3 {
+	.c {
 		stroke: inherit;
 		stroke-linecap: round;
 		stroke-linejoin: round;

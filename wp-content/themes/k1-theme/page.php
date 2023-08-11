@@ -24,6 +24,9 @@ get_header(); ?>
 		case ( 'pricing' ):
 			get_template_part( 'templates/page', 'pricing' );
 			break;
+		case ( 'giving' ):
+			get_template_part( 'templates/page', 'giving' );
+			break;
 		default:
 			echo 'hello';
 	}

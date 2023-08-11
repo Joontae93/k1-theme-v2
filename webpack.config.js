@@ -27,7 +27,7 @@ const jsFiles = [
  * For SCSS files (no leading `_`)
  * Array of strings modeled after scss names (e.g. 'we-are-kingdom-one')
  *  */
-const styleSheets = []; // for scss only
+const styleSheets = ['giving']; // for scss only
 
 module.exports = {
 	...defaultConfig,
