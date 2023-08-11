@@ -27,6 +27,9 @@ get_header(); ?>
 		case ( 'giving' ):
 			get_template_part( 'templates/page', 'giving' );
 			break;
+		case ( 'share-your-story' ):
+			get_template_part( 'templates/page', 'share-your-story' );
+			break;
 		default:
 			echo 'hello';
 	}
