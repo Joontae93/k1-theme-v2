@@ -224,18 +224,6 @@
 }
 
 .values {
-	%value_icon_base {
-		fill: white;
-		stroke: #fff;
-		.a {
-			fill: inherit;
-		}
-		.b {
-			fill: none;
-			stroke: inherit;
-			stroke-width: 4px;
-		}
-	}
 	&__background {
 		@include m.background-layers($opacity: 0.75);
 
@@ -243,6 +231,7 @@
 			background-color: var(--color-primary);
 		}
 	}
+
 	&__content {
 		&--header {
 			#leaves-3 {
@@ -269,10 +258,25 @@
 			}
 		}
 	}
+
+	%value_icon_base {
+		fill: white;
+		stroke: #fff;
+		.a {
+			fill: inherit;
+		}
+		.b {
+			fill: none;
+			stroke: inherit;
+			stroke-width: 4px;
+		}
+	}
+
 	.value-icon {
 		@extend %value_icon_base;
 		--size: 15rem;
 		width: var(--size);
+
 		@include m.media-breakpoint-up(lg) {
 			width: unset;
 		}
