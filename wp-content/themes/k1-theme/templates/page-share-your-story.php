@@ -83,13 +83,13 @@ k1_enqueue_page_style( 'shareYourStory' );
 				);
 				?>
 				<?php if ( $query->have_posts() ) : ?>
-				<?php while ( $query->have_posts() ) : ?>
-				<?php $query->the_post(); ?>
+					<?php while ( $query->have_posts() ) : ?>
+						<?php $query->the_post(); ?>
 				<div class="story col-lg-4">
 					<div class="story__video">
 						<?php echo get_field( 'video' ); ?>
 					</div>
-					<?php the_title( '<h3 class="headline text-white h4 story__title">', '</h3>' ); ?>
+						<?php the_title( '<h3 class="headline text-white h4 story__title">', '</h3>' ); ?>
 				</div>
 				<?php endwhile; ?>
 				<?php endif; ?>
