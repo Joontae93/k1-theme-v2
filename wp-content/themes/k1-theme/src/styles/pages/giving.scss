@@ -84,3 +84,28 @@
 		}
 	}
 }
+
+.give-butter {
+	#leaves-3 {
+		--size: 15rem;
+		width: var(--size);
+		height: var(--size);
+		position: absolute;
+		stroke: var(--color-primary);
+		top: 0;
+		@include m.media-breakpoint-up(xxl) {
+			left: -5rem;
+		}
+	}
+}
+.stephen-video {
+	.headline {
+		font-size: 4em;
+		letter-spacing: 3px;
+	}
+	iframe {
+		aspect-ratio: 16 / 9;
+		width: 100%;
+		min-height: 40rem;
+	}
+}

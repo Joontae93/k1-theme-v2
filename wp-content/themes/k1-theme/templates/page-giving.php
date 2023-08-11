@@ -50,9 +50,9 @@ $content = new Content_Sections();
 			</div>
 		</div>
 </section>
-<section class="how-to-help">
+<section class="how-to-help p-0 pt-5">
 	<?php $content->get_color_background_layers( 'how-to-help', 'left-top' ); ?>
-	<div class="how-to-help__content position-relative z-2 py-5">
+	<div class="how-to-help__content position-relative z-2 pt-5">
 		<div class="container">
 			<div class="row my-5">
 				<h2 class="headline text-white text-lg-center">How can you help the American church?</h2>
@@ -61,7 +61,7 @@ $content = new Content_Sections();
 					Kingdom One will get tools, education & resources back into churches, to grow their health.</span>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container my-5">
 			<div class="row">
 				<h3 class="headline text-white">There are multiple ways to give:</h3>
 			</div>
@@ -69,5 +69,37 @@ $content = new Content_Sections();
 		<?php get_template_part( 'template-parts/content', 'ways-to-give' ); ?>
 	</div>
 </section>
-<section class="givebutter"></section>
-<section class="stephen-video"></section>
+<section class="give-butter">
+	<?php k1_get_svg_asset( 'leaves-3' ); ?>
+	<div class="container">
+		<div class="row justify-content-end">
+			<h2 class="headline my-5">healthy things <span class="text-primary">grow</span></h2>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 d-flex flex-column">
+				<p class="mb-5">When you give, ministries are equipped with tools, resources and knowledge to be courageous, healthy and effective. Your gift helps create toolkits, develop
+					leaders and
+					set strong foundations for generations to come.</p>
+				<p class="text-primary fw-bold">Because of your giving, you ensure the Christian faith can reach future generations. </p>
+			</div>
+			<div class="col-lg-6">
+				<iframe src="https://givebutter.com/embed/c/kingdom-one" width="100%" height="600px" frameborder="0" scrolling="no" seamless=""></iframe>
+			</div>
+
+		</div>
+	</div>
+</section>
+<section class="stephen-video">
+	<div class="container">
+		<div class="row my-5">
+			<h2 class="headline h1 text-primary text-center">what your giving makes possible</h2>
+			<span class="subheadline text-lg-center">Our founder and CVO explains why now is a pivotal time to give to the health of the American Church.</span>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-10">
+				<iframe src="https://www.youtube-nocookie.com/embed/FqofY8MMF9o?controls=0" title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+</section>
