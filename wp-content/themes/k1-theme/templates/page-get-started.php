@@ -3,7 +3,7 @@
  * Page: Get Started
  */
 
-k1_enqueue_page_assets( 'getstarted' );
+k1_enqueue_page_assets( 'getStarted' );
 ?>
 <main>
 		<section class="first-section">
