@@ -1,0 +1,17 @@
+@use '../abstracts/mixins' as m;
+
+.headline:where(:not(.hero__content--headline)) {
+	color: var(--color-ar-purple);
+}
+
+.ar-three-steps {
+	&__background {
+		@include m.background-layers;
+		&--color {
+			background-color: var(--color-ar-orange);
+		}
+		&--lower {
+			background-color: rgba(black, 0.4);
+		}
+	}
+}
