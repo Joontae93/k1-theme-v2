@@ -109,6 +109,51 @@
 
 .story {
 	&__video {
-		aspect-ratio: 16 / 9;
+		iframe {
+			aspect-ratio: 16 / 9;
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.how-it-works {
+	#leaves-3 {
+		--size: 12rem;
+		width: var(--size);
+		height: var(--size);
+		stroke: var(--color-primary);
+		position: absolute;
+		left: -12rem;
+		top: -4rem;
+
+		@include m.media-breakpoint-up(lg) {
+			left: unset;
+			right: 30rem;
+			top: -4rem;
+		}
+	}
+}
+
+.how-it-works-icon {
+	--size: 20rem;
+	width: var(--size);
+	height: var(--size);
+	.a {
+		fill: none;
+	}
+
+	.c {
+		fill: var(--color-primary);
+	}
+	:is(&#phone) {
+		.b {
+			clip-path: url(#phone-a);
+		}
+	}
+	:is(&#video) {
+		.b {
+			clip-path: url(#video-a);
+		}
 	}
 }

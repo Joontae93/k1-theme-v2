@@ -98,6 +98,40 @@ k1_enqueue_page_style( 'shareYourStory' );
 		</div>
 	</div>
 </section>
-<section class="contact" id='share-form'>
-	<pre>Contact Form 7 Code Here</pre>
+<section class="how-it-works">
+	<div class="container">
+		<div class="row justify-content-lg-end">
+			<div class="col-lg-8 text-lg-end position-relative">
+				<?php k1_get_svg_asset( 'leaves-3' ); ?>
+				<h2 class="headline text-primary">How It Works</h2>
+				<p class="subheadline">If you would like to share your story with us, there are a couple of ways you can do that!</p>
+			</div>
+		</div>
+		<div class="row my-5">
+			<div class="col-lg-6 d-flex flex-column align-items-center">
+				<?php k1_get_svg_asset( 'story-icon-phone' ); ?>
+				<h3 class="headline my-5">Give Us A Call!</h3>
+				<ol>
+					<li>Find a nice quiet place to call in your story</li>
+					<li>Call (951) 223-1104</li>
+					<li>Share your story in 2-3 minutes as a voicemail</li>
+				</ol>
+			</div>
+			<div class="col-lg-6 d-flex flex-column align-items-center">
+				<?php k1_get_svg_asset( 'story-icon-video' ); ?>
+				<h3 class="headline my-5">Send us a video!</h3>
+				<ol>
+					<li>Find a nice, quiet place that's well-lit to record your story</li>
+					<li>Record your story with a smartphone in landscape (horizontal) mode</li>
+					<li>Let us kow you'r eready to share with the form below!</li>
+				</ol>
+			</div>
+		</div>
+		<div class="row text-center">
+			<small>By sharing your story you give Kingdom One permission to edit, reformat, share or publish your story publicly.</small>
+		</div>
+		<div class="row contact" id='share-form'>
+			<pre>Contact Form 7 Code Here</pre>
+		</div>
+	</div>
 </section>
