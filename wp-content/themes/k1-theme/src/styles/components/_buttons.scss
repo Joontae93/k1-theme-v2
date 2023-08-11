@@ -49,6 +49,30 @@
 			}
 		}
 	}
+	&__white {
+		&--outline {
+			@extend .btn;
+			background-color: transparent;
+			border-color: white;
+			color: white;
+
+			a {
+				color: white;
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: white;
+				border-color: white;
+				color: v.$color-primary;
+
+				a {
+					color: v.$color-primary;
+				}
+			}
+		}
+	}
 }
 
 a.btn {

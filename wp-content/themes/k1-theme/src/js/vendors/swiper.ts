@@ -20,7 +20,6 @@ const defaultArgs = {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
-	slidesPerView: 1,
 	spaceBetween: 20,
 	grabCursor: true,
 	autoHeight: true,
@@ -28,6 +27,9 @@ const defaultArgs = {
 	breakpoints: {
 		767: {
 			slidesPerView: 3,
+			slidesPerGroup: 3,
+			centeredSlides: false,
+			loop: false,
 		},
 	},
 } as SwiperOptions;

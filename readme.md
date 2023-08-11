@@ -1,6 +1,25 @@
 # Changelog
 
-## v.0.3.0
+## v0.4.1
+
+- homepage bug fixes
+
+## v0.4.0
+
+- Introduced new Post Type: Stories (/stories)
+
+## v0.3.2
+
+- Moved theme php files
+- updated screenshot
+
+## v0.3.1
+
+- Refactored sliders to load scss in JS file (instead of a second import in scss file)
+- Slider bug fixes
+- Slider Style updates
+
+## v0.3.0
 
 - Cleaned up Marcom Page
 - Refactored and renamed template sections

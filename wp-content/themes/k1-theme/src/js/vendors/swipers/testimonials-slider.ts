@@ -1,3 +1,4 @@
+import '../../../styles/components/swipers/_testimonials.scss';
 import { newSlider } from '../swiper';
 
 /** Call function to init slider  */
@@ -8,7 +9,7 @@ export const testimonialsSlider = () => {
 	}
 	return newSlider(el, {
 		pagination: {
-			el: 'swiper-testimonials-pagination',
+			el: '.swiper-testimonials-pagination',
 		},
 		navigation: {
 			nextEl: '.swiper-testimonials-button-next',
