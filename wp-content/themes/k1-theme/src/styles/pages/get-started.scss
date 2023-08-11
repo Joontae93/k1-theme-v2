@@ -1,0 +1,12 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+
+
+.quotes {
+  background-color: $quotes-background-color;
+}
+
+.first-section {
+  // use php to call in section bg
+  //background: url(/src/assets/images/bg-images/green-bg.png);
+}
