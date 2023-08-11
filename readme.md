@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.4.0
+
+- Introduced new Post Type: Stories (/stories)
+
 ## v0.3.2
 
 - Moved theme php files

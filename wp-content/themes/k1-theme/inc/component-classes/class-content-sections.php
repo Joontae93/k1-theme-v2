@@ -33,7 +33,7 @@ class Content_Sections extends Content_Components {
 			$hero = get_field( 'hero', $post_id );
 			extract( $hero );
 		}
-		$headline = $alternate_headline ?? get_the_title( $post_id );
+		$headline = empty( $alternate_headline ) ? get_the_title( $post_id ) : $alternate_headline;
 		$markup   = '<section class="hero d-flex align-items-center" id="hero">';
 		if ( ! isset( $background_image ) ) {
 			$background_image = null;
