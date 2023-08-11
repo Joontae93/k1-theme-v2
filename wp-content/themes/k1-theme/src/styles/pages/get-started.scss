@@ -1,12 +1,9 @@
 @use '../abstracts/mixins' as m;
 @use '../abstracts/variables' as v;
+@use '../components/swipers/quotes'
 
 
-.quotes {
-  background-color: v.${color-primary--dark};
-}
-
-.first-section {
+//.first-section {
   // use php to call in section bg
   //background: url(/src/assets/images/bg-images/green-bg.png);
-}
+//}
