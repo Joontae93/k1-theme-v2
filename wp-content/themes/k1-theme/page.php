@@ -30,6 +30,9 @@ get_header(); ?>
 		case ( 'share-your-story' ):
 			get_template_part( 'templates/page', 'share-your-story' );
 			break;
+		case ( 'get-started' ):
+			get_template_part( 'templates/page', 'get-started' );
+			break;
 		default:
 			echo 'hello';
 	}
