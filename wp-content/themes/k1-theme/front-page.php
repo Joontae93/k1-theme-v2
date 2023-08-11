@@ -42,7 +42,7 @@ get_header(); ?>
 		</div>
 	</aside>
 	<section class="stakes">
-		<?php $content->get_color_background_layers( 'stakes', 'left', array( 'k1-retreat-01', 'png' ) ); ?>
+		<?php $content->get_color_background_layers( 'stakes', 'left', array( 'k1-retreat-01', 'webp' ) ); ?>
 		<div class="stakes__content py-5">
 			<div class="container">
 				<div class="row mb-5">
