@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.4.1
+
+- homepage bug fixes
+
 ## v0.4.0
 
 - Introduced new Post Type: Stories (/stories)

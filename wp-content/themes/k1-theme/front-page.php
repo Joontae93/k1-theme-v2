@@ -11,7 +11,7 @@ k1_enqueue_page_assets( 'frontPage' );
 
 get_header(); ?>
 <main class="site-content">
-	<?php $content->hero_section( get_the_ID() ); ?>
+	<?php get_template_part( 'template-parts/front-page/section', 'hero' ); ?>
 	<aside class="top-talent-groups container">
 		<div class="row justify-content-center">
 			<?php
@@ -36,7 +36,7 @@ get_header(); ?>
 			foreach ( $icons as $icon ) {
 				$filename = "tg-{$icon['file']}-icon";
 				$svg      = k1_get_svg_asset( $filename, true, false );
-				echo "<div class='icon col'><img class='icon__svg' src='{$svg}' /><span class='icon__label'>{$icon['title']}</span></div>";
+				echo "<div class='icon col my-5 my-lg-0'><img class='icon__svg' src='{$svg}' /><span class='icon__label'>{$icon['title']}</span></div>";
 			}
 			?>
 		</div>
@@ -70,59 +70,61 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="community__grid--container">
-			<div class="community__grid col-lg-10">
-				<?php
-				$grid_items = array(
-					array(
-						'svg'  => 'compass',
-						'text' => 'Expert Guidance with a Kingdom One Ministry Partner',
-					),
-					array(
-						'svg'  => 'restroom',
-						'text' => 'Sexual Harrassment Prevention Training',
-					),
-					array(
-						'svg'  => 'justice',
-						'text' => 'AB-506 Child Safety & Mandated Reporting Compliance Training',
-					),
-					array(
-						'svg'  => 'git-network',
-						'text' => 'HR Ministry Network Conference Online Course',
-					),
-					array(
-						'svg'  => 'sitemap',
-						'text' => 'Talent Planning &amp; Organizational Leveling',
-					),
-					array(
-						'svg'  => 'search-dollar',
-						'text' => 'Annual Compensation Survey Report',
-					),
-					array(
-						'svg'  => 'profile',
-						'text' => 'Staffing Searches',
-					),
-					array(
-						'svg'  => 'medical',
-						'text' => 'Benefits, Insurance &amp; Total Rewards',
-					),
-					array(
-						'svg'  => 'group-add',
-						'text' => 'Ministry Cohorts',
-					),
-					array(
-						'svg'  => 'plus-circle',
-						'text' => 'And so much more...',
-					),
-				);
-				foreach ( $grid_items as $item ) {
-					$markup  = "<div class='community__grid--item'><div class='community__grid-item-content'>";
-					$markup .= k1_get_svg_asset( 'front-page-icon-' . $item['svg'], false, false );
-					$markup .= "<p class='community__grid-item-content--text'>{$item['text']}</p>";
-					$markup .= '</div></div>';
-					echo $markup;
-				}
-				?>
+			<div class="container">
+				<div class="community__grid">
+					<?php
+					$grid_items = array(
+						array(
+							'svg'  => 'compass',
+							'text' => 'Expert Guidance with a Kingdom One Ministry Partner',
+						),
+						array(
+							'svg'  => 'restroom',
+							'text' => 'Sexual Harrassment Prevention Training',
+						),
+						array(
+							'svg'  => 'justice',
+							'text' => 'AB-506 Child Safety & Mandated Reporting Compliance Training',
+						),
+						array(
+							'svg'  => 'git-network',
+							'text' => 'HR Ministry Network Conference Online Course',
+						),
+						array(
+							'svg'  => 'sitemap',
+							'text' => 'Talent Planning &amp; Organizational Leveling',
+						),
+						array(
+							'svg'  => 'search-dollar',
+							'text' => 'Annual Compensation Survey Report',
+						),
+						array(
+							'svg'  => 'profile',
+							'text' => 'Staffing Searches',
+						),
+						array(
+							'svg'  => 'medical',
+							'text' => 'Benefits, Insurance &amp; Total Rewards',
+						),
+						array(
+							'svg'  => 'group-add',
+							'text' => 'Ministry Cohorts',
+						),
+						array(
+							'svg'  => 'plus-circle',
+							'text' => 'And so much more...',
+						),
+					);
+					foreach ( $grid_items as $item ) {
+						$markup  = "<div class='community__grid--item'><div class='community__grid-item-content'>";
+						$markup .= k1_get_svg_asset( 'front-page-icon-' . $item['svg'], false, false );
+						$markup .= "<p class='community__grid-item-content--text'>{$item['text']}</p>";
+						$markup .= '</div></div>';
+						echo $markup;
+					}
+					?>
 
+				</div>
 			</div>
 		</div>
 	</section>
@@ -163,7 +165,7 @@ get_header(); ?>
 	get_template_part( 'template-parts/sliders/swiper', 'brands' );
 	get_template_part(
 		'template-parts/content',
-		'three-steps',
+		'equipment',
 		array(
 			'with_header' => true,
 			'header_args' => array(
