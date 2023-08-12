@@ -1,0 +1,28 @@
+@use 'sass:color';
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+@use '../components/equipment';
+
+.erc_comparisons {
+	&__background {
+		@include m.background-layers($opacity: 0.5);
+		&--color {
+			background-color: var(--color-erc-purple);
+		}
+		&--lower {
+			background-color: var(--color-primary--darkest);
+		}
+	}
+}
+
+.erc-icon {
+    :where(&#rocket) {
+        .a{fill:#00ae83;}.b{fill:#dbdbdb;}.c{clip-path:url(#rocket-a);}.d{fill:#fff;}.e{fill:#3b3d90;font-size:33px;font-family:Poppins-Bold, Poppins;font-weight:700;}.f{filter:url(#rocket-b);}
+    }
+    :where(&#chat) {
+        .a{fill:#dbdbdb;}.b{fill:#00ae83;stroke:#00ae83;stroke-width:3px;}.c{fill:#fff;}.d{fill:#3b3d90;font-size:33px;font-family:Poppins-Bold, Poppins;font-weight:700;}.e{filter:url(#chat-a);}
+    }
+    :where(&#partner) {
+        .a{fill:#00ae83;}.b{fill:#dbdbdb;}.c{clip-path:url(#partner-a);}.d{fill:#fff;}.e{fill:#3b3d90;font-size:33px;font-family:Poppins-Bold, Poppins;font-weight:700;}.f{filter:url(#partner-b);}
+    }
+}
