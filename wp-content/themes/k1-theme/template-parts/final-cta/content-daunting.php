@@ -1,8 +1,6 @@
 <?php
 /**
- * Final CTA Template Part
- *
- * $args = array()
+ * Final CTA: Daunting
  */
 
 $content = new Content_Sections();

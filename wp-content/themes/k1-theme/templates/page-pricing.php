@@ -83,4 +83,4 @@ $content = new Content_Sections();
 	</div>
 	<?php get_template_part( 'template-parts/sliders/swiper', 'services' ); ?>
 </aside>
-<?php get_template_part( 'template-parts/content', 'final-cta' ); ?>
+<?php get_template_part( 'template-parts/final-cta/content', 'daunting' ); ?>
