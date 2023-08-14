@@ -3,7 +3,7 @@
 @use '../abstracts/variables' as v;
 @use '../components/equipment';
 
-.erc_comparisons {
+.erc-comparisons {
 	&__background {
 		@include m.background-layers($opacity: 0.5);
 		&--color {
@@ -16,13 +16,18 @@
 }
 
 .erc-icon {
+    fill: var(--color-erc-purple);
+    font-size:33px;
+    font-family:Poppins-Bold, Poppins;
+    font-weight:700;
+
     :where(&#rocket) {
-        .a{fill:#00ae83;}.b{fill:#dbdbdb;}.c{clip-path:url(#rocket-a);}.d{fill:#fff;}.e{fill:#3b3d90;font-size:33px;font-family:Poppins-Bold, Poppins;font-weight:700;}.f{filter:url(#rocket-b);}
+        .a{fill:var(--color-primary);}.b{fill: var(--color-grey--lightest);}.c{clip-path:url(#rocket-a);}.d{fill:#fff;}.f{filter:url(#rocket-b);}
     }
     :where(&#chat) {
-        .a{fill:#dbdbdb;}.b{fill:#00ae83;stroke:#00ae83;stroke-width:3px;}.c{fill:#fff;}.d{fill:#3b3d90;font-size:33px;font-family:Poppins-Bold, Poppins;font-weight:700;}.e{filter:url(#chat-a);}
+        .a{fill: var(--color-grey--lightest);}.b{fill: var(--color-primary);stroke: var(--color-primary);stroke-width:3px;}.c{fill:#fff;}.e{filter:url(#chat-a);}
     }
     :where(&#partner) {
-        .a{fill:#00ae83;}.b{fill:#dbdbdb;}.c{clip-path:url(#partner-a);}.d{fill:#fff;}.e{fill:#3b3d90;font-size:33px;font-family:Poppins-Bold, Poppins;font-weight:700;}.f{filter:url(#partner-b);}
+        .a{fill: var(--color-primary);}.b{fill: var(--color-grey--lightest);}.c{clip-path:url(#partner-a);}.d{fill:#fff;}.f{filter:url(#partner-b);}
     }
 }

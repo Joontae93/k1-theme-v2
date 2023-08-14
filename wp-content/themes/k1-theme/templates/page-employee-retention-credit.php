@@ -9,13 +9,13 @@ k1_enqueue_page_style('employeeRetentionCredit');
 ?>
 <section class="calculator">
     <h3 class="color-erc-purple text-center">Estimate Your Employee Retention Credit Today!</h3>
-    <p class="text-center">We’re so glad you’re interested in learning more about the Employee Retention Credit available <br> to you through the Federal Government. Please complete this brief form so our ERC Team can <br> connect with you for your next step in the ERC process.</p>
+    <p class="text-lg-center">We’re so glad you’re interested in learning more about the Employee Retention Credit available to you through the Federal Government. Please complete this brief form so our ERC Team can connect with you for your next step in the ERC process.</p>
     <!-- ERC Calculator -->
 </section>
 
-<section class="erc_comparisons">
+<section class="erc-comparisons">
 	<?php $content->get_color_background_layers( 'erc_comparisons', 'right', array( 'erc-comparisons-bg', 'webp' ) ); ?>
-	<div class="container erc_comparisons__content position-relative z-2 py-5">
+	<div class="container erc-comparisons__content position-relative z-2 py-5">
 		<div class="row my-5">
 			<div class="col">
 				<h2 class="headline color-spark-yellow">what is erc?</h2>
