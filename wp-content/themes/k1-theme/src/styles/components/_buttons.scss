@@ -100,6 +100,30 @@
 		}
 	}
 
+	&__spark-yellow {
+		&--fill {
+			@extend .btn;
+			background-color: var(--color-spark-yellow);
+			color: white;
+
+			a {
+				color: white;
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: white;
+				border-color: var(--color-spark-yellow);
+				color: var(--color-spark-yellow);
+
+				a {
+					color: var(--color-spark-yellow);
+				}
+			}
+		}
+	}
+
 	&__ar-purple {
 		&--fill {
 			@extend .btn;

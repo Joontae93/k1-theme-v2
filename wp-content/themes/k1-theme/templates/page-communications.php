@@ -170,4 +170,4 @@ get_template_part(
 	)
 );
 get_template_part( 'template-parts/sliders/swiper', 'brands' );
-get_template_part( 'template-parts/content', 'final-cta' );
+get_template_part( 'template-parts/final-cta/content', 'daunting' );
