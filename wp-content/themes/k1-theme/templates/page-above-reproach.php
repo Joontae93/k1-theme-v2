@@ -8,8 +8,8 @@ k1_enqueue_page_style( 'aboveReproach' );
 ?>
 <section class="intro-video">
 	<div class="container">
-		<div class="row">
-			<h2 class="headline text-center">finally, an ab-506 training that is biblically-minded</h2>
+		<div class="row justify-content-lg-center">
+			<h2 class="headline text-lg-center col-lg-8">finally, an ab-506 training that is biblically-minded</h2>
 		</div>
 		<div class="row">
 			<pre>Stephen Video</pre>
@@ -21,6 +21,7 @@ k1_enqueue_page_style( 'aboveReproach' );
 					'text'        => 'Enroll Now',
 					'url'         => 'https://academy.kingdomone.co',
 					'is_external' => true,
+					'html_class'  => 'btn__black--outline',
 				)
 			);
 			?>
@@ -35,48 +36,71 @@ k1_enqueue_page_style( 'aboveReproach' );
 				coordinate and manage whichever team you are leading through the self-guided training.</p>
 		</div>
 		<div class="row">
-			<div class="col-lg-4">1</div>
-			<div class="col-lg-4">2</div>
-			<div class="col-lg-4">3</div>
+			<?php
+			$ab506_cards = array(
+				array(
+					'thumbnail' => 'Volunteer',
+					'title'     => 'Volunteer Teams',
+					'features'  => array( '60 Minutes', 'Overview of AB-506', 'Biblical, topical and legal child saftey training', 'Mandatory reporter requirements', 'Certificate of completion' ),
+					'cta_link'  => 'https://academy.kingdomone.co/course/ab-506-child-safety-reporting-volunteer/',
+
+				),
+				array(
+					'thumbnail' => 'Flagship',
+					'title'     => 'Ministry &amp; Non-Profit Teams',
+					'features'  => array( '90-Minute Training', 'Overview of AB-506', 'Biblical, topical and legal child saftey training', 'Mandatory reporter requirements', 'Certificate of completion' ),
+					'cta_link'  => 'https://academy.kingdomone.co/course/ab506/',
+
+				),
+				array(
+					'thumbnail' => 'School',
+					'title'     => 'Education Teams',
+					'features'  => array( '120 Minutes', 'Overview of AB-506', 'Biblical, topical and legal child saftey training', 'Mandatory reporter requirements', 'Certificate of completion' ),
+					'cta_link'  => 'https://academy.kingdomone.co/course/ab-506-child-safety-reporting-for-education/',
+
+				),
+			);
+			?>
+			<?php foreach ( $ab506_cards as $card ) : ?>
+			<div class="col-lg-4">
+				<div class="ar-card">
+					<div class="ar-card__bg" style="background-image:url('<?php k1_get_image_asset_url( 'AB-506-' . $card['thumbnail'] . '-Banner', 'png', 'temps' ); ?>');"></div>
+					<div class="ar-card__content">
+						<h3 class="ar-card__content--title">
+							<?php echo $card['title']; ?>
+						</h3>
+						<div class="ar-card__features-list">
+							<h4 class="ar-card__features-list--header">Course Features:</h4>
+							<?php $content->bulleted_list( $card['features'], 'ar-card__features-list--item' ); ?>
+						</div>
+						<a href="<?php echo $card['cta_link']; ?>" target="_blank" rel='noopener noreferrer' class="btn__ar-purple--fill ar-card__content--btn">Preview Course</a>
+					</div>
+				</div>
+			</div>
+			<?php endforeach; ?>
+
 		</div>
 	</div>
 </section>
 <section class="ab506-diy">
-	<?php
-	$content->two_col_text_and_media(
-		array(
-			'split'    => array( 5, 6 ),
-			'headline' => "don't see what you're looking for? that's ok!",
-			'content'  => '<p>Our D.I.Y. kit has policy templates and training resources for a fraction of the cost!</p>',
-			'cta'      => array(
-				'url'         => 'https://academy.kingdomone.co',
-				'title'       => 'Get the D.I.Y. Kit',
-				'is_external' => true,
-			),
-		)
-	);
-	?>
-</section>
-<section class="ar-three-steps">
-	<?php $content->get_color_background_layers( 'ar-three-steps', 'left-top' ); ?>
-	<div class="ar-three-steps__content position-relative z-3 py-5">
-		<div class="container">
-			<div class="row py-5 text-white">
-				<div class="col-lg-4">1</div>
-				<div class="col-lg-4">2</div>
-				<div class="col-lg-4">3</div>
-			</div>
-			<div class="row justify-content-lg-center">
-				<?php
-				$content->cta_button(
-					array(
-						'text'        => 'Enroll Now',
-						'url'         => 'https://academy.kingdomone.co',
-						'is_external' => true,
-					)
-				);
-				?>
-			</div>
-		</div>
+	<div class="container">
+		<?php
+		$content->two_col_text_and_media(
+			array(
+				'split'      => array( 5, 6 ),
+				'headline'   => "don't see what you're looking for? that's ok!",
+				'content'    => '<p>Our D.I.Y. kit has policy templates and training resources for a fraction of the cost!</p>',
+				'media_type' => 'photo',
+				'image'      => k1_get_image_asset_url( 'above-reproach-road-sign', 'webp', '', false ),
+				'cta'        => array(
+					'url'         => 'https://academy.kingdomone.co',
+					'title'       => 'Get the D.I.Y. Kit',
+					'is_external' => true,
+				),
+				'cta_class'  => 'btn__ar-purple--fill',
+			)
+		);
+		?>
 	</div>
 </section>
+<?php get_template_part( 'template-parts/final-cta/content', 'ab506' ); ?>
