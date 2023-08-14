@@ -1,0 +1,6 @@
+@use '../components/content-sections/ar-card';
+@use '../components/content-sections/final-cta/ab506';
+
+.headline:where(:not(.hero__content--headline)) {
+	color: var(--color-ar-purple);
+}

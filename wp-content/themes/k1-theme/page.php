@@ -33,6 +33,9 @@ get_header(); ?>
 		case ( 'get-started' ):
 			get_template_part( 'templates/page', 'get-started' );
 			break;
+		case ( 'above-reproach' ):
+			get_template_part( 'templates/page', 'above-reproach' );
+			break;
 		default:
 			echo 'hello';
 	}
