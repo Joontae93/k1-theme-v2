@@ -5,6 +5,30 @@
 	&__background {
 		transform: scaleX(-1);
 	}
+
+	&__content {
+		&--btn {
+			background-color: transparent;
+			border: 2px solid var(--color-ar-yellow);
+			color: var(--color-ar-yellow);
+
+			a {
+				color: var(--color-ar-yellow);
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: var(--color-ar-yellow);
+				border: 2px solid var(--color-ar-yellow);
+				color: black;
+
+				a {
+					color: black;
+				}
+			}
+		}
+	}
 }
 
 .headline:where(:not(.hero__content--headline)) {
