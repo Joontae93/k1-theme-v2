@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.5.0
+
+- Now with single and archive templates for posts!
+
 ## v0.4.2
 
 - Refactor `final-cta` sections into their own `template-parts` folder
