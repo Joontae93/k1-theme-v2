@@ -1,6 +1,11 @@
 .footer {
-	.logo {
-		color: white;
+	.socials {
+		--svg-size: 6rem;
+
+		.svg-inline--fa {
+			width: var(--svg-size);
+			height: var(--svg-size);
+		}
 	}
 }
 

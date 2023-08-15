@@ -5,6 +5,7 @@
  *
  * $args = array(
  * 'with_header' => boolean,
+ * 'as_cta'      => boolean,
  * 'header_args' => array(
  *   'headline' => string,
  *   'subheadline' => string,
@@ -16,7 +17,7 @@ extract( $args );
 $content = new Content_Sections();
 ?>
 <section class="equipment">
-	<?php $content->get_color_background_layers( 'equipment', 'zig-zag-left', array( 'josh-calabrese-XXpbdU_31Sg-unsplash', 'jpg' ) ); ?>
+	<?php $content->get_color_background_layers( 'equipment', $as_cta ? 'left-top' : 'zig-zag-left', array( 'josh-calabrese-XXpbdU_31Sg-unsplash', 'jpg' ) ); ?>
 	<div class="equipment__content container">
 		<?php
 		if ( $with_header ) {

@@ -1,0 +1,132 @@
+@use '../../equipment';
+@use '../../../abstracts/mixins' as m;
+
+.final-cta-erc {
+	&__background {
+		@include m.background-layers($opacity: 0.65);
+
+		&--color {
+			background-color: var(--color-primary);
+		}
+		&--lower {
+			background-position: 70% 70%;
+		}
+	}
+	&__content {
+		position: relative;
+		z-index: 2;
+		padding-top: 4rem;
+
+		.headline {
+			text-align: center;
+			text-transform: capitalize;
+			letter-spacing: 0.2rem;
+		}
+
+		#spark-icon {
+			position: absolute;
+			top: 0rem;
+			right: 0rem;
+
+			@include m.media-breakpoint-up(md) {
+				right: -4rem;
+			}
+
+			@include m.media-breakpoint-up(lg) {
+				right: 4rem;
+			}
+
+			@include m.media-breakpoint-up(xl) {
+				right: 12rem;
+			}
+
+			@include m.media-breakpoint-up(xxl) {
+				right: 22rem;
+			}
+		}
+	}
+
+	&__steps {
+		%step-style {
+			@include m.displayFlex(column, $cross: center);
+
+			svg {
+				--size: 24rem;
+				width: var(--size);
+				height: var(--size);
+				margin-bottom: 2rem;
+			}
+
+			.subheadline {
+				font-size: 1.35em;
+				display: block;
+				margin: 1.5rem 0;
+			}
+		}
+
+		&--step-1 {
+			@extend %step-style;
+		}
+
+		&--step-2 {
+			@extend %step-style;
+		}
+
+		&--step-3 {
+			@extend %step-style;
+		}
+	}
+}
+
+.erc-icon {
+	fill: var(--color-erc-purple);
+	font-size: 33px;
+	font-family: Poppins-Bold, Poppins;
+	font-weight: 700;
+	.a {
+		fill: var(--color-primary);
+	}
+	.b {
+		fill: var(--color-grey--lightest);
+	}
+	.d {
+		fill: white;
+	}
+
+	:where(&#rocket) {
+		.c {
+			clip-path: url(#rocket-a);
+		}
+
+		.f {
+			filter: url(#rocket-b);
+		}
+	}
+	:is(&#chat) {
+		.a {
+			fill: var(--color-grey--lightest);
+		}
+		.b {
+			fill: var(--color-primary);
+			stroke: var(--color-primary);
+			stroke-width: 3px;
+		}
+		.c {
+			fill: #fff;
+		}
+		.d {
+			fill: var(--color-erc-purple);
+		}
+		.e {
+			filter: url(#chat-a);
+		}
+	}
+	:where(&#partner) {
+		.c {
+			clip-path: url(#partner-a);
+		}
+		.f {
+			filter: url(#partner-b);
+		}
+	}
+}

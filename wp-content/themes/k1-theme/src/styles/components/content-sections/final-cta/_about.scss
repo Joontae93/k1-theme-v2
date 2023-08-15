@@ -1,0 +1,26 @@
+@use '../../../abstracts/mixins' as m;
+
+.final-cta-about {
+	#spark-icon {
+		position: absolute;
+		top: -4rem;
+		right: 0rem;
+
+		@include m.media-breakpoint-up(sm) {
+			right: -8rem;
+		}
+
+		@include m.media-breakpoint-up(md) {
+			right: -4rem;
+		}
+
+		@include m.media-breakpoint-up(xl) {
+			top: 0;
+			right: 4rem;
+		}
+
+		@include m.media-breakpoint-up(xxl) {
+			right: 12rem;
+		}
+	}
+}

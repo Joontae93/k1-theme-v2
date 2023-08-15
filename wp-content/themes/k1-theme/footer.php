@@ -1,31 +1,30 @@
-<?php
+<?php //phpcs:ignore
 /**
  * Basic Footer Template
  *
  * @since 1.0
  */
 
-// phpcs:ignore
-$current_year = date( "Y" );
+$current_year = gmdate( 'Y' );
 ?>
-<footer class="bg-color-primary--dark pt-5 pb-3">
+<footer class="footer bg-color-primary--dark pt-5 pb-3">
 	<div class="container">
 		<div class="row mb-5">
-			<div class="col-4">
-				<a href="/" class="h1">
-					<figure class="logo"><?php echo file_get_contents('wp-content/themes/k1-theme/src/assets/K1-Logo-v2.svg'); ?></figure>
+			<div class="col-md-4 d-flex justify-content-center align-items-center flex-column">
+				<a href="/" class="h1" aria-label='to Home page'>
+					<figure class="logo">
+						<?php echo file_get_contents( 'wp-content/themes/k1-theme/src/assets/K1-Logo-v2.svg' ); ?>
+					</figure>
 				</a>
-				<div class="socials">
-					<div class="row">
-						<div class="col-4"><i class='fa-brands fa-facebook'></i></div>
-						<div class="col-4"><i class='fa-brands fa-instagram'></i></div>
-						<div class="col-4"><i class='fa-brands fa-linkedin'></i></div>
-					</div>
+				<div class="socials row justify-content-around align-self-stretch">
+					<i class='fa-brands fa-facebook'></i>
+					<i class='fa-brands fa-instagram'></i>
+					<i class='fa-brands fa-linkedin'></i>
 				</div>
 			</div>
-			<div class="col">
+			<div class="my-5 col-md-8">
 				<div class="row">
-					<div class="col-lg-4">
+					<div class="col-md-4">
 						<nav class="footer-nav" id="footer-nav-1">
 							<ul>
 								<li><a href="/about">About Us</a></li>
@@ -34,16 +33,16 @@ $current_year = date( "Y" );
 							</ul>
 						</nav>
 					</div>
-					<div class="col-lg-4">
+					<div class="col-md-4">
 						<nav class="footer-nav" id="footer-nav-2">
 							<ul>
-								<li><a href="#">Our Services</a></li>
-								<li><a href="#">Staffing</a></li>
-								<li><a href="#">Academy</a></li>
+								<li><a href="/services">Our Services</a></li>
+								<li><a href="/staffing">Staffing</a></li>
+								<li><a href="https://academy.kingdomone.co" target="_blank" rel="noreferrer noopener">Academy</a></li>
 							</ul>
 						</nav>
 					</div>
-					<div class="col-lg-4">
+					<div class="col-md-4">
 						<nav class="footer-nav" id="footer-nav-3">
 							<ul>
 								<li><a href="#">Free Resources</a></li>

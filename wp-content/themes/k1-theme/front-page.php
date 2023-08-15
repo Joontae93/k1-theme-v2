@@ -168,6 +168,7 @@ get_header(); ?>
 		'equipment',
 		array(
 			'with_header' => true,
+			'as_cta'      => true,
 			'header_args' => array(
 				'headline'    => 'Decide to make a ministry change',
 				'subheadline' => "Your role isn't easy (we know, we've been there!), but your job is so necessary to your Ministry's Health. Our mission is to build healthy people & strategies that help the Church thrive so you never have to second guess your ministry efforts. Our pricing allows ministries of all sizes to participate in Kingdom One. Visit our pricing page to learn more about the costs and process. ",

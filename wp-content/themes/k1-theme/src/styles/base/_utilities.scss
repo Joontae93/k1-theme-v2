@@ -15,21 +15,33 @@
 	color: white;
 }
 
+.color-grey {
+	color: var(--color-grey);
+}
+
 .color-erc-purple {
 	color: var(--color-erc-purple);
 }
 
-.bg-rolling-hills {
-	background-repeat: no-repeat;
-	background-size: 100%;
-	height: 110rem;
-
-	.container {
-		position: absolute;
-		top: 20%;
-		left: 5%;
-	}
+.color-erc-blue {
+	color: var(--color-erc-blue);
 }
+
+.color-spark-yellow {
+	color: var(--color-spark-yellow);
+}
+
+// .bg-rolling-hills {
+// 	background-repeat: no-repeat;
+// 	background-size: 100%;
+// 	height: 110rem;
+
+// 	.container {
+// 		position: absolute;
+// 		top: 20%;
+// 		left: 5%;
+// 	}
+// }
 
 .text-roie {
 	font-family: var(--font-headings) !important;

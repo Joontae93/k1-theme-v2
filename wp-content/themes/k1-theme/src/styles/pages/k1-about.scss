@@ -1,5 +1,6 @@
 @use '../abstracts/mixins' as m;
 @use '../abstracts/variables' as v;
+@use '../components/content-sections/final-cta/about';
 
 %leaves-4_base {
 	stroke: var(--color-primary);
@@ -11,6 +12,7 @@
 		--size: 18rem;
 	}
 }
+
 .empathy {
 	#leaves-4 {
 		position: absolute;
@@ -24,6 +26,7 @@
 		}
 	}
 }
+
 .authority {
 	.headline {
 		width: 60vw;
