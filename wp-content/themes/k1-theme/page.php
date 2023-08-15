@@ -33,6 +33,9 @@ get_header(); ?>
 		case ( 'get-started' ):
 			get_template_part( 'templates/page', 'get-started' );
 			break;
+		case ( 'employee-retention-credit' ):
+			get_template_part( 'templates/page', 'employee-retention-credit' );
+			break;
 		default:
 			the_content();
 	}
