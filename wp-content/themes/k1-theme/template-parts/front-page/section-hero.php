@@ -8,9 +8,9 @@ $content = new Content_Sections();
 ?>
 <section class="hero d-flex flex-column justify-content-center" id="hero">
 	<?php
-	$hero = get_field( 'hero', get_the_ID() );
+	$hero = get_field( 'hero' );
 	extract( $hero );
-	$headline = empty( $alternate_headline ) ? get_the_title( $post_id ) : $alternate_headline;
+	$headline = empty( $alternate_headline ) ? get_the_title() : $alternate_headline;
 	echo $content->get_hero_background( $has_background_image, $color, $color_direction, $background_image );
 	echo $content->get_hero_content( $headline, $subheadline, false );
 	?>
