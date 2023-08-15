@@ -122,7 +122,7 @@ class Content_Components {
 	}
 
 	/** Gets the content layer of the Hero Section */
-	public function get_hero_content( string $headine, string $subheadline, bool $has_cta, array $cta_options = array() ) : string {
+	public function get_hero_content( string $headine, string $subheadline, bool $has_cta, array|null $cta_options = array() ) : string {
 		$markup  = "<div class='hero__content container d-flex flex-column align-items-stretch'><div class='row'><div class='col-1 align-self-start h-auto position-relative d-none d-md-block'>" . k1_get_svg_asset( 'leaves-3', false, false ) . "</div><div class='position-relative d-flex flex-column col-11'>";
 		$markup .= $this->headline(
 			$headine,
