@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.4.2
+
+- Refactor `final-cta` sections into their own `template-parts` folder
+- Add new Button styles
+
 ## v0.4.1
 
 - homepage bug fixes

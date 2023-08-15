@@ -37,7 +37,7 @@ get_header(); ?>
 			get_template_part( 'templates/page', 'employee-retention-credit' );
 			break;
 		default:
-			echo 'hello';
+			the_content();
 	}
 	?>
 </main>

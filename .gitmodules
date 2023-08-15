@@ -1,0 +1,3 @@
+[submodule "wp-content/themes/k1-block-theme"]
+	path = wp-content/themes/k1-block-theme
+	url = https://github.com/kingdom-one/k1-block-theme.git

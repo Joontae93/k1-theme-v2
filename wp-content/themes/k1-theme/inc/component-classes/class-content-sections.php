@@ -66,7 +66,7 @@ class Content_Sections extends Content_Components {
 	 *  'cta_class'        => 'btn__primary--fill',
 	 *  'media_type'       => 'photo' | 'video' | 'svg'
 	 *  'reverse'          => false,
-	 *  'image'            => null | array,
+	 *  'image'            => null | array | string,
 	 * );
 	 * ```
 	 * @param bool  $echo Whether to echo or return the markup (default: true)
@@ -103,10 +103,15 @@ class Content_Sections extends Content_Components {
 			if ( 'svg' === $media_type ) {
 				$col_1_content = $image;
 			} elseif ( 'photo' === $media_type ) {
-				$col_1_content  = "<figure class='two-col__image'>";
-				$alt            = esc_attr( $image['alt'] );
-				$srcset         = wp_get_attachment_image_srcset( $image['ID'] );
-				$col_1_content .= "<img src={$image['sizes']['two-col']} alt='{$alt}'} srcset='{$srcset}' />";
+				$col_1_content = "<figure class='two-col__image'>";
+				if ( 'string' === gettype( $image ) ) {
+					$alt            = $alt ?? '';
+					$col_1_content .= "<img src={$image} alt='{$alt}'} />";
+				} else {
+					$alt            = esc_attr( $image['alt'] );
+					$srcset         = wp_get_attachment_image_srcset( $image['ID'] );
+					$col_1_content .= "<img src={$image['sizes']['two-col']} alt='{$alt}'} srcset='{$srcset}' />";
+				}
 				$col_1_content .= '</figure>';
 			}
 		} elseif ( 'video' === $media_type ) {
