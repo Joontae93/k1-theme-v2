@@ -25,7 +25,6 @@ class Content_Sections extends Content_Components {
 	 * );
 	 * ```
 	 */
-
 	public function hero_section( int $post_id = null, $echo = true, array $args = array() ) {
 		if ( empty( $post_id ) ) {
 			extract( $args );
@@ -39,7 +38,11 @@ class Content_Sections extends Content_Components {
 			$background_image = null;
 		}
 		$markup .= $this->get_hero_background( $has_background_image, $color, $color_direction, $background_image );
-		$markup .= $this->get_hero_content( $headline, $subheadline, $has_cta, $cta_options );
+		if ( $has_cta ) {
+			$markup .= $this->get_hero_content( $headline, $subheadline, $has_cta, $cta_options );
+		} else {
+			$markup .= $this->get_hero_content( $headline, $subheadline, false );
+		}
 		$markup .= '</section>';
 
 		if ( $echo ) {

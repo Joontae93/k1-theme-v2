@@ -7,7 +7,10 @@
  */
 
 $content = new Content_Sections();
-get_header(); ?>
+get_header();
+if ( ! is_archive() ) :
+	?>
+
 <main class="site-content <?php echo $post->post_name; ?>">
 	<?php $content->hero_section( get_the_ID() ); ?>
 	<?php
@@ -41,4 +44,6 @@ get_header(); ?>
 	}
 	?>
 </main>
-<?php get_footer(); ?>
+	<?php
+endif;
+get_footer(); ?>
