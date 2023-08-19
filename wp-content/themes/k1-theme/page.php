@@ -8,8 +8,8 @@
 
 $content = new Content_Sections();
 get_header();
-if ( ! is_archive() ) :
-	?>
+?>
+<?php if ( ! is_archive() ) : ?>
 
 <main class="site-content <?php echo $post->post_name; ?>">
 	<?php $content->hero_section( get_the_ID() ); ?>
@@ -39,11 +39,14 @@ if ( ! is_archive() ) :
 		case ( 'employee-retention-credit' ):
 			get_template_part( 'templates/page', 'employee-retention-credit' );
 			break;
+		case ( 'staffing' ):
+			get_template_part( 'templates/page', 'staffing' );
+			break;
 		default:
 			the_content();
 	}
 	?>
 </main>
-	<?php
-endif;
-get_footer(); ?>
+<?php endif; ?>
+<?php
+get_footer();

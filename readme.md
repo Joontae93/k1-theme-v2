@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.6.0
+
+- Now with /staffing!
+
 ## v0.5.0
 
 - Now with single and archive templates for posts!

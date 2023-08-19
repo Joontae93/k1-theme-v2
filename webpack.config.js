@@ -22,6 +22,7 @@ const jsFiles = [
 	'pricing',
 	'k1-about',
 	'get-started',
+	'staffing',
 ];
 
 /**
