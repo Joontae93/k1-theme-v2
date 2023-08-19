@@ -25,10 +25,11 @@ $content = new Content_Sections();
 				<h2 class="text-white text-roie">core services</h2>
 			</div>
 		</div>
-		<div class="row justify-content-around">
+		<div class="row justify-content-lg-evenly my-5">
 			<?php
+			$cols = 12 / count( $args );
 			foreach ( $args as $list ) {
-				echo '<div class="col-md-6 col-lg-3 d-flex flex-column">';
+				echo "<div class='col-md-6 col-lg-{$cols} d-flex flex-column'>";
 				if ( $list['title'] ) {
 					echo "<h3 class='text-roie text-white mt-5 text-lowercase'>{$list['title']}</h3>";
 				}

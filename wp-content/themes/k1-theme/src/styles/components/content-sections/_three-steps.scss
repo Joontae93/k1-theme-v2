@@ -154,4 +154,53 @@
 			fill: #fff;
 		}
 	}
+
+	:where(&#build-step-3) {
+		.a,
+		.c {
+			fill: none;
+			stroke: #fff;
+			stroke-width: 5px;
+		}
+		.b {
+			clip-path: url(#build-step-3-a);
+		}
+		.c {
+			stroke-linecap: round;
+			stroke-linejoin: round;
+		}
+		.d {
+			fill: #fff;
+		}
+		.e {
+			fill: var(--color-primary--dark);
+			font-size: 33px;
+			font-family: v.$font-poppins;
+			font-weight: 700;
+		}
+		.f {
+			filter: url(#build-step-3-e);
+		}
+	}
+
+	:where(&#partner-step-2) {
+		.a {
+			fill: none;
+		}
+		.b {
+			clip-path: url(#partner-step-2-a);
+		}
+		.c {
+			fill: #fff;
+		}
+		.d {
+			fill: var(--color-primary--dark);
+			font-size: 33px;
+			font-family: v.$font-poppins;
+			font-weight: 700;
+		}
+		.e {
+			filter: url(#partner-step-2-b);
+		}
+	}
 }

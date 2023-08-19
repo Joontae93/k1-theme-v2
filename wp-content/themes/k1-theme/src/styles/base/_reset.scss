@@ -11,12 +11,12 @@
 
 html {
 	font-size: 62.5%;
-	overflow-x: hidden;
 }
 
 body {
 	box-sizing: border-box;
 	font-size: 1.6rem;
+	overflow-x: hidden;
 }
 
 :root {
@@ -34,13 +34,10 @@ body {
 	--color-spark-yellow: #{v.$color-spark-yellow};
 	--color-ar-purple: #{v.$color-ar-purple};
 	--color-ar-orange: #{v.$color-ar-orange};
-    --color-ar-yellow: #{v.$color-ar-yellow};
-  
+	--color-ar-yellow: #{v.$color-ar-yellow};
+
 	--color-erc-purple: #{v.$color-erc-purple};
 	--color-erc-blue: #{v.$color-erc-blue};
-
-	
-
 
 	--transition--standard: #{v.$transition--standard};
 }
