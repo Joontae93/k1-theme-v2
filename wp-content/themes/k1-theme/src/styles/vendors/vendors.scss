@@ -1,3 +1,7 @@
 @use './bs-custom';
 @use './css-animations/animate.min.css';
 @use './fonts';
+
+.container fluid {
+    --bs-gutter-x: 2.5rem;
+}
