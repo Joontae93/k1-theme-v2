@@ -22,6 +22,7 @@
 			top: -4rem;
 			left: 28rem;
 		}
+
 	}
 	%list_headline {
 		font-size: 1.5em;
@@ -31,6 +32,7 @@
 			@extend %list_headline;
 			color: var(--color-erc-blue);
 		}
+
 	}
 
 	&__list-2 {
@@ -42,5 +44,6 @@
 		&--item {
 			color: var(--color-grey--lightest);
 		}
+
 	}
 }

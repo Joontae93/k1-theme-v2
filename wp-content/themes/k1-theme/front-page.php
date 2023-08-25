@@ -25,7 +25,7 @@ get_header(); ?>
 					'file'  => 'finance',
 				),
 				array(
-					'title' => 'Marketing & Communications',
+					'title' => 'Marketing & <br> Communications',
 					'file'  => 'marcom',
 				),
 				array(
@@ -36,7 +36,7 @@ get_header(); ?>
 			foreach ( $icons as $icon ) {
 				$filename = "tg-{$icon['file']}-icon";
 				$svg      = k1_get_svg_asset( $filename, true, false );
-				echo "<div class='icon col my-5 my-lg-0'><img class='icon__svg' src='{$svg}' /><span class='icon__label'>{$icon['title']}</span></div>";
+				echo "<div class='icon col-12 col-lg-3 my-5 my-lg-0'><img class='icon__svg' src='{$svg}' /><span class='icon__label'>{$icon['title']}</span></div>";
 			}
 			?>
 		</div>

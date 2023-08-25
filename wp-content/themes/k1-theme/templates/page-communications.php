@@ -9,7 +9,7 @@ $content = new Content_Sections();
 	<div class="container">
 		<div class="row my-5">
 			<div class="col">
-				<h2 class="text-primary text-lg-center">is your marketing</h2>
+				<h2 class="text-primary text-center">is your marketing</h2>
 			</div>
 		</div>
 		<div class="row problems__content justify-content-around">
@@ -37,13 +37,13 @@ $content = new Content_Sections();
 				),
 			);
 			foreach ( $issues as $issue ) {
-				echo "<div class='col col-lg-2 d-flex flex-column align-items-center'>" . k1_get_svg_asset( 'marcom-' . $issue['svg'], echo:false ) . "<p class='text-center'>{$issue['text']}</p></div>";
+				echo "<div class='col-sm-12 col-lg-2 d-flex flex-column align-items-center'>" . k1_get_svg_asset( 'marcom-' . $issue['svg'], echo:false ) . "<p class='text-center'>{$issue['text']}</p></div>";
 			}
 			?>
 		</div>
 		<div class="row my-5">
 			<div class="col">
-				<p class='text-lg-center'><b>Marketing and communication for ministry takes a lot of work.</b><br /> Let's avoid appearing desperate and needy by constantly posting event
+				<p class='text-center'><b>Marketing and communication for ministry takes a lot of work.</b><br /> Let's avoid appearing desperate and needy by constantly posting event
 					information. Let's showcase your ministry strengths to make an eternal impact on people's lives!</p>
 			</div>
 		</div>
@@ -83,7 +83,7 @@ $content = new Content_Sections();
 <section class="empathy">
 	<div class="container">
 		<div class="row justify-content-lg-center">
-			<div class="col-lg-8 text-lg-center">
+			<div class="col-lg-8 text-center">
 				<h2 class="text-primary">We Know What It Feels Like</h2>
 				<span class="h4 d-block my-5">Working hard for an event, product, or service and have marketing fail to promote it to the right people takes a toll on you.</span>
 				<p class="mb-5">We can teach and implement a story-based framework like the ones we've created for dozens of ministries that helped them gain confidence in their messaging
@@ -111,7 +111,7 @@ get_template_part(
 ?>
 <section class="statistics">
 	<div class="container">
-		<div class="row text-lg-center justify-content-around gap-5">
+		<div class="row text-center justify-content-around gap-5">
 			<div class="col-6 col-md-4 col-xxl-2">
 				<?php k1_get_svg_asset( 'marcom-stats-21' ); ?>
 				<p>21% of websites report trouble with low traffic.</p>
@@ -136,7 +136,7 @@ get_template_part(
 	'template-parts/content',
 	'three-steps',
 	array(
-		'headline'           => "Let's Partner Together To <br /> Grow Your Ministry's Capacity!",
+		'headline'           => "Let's Partner Together To Grow Your Ministry's Capacity!",
 		'bg_image_file_name' => 'marcom-three-steps-bg',
 		'rows'               => array(
 			array(

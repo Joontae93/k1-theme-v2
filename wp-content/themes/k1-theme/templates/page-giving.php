@@ -55,7 +55,7 @@ $content = new Content_Sections();
 	<div class="how-to-help__content position-relative z-2 pt-5">
 		<div class="container">
 			<div class="row my-5">
-				<h2 class="headline text-white text-lg-center">How can you help the American church?</h2>
+				<h2 class="headline text-white text-center">How can you help the American church?</h2>
 				<span class="subheadline text-primary">We don't have a magic wand to fix the problem now, but we do have resources that will give the church a fighting chance.
 					Giving to
 					Kingdom One will get tools, education & resources back into churches, to grow their health.</span>
@@ -63,7 +63,7 @@ $content = new Content_Sections();
 		</div>
 		<div class="container my-5">
 			<div class="row">
-				<h3 class="headline text-white">There are multiple ways to give:</h3>
+				<h3 class="headline text-sm-center text-white">There are multiple ways to give:</h3>
 			</div>
 		</div>
 		<?php get_template_part( 'template-parts/content', 'ways-to-give' ); ?>
@@ -93,7 +93,7 @@ $content = new Content_Sections();
 	<div class="container">
 		<div class="row my-5">
 			<h2 class="headline h1 text-primary text-center">what your giving makes possible</h2>
-			<span class="subheadline text-lg-center">Our founder and CVO explains why now is a pivotal time to give to the health of the American Church.</span>
+			<span class="subheadline text-center">Our founder and CVO explains why now is a pivotal time to give to the health of the American Church.</span>
 		</div>
 		<div class="row justify-content-center">
 			<div class="col-lg-10">

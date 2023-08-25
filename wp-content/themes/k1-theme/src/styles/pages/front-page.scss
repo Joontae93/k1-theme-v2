@@ -44,7 +44,7 @@
 	&__content {
 		position: relative;
 		z-index: 4;
-
+		
 		@include m.media-breakpoint-up(lg) {
 			--frame-left: 47rem;
 			--frame-top: 3rem;

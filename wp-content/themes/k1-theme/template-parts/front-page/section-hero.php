@@ -16,7 +16,7 @@ $content = new Content_Sections();
 	?>
 	<div class="container my-5">
 		<div class="row position-relative z-3">
-			<div class="col-1"></div>
+			<div class="col-lg-1"></div>
 			<div class="col-lg-11">
 				<?php $content->cta_button(); ?>
 				<?php

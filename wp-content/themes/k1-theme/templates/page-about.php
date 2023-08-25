@@ -58,8 +58,8 @@ $content = new Content_Sections();
 		$content->two_col_text_and_media( $args );
 		?>
 		<div class="row my-5">
-			<h2 class="headline text-lg-center">Pastors and Ministry Leaders are not the Problems</h2>
-			<p class="text-lg-center">The American Church is suffering from an unhealthy understanding of organizational structure. The Kingdom One method has helped over 65 ministries,
+			<h2 class="text-center">Pastors and Ministry Leaders are not the Problems</h2>
+			<p class="text-center">The American Church is suffering from an unhealthy understanding of organizational structure. The Kingdom One method has helped over 65 ministries,
 				camps, schools, and non-profits find courage, health & effectiveness in ministry. </p>
 		</div>
 	</div>
