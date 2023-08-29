@@ -3,6 +3,8 @@
 
 	<description>A custom set of rules to check for a WordPress project by K1's dev team.</description>
 
+	<config name="minimum_wp_version" value="6.0"/>
+
 	<!-- Exclude WP Core folders and files from being checked. -->
 	<exclude-pattern>/docroot/wp-admin/*</exclude-pattern>
 	<exclude-pattern>/docroot/wp-includes/*</exclude-pattern>
@@ -15,6 +17,7 @@
 
 	<!-- Exclude the Composer Vendor directory. -->
 	<exclude-pattern>/vendor/*</exclude-pattern>
+	
 
 	<!-- Exclude the Node Modules directory. -->
 	<exclude-pattern>/node_modules/*</exclude-pattern>
