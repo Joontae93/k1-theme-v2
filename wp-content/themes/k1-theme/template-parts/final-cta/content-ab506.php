@@ -25,10 +25,10 @@ $content = new Content_Sections();
 				);
 				?>
 				<?php foreach ( $three_step_cols as $index => $col ) : ?>
-				<div class="col-lg-4 d-flex flex-column align-items-center">
+				<div class="col-lg-4 d-flex flex-column align-items-center my-5">
 					<?php k1_get_svg_asset( 'ab506-final-cta-step-' . ( $index + 1 ) ); ?>
 					<h3 class="text-white headline mt-3 mb-5"><?php echo $col['headline']; ?></h3>
-					<p class="subheadline text-lg-center text-white"><?php echo $col['subheadline']; ?></p>
+					<p class="subheadline text-sm-center text-white"><?php echo $col['subheadline']; ?></p>
 				</div>
 				<?php endforeach; ?>
 			</div>

@@ -24,7 +24,7 @@ $content = new Content_Sections();
 					array(
 						'text'       => 'Learn More',
 						'link'       => '#',
-						'html_class' => 'btn__white--outline mx-5',
+						'html_class' => 'btn__white--outline mx-0 mx-lg-5',
 					)
 				);
 				?>

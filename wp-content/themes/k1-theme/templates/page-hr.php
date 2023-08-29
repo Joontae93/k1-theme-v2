@@ -50,7 +50,7 @@ $content = new Content_Sections();
 		</div>
 		<div class="row justify-content-center text-center my-5">
 			<div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
-				<h2 class="mb-5">it's time to start a journey to revamping your hr efforts</h2>
+				<h2 class="headline mb-5">it's time to start a journey to revamping your hr efforts</h2>
 				<?php $content->cta_button(); ?>
 			</div>
 		</div>
@@ -114,17 +114,18 @@ get_template_part(
 	'template-parts/content',
 	'three-steps',
 	array(
-		'headline' => "Let's Partner Together To <br /> Grow Your Ministry's Capacity!",
+		'headline' => "Let's Partner Together To Grow Your Ministry's Capacity!",
 		'rows'     => array(
 			array(
 				'svg'         => 'above-reproach-lady-justice-step-1',
-				'headline'    => 'Commit to creating a safe place for <br> your people - <a>Get Above Reproach</a>.',
+				'headline'    => 'Commit to creating a safe place foryour people - Get Above Reproach.',
 				'subheadline' => 'Above Reproach is our safety ecosystem, geared to equip you with the essentials to provide safe places for your people. When you bundle AB-506
 				Child Abuse Prevention + Mandated Reporting along with Harassment & Bullying Prevention training you double down on your commitment to safety AND enjoy a discounted
 				bundle price.',
 				'cta'         => array(
-					'url'  => '',
-					'text' => 'Enroll Now',
+					'url'         => 'https://academy.kingdomone.co',
+					'text'        => 'Enroll Now',
+					'is_external' => true,
 				),
 			),
 			array(
@@ -138,13 +139,12 @@ get_template_part(
 			),
 			array(
 				'svg'         => 'rocket-step-3',
-				'headline'    => 'Get connected. Partner with our HR <br> industry experts to amplify your work <br> at <a
-				href="/get-started/">kingdomone.co/Get-Started</a>.',
+				'headline'    => 'Get connected. Partner with our HR industry experts to amplify your work at kingdomone.co.',
 				'subheadline' => 'Ministry is complicated. Can we get an “amen”? While industry best practices and guidance is an excellent start, the pursuit of becoming
 				courageous, healthy, and effective is nuanced. Our league of extraordinary gentlemen and women is ready to partner with you in a 1:1 capacity to assess and coach you
 				forward thoroughly.',
 				'cta'         => array(
-					'url'  => '',
+					'url'  => '/get-started',
 					'text' => 'Get Started',
 				),
 			),

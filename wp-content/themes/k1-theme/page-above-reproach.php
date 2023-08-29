@@ -18,7 +18,6 @@ get_header();
 		echo "<div class='container'><div class='row'><div class='d-none d-lg-block col-1'></div><img class='hero__ar-logo position-relative z-3 col-lg-5' src='{$lady_justice_url}' /></div></div>";
 		echo $content->get_hero_content( $headline, $subheadline, $has_cta, $cta_options );
 		?>
-
 	</section>
 	<section class="intro-video">
 		<div class="container">

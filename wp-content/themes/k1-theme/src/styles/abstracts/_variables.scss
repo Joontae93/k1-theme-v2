@@ -1,3 +1,4 @@
+@forward './clip-paths';
 /* ////////////
 // TYPOGRAPHY
 ///////////// */
@@ -5,28 +6,6 @@ $font-roie: 'Roie', sans-serif;
 $font-poppins: 'poppins', sans-serif;
 $font-headings: $font-roie;
 $font-body: $font-poppins;
-
-/* //////////
-// CLIP PATHS
-/////////// */
-$height: 5%;
-$drop: calc(0% + $height);
-$lift: calc(100% - $height);
-
-$lift-left-bottom: polygon(0 0, 100% 0, 100% 100%, 0% $lift);
-$lift-right-bottom: polygon(0 0, 100% 0, 100% $lift, 0% 100%);
-
-$drop-left-top: polygon(0 $drop, 100% 0, 100% 100%, 0 100%);
-$drop-right-top: polygon(0 0, 100% $drop, 100% 100%, 0 100%);
-
-$drop-left: polygon(0 $drop, 100% 0, 100% 100%, 0 $lift);
-$drop-right: polygon(0 0, 100% $drop, 100% $lift, 0 100%);
-
-$zig-color-left: polygon(0 $drop, 100% 0, 100% $lift, 0 100%);
-$zag-color-right: polygon(0 0, 100% $drop, 100% 100%, 0 $lift);
-
-$zig-color-right: polygon(0 0, 100% $drop, 100% 100%, 0 $lift);
-$zag-color-left: polygon(0 $drop, 100% 0, 100% $lift, 0 100%);
 
 /* //////////
 // COLORS
@@ -40,11 +19,8 @@ $color-spark-yellow: #f4c063;
 $color-ar-purple: #9d9dcd;
 $color-ar-orange: #e37f5a;
 $color-ar-yellow: #f4eb27;
-$color-erc-purple: #3B3D90; 
-$color-erc-blue: #50C4D2; 
-
-
-
+$color-erc-purple: #3b3d90;
+$color-erc-blue: #50c4d2;
 
 /* Utilities */
 $color-grey: #4b4b4b;

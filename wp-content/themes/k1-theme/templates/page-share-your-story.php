@@ -65,13 +65,24 @@ k1_enqueue_page_style( 'shareYourStory' );
 		</div>
 	</div>
 </section>
+<?php
+$query = new WP_Query(
+	array(
+		'posts_per_page' => 6,
+		'post_type'      => 'stories',
+	)
+);
+?>
+<?php if ( $query->have_posts() ) : ?>
 <section class="stories">
 	<?php $content->get_color_background_layers( 'stories', 'left' ); ?>
 	<div class="stories__content z-3 position-relative">
 		<div class="container">
 			<div class="row my-5">
-				<h2 class="headline text-white">recent stories</h2>
-				<?php k1_get_svg_asset( 'leaves-3' ); ?>
+				<div class="col">
+					<h2 class="headline text-white">recent stories</h2>
+					<?php k1_get_svg_asset( 'leaves-3' ); ?>
+				</div>
 			</div>
 			<div class="row">
 				<?php
@@ -82,22 +93,21 @@ k1_enqueue_page_style( 'shareYourStory' );
 					)
 				);
 				?>
-				<?php if ( $query->have_posts() ) : ?>
-					<?php while ( $query->have_posts() ) : ?>
-						<?php $query->the_post(); ?>
-				<div class="story col-lg-4">
+				<?php while ( $query->have_posts() ) : ?>
+					<?php $query->the_post(); ?>
+				<div class="story col-lg-4 my-5">
 					<div class="story__video">
 						<?php echo get_field( 'video' ); ?>
 					</div>
-						<?php the_title( '<h3 class="headline text-white h4 story__title">', '</h3>' ); ?>
+					<?php the_title( '<h3 class="headline text-white h4 story__title">', '</h3>' ); ?>
 				</div>
 				<?php endwhile; ?>
-				<?php endif; ?>
 				<?php wp_reset_postdata(); ?>
 			</div>
 		</div>
 	</div>
 </section>
+<?php endif; ?>
 <section class="how-it-works">
 	<div class="container">
 		<div class="row justify-content-lg-end">

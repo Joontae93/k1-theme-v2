@@ -34,3 +34,13 @@
 .headline:where(:not(.hero__content--headline)) {
 	color: var(--color-ar-purple);
 }
+
+.ab506-diy {
+	.two-col {
+		&__image {
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
