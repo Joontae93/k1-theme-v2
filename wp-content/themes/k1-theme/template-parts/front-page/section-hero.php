@@ -16,7 +16,7 @@ $content = new Content_Sections();
 	?>
 	<div class="container my-5">
 		<div class="row position-relative z-3">
-			<div class="col-1"></div>
+			<div class="col-lg-1"></div>
 			<div class="col-lg-11">
 				<?php $content->cta_button(); ?>
 				<?php
@@ -24,7 +24,7 @@ $content = new Content_Sections();
 					array(
 						'text'       => 'Learn More',
 						'link'       => '#',
-						'html_class' => 'btn__white--outline mx-5',
+						'html_class' => 'btn__white--outline mx-0 mx-lg-5',
 					)
 				);
 				?>

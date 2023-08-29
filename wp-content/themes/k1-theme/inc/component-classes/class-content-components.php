@@ -1,6 +1,11 @@
 <?php
 /**
- * A Component Class that displays content a few different ways. All methods have an $args bypass and an $echo control where `false` returns the markup and `true` echoes the markup. The $args array also shows expected parameters.
+ * Content Components
+ * Description: A Component Class that displays content a few different ways. All methods have an $args bypass and an $echo control where `false` returns the markup and `true` echoes the markup. The $args array also shows expected parameters.
+ */
+
+/**
+ * Component Generator
  *
  * @param bool $acf class-wide control to use acf fields or standard WordPress field lookups (e.g. `get_field` vs `get_the_excerpt`). If true, excerpt will be set with `get_field('archive_content',$id)`. Defaults `true`
  *
@@ -11,7 +16,9 @@ class Content_Components {
 	/**
 	 * A headline element that has lots of optional parameters in the $args array.
 	 *
-	 * @param array $args Pass optional customizations
+	 * @param string $headline the headline
+	 * @param ?bool  $echo the echo/return toggle
+	 * @param ?array $args Pass optional customizations
 	 *
 	 * ```php
 	 * $args = array(
@@ -86,13 +93,14 @@ class Content_Components {
 	/**
 	 * Renders a ul/ol of list items
 	 *
-	 * @param array  $list_items         an array of strings to become the `<li>`s
-	 * @param string $item_class        a string to set list item htmlClass
-	 * @param string $list_type         `ul` | `ol`
-	 * @param bool   $echo                `echo` or `return` the markup
+	 * @param array   $list_items         an array of strings to become the `<li>`s
+	 * @param ?string $item_class        a string to set list item htmlClass
+	 * @param ?string $list_type         `ul` | `ol`
+	 * @param ?string $list_class         a string to set list item htmlClass
+	 * @param ?bool   $echo                `echo` or `return` the markup
 	 */
-	public function bulleted_list( array $list_items, string $item_class = '', string $list_type = 'ul', bool $echo = true ) {
-		$markup = "<{$list_type}>";
+	public function bulleted_list( array $list_items, string $item_class = '', string $list_type = 'ul', string $list_class = '', bool $echo = true ) {
+		$markup = empty( $list_class ) ? $markup = "<{$list_type}>" : "<{$list_type} class='{$list_class}'>";
 		foreach ( $list_items as $item ) {
 			$item    = acf_esc_html( $item );
 			$markup .= empty( $item_class ) ? "<li>{$item}</li>" : "<li class='{$item_class}'>{$item}</li>";
@@ -105,8 +113,14 @@ class Content_Components {
 		}
 	}
 
-	/** Generates the Lower layer of the hero section */
-	public function get_hero_background( bool $has_background_image, string $color, string $color_direction, string|null $background_image = '' ):string {
+	/** Generates the Lower layer of the hero section
+	 *
+	 * @param bool    $has_background_image background-image toggle
+	 * @param string  $color the color
+	 * @param string  $color_direction the direction the color will poke out from (left or right)
+	 * @param ?string $background_image the image url
+	 */
+	public function get_hero_background( bool $has_background_image, string $color, string $color_direction, ?string $background_image = '' ):string {
 		$class  = $has_background_image ? "hero__background color-{$color_direction}" : 'hero__background';
 		$markup = "<div class='{$class}'>";
 		if ( $has_background_image ) {
@@ -121,11 +135,18 @@ class Content_Components {
 		return $markup;
 	}
 
-	/** Gets the content layer of the Hero Section */
-	public function get_hero_content( string $headine, string $subheadline, bool $has_cta, array|null $cta_options = array() ) : string {
+	/**
+	 *  Gets the content layer of the Hero Section
+	 *
+	 * @param string $headline the headline
+	 * @param string $subheadline the subheadline
+	 * @param bool   $has_cta trigger the CTA generator
+	 * @param ?array $cta_options the CTA args
+	 */
+	public function get_hero_content( string $headline, string $subheadline, bool $has_cta, ?array $cta_options = array() ) : string {
 		$markup  = "<div class='hero__content container d-flex flex-column align-items-stretch'><div class='row'><div class='col-1 align-self-start h-auto position-relative d-none d-md-block'>" . k1_get_svg_asset( 'leaves-3', false, false ) . "</div><div class='position-relative d-flex flex-column col-11'>";
 		$markup .= $this->headline(
-			$headine,
+			$headline,
 			false,
 			array(
 				'headline_element'    => 'h1',

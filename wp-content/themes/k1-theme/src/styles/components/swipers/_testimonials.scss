@@ -2,6 +2,9 @@
 @use './base';
 
 .testimonials {
+	.swiper-wrapper {
+		box-sizing: border-box;
+	}
 	.swiper-pagination-bullet-active {
 		background-color: var(--color-primary);
 	}

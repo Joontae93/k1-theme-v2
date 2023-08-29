@@ -8,7 +8,7 @@ k1_enqueue_page_style( 'shareYourStory' );
 ?>
 <section class="bg-color-primary" id='section-2'>
 	<div class="container">
-		<div class="row text-lg-end">
+		<div class="row text-sm-center text-lg-end">
 			<h2 class="headline text-white">what's your story?</h2>
 			<p class="subheadline fw-bold">The best way to share our vision of being courageous, healthy & effective is by sharing stories of life change within your ministry.</p>
 		</div>
@@ -17,9 +17,9 @@ k1_enqueue_page_style( 'shareYourStory' );
 <section class="story-examples">
 	<div class="container">
 		<div class="row">
-			<h2 class="headline h1 text-lg-center text-primary">we love hearing stories</h2>
+			<h2 class="headline h1 text-center text-primary">we love hearing stories</h2>
 			<?php k1_get_svg_asset( 'leaves-3' ); ?>
-			<span class="subheadline text-lg-center">Send us your personal story of how Kingdom One has changed your life by sharing your story and or answering the following
+			<span class="subheadline text-center">Send us your personal story of how Kingdom One has changed your life by sharing your story and or answering the following
 				questions:</span>
 		</div>
 		<div class="row mt-5">
@@ -53,7 +53,7 @@ k1_enqueue_page_style( 'shareYourStory' );
 			</div>
 			<?php endforeach; ?>
 		</div>
-		<div class="row mt-5 justify-content-lg-center">
+		<div class="row mt-5 justify-content-center">
 			<?php
 			$content->cta_button(
 				array(
@@ -65,13 +65,24 @@ k1_enqueue_page_style( 'shareYourStory' );
 		</div>
 	</div>
 </section>
+<?php
+$query = new WP_Query(
+	array(
+		'posts_per_page' => 6,
+		'post_type'      => 'stories',
+	)
+);
+?>
+<?php if ( $query->have_posts() ) : ?>
 <section class="stories">
 	<?php $content->get_color_background_layers( 'stories', 'left' ); ?>
 	<div class="stories__content z-3 position-relative">
 		<div class="container">
 			<div class="row my-5">
-				<h2 class="headline text-white">recent stories</h2>
-				<?php k1_get_svg_asset( 'leaves-3' ); ?>
+				<div class="col">
+					<h2 class="headline text-white">recent stories</h2>
+					<?php k1_get_svg_asset( 'leaves-3' ); ?>
+				</div>
 			</div>
 			<div class="row">
 				<?php
@@ -82,22 +93,21 @@ k1_enqueue_page_style( 'shareYourStory' );
 					)
 				);
 				?>
-				<?php if ( $query->have_posts() ) : ?>
-					<?php while ( $query->have_posts() ) : ?>
-						<?php $query->the_post(); ?>
-				<div class="story col-lg-4">
+				<?php while ( $query->have_posts() ) : ?>
+					<?php $query->the_post(); ?>
+				<div class="story col-lg-4 my-5">
 					<div class="story__video">
 						<?php echo get_field( 'video' ); ?>
 					</div>
-						<?php the_title( '<h3 class="headline text-white h4 story__title">', '</h3>' ); ?>
+					<?php the_title( '<h3 class="headline text-white h4 story__title">', '</h3>' ); ?>
 				</div>
 				<?php endwhile; ?>
-				<?php endif; ?>
 				<?php wp_reset_postdata(); ?>
 			</div>
 		</div>
 	</div>
 </section>
+<?php endif; ?>
 <section class="how-it-works">
 	<div class="container">
 		<div class="row justify-content-lg-end">

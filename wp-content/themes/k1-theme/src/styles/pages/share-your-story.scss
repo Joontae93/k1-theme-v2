@@ -93,16 +93,22 @@
 			background-color: var(--color-primary--darkest);
 		}
 	}
+
 	&__content {
 		#leaves-3 {
-			--size: 12rem;
+			--size: 8rem;
 			width: var(--size);
 			height: var(--size);
 			position: absolute;
 			transform: scaleY(-1);
 			display: block;
-			top: -4rem;
-			left: 32rem;
+			top: -2rem;
+			left: 31rem;
+			@include m.media-breakpoint-up(sm) {
+				--size: 12rem;
+				top: -4rem;
+				left: 32rem;
+			}
 		}
 	}
 }

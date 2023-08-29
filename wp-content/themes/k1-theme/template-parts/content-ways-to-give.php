@@ -27,41 +27,41 @@ $ways_to_give = array(
 );
 $content      = new Content_Sections();
 ?>
-<div class="ways-to-give text-white">
-	<?php foreach ( $ways_to_give as $index => $step ) : ?>
-		<?php
-		$row_class = 'row';
-		if ( 1 === $index ) {
-			$row_class .= ' bg-color-primary--dark';
-		}
-		if ( 0 === $index % 2 ) {
-			$row_class .= ' flex-lg-row-reverse';
-		}
-		?>
-	<div class="<?php echo $row_class; ?>">
-		<div class="ways-to-give__bg-image col-lg-6 position-relative">
-			<div class="<?php echo 'ways-to-give__bg-image--image-' . ( $index + 1 ); ?>"
-				 style="background-image:url('<?php k1_get_image_asset_url( 'ways-to-give-bg-' . ( $index + 1 ), 'webp', 'bg-images' ); ?>')"></div>
-			<div class="<?php echo ( $index % 2 ) ? 'ways-to-give__bg-image-overlay--left' : 'ways-to-give__bg-image-overlay--right'; ?>"></div>
-		</div>
-		<?php k1_get_svg_asset( 'ways-to-give-' . $index + 1 ); ?>
-		<div class="row ways-to-give__content col-lg-6 z-2 py-5">
-			<div class="container">
+<ul class="ways-to-give text-white list-unstyled m-0 overflow-x-hidden">
+	<div class="container-fluid">
+		<?php foreach ( $ways_to_give as $index => $step ) : ?>
+			<?php
+			$row_class = 'row';
+			if ( 1 === $index ) {
+				$row_class .= ' bg-color-primary--dark';
+			}
+			if ( 0 === $index % 2 ) {
+				$row_class .= ' flex-lg-row-reverse';
+			}
+			?>
+		<div class="<?php echo $row_class; ?>">
+			<div class="ways-to-give__bg-image col-lg-6 position-relative">
+				<div class="<?php echo 'ways-to-give__bg-image--image-' . ( $index + 1 ); ?>"
+					 style="background-image:url('<?php k1_get_image_asset_url( 'ways-to-give-bg-' . ( $index + 1 ), 'webp', 'bg-images' ); ?>')"></div>
+				<div class="<?php echo ( $index % 2 ) ? 'ways-to-give__bg-image-overlay--left' : 'ways-to-give__bg-image-overlay--right'; ?>"></div>
+			</div>
+			<?php k1_get_svg_asset( 'ways-to-give-' . $index + 1 ); ?>
+			<div class="ways-to-give__content col-lg-6 z-2 py-5">
 				<div class="row py-5 justify-content-center<?php echo ( 0 !== $index % 2 ) ? ' flex-lg-row-reverse text-lg-end' : ''; ?> ">
 					<div class="d-none d-lg-block col-lg-2 position-relative">
 						<?php k1_get_svg_asset( 'leaves-' . $step['leaves'] ); ?>
 					</div>
-					<div class="col-lg-8 position-relative">
+					<li class="col-lg-8 position-relative">
 						<h4 class="headline text-white">
 							<?php echo $step['headline']; ?>
 						</h4>
-						<p>
+						<p style="font-size: 1em;">
 							<?php echo $step['subheadline']; ?>
 						</p>
-					</div>
+					</li>
 				</div>
 			</div>
 		</div>
+		<?php endforeach ?>
 	</div>
-	<?php endforeach ?>
-</div>
+</ul>

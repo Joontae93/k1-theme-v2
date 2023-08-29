@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.6.1
+
+- Fixed all mobile overflow issues.
+- Refactored Clip Paths to their own scss file
+
 ## v0.6.0
 
 - Now with /staffing!

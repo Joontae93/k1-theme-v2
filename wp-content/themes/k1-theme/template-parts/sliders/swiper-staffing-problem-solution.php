@@ -9,12 +9,12 @@ $content = new Content_Sections();
 	<div class="swiper-wrapper">
 		<div class="swiper-slide">
 			<?php k1_get_svg_asset( 'staffing-icon-frustrated' ); ?>
-			<span class="headline text-white h3 text-lg-center col-lg-8">Finances can cause a lot of frustration, confusion and insecurity.</span>
+			<span class="headline text-white h3 text-center col-lg-8">Finances can cause a lot of frustration, confusion and insecurity.</span>
 			<?php k1_get_svg_asset( 'leaves-3' ); ?>
 		</div>
 		<div class="swiper-slide">
 			<?php k1_get_svg_asset( 'staffing-icon-strategy' ); ?>
-			<span class="headline text-white h3 text-lg-center col-lg-8">
+			<span class="headline text-white h3 text-center col-lg-8">
 				Accurate and timely finance reports help avoid frustrating conversations and build trust so you can accomplish your ministry's goals.
 			</span>
 			<?php k1_get_svg_asset( 'leaves-3' ); ?>

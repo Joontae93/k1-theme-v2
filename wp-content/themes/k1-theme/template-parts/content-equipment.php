@@ -22,7 +22,7 @@ $content = new Content_Sections();
 		<?php
 		if ( $with_header ) {
 			extract( $header_args );
-			echo "<h2 class='headline text-center text-white mt-5'>{$headline}</h2><p class='subheadline text-white text-lg-center text-my-5'>{$subheadline}</p>";
+			echo "<h2 class='headline text-center text-white mt-5'>{$headline}</h2><p class='subheadline text-white text-center text-my-5'>{$subheadline}</p>";
 		}
 		?>
 		<div class="equipment__steps row justify-content-around">

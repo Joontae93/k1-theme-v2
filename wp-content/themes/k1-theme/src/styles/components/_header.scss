@@ -2,6 +2,8 @@
 @use './header/navbar';
 @use './header/offcanvas';
 @use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
 
 .header {
 	width: 100%;

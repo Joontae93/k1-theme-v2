@@ -70,22 +70,14 @@
 			background-color: var(--color-primary);
 		}
 	}
+
 	&__content {
 		margin-top: 10rem;
 		margin-bottom: 5rem;
+		overflow-x: hidden;
 
 		@include m.media-breakpoint-up(xxl) {
 			margin-top: 30rem;
-		}
-
-		h2 {
-			@include m.media-breakpoint-up(xs) {
-				width: 80vw;
-			}
-
-			@include m.media-breakpoint-up(sm) {
-				width: unset;
-			}
 		}
 
 		#status-quo-sign {
@@ -108,26 +100,18 @@
 		#leaves-3 {
 			position: absolute;
 			transform: rotate(-60deg);
-			$size: 13rem;
-			width: $size;
-			height: $size;
+			--size: 10rem;
+			width: var(--size);
+			height: var(--size);
 			top: -8rem;
-			right: -2rem;
+			left: 28rem;
 
 			@include m.media-breakpoint-up(sm) {
-				right: -4rem;
+				--size: 10rem;
 			}
 
 			@include m.media-breakpoint-up(md) {
-				right: 0rem;
-			}
-
-			@include m.media-breakpoint-up(xl) {
-				right: 20%;
-			}
-
-			@include m.media-breakpoint-up(xxl) {
-				right: 30%;
+				left: 58rem;
 			}
 		}
 	}
@@ -238,25 +222,35 @@
 	&__content {
 		&--header {
 			#leaves-3 {
-				$size: 10rem;
-				width: $size;
-				height: $size;
+				--size: 8rem;
+				width: var(--size);
+				height: var(--size);
 				position: absolute;
 				transform: rotate(-60deg);
 				stroke: var(--color-primary);
 				top: -6rem;
-				right: 0;
+				right: 0rem;
+				display: none;
+
+				@include m.media-breakpoint-up(sm) {
+					--size: 10rem;
+					display: block;
+					left: 41rem;
+					right: unset;
+				}
 				@include m.media-breakpoint-up(md) {
-					top: -4rem;
-					right: 15%;
+					--size: 12rem;
+					left: 50rem;
 				}
 				@include m.media-breakpoint-up(lg) {
-					top: -4rem;
-					right: 25%;
+					top: -8rem;
+					left: 62rem;
 				}
 				@include m.media-breakpoint-up(xl) {
-					top: -4rem;
-					right: 30%;
+					left: 70rem;
+				}
+				@include m.media-breakpoint-up(xxl) {
+					left: 78rem;
 				}
 			}
 		}

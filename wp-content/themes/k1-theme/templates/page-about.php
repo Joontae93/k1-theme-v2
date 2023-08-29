@@ -58,8 +58,8 @@ $content = new Content_Sections();
 		$content->two_col_text_and_media( $args );
 		?>
 		<div class="row my-5">
-			<h2 class="headline text-lg-center">Pastors and Ministry Leaders are not the Problems</h2>
-			<p class="text-lg-center">The American Church is suffering from an unhealthy understanding of organizational structure. The Kingdom One method has helped over 65 ministries,
+			<h2 class="text-center">Pastors and Ministry Leaders are not the Problems</h2>
+			<p class="text-center">The American Church is suffering from an unhealthy understanding of organizational structure. The Kingdom One method has helped over 65 ministries,
 				camps, schools, and non-profits find courage, health & effectiveness in ministry. </p>
 		</div>
 	</div>
@@ -73,7 +73,7 @@ $content = new Content_Sections();
 					<?php k1_get_svg_asset( 'icon-status-quo-sign' ); ?>
 				</div>
 				<div class="col position-relative">
-					<h2 class="text-primary">You can only choose one.</h2>
+					<h2 class="text-primary">You can only <br class='d-md-none' />choose one.</h2>
 					<p class="text-white">We find that ministry leaders often suffer from overwhelm, exhaustion & lack of clarity. Imagine receiving help from other ministry leaders you
 						trust; how would that shape your ministry? Our people, knowledge, and tools are ministry-tested and pastor approved. </p>
 					<?php k1_get_svg_asset( 'leaves-3' ); ?>
@@ -128,7 +128,7 @@ $content = new Content_Sections();
 	<?php $content->get_color_background_layers( 'values', 'zig-zag-left', array( 'values-bg', 'webp' ) ); ?>
 	<div class="container py-5 my-5 values__content z-2">
 		<div class="row justify-content-center">
-			<div class="values__content--header text-center position-relative my-5">
+			<div class="values__content--header text-center position-relative my-5 col">
 				<h2 class="h1 headline text-primary">our values</h2>
 				<?php k1_get_svg_asset( 'leaves-3' ); ?>
 			</div>
@@ -195,7 +195,7 @@ $content = new Content_Sections();
 	</div>
 	<div class="container-fluid">
 		<div class="row my-5 py-5">
-			<div class="swiper" id="staff-swiper">
+			<div class="swiper w-100" id="staff-swiper">
 				<div class="swiper-wrapper">
 					<?php
 					$staff = array(

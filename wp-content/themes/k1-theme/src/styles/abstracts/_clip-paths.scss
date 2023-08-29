@@ -1,0 +1,21 @@
+/* //////////
+// CLIP PATHS
+/////////// */
+$height: 5vw;
+$drop: calc(0% + $height);
+$lift: calc(100% - $height);
+
+$lift-left-bottom: polygon(0 0, 100% 0, 100% 100%, 0% $lift);
+$lift-right-bottom: polygon(0 0, 100% 0, 100% $lift, 0% 100%);
+
+$drop-left-top: polygon(0 $drop, 100% 0, 100% 100%, 0 100%);
+$drop-right-top: polygon(0 0, 100% $drop, 100% 100%, 0 100%);
+
+$drop-left: polygon(0 $drop, 100% 0, 100% 100%, 0 $lift);
+$drop-right: polygon(0 0, 100% $drop, 100% $lift, 0 100%);
+
+$zig-color-left: polygon(0 $drop, 100% 0, 100% $lift, 0 100%);
+$zag-color-right: polygon(0 0, 100% $drop, 100% 100%, 0 $lift);
+
+$zig-color-right: polygon(0 0, 100% $drop, 100% 100%, 0 $lift);
+$zag-color-left: polygon(0 $drop, 100% 0, 100% $lift, 0 100%);

@@ -6,13 +6,18 @@
  * @version 1.0.0
  */
 
+/** Get Parent Class */
 require_once get_template_directory() . '/inc/component-classes/class-content-components.php';
+
+/** HTML Content Generator */
 class Content_Sections extends Content_Components {
 
 	/**
 	 * Gets the Hero `<section>` with class 'hero'. Optional Background Image or color.
 	 *
-	 * @param array $args Expects an associative array:
+	 * @param ?int   $post_id the post ID
+	 * @param ?bool  $echo the echo/return toggle
+	 * @param ?array $args Expects an associative array:
 	 * ```php
 	 *  $args = array(
 	 * 'has_background_image' => bool,
@@ -162,7 +167,11 @@ class Content_Sections extends Content_Components {
 	/**
 	 * Vertical Card Layout with an image. $args overrides the `headline` settings
 	 *
-	 * @param array $args Expects an associative array:
+	 * @param string $image_src the url for the image
+	 * @param string $headline the headline
+	 * @param string $excerpt the excerpt
+	 * @param ?bool  $echo the echo/return toggle
+	 * @param ?array $args Expects an associative array:
 	 * ```php
 	 * $headline_args = array(
 	 * 'headline_element'        => ?string default "h2",

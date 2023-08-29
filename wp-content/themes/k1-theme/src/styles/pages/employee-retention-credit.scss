@@ -14,13 +14,17 @@
 
 	&__content {
 		#leaves-3 {
-			--size: 12rem;
+			--size: 10rem;
 			width: var(--size);
 			height: var(--size);
 			position: absolute;
 			transform: rotate(0) scaleY(-1);
 			top: -4rem;
 			left: 28rem;
+
+			@include m.media-breakpoint-up(sm) {
+				--size: 12rem;
+			}
 		}
 	}
 	%list_headline {

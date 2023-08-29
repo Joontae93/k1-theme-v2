@@ -26,7 +26,7 @@ k1_enqueue_page_assets( 'staffing' );
 <section class="problem-solution">
 	<div class="container">
 		<div class="row justify-content-center" id='section-header'>
-			<div class="col-lg-10 text-md-center">
+			<div class="col-lg-10 text-center">
 				<h2 class="headline text-primary">The American Church is Struggling</h2>
 				<p class="subheadline ">In 2019, 4,500 churches closed their doors, and that number continues to rise each year. Year after year, fewer people are attending and
 					giving at church services, and this creates so much heartache for ministry leaders.</p>
@@ -63,7 +63,7 @@ k1_enqueue_page_assets( 'staffing' );
 			<?php endforeach; ?>
 		</div>
 		<div class="row justify-content-center">
-			<div class="col-lg-10 col-xl-8 text-lg-center">
+			<div class="col-lg-10 col-xl-8 text-center">
 				<h2 class="headline text-primary">There is Hope!</h2>
 				<p class="subheadline">We understand you may be overwhelmed, but practicing the time-tested principles of stewardship will lead your ministry to financial
 					health.</p>

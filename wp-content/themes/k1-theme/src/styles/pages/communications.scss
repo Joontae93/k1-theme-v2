@@ -25,6 +25,13 @@
 			background-color: var(--color-primary);
 		}
 	}
+	&__content {
+		.headline {
+			@include m.media-breakpoint-down(xs) {
+				font-size: 2.5em;
+			}
+		}
+	}
 	#leaves-3 {
 		transform: rotate(0) scaleY(-1);
 		stroke: var(--color-primary);
