@@ -1,0 +1,55 @@
+@use '../abstracts/mixins' as m;
+
+%standard-border {
+	border: 2px solid var(--color-primary--dark);
+	border-radius: 1rem;
+}
+.hero {
+	// height: 80vw;
+
+	@include m.media-breakpoint-up(lg) {
+		min-height: 30vw;
+	}
+
+	&__background {
+		&--lower {
+			background-image: linear-gradient(
+				to right bottom,
+				transparent,
+				rgba(black, 0.35)
+			);
+		}
+	}
+}
+
+article.single {
+	> p {
+		word-wrap: break-word;
+	}
+}
+.single {
+	&__container {
+		@extend %standard-border;
+		@include m.box-shadow($opacity: 0.2);
+	}
+
+	&__featured-image {
+		aspect-ratio: 16 / 9;
+
+		&--image {
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}
+
+.meta {
+	@extend %standard-border;
+	position: sticky;
+	top: 5%;
+	padding: 1rem;
+
+	&__container {
+		padding: 1rem;
+	}
+}

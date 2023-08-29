@@ -24,4 +24,10 @@
 		box-sizing: unset;
 		opacity: 1;
 	}
+	&__body {
+		overflow-y: scroll;
+		.mobile-navbar {
+			overflow-y: scroll;
+		}
+	}
 }
