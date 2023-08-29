@@ -33,13 +33,14 @@ class Theme_Init extends K1_Theme_Cleaner {
 		wp_enqueue_style( 'main', get_template_directory_uri() . '/dist/global.css', array( 'vendors' ), $modified_styles );
 		wp_localize_script( 'main', 'k1SiteData', array( 'rootUrl' => home_url() ) );
 
-		$this->remove_wordpress_styles( array( 'classic-theme-styles', 'wp-block-library', 'dashicons', 'global-styles' ) );
+		$this->remove_wordpress_styles( array( 'classic-theme-styles', 'dashicons', 'global-styles' ) );
 	}
 
 	/** Handle Theme Supports */
 	public function k1_theme_supports() {
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'title-tag' );
+		add_theme_support( 'responsive-embeds' );
 	}
 
 	public function register_k1_menus() {
