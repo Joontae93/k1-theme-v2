@@ -17,9 +17,9 @@ $content = new Content_Components();
 							<hr class="col-1 border-5 border-primary">
 						</div>
 						<ul class="list-unstyled">
-							<li>Icon <br /> <span>Community</span></li>
-							<li>Icon <br /> <span>Tools</span></li>
-							<li>Icon <br /> <span>Knowledge</span></li>
+							<li><?php k1_get_svg_asset( 'front-page-icon-', 'community' ); ?> <br /> <span>Community</span></li>
+							<li><?php k1_get_svg_asset( 'front-page-icon-', 'tools' ); ?> <br /> <span>Tools</span></li>
+							<li><?php k1_get_svg_asset( 'front-page-icon-', 'knowledge' ); ?> <br /> <span>Knowledge</span></li>
 						</ul>
 					</div>
 					<div class="swiper-slide">
@@ -30,11 +30,13 @@ $content = new Content_Components();
 							<hr class="col-1 border-5 border-primary">
 						</div>
 						<ul class="list-unstyled">
-							<li>A bad Thing</li>
-							<li>A bad Thing</li>
-							<li>A bad Thing</li>
-							<li>A bad Thing</li>
-							<li>A bad Thing</li>
+							<li>High turnover rate</li>
+							<li>Unfruitful staffing search</li>
+							<li>Painful leadership transitions, terminations, & underperformance</li>
+							<li>Unstable work environments & unhealthy staff culture</li>
+							<li>Poor financial visibility</li>
+							<li>Ineffective marketing & communications</li>
+							<li>Frustrating piecemeal systems and process</li>
 						</ul>
 					</div>
 				</div>

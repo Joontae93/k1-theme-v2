@@ -137,19 +137,19 @@ get_header(); ?>
 		array(
 			array(
 				'title' => 'hr',
-				'items' => array( 'Staffing', 'Staffing', 'Staffing', 'Staffing', 'Staffing', 'Staffing', 'Staffing' ),
+				'items' => array( 'Staffing', 'Handbooks', 'Payroll', 'HRIS Implementation', 'Staff Survey', 'Total Rewards', 'Compensation Survey', 'Ministry Assessment', 'Retirement', 'Benefits' ),
 			),
 			array(
 				'title' => 'finance',
-				'items' => array( 'Payroll', 'Payroll', 'Payroll', 'Payroll', 'Payroll', 'Payroll', 'Payroll' ),
+				'items' => array( 'Receivables', 'Payables', 'Expense Tracking', 'Payroll', 'Credit Card Reconciliation', 'Bank Statement Reconciliation', 'Financial Reporting', 'Budgeting', 'Audit Support'),
 			),
 			array(
 				'title' => 'marcom',
-				'items' => array( 'Graphic Design', 'Graphic Design', 'Graphic Design', 'Graphic Design', 'Graphic Design' ),
+				'items' => array( 'Graphic Design', 'Web Design', 'Web Development', 'Storybranding', 'Marketing', 'Communications', 'Copy Writing', 'Video Editing' ),
 			),
 			array(
 				'title' => 'staffing',
-				'items' => array( 'Hiring', 'Hiring', 'Hiring' ),
+				'items' => array( 'Relational Recruiting', 'Culture Fit Interviewing', 'Active Recruiting Methods-using HR tech tools', 'Creates compelling job postings and handles candidate management', 'Micro-site created to present candidate bios and share ministry profiles', 'Onboarding plan coordinated, salary recommendations.' ),
 			),
 		)
 	);

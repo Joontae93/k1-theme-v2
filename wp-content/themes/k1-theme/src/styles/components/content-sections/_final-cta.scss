@@ -1,4 +1,5 @@
 @use '../../abstracts/mixins' as m;
+
 .final-cta {
 	&__background {
 		@include m.background-layers($opacity: 0.75);
