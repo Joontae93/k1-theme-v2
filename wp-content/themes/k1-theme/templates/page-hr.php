@@ -109,7 +109,7 @@ get_template_part(
 	</div>
 </section>
 <?php
-get_template_part( 'template-parts/sliders/swiper', 'testimonials' );
+// get_template_part( 'template-parts/sliders/swiper', 'testimonials' );
 get_template_part(
 	'template-parts/content',
 	'three-steps',
@@ -118,7 +118,7 @@ get_template_part(
 		'rows'     => array(
 			array(
 				'svg'         => 'above-reproach-lady-justice-step-1',
-				'headline'    => 'Commit to creating a safe place foryour people - Get Above Reproach.',
+				'headline'    => 'Commit to creating a safe place for your people - Get Above Reproach.',
 				'subheadline' => 'Above Reproach is our safety ecosystem, geared to equip you with the essentials to provide safe places for your people. When you bundle AB-506
 				Child Abuse Prevention + Mandated Reporting along with Harassment & Bullying Prevention training you double down on your commitment to safety AND enjoy a discounted
 				bundle price.',

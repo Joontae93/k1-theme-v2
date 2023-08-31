@@ -18,7 +18,7 @@ k1_enqueue_page_assets( 'getStarted' );
 		<pre>Contact Form 7 Code Here</pre>
 	</div>
 </section>
-<?php get_template_part( 'template-parts/sliders/swiper', 'testimonials' ); ?>
+<?php // get_template_part( 'template-parts/sliders/swiper', 'testimonials' ); ?>
 <aside>
 	<div class="container">
 		<div class="row d-flex justify-content-center align-items-center">
@@ -28,7 +28,6 @@ k1_enqueue_page_assets( 'getStarted' );
 		</div>
 	</div>
 </aside>
-
 <?php
 	get_template_part(
 		'template-parts/content',

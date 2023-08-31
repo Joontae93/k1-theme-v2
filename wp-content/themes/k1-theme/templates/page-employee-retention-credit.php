@@ -31,8 +31,8 @@ k1_enqueue_page_style( 'employeeRetentionCredit' );
 		<div class="row justify-content-center">
 			<?php
 			$lists = array(
-				'Kingdom One ERC+' => array( 'Financial AND Ministry Professionals', 'Relational', 'Fees: Capped at 5%', '2 Hrs Finance/Accounting Consulting', '2 Hrs Human Resources Consulting', '4-Wk Transformational Finance Cohort', '4-Wk Healthy Staff Culture HR Cohort', 'Free Admission to K1 Events in 2023' ),
-				"Others' ERC"      => array( 'Financial Professionals', 'Transactional', 'Fees: Upwards of 20%', 'Additional Charge' ),
+				'Kingdom One ERC+' => array( 'Financial <em>and</em> Ministry Professionals', 'Relational', 'Fees: Capped at 5%', '2 Hrs Finance/Accounting Consulting', '2 Hrs Human Resources Consulting', '4-Wk Transformational Finance Cohort', '4-Wk Healthy Staff Culture HR Cohort', 'Free Admission to K1 Events in 2023' ),
+				"Others' ERC"      => array( 'Financial Professionals', 'Transactional', 'Fees: Upwards of 20%', 'Additional Charges Apply' ),
 			);
 			?>
 			<?php foreach ( $lists as $list_title => $list ) : ?>

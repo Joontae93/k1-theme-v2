@@ -38,16 +38,17 @@ $content = new Content_Sections();
 						'The more Talents you take the bigger the discount <br> (think ice cream scoops)',
 						'The benefit of having the time, expertise, and <br> knowledge, without committing to salary, benefits & <br> onboarding. We perform like staff but cost way less.',
 					);
-					foreach ( $talents as $talent ) {
-						echo '<li>' . acf_esc_html( $talent ) . '</li>';
-					}
+					// foreach ( $talents as $talent ) {
+					// echo '<li>' . acf_esc_html( $talent ) . '</li>';
+					// }
+					$content->bulleted_list( $talents )
 					?>
 				</ul>
 			</div>
 		</div>
 	</div>
 </section>
-<section class="services-calculator">
+<!-- <section class="services-calculator">
 	<?php $content->get_color_background_layers( 'services-calculator', 'right' ); ?>
 	<div class="container">
 		<div class="services-calculator__content row">
@@ -69,7 +70,7 @@ $content = new Content_Sections();
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 <aside class="our-services">
 	<div class="container my-5">
 		<div class="row">

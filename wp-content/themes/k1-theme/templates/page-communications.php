@@ -43,7 +43,7 @@ $content = new Content_Sections();
 		</div>
 		<div class="row my-5">
 			<div class="col">
-				<p class='text-center'><b>Marketing and communication for ministry takes a lot of work.</b> Let's avoid appearing desperate and needy by constantly posting event
+				<p class='text-center'><b>Marketing and communication for ministry takes a lot of work.</b><br />Let's avoid appearing desperate and needy by constantly posting event
 					information. Let's showcase your ministry strengths to make an eternal impact on people's lives!</p>
 			</div>
 		</div>
@@ -92,7 +92,7 @@ $content = new Content_Sections();
 		</div>
 	</div>
 </section>
-<?php get_template_part( 'template-parts/sliders/swiper', 'testimonials' ); ?>
+<?php // get_template_part( 'template-parts/sliders/swiper', 'testimonials' ); ?>
 <section class="empathy">
 	<div class="container">
 		<div class="row justify-content-lg-center">
@@ -182,5 +182,4 @@ get_template_part(
 		),
 	)
 );
-get_template_part( 'template-parts/sliders/swiper', 'brands' );
 get_template_part( 'template-parts/final-cta/content', 'daunting' );
