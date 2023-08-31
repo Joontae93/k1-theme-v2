@@ -2,7 +2,18 @@
 
 %base-text {
 	font-family: v.$font-body;
-	font-size: 1.35em;
+	font-size: 1.35em; // 21.6px
+}
+
+%heading {
+	font-family: v.$font-roie;
+	font-weight: 700;
+}
+
+%subheadline {
+	font-family: v.$font-poppins;
+	font-weight: 400;
+	font-size: 2em;
 }
 
 ul {
@@ -33,12 +44,6 @@ body {
 	small {
 		font-family: v.$font-body;
 	}
-}
-
-%heading {
-	// font-family: v.$font-poppins;
-	font-family: v.$font-roie;
-	font-weight: 700;
 }
 
 h1,
@@ -77,12 +82,6 @@ h6,
 
 .headline {
 	@extend %heading;
-}
-
-%subheadline {
-	font-family: v.$font-poppins;
-	font-weight: 400;
-	font-size: 2em;
 }
 
 .subheadline {

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.7.2
+
+- Minor bug fixes before the big bug fix
+
 ## v0.7.1
 
 - Refactor page assets (css/js) into `dist/pages`
