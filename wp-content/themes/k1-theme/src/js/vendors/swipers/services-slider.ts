@@ -12,8 +12,8 @@ export const servicesSlider = () => {
 			el: 'swiper-services-pagination',
 		},
 		navigation: {
-			nextEl: '.swiper-services-button-next',
-			prevEl: '.swiper-services-button-prev',
+			nextEl: '.swiper-button-services-next',
+			prevEl: '.swiper-button-services-prev',
 		},
 	});
 };

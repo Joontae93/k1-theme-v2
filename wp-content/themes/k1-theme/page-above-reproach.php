@@ -1,6 +1,8 @@
 <?php
 /**
- * Page: Above Repraoch
+ * Page: Above Reproach
+ *
+ * @package KingdomOne
  */
 
 $content = new Content_Sections();

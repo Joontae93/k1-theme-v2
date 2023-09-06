@@ -35,11 +35,11 @@ $bg_image_file_name = $bg_image_file_name ?? 'three-steps-bg';
 			$subheadline = acf_esc_html( $row['subheadline'] );
 			$href        = esc_url( $row['cta']['url'] );
 			?>
-		<div class="row my-5">
-			<div class="col-6 col-lg-2 p-5">
+		<div class="row my-5 justify-content-around">
+			<div class="col-6 col-lg-2 p-2">
 				<?php k1_get_svg_asset( $row['svg'] ); ?>
 			</div>
-			<div class='col-sm-12 col-lg-10 d-flex flex-column'>
+			<div class='col-sm-12 col-lg-9 d-flex flex-column'>
 				<h3 class='text-primary'>
 					<?php echo $headline; ?>
 				</h3>

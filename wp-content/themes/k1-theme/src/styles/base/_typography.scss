@@ -15,8 +15,7 @@
 %subheadline {
 	font-family: v.$font-poppins;
 	font-weight: 400;
-	font-size: 2em;
-	color: black;
+	font-size: 1.4em;
 }
 
 ul {
@@ -24,7 +23,7 @@ ul {
 }
 
 body {
-	color: black;
+	color: var(--color-grey);
 	font-family: v.$font-body;
 
 	.text-content {
