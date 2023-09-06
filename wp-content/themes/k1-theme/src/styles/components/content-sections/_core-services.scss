@@ -19,7 +19,7 @@
 
 		&--column {
 			@include m.media-breakpoint-up(md) {
-				width: auto;
+				min-width: auto;
 			}
 		}
 	}

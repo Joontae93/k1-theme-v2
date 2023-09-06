@@ -48,10 +48,10 @@ $content = new Content_Sections();
 			);
 			?>
 			<?php foreach ( $default_steps as $step ) : ?>
-			<div class="equipment__steps--step-1 col-lg-4 my-5 my-lg-0">
+			<div class="equipment__steps--step-1 col-lg-4 my-5 py-5 my-lg-0">
 				<?php k1_get_svg_asset( $step['svg'] ); ?>
 				<h3 class="headline text-white text-center"><?php echo $step['headline']; ?></h3>
-				<span class="subheadline fs-4 text-white text-center"><?php echo $step['subheadline']; ?></span>
+				<span class="subheadline text-white text-center"><?php echo $step['subheadline']; ?></span>
 			</div>
 			<?php endforeach; ?>
 		</div>
