@@ -1,6 +1,8 @@
 <?php
 /**
  * Page: Giving
+ *
+ * @package KingdomOne
  */
 
 k1_enqueue_page_style( 'giving' );

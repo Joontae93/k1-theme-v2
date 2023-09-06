@@ -4,6 +4,7 @@
  *
  * @author KJ Roelke
  * @since 1.0
+ * @package KingdomOne
  */
 
 $content = new Content_Sections();
@@ -50,11 +51,10 @@ get_header(); ?>
 				<div class="row mb-5">
 					<div class="col d-flex flex-column text-center text-white">
 						<h2 class="headline text-white">relationship first</h2>
-						<span class="subheadline d-block mt-3 mb-5">Don't let ministry pain points stop you from fulfilling your calling. At Kingdom One, we help ministries reduce turnover,
-							find
-							quality
-							candidates and assist with hiring & transitions. Transform your ministry work environment to be more courageous, healthy & effective with our HR, finance, and
-							strategic experts. </span>
+						<div class="subheadline mt-3 mb-5 text-white">Don't let ministry pain points stop you from fulfilling your calling. At Kingdom One, we help ministries reduce
+							turnover, find quality candidates and assist with hiring & transitions. Transform your ministry work environment to be more courageous, healthy & effective with
+							our HR, finance, and strategic experts.
+						</div>
 					</div>
 				</div>
 				<?php get_template_part( 'template-parts/sliders/swiper', 'front-page-stakes' ); ?>
@@ -62,13 +62,13 @@ get_header(); ?>
 		</div>
 	</section>
 	<section class="community">
-		<div class="container">
+		<div class="container py-5">
 			<div class="row">
 				<h2 class="headline mt-5 text-white">Community, Tools &amp; Knowledge</h2>
 				<?php k1_get_svg_asset( 'leaves-4' ); ?>
 			</div>
 			<div class="row">
-				<div class="col-lg-6 subheadline">Our Tools, Training & Talent deliver the expertise you need to develop a healthy ministry.</div>
+				<div class="col-lg-9 subheadline text-white mb-5">Our Tools, Training & Talent deliver the expertise you need to develop a healthy ministry.</div>
 			</div>
 		</div>
 		<div class="community__grid--container">
@@ -112,10 +112,6 @@ get_header(); ?>
 							'svg'  => 'group-add',
 							'text' => 'Ministry Cohorts',
 						),
-						array(
-							'svg'  => 'plus-circle',
-							'text' => 'And so much more...',
-						),
 					);
 					foreach ( $grid_items as $item ) {
 						$markup  = "<div class='community__grid--item'><div class='community__grid-item-content'>";
@@ -137,19 +133,19 @@ get_header(); ?>
 		array(
 			array(
 				'title' => 'hr',
-				'items' => array( 'Staffing', 'Staffing', 'Staffing', 'Staffing', 'Staffing', 'Staffing', 'Staffing' ),
+				'items' => array( 'Staffing', 'Handbooks', 'Payroll', 'HRIS Implementation', 'Staff Survey', 'Total Rewards', 'Compensation Survey', 'Ministry Assessment', 'Retirement', 'Benefits' ),
 			),
 			array(
 				'title' => 'finance',
-				'items' => array( 'Payroll', 'Payroll', 'Payroll', 'Payroll', 'Payroll', 'Payroll', 'Payroll' ),
+				'items' => array( 'Receivables', 'Payables', 'Expense Tracking', 'Payroll', 'Credit Card Reconciliation', 'Bank Statement Reconciliation', 'Financial Reporting', 'Budgeting', 'Audit Support' ),
 			),
 			array(
 				'title' => 'marcom',
-				'items' => array( 'Graphic Design', 'Graphic Design', 'Graphic Design', 'Graphic Design', 'Graphic Design' ),
+				'items' => array( 'Graphic Design', 'Web Design', 'Web Development', 'Storybranding', 'Marketing', 'Communications', 'Copy Writing', 'Video Editing' ),
 			),
 			array(
 				'title' => 'staffing',
-				'items' => array( 'Hiring', 'Hiring', 'Hiring' ),
+				'items' => array( 'Relational Recruiting', 'Culture Fit Interviewing', 'Active Recruiting Methods&mdash;using HR Tech Tools', 'Compelling Job Posting Creation and Candidate Management', 'Micro-site creation for Candidate Bio and Ministry Profile display', 'Onboarding Plan Coordination and Salary Recommendations' ),
 			),
 		)
 	);
@@ -164,7 +160,7 @@ get_header(); ?>
 	</aside>
 	<?php
 	get_template_part( 'template-parts/sliders/swiper', 'testimonials' );
-	get_template_part( 'template-parts/sliders/swiper', 'brands' );
+	// get_template_part( 'template-parts/sliders/swiper', 'brands' );
 	get_template_part(
 		'template-parts/content',
 		'equipment',

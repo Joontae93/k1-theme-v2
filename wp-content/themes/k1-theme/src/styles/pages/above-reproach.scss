@@ -1,3 +1,4 @@
+@use '../abstracts/mixins' as m;
 @use '../components/content-sections/ar-card';
 @use '../components/content-sections/final-cta/ab506';
 
@@ -27,6 +28,19 @@
 					color: black;
 				}
 			}
+		}
+	}
+
+	&__ar-logo {
+		margin-left: -1.5rem;
+		@include m.media-breakpoint-up(sm) {
+			margin-left: -2rem;
+		}
+		@include m.media-breakpoint-up(md) {
+			margin-left: 2rem;
+		}
+		@include m.media-breakpoint-up(lg) {
+			margin-left: -2rem;
 		}
 	}
 }

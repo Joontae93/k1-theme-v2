@@ -1,6 +1,8 @@
 <?php
 /**
  * Page: Get Started
+ *
+ * @package KingdomOne
  */
 
 k1_enqueue_page_assets( 'getStarted' );

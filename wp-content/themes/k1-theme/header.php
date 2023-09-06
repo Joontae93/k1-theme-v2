@@ -1,6 +1,8 @@
-<?php //phpcs:ignore
+<?php
 /**
  * Basic Header Template
+ *
+ * @package KingdomOne
  */
 
 ?>
@@ -46,4 +48,4 @@
 			</div>
 		</div>
 	</header>
-	<?php get_template_part('template-parts/nav','offcanvas'); ?>
+	<?php get_template_part( 'template-parts/nav', 'offcanvas' ); ?>

@@ -1,6 +1,8 @@
 <?php
 /**
  * Post Single Template
+ *
+ * @package KingdomOne
  */
 
 $content = new Content_Sections();
@@ -42,10 +44,10 @@ $content->hero_section(
 				$modified_date  = get_the_modified_date( 'M d, Y' );
 				?>
 				<span class="h4 text-capitalize text-primary--dark">About this post</span>
-				<span class="meta__author fw-bold">Written By: <?php echo ( empty( $author_name ) ) ? 'Kingdom One' : $author; ?></span>
-				<span class="meta__date fw-bold">Published On: <?php echo $published_date; ?></span>
+				<span class="meta__author fw-bold">Written By: <?php echo ( empty( $author_name ) ) ? 'Kingdom One' : esc_html( $author ); ?></span>
+				<span class="meta__date fw-bold">Published On: <?php echo esc_textarea( $published_date ); ?></span>
 				<?php if ( $modified_date && $published_date !== $modified_date ) : ?>
-				<span class="meta__date--modified fw-bold">Last Updated: <?php echo $modified_date; ?></span>
+				<span class="meta__date--modified fw-bold">Last Updated: <?php echo esc_textarea( $modified_date ); ?></span>
 				<?php endif; ?>
 				<div class="meta__more">
 					<div class="meta__more--category my-5">
