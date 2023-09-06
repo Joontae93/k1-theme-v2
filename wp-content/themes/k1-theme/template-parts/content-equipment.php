@@ -11,6 +11,8 @@
  *   'subheadline' => string,
  *   ),
  * )
+ *
+ * @package KingdomOne
  */
 
 extract( $args );
@@ -22,7 +24,7 @@ $content = new Content_Sections();
 		<?php
 		if ( $with_header ) {
 			extract( $header_args );
-			echo "<h2 class='headline text-center text-white mt-5'>{$headline}</h2><p class='subheadline text-white text-center text-my-5'>{$subheadline}</p>";
+			echo "<h2 class='headline text-center text-white mt-5'>{$headline}</h2><p class='subheadline fs-4 text-white text-center text-my-5'>{$subheadline}</p>";
 		}
 		?>
 		<div class="equipment__steps row justify-content-around">
@@ -49,11 +51,11 @@ $content = new Content_Sections();
 			<div class="equipment__steps--step-1 col-lg-4 my-5 my-lg-0">
 				<?php k1_get_svg_asset( $step['svg'] ); ?>
 				<h3 class="headline text-white text-center"><?php echo $step['headline']; ?></h3>
-				<span class="subheadline text-white text-center"><?php echo $step['subheadline']; ?></span>
+				<span class="subheadline fs-4 text-white text-center"><?php echo $step['subheadline']; ?></span>
 			</div>
 			<?php endforeach; ?>
 		</div>
-		<div class="row flex-column justify-content-center align-items-center">
+		<div class="mt-5 py-5 row flex-column justify-content-center align-items-center">
 			<?php $content->cta_button(); ?>
 		</div>
 	</div>

@@ -13,6 +13,8 @@
  *       'text' => '',
  *     )),
  *   )
+ *
+ * @package KingdomOne
  */
 
 $content = new Content_Sections();
@@ -22,13 +24,13 @@ $bg_image_file_name = $bg_image_file_name ?? 'three-steps-bg';
 <section class="three-steps my-5">
 	<?php $content->get_color_background_layers( 'three-steps', 'zig-zag-left', array( $bg_image_file_name, 'webp' ) ); ?>
 	<div class="container three-steps__content position-relative z-3 py-5">
-		<div class="row text-center">
+		<div class="row text-center py-5">
 			<div class="col d-flex justify-content-center align-items-center">
-				<h2 class="h1 headline text-white"><?php echo esc_textarea( $headline ); ?></h2>
+				<h2 class="display-3 headline text-white py-5"><?php echo esc_textarea( $headline ); ?></h2>
 			</div>
 		</div>
 		<?php foreach ( $rows as $row ) : ?>
-			<?php
+		<?php
 			$headline    = acf_esc_html( $row['headline'] );
 			$subheadline = acf_esc_html( $row['subheadline'] );
 			$href        = esc_url( $row['cta']['url'] );

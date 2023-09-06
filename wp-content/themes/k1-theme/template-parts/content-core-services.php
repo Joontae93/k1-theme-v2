@@ -10,6 +10,8 @@
  *     'items' => array(...the bullet points...)
  *   )
  * );
+ *
+ * @package KingdomOne
  */
 
 $content = new Content_Sections();
@@ -29,16 +31,13 @@ $content = new Content_Sections();
 			<?php
 			$cols = 12 / count( $args );
 			foreach ( $args as $list ) {
-				echo "<div class='col-md-6 col-lg-{$cols} d-flex flex-column'>";
+				echo "<div class='core-services__content--column col-md-6 col-lg-{$cols} d-flex flex-column align-items-center'>";
 				if ( $list['title'] ) {
 					echo "<h3 class='text-roie text-white mt-5 text-lowercase'>{$list['title']}</h3>";
 				}
-				echo '<ul>';
-				foreach ( $list['items'] as $item ) {
-					$item = esc_textarea( $item );
-					echo "<li class='text-white'>{$item}</li>";
-				}
-				echo '</ul></div>';
+				$content->bulleted_list( $list['items'], 'text-white', 'ul', 'm-0' );
+
+				echo '</div>';
 			}
 			?>
 		</div>

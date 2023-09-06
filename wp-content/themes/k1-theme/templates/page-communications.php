@@ -1,5 +1,8 @@
 <?php
-/** Marketing & Communications Content */
+/** Marketing & Communications Content
+ *
+ * @package KingdomOne
+ */
 
 k1_enqueue_page_assets( 'communications' );
 $content = new Content_Sections();
@@ -37,7 +40,7 @@ $content = new Content_Sections();
 				),
 			);
 			foreach ( $issues as $issue ) {
-				echo "<div class='col-sm-12 col-lg-2 d-flex flex-column align-items-center'>" . k1_get_svg_asset( 'marcom-' . $issue['svg'], echo:false ) . "<p class='text-center'>{$issue['text']}</p></div>";
+				echo "<div class='col-sm-12 col-lg-2 d-flex flex-column align-items-center'>" . k1_get_svg_asset( 'marcom-' . $issue['svg'], false, false ) . "<p class='text-center'>{$issue['text']}</p></div>";
 			}
 			?>
 		</div>
