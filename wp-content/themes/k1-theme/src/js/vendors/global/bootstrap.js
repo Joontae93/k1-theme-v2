@@ -1,1 +1,1 @@
-import { Offcanvas } from 'bootstrap';
+import Offcanvas from 'bootstrap/js/dist/offcanvas';

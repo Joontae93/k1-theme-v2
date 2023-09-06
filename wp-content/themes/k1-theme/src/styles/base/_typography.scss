@@ -2,18 +2,21 @@
 
 %base-text {
 	font-family: v.$font-body;
-	font-size: 1.35em; // 21.6px
+	font-size: 2.16rem;
+	color: var(--color-grey);
 }
 
 %heading {
 	font-family: v.$font-roie;
 	font-weight: 700;
+	color: var(--color-primary--dark);
 }
 
 %subheadline {
 	font-family: v.$font-poppins;
 	font-weight: 400;
 	font-size: 2em;
+	color: black;
 }
 
 ul {
@@ -23,10 +26,6 @@ ul {
 body {
 	color: black;
 	font-family: v.$font-body;
-
-	a {
-		text-decoration: none;
-	}
 
 	.text-content {
 		@extend %base-text;
@@ -47,7 +46,9 @@ body {
 }
 
 h1,
-.h1 {
+.h1,
+.display-1 {
+	@extend %heading;
 	font-family: v.$font-roie;
 	font-size: 4em;
 	text-transform: lowercase;
@@ -57,12 +58,14 @@ h2,
 .h2 {
 	@extend %heading;
 	font-size: 3em;
-	color: v.$color-grey;
+	color: var(--color-primary--dark);
+	font-family: v.$font-roie;
 }
 
 h3,
 .h3 {
-	@extend %heading;
+	@extend %subheadline;
+	font-weight: 700;
 	font-size: 2.4em;
 	text-transform: capitalize;
 }
@@ -88,13 +91,27 @@ h6,
 	@extend %subheadline;
 }
 
-.white-stroke {
+.white-stroke,
+.display-2 {
 	@extend %subheadline;
 	text-transform: uppercase;
 	color: transparent;
 	-webkit-text-stroke: 1px white;
 	font-size: 3em;
 	font-weight: 700;
+}
+
+.display-3 {
+	font-family: v.$font-poppins;
+	font-weight: 700;
+	color: var(--color-grey);
+	font-size: 2.5em;
+}
+
+.display-4 {
+	font-family: v.$font-poppins;
+	font-weight: 700;
+	font-size: 1em;
 }
 
 .site-title {

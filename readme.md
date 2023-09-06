@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.7.3
+
+- All the bug fixes ([Github issue #66](https://github.com/kingdom-one/k1-theme-v2/issues/66))
+
 ## v0.7.2
 
 - Minor bug fixes before the big bug fix

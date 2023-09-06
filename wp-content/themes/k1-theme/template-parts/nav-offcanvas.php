@@ -1,4 +1,4 @@
-<?php //phpcs:ignore
+<?php
 /**
  * The OffCanvas
  * Built with Bootstrap 5.3
@@ -20,7 +20,7 @@
 	</div>
 	<div class="offcanvas__body">
 		<?php
-		if (has_nav_menu( 'mobile_menu' )) {
+		if ( has_nav_menu( 'mobile_menu' ) ) {
 			wp_nav_menu(
 				array(
 					'theme_location'  => 'mobile_menu',
