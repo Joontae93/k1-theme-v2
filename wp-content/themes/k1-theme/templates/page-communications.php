@@ -189,4 +189,6 @@ get_template_part(
 		),
 	)
 );
+get_template_part( 'template-parts/content', 'recent-partnerships' );
+get_template_part( 'template-parts/sliders/swiper', 'brands' );
 get_template_part( 'template-parts/final-cta/content', 'daunting' );
