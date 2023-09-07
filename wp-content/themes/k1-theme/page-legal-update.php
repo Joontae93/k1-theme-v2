@@ -1,6 +1,8 @@
 <?php
 /**
  * Page: Above Reproach Legal Update
+ *
+ * @package KingdomOne
  */
 
 $content = new Content_Sections();
@@ -23,14 +25,17 @@ get_header();
 		<div class="container">
 			<div class="row text-sm-center text-lg-start">
 				<h2 class="headline text-white">with legal policies and procedures constantly in flux, it can be difficult for your ministry to evolve to meet regulations quickly.</h2>
-				<p class="subheadline fw-bold">Legal compliance is something you can’t ignore. When ministries don’t strive to stay up-to-date with compliance, they open the door to confusion within your ministry team; if nobody within the organization is on the same page, legal setbacks can occur that can seriously damage the integrity of your ministry.</p>
+				<p class="subheadline fw-bold">Legal compliance is something you can’t ignore. When ministries don’t strive to stay up-to-date with compliance, they open the door to
+					confusion within your ministry team; if nobody within the organization is on the same page, legal setbacks can occur that can seriously damage the integrity of your
+					ministry.</p>
 			</div>
 		</div>
 	</section>
 	<section class="bg-color-ar-deep-blue">
 		<div class="container">
 			<div class="row my-5">
-				<h2 class="text-white text-center">When you attend the Above Reproach Legal Update Conference, you help shield your ministry from legal setbacks and provide your team with the tools to lead your ministry confidently through the legal changes of 2024.</h2>
+				<h2 class="text-white text-center">When you attend the Above Reproach Legal Update Conference, you help shield your ministry from legal setbacks and provide your team with
+					the tools to lead your ministry confidently through the legal changes of 2024.</h2>
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-lg-10">
@@ -43,12 +48,13 @@ get_header();
 	<section class="attorney-cta">
 		<div class="row col-8 container">
 			<div class="col-4">
-			<?php k1_get_image_asset_url( 'jenn-bursh', 'png', '', false ) ?>
+				<?php k1_get_image_asset_url( 'jenn-bursh', 'png', '', false ); ?>
 			</div>
 			<div class="col-8">
 				<h3>Jenn Bursh - Attorney at Law</h3>
 				<h2>Your Ministry Legal Partner</h2>
-				<p>“Legal updates are your ministry's first line of defense to minimize potential financial liability. If you know what the law requires of your ministry, you can make informed decisions to navigate the difficult waters between the law and ministry.”</p>
+				<p>“Legal updates are your ministry's first line of defense to minimize potential financial liability. If you know what the law requires of your ministry, you can make
+					informed decisions to navigate the difficult waters between the law and ministry.”</p>
 			</div>
 		</div>
 	</section>
