@@ -1,5 +1,8 @@
 <?php
-/** AB506 Legal Update Final CTA */
+/** AB506 Legal Update Final CTA
+ *
+ * @package KingdomOne
+ */
 
 $content = new Content_Sections();
 ?>
@@ -7,7 +10,10 @@ $content = new Content_Sections();
 	<?php $content->get_color_background_layers( 'legal-update-final-cta', 'left', array( 'legal-update-final-cta-bg', 'webp' ) ); ?>
 	<div class="legal-update-final-cta__content position-relative z-3 py-5">
 		<div class="container">
-			<div class="row py-5 text-white">
+			<div class="row">
+				<h2 class='color-ar-yellow text-center'>say goodbye to setbacks!</h2>
+			</div>
+			<div class="row py-5 text-white justify-content-evenly">
 				<?php
 				$three_step_cols = array(
 					array(
@@ -25,8 +31,8 @@ $content = new Content_Sections();
 				);
 				?>
 				<?php foreach ( $three_step_cols as $index => $col ) : ?>
-				<div class="col-lg-4 d-flex flex-column align-items-center my-5">
-					<?php k1_get_svg_asset( 'ab506-final-cta-step-' . ( $index + 1 ) ); ?>
+				<div class="col-lg-4 d-flex flex-column align-items-center text-center">
+					<?php k1_get_svg_asset( 'legal-update-circle-' . ( $index + 1 ) ); ?>
 					<h3 class="text-white headline mt-3 mb-5"><?php echo $col['headline']; ?></h3>
 					<p class="subheadline text-sm-center text-white"><?php echo $col['subheadline']; ?></p>
 				</div>

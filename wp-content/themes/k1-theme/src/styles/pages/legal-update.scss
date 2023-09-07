@@ -1,12 +1,11 @@
-@use "../../abstracts/mixins" as m;
-@use "../../abstracts/variables" as v;
-
+@use '../abstracts/mixins' as m;
+@use '../abstracts/variables' as v;
+@use '../components/buttons';
+@use '../components/content-sections/attorney-callout';
+@use '../components/content-sections/final-cta/legal-update';
+@use 'sass:color';
 
 .hero {
-	&__background {
-		transform: scaleX(-1);
-	}
-
 	&__content {
 		&--btn {
 			background-color: transparent;
@@ -36,14 +35,162 @@
 	color: var(--color-ar-deep-blue);
 }
 
+#section-2 {
+	margin-top: -5rem;
+	padding: 8rem 0;
+}
 
-.attorney-cta {
-    background-color: var(--color-ar-deep-blue);
+.conference-plan {
+	&__background {
+		clip-path: polygon(0 0, 100% 0, 100% 50%, 0 40%);
+		@include m.media-breakpoint-up(lg) {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+		}
+	}
+	&__video {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+	}
+	&__cta-button {
+		@extend %pill-btn;
+		color: var(--color-ar-deep-blue);
+		border: 2px solid var(--color-ar-deep-blue);
+		&:hover {
+			background-color: var(--color-ar-deep-blue);
+			color: white;
+		}
+	}
 
-    > container {
-        background-color: #023042;
-        color: white;
-        border-color: white;
-        
-    }
+	&__step {
+		&--icon {
+			width: 17rem;
+		}
+	}
+}
+
+%steps {
+	.a {
+		fill: var(--color-ar-deep-blue);
+	}
+	.c {
+		fill: var(--color-ar-golden-yellow);
+	}
+	.d {
+		// fill: var(--color-ar-yellow);
+		fill: white;
+		font-size: 35px;
+		font-family: v.$font-poppins;
+		font-weight: 700;
+	}
+}
+
+.legal-update-icons {
+	:where(&#shield) {
+		@extend %steps;
+		.b {
+			fill: none;
+			stroke: #fff;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			stroke-width: 8px;
+		}
+
+		.e {
+			filter: url(#shield-a);
+		}
+	}
+
+	:where(&#tools) {
+		@extend %steps;
+
+		.b {
+			fill: #fff;
+		}
+
+		.e {
+			filter: url(#tools-a);
+		}
+	}
+
+	:where(&#confidence) {
+		@extend %steps;
+		.b {
+			fill: none;
+			stroke: #fff;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			stroke-width: 6px;
+		}
+		.e {
+			filter: url(#confidence-a);
+		}
+	}
+
+	:where(&#docs) {
+		stroke: white;
+
+		.a,
+		.b {
+			fill: none;
+			stroke: inherit;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			stroke-width: 12px;
+		}
+		.b {
+			stroke-dasharray: 1.002 30.049;
+		}
+	}
+
+	&__circles {
+		max-width: 17rem;
+		.a,
+		.d {
+			fill: none;
+		}
+		.a {
+			stroke: #fff;
+			stroke-width: 5px;
+		}
+		.b {
+			fill: #fff;
+			font-size: 75px;
+			font-family: v.$font-poppins;
+		}
+		.c {
+			stroke: none;
+		}
+	}
+}
+#hr-ministry-network-logo {
+	width: 28rem;
+	height: 8.8rem;
+	.a {
+		fill: none;
+	}
+	.b {
+		clip-path: url(#hr-ministry-network-logo-a);
+	}
+	.c {
+		fill: #fff;
+	}
+}
+.ministry-network {
+	margin-top: -5rem;
+	&__cta {
+		@extend %pill-btn;
+		border-color: color.adjust(v.$color-ar-deep-blue, $lightness: -10%);
+		color: color.adjust(v.$color-ar-deep-blue, $lightness: -10%);
+	}
+	&__icons {
+		&--judge {
+			top: 0;
+			height: 75%;
+		}
+		&--lady-justice {
+			bottom: -5rem;
+			left: 3rem;
+			height: 75%;
+		}
+	}
 }

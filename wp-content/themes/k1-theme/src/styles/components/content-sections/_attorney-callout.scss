@@ -1,0 +1,39 @@
+@use '../../abstracts/mixins' as m;
+@use '../../abstracts/variables' as v;
+@use 'sass:color' as color;
+.attorney-callout {
+	@include m.media-breakpoint-up(lg) {
+		height: 80rem;
+	}
+	&__background {
+		&--left {
+			clip-path: polygon(0 5%, 100% 5%, 100% 95%, 0 95%);
+		}
+		&--right {
+			clip-path: polygon(80% 0, 100% 0, 100% 100%, 60% 100%);
+		}
+	}
+	&__content {
+		border-radius: 1rem;
+		background-color: color.adjust(v.$color-ar-deep-blue, $lightness: -10%);
+	}
+
+	&__image {
+		border-radius: 50%;
+		width: 50%;
+		height: auto;
+		aspect-ratio: 1;
+		object-fit: cover;
+
+		@include m.media-breakpoint-up(lg) {
+			width: 100%;
+		}
+
+		&--steno {
+			position: absolute;
+			bottom: 0;
+			z-index: 4;
+			height: 50%;
+		}
+	}
+}
