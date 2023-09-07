@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.7.4
+
+- Finish Legal Update Page
+
 ## v0.7.3
 
 - All the bug fixes ([Github issue #66](https://github.com/kingdom-one/k1-theme-v2/issues/66))

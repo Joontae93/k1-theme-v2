@@ -34,10 +34,7 @@ function k1_get_svg_asset( string $file, bool $as_image_src = false, bool $echo 
  * @param bool   $echo echo / return toggle
  */
 function k1_get_image_asset_url( string $file, string $extension, string $folder = '', $echo = true ) {
-	if ( empty( $folder ) ) {
-		$url = get_template_directory_uri() . "/src/assets/images/{$file}.{$extension}";
-	}
-	$url = get_template_directory_uri() . "/src/assets/images/{$folder}/{$file}.{$extension}";
+	$url = get_template_directory_uri() . '/src/assets/images' . ( empty( $folder ) ? "/{$file}.{$extension}" : "/{$folder}/{$file}.{$extension}" );
 	if ( $echo ) {
 		echo $url;
 	} else {

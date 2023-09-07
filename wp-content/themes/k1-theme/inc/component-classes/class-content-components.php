@@ -120,7 +120,7 @@ class Content_Components {
 	 * @param string  $color_direction the direction the color will poke out from (left or right)
 	 * @param ?string $background_image the image url
 	 */
-	public function get_hero_background( bool $has_background_image, string $color, string $color_direction, ?string $background_image = '' ):string {
+	public function get_hero_background( bool $has_background_image, string $color, string $color_direction, ?string $background_image = '' ): string {
 		$class  = $has_background_image ? "hero__background color-{$color_direction}" : 'hero__background';
 		$markup = "<div class='{$class}'>";
 		if ( $has_background_image ) {
@@ -143,7 +143,7 @@ class Content_Components {
 	 * @param bool   $has_cta trigger the CTA generator
 	 * @param ?array $cta_options the CTA args
 	 */
-	public function get_hero_content( string $headline, string $subheadline, bool $has_cta, ?array $cta_options = array() ) : string {
+	public function get_hero_content( string $headline, string $subheadline, bool $has_cta, ?array $cta_options = array() ): string {
 		$markup  = "<div class='hero__content container d-flex flex-column align-items-stretch'><div class='row'><div class='col-1 align-self-start h-auto position-relative d-none d-md-block'>" . k1_get_svg_asset( 'leaves-3', false, false ) . "</div><div class='position-relative d-flex flex-column col-11'>";
 		$markup .= $this->headline(
 			$headline,

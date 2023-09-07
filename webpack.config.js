@@ -35,6 +35,7 @@ const styleSheets = [
 	'share-your-story',
 	'employee-retention-credit',
 	'above-reproach',
+	'legal-update',
 ]; // for scss only
 
 module.exports = {
