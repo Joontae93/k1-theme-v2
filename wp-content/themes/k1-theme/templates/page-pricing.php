@@ -1,6 +1,8 @@
 <?php
 /**
  * Page: Process & Pricing
+ *
+ * @package KingdomOne
  */
 
 k1_enqueue_page_assets( 'pricing' );
@@ -17,7 +19,8 @@ $content = new Content_Sections();
 				<?php
 				$content->headline(
 					'what is a talent?',
-					args:array(
+					true,
+					array(
 						'headline_class'      => 'headline text-primary',
 						'subheadline_content' => 'The approach will not be easy. You are required to maneuver straight down this trench and skim the surface to this point.',
 					)
@@ -30,24 +33,20 @@ $content = new Content_Sections();
 				<?php k1_get_svg_asset( 'pricing-talents-explanation' ); ?>
 			</div>
 			<div class="col-lg-8">
-				<ul class="ms-5 d-inline-flex flex-column justify-content-around h-100">
-					<?php
-					$talents = array(
-						"Monthly Subscription to Ministry Expert's Time",
-						'16 hours a month: half a day a week dedicated to your ministry',
-						'The more Talents you take the bigger the discount <br> (think ice cream scoops)',
-						'The benefit of having the time, expertise, and <br> knowledge, without committing to salary, benefits & <br> onboarding. We perform like staff but cost way less.',
-					);
-					foreach ( $talents as $talent ) {
-						echo '<li>' . acf_esc_html( $talent ) . '</li>';
-					}
-					?>
-				</ul>
+				<?php
+				$talents = array(
+					"Monthly Subscription to Ministry Expert's Time",
+					'16 hours a month: half a day a week dedicated to your ministry',
+					'The more Talents you take the bigger the discount <br> (think ice cream scoops)',
+					'The benefit of having the time, expertise, and <br> knowledge, without committing to salary, benefits & <br> onboarding. We perform like staff but cost way less.',
+				);
+				$content->bulleted_list( $talents, '', 'ul', 'ms-5 d-inline-flex flex-column justify-content-around h-100' );
+				?>
 			</div>
 		</div>
 	</div>
 </section>
-<section class="services-calculator">
+<!-- <section class="services-calculator">
 	<?php $content->get_color_background_layers( 'services-calculator', 'right' ); ?>
 	<div class="container">
 		<div class="services-calculator__content row">
@@ -69,7 +68,7 @@ $content = new Content_Sections();
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 <aside class="our-services">
 	<div class="container my-5">
 		<div class="row">

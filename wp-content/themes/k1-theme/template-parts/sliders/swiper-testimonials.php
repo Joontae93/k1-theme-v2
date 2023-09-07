@@ -2,6 +2,8 @@
 /**
  * Brands Swiper
  * powered by Swiper.js
+ *
+ * @package KingdomOne
  */
 
 $swiper_slides = array(

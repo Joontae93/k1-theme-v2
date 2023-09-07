@@ -15,5 +15,12 @@ export const testimonialsSlider = () => {
 			nextEl: '.swiper-testimonials-button-next',
 			prevEl: '.swiper-testimonials-button-prev',
 		},
+		// breakpoints: {
+		// 767: {
+		// 	slidesPerView: 3,
+		// 	centeredSlides: false,
+		// 	loop: true,
+		// },
+		// },
 	});
 };

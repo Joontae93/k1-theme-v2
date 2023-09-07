@@ -1,13 +1,10 @@
 @use './header/hamburger';
-@use './header/navbar';
 @use './header/offcanvas';
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins' as m;
 
-
 .header {
 	width: 100%;
-	background-color: transparent;
 	position: absolute;
 	top: 0;
 	z-index: 5;
@@ -18,7 +15,9 @@
 	}
 
 	a {
-		color: white;
+		h1 {
+			color: white;
+		}
 	}
 
 	&__social-icon {

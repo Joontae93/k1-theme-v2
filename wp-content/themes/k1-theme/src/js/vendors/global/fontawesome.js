@@ -11,4 +11,4 @@ library.add(faFacebook, faInstagram, faLinkedin);
  * Replaces any existing <i> tags with <svg>
  * Sets up a MutationObserver to continue doing this as the DOM changes.
  */
-dom.watch();
+dom.i2svg();

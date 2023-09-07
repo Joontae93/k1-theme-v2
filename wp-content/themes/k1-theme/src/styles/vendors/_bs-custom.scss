@@ -9,6 +9,7 @@
 // 2. Include any default variable overrides here
 $primary: v.$color-primary;
 $font-size-base: 1.6rem;
+$link-decoration: none;
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import 'bootstrap/scss/variables';
@@ -24,7 +25,6 @@ $display-font-sizes: (
 	6: 2.5rem,
 );
 
-$display-font-family: 'Roie', sans-serif;
 $display-font-style: null;
 $display-font-weight: 400;
 $display-line-height: $headings-line-height;
@@ -57,7 +57,7 @@ $display-line-height: $headings-line-height;
 // @import "bootstrap/scss/badge";
 // @import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/card";
+// @import 'bootstrap/scss/card';
 // @import 'bootstrap/scss/carousel';
 // @import "bootstrap/scss/code";
 // @import "bootstrap/scss/custom-forms";

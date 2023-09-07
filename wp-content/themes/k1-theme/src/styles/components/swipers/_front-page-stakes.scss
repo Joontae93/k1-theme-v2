@@ -1,0 +1,124 @@
+@use '../../abstracts/mixins' as m;
+.stakes {
+	.swiper {
+		max-height: unset;
+		height: auto;
+		overflow-y: visible;
+
+		@include m.media-breakpoint-up(lg) {
+			height: 75rem;
+			max-height: unset;
+		}
+		@include m.media-breakpoint-up(xl) {
+			height: 64rem;
+			max-height: unset;
+		}
+		@include m.media-breakpoint-up(xxl) {
+			height: 60rem;
+			max-height: unset;
+		}
+
+		.swiper-pagination-bullets {
+			bottom: -3rem;
+		}
+		.swiper-pagination-bullet {
+			--size: 1.5rem;
+			width: var(--size);
+			height: var(--size);
+
+			&-active {
+				background-color: var(--color-primary);
+			}
+		}
+		.swiper-slide {
+			a {
+				@include m.media-breakpoint-down(lg) {
+					margin-top: auto;
+				}
+			}
+		}
+	}
+
+	&__content {
+		position: relative;
+		z-index: 4;
+
+		@include m.media-breakpoint-up(lg) {
+			--frame-left: 47rem;
+			--frame-top: 3rem;
+			--frame-bottom: 70rem;
+			--frame-right: 92rem;
+
+			--window: polygon(
+				0% 0%,
+				0% 100%,
+				var(--frame-left) 100%,
+				var(--frame-left) var(--frame-top),
+				var(--frame-right) var(--frame-top),
+				var(--frame-right) var(--frame-bottom),
+				var(--frame-left) var(--frame-bottom),
+				var(--frame-left) 100%,
+				100% 100%,
+				100% 0%
+			);
+		}
+		@include m.media-breakpoint-up(xl) {
+			--frame-left: 56rem;
+			--frame-top: 3rem;
+			--frame-bottom: 65rem;
+			--frame-right: 110rem;
+		}
+
+		@include m.media-breakpoint-up(xxl) {
+			--frame-left: 65rem;
+			--frame-top: 3rem;
+			--frame-bottom: 63rem;
+			--frame-right: 128rem;
+		}
+
+		&--background {
+			background-color: #fef1db;
+			border-radius: 1rem;
+			padding: 3rem;
+			@include m.media-breakpoint-up(lg) {
+				clip-path: var(--window);
+			}
+		}
+	}
+
+	&__icon {
+		--size: 10rem;
+		width: var(--size);
+		height: var(--size);
+
+		&#community {
+			.a {
+				fill: none;
+			}
+			.b {
+				clip-path: url(#community-a);
+			}
+			.c {
+				fill: var(--color-primary);
+			}
+		}
+
+		&#knowledge {
+			.a {
+				fill: var(--color-primary);
+			}
+			.b {
+				clip-path: url(#knowledge-a);
+			}
+		}
+
+		&#tools {
+			.a {
+				fill: var(--color-primary);
+			}
+			.b {
+				clip-path: url(#tools-a);
+			}
+		}
+	}
+}

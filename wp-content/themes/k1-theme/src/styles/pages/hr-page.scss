@@ -13,15 +13,37 @@
 	}
 }
 
-.costs {
-	&__image {
-		aspect-ratio: 4 / 3;
+%leaves-4_base {
+	stroke: var(--color-primary);
+	fill: none;
+	--size: 8rem;
+	width: var(--size);
+	height: var(--size);
 
-		&--image {
-			object-fit: contain;
+	@include m.media-breakpoint-up(xxl) {
+		--size: 10rem;
+	}
+}
+
+.costs {
+	#leaves-4 {
+		@extend %leaves-4_base;
+		position: absolute;
+		transform: rotate(0deg) scaleY(-1);
+		z-index: 4;
+		top: -3rem;
+		right: 0rem;
+
+		@include m.media-breakpoint-up(xl) {
+			top: -6rem;
+			right: -8rem;
 		}
 	}
-	.clip-color-right {
-		@include m.background-layers;
+
+	&__image {
+		&--image {
+			aspect-ratio: 4 / 3;
+			object-fit: cover;
+		}
 	}
 }

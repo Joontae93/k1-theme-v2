@@ -223,4 +223,5 @@ class Content_Sections extends Content_Components {
 		$layers .= '</div>';
 		echo $layers;
 	}
+
 }

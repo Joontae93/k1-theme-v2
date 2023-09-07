@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.7.3
+
+- All the bug fixes ([Github issue #66](https://github.com/kingdom-one/k1-theme-v2/issues/66))
+
+## v0.7.2
+
+- Minor bug fixes before the big bug fix
+
+## v0.7.1
+
+- Refactor page assets (css/js) into `dist/pages`
+- Refactor layout assets into `dist/layouts`
+- Update the `k1_enqueue_page` functions to allow lookups to `dist` subfolders
+- Refactor Clip-Path mixins into the Clip-Paths scss file
+- Discarded Bootstrap Cards because it wasn't doing anything useful
+
+## v0.6.2
+
+- Updated Single & Archive Templates to use bootstrap cards & look better
+
 ## v0.6.1
 
 - Fixed all mobile overflow issues.

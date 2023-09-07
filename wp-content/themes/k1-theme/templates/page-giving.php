@@ -1,6 +1,8 @@
 <?php
 /**
  * Page: Giving
+ *
+ * @package KingdomOne
  */
 
 k1_enqueue_page_style( 'giving' );
@@ -56,7 +58,7 @@ $content = new Content_Sections();
 		<div class="container">
 			<div class="row my-5">
 				<div class="col">
-					<h2 class="headline text-white text-center">How can you help the American church?</h2>
+					<h2 class="headline text-white text-center pt-5">How can you help the American church?</h2>
 					<span class="subheadline text-primary">We don't have a magic wand to fix the problem now, but we do have resources that will give the church a fighting chance.
 						Giving to
 						Kingdom One will get tools, education & resources back into churches, to grow their health.</span>

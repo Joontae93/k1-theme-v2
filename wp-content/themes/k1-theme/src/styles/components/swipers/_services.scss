@@ -2,6 +2,7 @@
 @use './base';
 
 #services-swiper {
+	min-height: 30rem;
 	.swiper-wrapper {
 		align-items: stretch;
 	}

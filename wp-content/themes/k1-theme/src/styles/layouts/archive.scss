@@ -1,0 +1,65 @@
+@use '../abstracts/mixins' as m;
+.hero {
+	min-height: 30vw;
+
+	&__background {
+		&--lower {
+			background-image: linear-gradient(
+				to right bottom,
+				transparent,
+				rgba(black, 0.35)
+			);
+		}
+	}
+}
+
+.post-container {
+	display: grid;
+	$gap: 2rem;
+	gap: $gap;
+	grid-template-columns: 1fr;
+	place-content: center;
+
+	@include m.media-breakpoint-up(md) {
+		grid-template-columns: repeat(auto-fill, min(calc(50% - $gap)));
+	}
+
+	@include m.media-breakpoint-up(xl) {
+		grid-template-columns: repeat(auto-fill, min(calc(33% - $gap)));
+	}
+}
+.post {
+	@include m.box-shadow($opacity: 0.05);
+	border-bottom: 5px solid transparent;
+	padding: 0;
+	cursor: pointer;
+
+	&:hover {
+		transition: all 0.2s ease;
+		transform: translateY(-4px);
+		@include m.box-shadow($opacity: 0.15);
+		border-color: var(--color-primary--dark);
+	}
+
+	&__image {
+		width: 100%;
+		aspect-ratio: 16/9;
+		min-height: 20rem;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	&__content {
+		padding: 2rem;
+	}
+	&__cta {
+		color: var(--color-grey--light);
+		text-transform: uppercase;
+		font-size: 1.6rem;
+		transition: color 0.2s ease;
+
+		.post:hover & {
+			color: var(--color-primary--dark);
+		}
+	}
+}

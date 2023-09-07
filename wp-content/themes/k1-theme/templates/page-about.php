@@ -1,69 +1,82 @@
 <?php
 /**
  * Page: About
+ *
+ * @package KingdomOne
  */
 
 k1_enqueue_page_assets( 'k1About' );
 $content = new Content_Sections();
 ?>
 <section class="empathy">
-	<!-- TODO: #36 talk to tim about photo display -->
 	<div class="container">
-		<?php
-		$content->two_col_text_and_media(
-			array(
-				'split'          => array( 4, 8 ),
-				'headline'       => 'we understand',
-				'headline_class' => 'headline text-primary',
-				'media_type'     => 'svg',
-				'image'          => k1_get_svg_asset( 'leaves-4', false, false ),
-				'content'        => '<p><b>Leading a ministry is complex and high stakes. A few wrong decisions can lead to organizational stall-out and frustration.</b></p><p>Leading a ministry is complex and high stakes. A few wrong decisions can lead to organizational stall-out and frustration.</p>',
-				'cta'            => array(
-					'title' => 'Get Started',
-					'url'   => '/get-started',
-				),
-			)
-		);
-		?>
+		<div class="row justify-content-between">
+			<figure class="empathy__image position-relative col-lg-4">
+				<?php k1_get_svg_asset( 'leaves-4' ); ?>
+				<div class="clip-color-right">
+					<div class="bg-color-primary"></div>
+					<img class='empathy__image--image' src="<?php k1_get_image_asset_url( 'about-empathy', 'webp', ); ?>" />
+				</div>
+			</figure>
+			<div class="col-lg-7 empathy__content">
+				<h2 class="headline">we understand</h2>
+				<div class="subheadline">
+					<p><b>Leading a ministry is complex and high stakes. A few wrong decisions can lead to organizational stall-out and frustration.</b></p>
+					<p>Leading a ministry is complex and high stakes. A few wrong decisions can lead to organizational stall-out and frustration.
+				</div>
+				<?php $content->cta_button(); ?>
+			</div>
+		</div>
 	</div>
 </section>
 <section class="authority">
 	<div class="container">
-		<?php
-		$args             = array(
-			'split'          => array( 4, 8 ),
-			'reverse'        => true,
-			'headline'       => "the numbers don't lie",
-			'headline_class' => 'headline text-primary',
-			'media_type'     => 'svg',
-			'image'          => k1_get_svg_asset( 'leaves-4', false, false ),
-		);
-		$args['content']  = "<p><b>The church should be the healthiest, safest and most courageous organization on the planet, <span class='color-primary'>and it's not.</span></b></p>";
-		$args['content'] .= $content->bulleted_list(
-			array(
-				'70% of Pastors have lower self-esteem since joining the ministry',
-				'70% of Pastors fight depression',
-				"50% of Ministry Leaders would leave the ministry but can't find another job",
-				'80% of Pastors believe ministry has a negative effect on family, and 33% siting the occupation as hazardous to overall well-being',
-				'80% of Ministry spouses feel neglected and underappreciated',
-				'70% of Pastors don’t have a good marriage, 38% are divorced or in the process of divorce.',
-				'41% of Pastors display anger problems reported by spouses',
-				'50% of Pastors watch pornography',
-				'50% of Pastors report inappropriate sexual behavior with someone in the church.',
-			),
-			'',
-			'ul',
-			false
-		);
-		$content->two_col_text_and_media( $args );
-		?>
-		<div class="row my-5">
-			<h2 class="text-center">Pastors and Ministry Leaders are not the Problems</h2>
-			<p class="text-center">The American Church is suffering from an unhealthy understanding of organizational structure. The Kingdom One method has helped over 65 ministries,
-				camps, schools, and non-profits find courage, health & effectiveness in ministry. </p>
+		<div class="row flex-row-reverse">
+			<figure class="authority__image position-relative col-lg-4">
+				<?php k1_get_svg_asset( 'leaves-4' ); ?>
+				<div class="clip-color-left">
+					<div class="bg-color-primary"></div>
+					<img class='authority__image--image' src="<?php k1_get_image_asset_url( 'about-numbers', 'webp', ); ?>" />
+				</div>
+			</figure>
+			<div class="authority__content col-lg-7">
+				<h2 class="headline">the numbers don't lie</h2>
+				<div class="subheadline">
+					<p>
+						<b>The church should be the healthiest, safest and most courageous organization on the planet, <span class='color-primary'>and it's not.</span></b>
+					</p>
+					<?php
+					$content->bulleted_list(
+						array(
+							'70% of Pastors have lower self-esteem since joining the ministry',
+							'70% of Pastors fight depression',
+							"50% of Ministry Leaders would leave the ministry but can't find another job",
+							'80% of Pastors believe ministry has a negative effect on family, and 33% siting the occupation as hazardous to overall well-being',
+							'80% of Ministry spouses feel neglected and underappreciated',
+							'70% of Pastors don’t have a good marriage, 38% are divorced or in the process of divorce.',
+							'41% of Pastors display anger problems reported by spouses',
+							'50% of Pastors watch pornography',
+							'50% of Pastors report inappropriate sexual behavior with someone in the church.',
+						)
+					);
+					?>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
+<aside class="text-callout">
+	<div class="container">
+		<div class="row my-5 justify-content-center">
+			<div class="col-10 flex-column align-items-center text-center">
+				<h2 class="display-3">Pastors and Ministry Leaders are not the Problems</h2>
+				<p class='mt-3 mb-5'>The American Church is suffering from an unhealthy understanding of organizational structure. The Kingdom One method has helped over 65 ministries,
+					camps, schools, and non-profits find courage, health & effectiveness in ministry. </p>
+				<?php $content->cta_button(); ?>
+			</div>
+		</div>
+	</div>
+</aside>
 <section class="choose-one">
 	<?php $content->get_color_background_layers( 'choose-one', 'zig-zag-right', array( 'about-choose-one-bg', 'webp' ) ); ?>
 	<div class="choose-one__content position-relative z-2">
@@ -85,7 +98,7 @@ $content = new Content_Sections();
 <section class="ministry-plan">
 	<div class="ministry-plan__content container">
 		<div class="row justify-content-center">
-			<h2 class='headline mt-5 text-center'>Your Healthy Ministry Plan <span class="text-primary">Starts Here</span></h2>
+			<h2 class='color-grey text-poppins mt-5 text-center'>Your Healthy Ministry Plan <span class="text-primary">Starts Here</span></h2>
 		</div>
 		<div class="ministry-plan__steps row justify-content-evenly my-5">
 			<?php
@@ -111,11 +124,11 @@ $content = new Content_Sections();
 			);
 			?>
 			<?php foreach ( $default_steps as $index => $step ) : ?>
-				<?php $step_level = $index + 1; ?>
+			<?php $step_level = $index + 1; ?>
 			<div class="<?php echo "ministry-plan__steps--step-{$step_level}"; ?> col-lg-4 my-5 my-lg-0 d-flex flex-column align-items-center text-primary--dark">
 				<?php k1_get_svg_asset( $step['svg'] ); ?>
-				<h3 class="text-poppins text-center align-self-stretch mt-5 mb-3"><?php echo $step['headline']; ?></h3>
-				<span class="subheadline text-center align-self-stretch"><?php echo $step['subheadline']; ?></span>
+				<h3 class="text-poppins text-center align-self-stretch mt-5 mb-3 color-primary--dark"><?php echo $step['headline']; ?></h3>
+				<span class="subheadline text-center align-self-stretch fs-4"><?php echo $step['subheadline']; ?></span>
 			</div>
 			<?php endforeach; ?>
 		</div>
@@ -134,7 +147,6 @@ $content = new Content_Sections();
 			</div>
 		</div>
 		<?php
-		// TODO: #35 Debug first icon
 		$values = array(
 			array(
 				'svg'         => 'relationship-first',
@@ -171,7 +183,7 @@ $content = new Content_Sections();
 			$is_even   = 0 === $index % 2;
 			$row_class = $is_even ? 'row' : 'row flex-row-reverse';
 			echo "<div class='{$row_class} justify-content-center my-5'>";
-			echo "<div class='col-lg-2'>" . k1_get_svg_asset( 'values-' . $value['svg'], false, false ) . '</div>';
+			echo "<div class='col-lg-2 p-5'>" . k1_get_svg_asset( 'values-' . $value['svg'], false, false ) . '</div>';
 			$col_class = ! $is_even ? 'text-lg-end' : '';
 			?>
 		<div class="<?php echo $col_class; ?> mt-5 mt-lg-0 col-lg-8 d-flex flex-column justify-content-center">
@@ -182,7 +194,7 @@ $content = new Content_Sections();
 				<?php echo $value['subheadline']; ?>
 			</span>
 		</div>
-			<?php echo '</div>'; ?>
+		<?php echo '</div>'; ?>
 		<?php endforeach; ?>
 	</div>
 </section>

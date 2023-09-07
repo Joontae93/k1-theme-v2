@@ -1,7 +1,7 @@
 /* //////////
 // CLIP PATHS
 /////////// */
-$height: 5vw;
+$height: 5%;
 $drop: calc(0% + $height);
 $lift: calc(100% - $height);
 
@@ -19,3 +19,135 @@ $zag-color-right: polygon(0 0, 100% $drop, 100% 100%, 0 $lift);
 
 $zig-color-right: polygon(0 0, 100% $drop, 100% 100%, 0 $lift);
 $zag-color-left: polygon(0 $drop, 100% 0, 100% $lift, 0 100%);
+
+/* //////////////////
+// CLIP PATH MIXINS
+//////////////// */
+
+@mixin clip-path($direction, $has-overlay: true) {
+	@if ('right-bottom' == $direction) {
+		& > :nth-child(1) {
+			clip-path: $lift-left-bottom; // lifts left bottom
+		}
+		& > :nth-child(2) {
+			clip-path: $lift-right-bottom; // lifts right bottom
+		}
+		@if ($has-overlay) {
+			& > :nth-child(3) {
+				clip-path: $lift-right-bottom;
+			}
+		}
+	}
+
+	@if ('left-bottom' == $direction) {
+		& > :nth-child(1) {
+			clip-path: $lift-right-bottom;
+		}
+
+		& > :nth-child(2) {
+			clip-path: $lift-left-bottom;
+		}
+
+		@if ($has-overlay) {
+			& > :nth-child(3) {
+				clip-path: $lift-left-bottom;
+			}
+		}
+	}
+
+	@if ('left-top' == $direction) {
+		& > :nth-child(1) {
+			clip-path: $drop-right-top;
+		}
+
+		& > :nth-child(2) {
+			clip-path: $drop-left-top;
+		}
+
+		@if ($has-overlay) {
+			& > :nth-child(3) {
+				clip-path: $drop-left-top;
+			}
+		}
+	}
+
+	@if ('right-top' == $direction) {
+		& > :nth-child(1) {
+			clip-path: $drop-left-top;
+		}
+
+		& > :nth-child(2) {
+			clip-path: $drop-right-top;
+		}
+
+		@if ($has-overlay) {
+			& > :nth-child(3) {
+				clip-path: $drop-right-top;
+			}
+		}
+	}
+
+	@if ('left' == $direction) {
+		& > :nth-child(1) {
+			clip-path: $drop-right;
+		}
+
+		& > :nth-child(2) {
+			clip-path: $drop-left;
+		}
+
+		@if ($has-overlay) {
+			& > :nth-child(3) {
+				clip-path: $drop-left;
+			}
+		}
+	}
+
+	@if ('right' == $direction) {
+		& > :nth-child(1) {
+			clip-path: $drop-left;
+		}
+
+		& > :nth-child(2) {
+			clip-path: $drop-right;
+		}
+
+		@if ($has-overlay) {
+			& > :nth-child(3) {
+				clip-path: $drop-right;
+			}
+		}
+	}
+
+	@if ('zig-zag-left' == $direction) {
+		& > :nth-child(1) {
+			clip-path: $zag-color-right;
+		}
+
+		& > :nth-child(2) {
+			clip-path: $zig-color-left;
+		}
+
+		@if ($has-overlay) {
+			& > :nth-child(3) {
+				clip-path: $zig-color-left;
+			}
+		}
+	}
+
+	@if ('zig-zag-right' == $direction) {
+		& > :nth-child(1) {
+			clip-path: $zag-color-left;
+		}
+
+		& > :nth-child(2) {
+			clip-path: $zig-color-right;
+		}
+
+		@if ($has-overlay) {
+			& > :nth-child(3) {
+				clip-path: $zig-color-right;
+			}
+		}
+	}
+}

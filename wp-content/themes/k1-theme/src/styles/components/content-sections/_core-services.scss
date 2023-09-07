@@ -16,8 +16,11 @@
 
 	&__content {
 		z-index: 9;
-		ul {
-			margin-left: 0;
+
+		&--column {
+			@include m.media-breakpoint-up(md) {
+				min-width: auto;
+			}
 		}
 	}
 }

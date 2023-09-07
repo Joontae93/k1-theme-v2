@@ -1,6 +1,8 @@
 <?php
 /**
  * Services Swiper (as seen on /communications)
+ *
+ * @package KingdomOne
  */
 
 $slides = array(
@@ -107,6 +109,7 @@ $slides = array(
 		</div>
 		<?php endforeach; ?>
 	</div>
+	<div class="swiper-services-pagination"></div>
 	<div class="swiper-button-services-prev swiper-button-prev"></div>
 	<div class="swiper-button-services-next swiper-button-next"></div>
 </div>

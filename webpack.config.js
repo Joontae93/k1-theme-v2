@@ -23,6 +23,7 @@ const jsFiles = [
 	'k1-about',
 	'get-started',
 	'staffing',
+	'archive',
 ];
 
 /**
@@ -45,12 +46,15 @@ module.exports = {
 				'vendors/fontawesome': `.${THEME_DIR}/src/js/vendors/global/fontawesome.js`,
 				'vendors/bootstrap': `.${THEME_DIR}/src/js/vendors/global/bootstrap.js`,
 				'vendors/vendors': `.${THEME_DIR}/src/styles/vendors/vendors.scss`,
+				'layouts/single': `.${THEME_DIR}/src/styles/layouts/single.scss`,
 			};
 
 			if (jsFiles.length > 0) {
 				jsFiles.forEach((jsFile) => {
 					const jsFileOutput = snakeToCamel(jsFile);
-					entries[jsFileOutput] = `.${THEME_DIR}/src/js/${jsFile}/index.ts`;
+					entries[
+						`pages/${jsFileOutput}`
+					] = `.${THEME_DIR}/src/js/${jsFile}/index.ts`;
 				});
 			}
 
@@ -58,7 +62,7 @@ module.exports = {
 				styleSheets.forEach((styleSheet) => {
 					const styleSheetOutput = snakeToCamel(styleSheet);
 					entries[
-						styleSheetOutput
+						`pages/${styleSheetOutput}`
 					] = `.${THEME_DIR}/src/styles/pages/${styleSheet}.scss`;
 				});
 			}
