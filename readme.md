@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.8.0
+
+- Update Staff Swiper
+- New CPT: Staff
+
 ## v0.7.4
 
 - Finish Legal Update Page

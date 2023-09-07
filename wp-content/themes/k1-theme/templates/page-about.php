@@ -124,7 +124,7 @@ $content = new Content_Sections();
 			);
 			?>
 			<?php foreach ( $default_steps as $index => $step ) : ?>
-			<?php $step_level = $index + 1; ?>
+				<?php $step_level = $index + 1; ?>
 			<div class="<?php echo "ministry-plan__steps--step-{$step_level}"; ?> col-lg-4 my-5 my-lg-0 d-flex flex-column align-items-center text-primary--dark">
 				<?php k1_get_svg_asset( $step['svg'] ); ?>
 				<h3 class="text-poppins text-center align-self-stretch mt-5 mb-3 color-primary--dark"><?php echo $step['headline']; ?></h3>
@@ -194,7 +194,7 @@ $content = new Content_Sections();
 				<?php echo $value['subheadline']; ?>
 			</span>
 		</div>
-		<?php echo '</div>'; ?>
+			<?php echo '</div>'; ?>
 		<?php endforeach; ?>
 	</div>
 </section>
@@ -207,26 +207,7 @@ $content = new Content_Sections();
 	</div>
 	<div class="container-fluid">
 		<div class="row my-5 py-5">
-			<div class="swiper w-100" id="staff-swiper">
-				<div class="swiper-wrapper">
-					<?php
-					$staff = array(
-						array( 'img' => k1_get_image_asset_url( 'tester', 'png', 'staff', false ) ),
-						array( 'img' => k1_get_image_asset_url( 'tester', 'png', 'staff', false ) ),
-						array( 'img' => k1_get_image_asset_url( 'tester', 'png', 'staff', false ) ),
-						array( 'img' => k1_get_image_asset_url( 'tester', 'png', 'staff', false ) ),
-					);
-					foreach ( $staff as $person ) {
-						echo "<div class='swiper-slide'><img class='ratio ratio-1x1' src='{$person['img']}' /></div>";
-					}
-					?>
-				</div>
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
-			</div>
-		</div>
-		<div class="row py-5">
-			<div class="swiper-pagination"></div>
+			<?php get_template_part( 'template-parts/sliders/swiper', 'k1-team' ); ?>
 		</div>
 	</div>
 </section>
