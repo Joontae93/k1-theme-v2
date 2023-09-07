@@ -3,6 +3,7 @@
  * The helper functions to use
  *
  * @since 1.3
+ * @package KingdomOne
  */
 
 /** Gets SVG from `~/assets/svgs`
@@ -11,18 +12,17 @@
  * @param bool   $as_image_src base-encode svg or return pure svg code
  * @param bool   $echo echo/return toggle
  */
-function k1_get_svg_asset( string $file, bool $as_image_src = false, bool $echo = true ) {	
+function k1_get_svg_asset( string $file, bool $as_image_src = false, bool $echo = true ) {
 	$svg = file_get_contents( get_template_directory() . '/src/assets/svgs/' . $file . '.svg' );
-	if ($as_image_src) {
-		$svg = 'data:image/svg+xml;base64,' . base64_encode($svg);
+	if ( $as_image_src ) {
+		$svg = 'data:image/svg+xml;base64,' . base64_encode( $svg );
 	}
-	
+
 	if ( $echo ) {
 		echo $svg;
 	} else {
 		return $svg;
 	}
-	
 }
 
 /**
@@ -53,19 +53,19 @@ function k1_get_image_asset_url( string $file, string $extension, string $folder
  * @param ?string $location the subfolder inside the `dist` to find the file
  */
 function k1_enqueue_page_style( string $id, ?array $deps = array( 'main' ), ?string $location = 'pages' ) {
-	$file_path = get_stylesheet_directory() . "/dist/{$location}";
-	$file_uri = get_stylesheet_directory_uri() . "/dist/{$location}";
+	$file_path  = get_stylesheet_directory() . "/dist/{$location}";
+	$file_uri   = get_stylesheet_directory_uri() . "/dist/{$location}";
 	$asset_file = "{$file_path}/{$id}.asset.php";
 
 	if ( file_exists( $asset_file ) ) {
-		$asset = include $asset_file;
+		$asset      = include $asset_file;
 		$total_deps = array_merge( $deps, array( 'main' ) );
 			wp_enqueue_style(
-			$id,
-			"{$file_uri}/{$id}.css",
-			$total_deps,
-			$asset['version']
-		); 
+				$id,
+				"{$file_uri}/{$id}.css",
+				$total_deps,
+				$asset['version']
+			);
 	} else {
 		wp_enqueue_style(
 			$id,
@@ -84,10 +84,9 @@ function k1_enqueue_page_style( string $id, ?array $deps = array( 'main' ), ?str
  * @param ?string $location the subfolder inside the `dist` to find the file
  */
 function k1_enqueue_page_script( string $id, ?array $deps = array( 'main' ), ?string $location = 'pages' ) {
-	$file_path = get_stylesheet_directory() . "/dist/{$location}";
-	$file_uri = get_stylesheet_directory_uri() . "/dist/{$location}";
+	$file_path  = get_stylesheet_directory() . "/dist/{$location}";
+	$file_uri   = get_stylesheet_directory_uri() . "/dist/{$location}";
 	$asset_file = "{$file_path}/{$id}.asset.php";
-
 
 	if ( file_exists( $asset_file ) ) {
 		$asset = include $asset_file;
@@ -116,7 +115,7 @@ function k1_enqueue_page_script( string $id, ?array $deps = array( 'main' ), ?st
  * @param string $id The id you set in webpack.config.js.
  * @param array  $deps Associative array of dependencies for styles and scripts.
  */
-function k1_enqueue_page_assets( string $id, ?array $deps = array(),?string $location = 'pages' ) {
+function k1_enqueue_page_assets( string $id, ?array $deps = array(), ?string $location = 'pages' ) {
 	$default_deps = array(
 		'styles'  => array( 'main' ),
 		'scripts' => array( 'main' ),
