@@ -4,6 +4,7 @@
 
 - Update Staff Swiper
 - New CPT: Staff
+- Fix Swiper on /staffing
 
 ## v0.7.4
 
