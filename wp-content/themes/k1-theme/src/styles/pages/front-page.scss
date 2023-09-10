@@ -212,3 +212,17 @@
 		}
 	}
 }
+
+.projects {
+	&__background {
+		@include m.background-layers;
+
+		&--color {
+			background-color: var(--color-primary);
+		}
+
+		&--lower {
+			background-color: black;
+		}
+	}
+}
