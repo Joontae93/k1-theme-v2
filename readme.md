@@ -1,10 +1,11 @@
 # Changelog
 
-## v0.8.0
+## v0.8.1
 
 - Update Staff Swiper
 - New CPT: Staff
 - Fix Swiper on /staffing
+- Fix footer/off-canvas z-index battle
 
 ## v0.7.4
 
