@@ -158,9 +158,100 @@ get_header(); ?>
 			</div>
 		</div>
 	</aside>
+	<?php get_template_part( 'template-parts/sliders/swiper', 'testimonials' ); ?>
+	<section class="projects py-5">
+		<?php $content->get_color_background_layers( 'projects', 'zig-zag-left', ); ?>
+		<div class="z-3 position-relative py-5 my-5">
+			<div class="container">
+				<div class="row justify-content-center mt-5">
+					<div class="col-lg-10 text-center">
+						<h2 class="text-white">Recent Partnerships</h2>
+						<p class="subheadline text-white">We have had the privilege of partnering with so many amazing ministries. Below is some of the recent work that we have had the
+							opportunity to be a part of.</p>
+					</div>
+				</div>
+
+			</div>
+			<div class="mb-5 py-5">
+				<?php
+				get_template_part(
+					'template-parts/sliders/swiper',
+					'project-gallery',
+					array(
+						'id'     => 'gallery-1',
+						'slides' => array(
+							'<img src="' . k1_get_image_asset_url( '1-people-first', 'png', 'previous-work/southwest-church', false ) . '" />',
+							'<img src="' . k1_get_image_asset_url( '2-leveling', 'png', 'previous-work/southwest-church', false ) . '" />',
+							'<img src="' . k1_get_image_asset_url( '3-departments', 'png', 'previous-work/southwest-church', false ) . '" />',
+							'<img src="' . k1_get_image_asset_url( '4-leveling-map', 'png', 'previous-work/southwest-church', false ) . '" />',
+							'<img src="' . k1_get_image_asset_url( '5-colors', 'png', 'previous-work/southwest-church', false ) . '" />',
+						),
+						'links'  => array(
+							array(
+								'text'       => 'Total Comp Sample',
+								'link'       => '#',
+								'html_class' => 'btn__primary--fill mt-5',
+							),
+							array(
+								'text'       => 'Leveling Handout Sample',
+								'link'       => '#',
+								'html_class' => 'btn__primary--fill mt-5',
+							),
+							array(
+								'text'       => 'Total Comp Sample',
+								'link'       => '#',
+								'html_class' => 'btn__primary--fill mt-5',
+							),
+						),
+						'logo'   => k1_get_image_asset_url( 'logo-southwest-church', 'png', 'previous-work/southwest-church', false ),
+					)
+				);
+				?>
+			</div>
+			<div class="my-5 py-5">
+				<?php
+				get_template_part(
+					'template-parts/sliders/swiper',
+					'project-gallery',
+					array(
+						'id'     => 'gallery-2',
+						'slides' => array(
+							'<img src="' . k1_get_image_asset_url( '1-handbook', 'png', 'previous-work/hdc', false ) . '" />',
+							'<img src="' . k1_get_image_asset_url( '2-leveling-groups', 'png', 'previous-work/hdc', false ) . '" />',
+							'<img src="' . k1_get_image_asset_url( '3-purposes', 'png', 'previous-work/hdc', false ) . '" />',
+						),
+						'links'  => array(
+							array(
+								'text'       => 'Total Comp Sample',
+								'link'       => '#',
+								'html_class' => 'btn__primary--fill mt-5',
+							),
+							array(
+								'text'       => 'Leveling Handout Sample',
+								'link'       => '#',
+								'html_class' => 'btn__primary--fill mt-5',
+							),
+							array(
+								'text'       => 'Total Comp Sample',
+								'link'       => '#',
+								'html_class' => 'btn__primary--fill mt-5',
+							),
+						),
+						'logo'   => k1_get_image_asset_url( 'logo-hdc', 'png', 'previous-work/hdc', false ),
+					)
+				);
+				?>
+			</div>
+		</div>
+	</section>
+	<aside class="video-testimonial">
+		<div class="container">
+			<div class="row">
+				<pre>Hume Video</pre>
+			</div>
+		</div>
+	</aside>
 	<?php
-	get_template_part( 'template-parts/sliders/swiper', 'testimonials' );
-	// get_template_part( 'template-parts/sliders/swiper', 'brands' );
 	get_template_part(
 		'template-parts/content',
 		'equipment',

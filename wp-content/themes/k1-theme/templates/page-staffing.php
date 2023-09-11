@@ -18,7 +18,7 @@ k1_enqueue_page_assets( 'staffing' );
 <section class="problem-solution-swiper">
 	<?php $content->get_color_background_layers( 'problem-solution-swiper', 'zig-zag-left', array( 'staffing-swiper-bg', 'webp' ) ); ?>
 	<div class="container">
-		<div class="row align-items-center">
+		<div class="row align-items-center py-5 my-5">
 			<?php get_template_part( 'template-parts/sliders/swiper', 'staffing-problem-solution' ); ?>
 		</div>
 	</div>

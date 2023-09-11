@@ -3,7 +3,16 @@ import { newSlider } from '../vendors/swiper';
 
 const staff = document.getElementById('staff-swiper');
 if (staff) {
-	newSlider(staff, { spaceBetween: 40 });
+	newSlider(staff, {
+		breakpoints: {
+			767: {
+				slidesPerView: 3,
+				slidesPerGroup: 3,
+				centeredSlides: false,
+				loop: true,
+			},
+		},
+	});
 } else {
 	console.warn('No Staff Slider Found');
 }
