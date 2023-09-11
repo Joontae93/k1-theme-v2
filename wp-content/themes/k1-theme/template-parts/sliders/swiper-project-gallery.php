@@ -28,7 +28,7 @@ if ( ! function_exists( 'k1_generate_the_slides' ) ) {
 	<div class="container">
 		<div class="row justify-content-center my-5">
 			<div class="col-6 d-flex justify-content-center">
-				<?php echo "<img src='{$args['logo']}' />"; ?>
+				<?php echo "<img src='{$args['logo']}' class='w-100' />"; ?>
 			</div>
 		</div>
 	</div>

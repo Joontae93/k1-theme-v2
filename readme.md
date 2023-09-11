@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.8.2
+
+- Fix homepage overflow
+
 ## v0.8.1
 
 - Update Staff Swiper
