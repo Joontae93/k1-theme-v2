@@ -21,24 +21,28 @@ get_header(); ?>
 					array(
 						'title' => 'H.R.',
 						'file'  => 'hr',
+						'link'  => '/hr',
 					),
 					array(
 						'title' => 'Finance',
 						'file'  => 'finance',
+						'link'  => '/finance',
 					),
 					array(
 						'title' => 'Marketing & <br> Communications',
 						'file'  => 'marcom',
+						'link'  => '/communications',
 					),
 					array(
 						'title' => 'Staffing',
 						'file'  => 'staffing',
+						'link'  => '/staffing',
 					),
 				);
 				foreach ( $icons as $icon ) {
 					$filename = "tg-{$icon['file']}-icon";
 					$svg      = k1_get_svg_asset( $filename, true, false );
-					echo "<div class='icon col-12 col-lg-3 my-5 my-lg-0'><img class='icon__svg' src='{$svg}' /><span class='icon__label'>{$icon['title']}</span></div>";
+					echo "<div class='icon col-12 col-lg-3 my-5 my-lg-0'><a href='{$icon['link']}' aria-label='{$icon['title']}'><img class='icon__svg' src='{$svg}' alt='{$icon['title']} icon' /></a><span class='icon__label'>{$icon['title']}</span></div>";
 				}
 				?>
 			</div>
@@ -153,8 +157,9 @@ get_header(); ?>
 	<aside class='text-callout py-5'>
 		<div class="container">
 			<div class="row">
-				<h2 class="col text-center display-3">We're using our marketplace and ministry expertise to help ministries become more <span class="text-primary">Courageous,
-						Healthy & Effective</span></h2>
+				<h2 class="col text-center display-3">
+					We're using our expertise to help ministries become more <span class="text-primary">Courageous, Healthy & Effective</span>
+				</h2>
 			</div>
 		</div>
 	</aside>
@@ -170,7 +175,6 @@ get_header(); ?>
 							opportunity to be a part of.</p>
 					</div>
 				</div>
-
 			</div>
 			<div class="mb-5 py-5">
 				<?php
@@ -251,19 +255,24 @@ get_header(); ?>
 			</div>
 		</div>
 	</aside>
-	<?php
-	get_template_part(
-		'template-parts/content',
-		'equipment',
-		array(
-			'with_header' => true,
-			'as_cta'      => true,
-			'header_args' => array(
-				'headline'    => 'Decide to make a ministry change',
-				'subheadline' => "Your role isn't easy (we know, we've been there!), but your job is so necessary to your Ministry's Health. Our mission is to build healthy people & strategies that help the Church thrive so you never have to second guess your ministry efforts. Our pricing allows ministries of all sizes to participate in Kingdom One. Visit our pricing page to learn more about the costs and process. ",
-			),
-		)
-	);
-	?>
+	<section class="ministry-plan">
+		<?php $content->get_color_background_layers( 'ministry-plan', 'left-top', array( 'josh-calabrese-XXpbdU_31Sg-unsplash', 'jpg' ) ); ?>
+		<div class="ministry-plan__content position-relative z-3 py-5">
+			<div class="container">
+				<div class="ministry-plan__header row">
+					<div class="col text-center">
+						<h2 class="headline text-white">Decide to make a ministry change</h2>
+						<p class="white-stroke my-5">get started today</p>
+						<div class="subheadline text-white">Your role isn't easy (we know, we've been there!), but your job is so necessary to your Ministry's Health. Our mission is to build
+							healthy
+							people & strategies that help the Church thrive so you never have to second guess your ministry efforts.</div>
+					</div>
+				</div>
+				<div class="ministry-plan__steps row justify-content-evenly my-5">
+					<?php get_template_part( 'template-parts/final-cta/content', 'ministry-change' ); ?>
+				</div>
+			</div>
+		</div>
+	</section>
 </main>
 <?php get_footer(); ?>

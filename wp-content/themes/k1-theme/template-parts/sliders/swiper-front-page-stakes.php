@@ -13,7 +13,7 @@ $content = new Content_Components();
 				<div class="swiper-pagination swiper-stakes-pagination"></div>
 				<div class="swiper-wrapper">
 					<div class="swiper-slide d-flex flex-column align-items-center">
-						<h3 class="display-3 w-75">Our Relationship First Approach Helps You <span class='text-primary'>Avoid:</span></h3>
+						<h3 class="display-3 w-75 text-center">Our Relationship First Approach Helps You <span class='text-primary'>Avoid:</span></h3>
 						<div class="borders row w-100 gap-2">
 							<hr class="col-1 border-5 border-primary">
 							<hr class="col-6 border-5 flex-grow-1">
@@ -36,7 +36,7 @@ $content = new Content_Components();
 						?>
 					</div>
 					<div class="swiper-slide d-flex flex-column align-items-center">
-						<h3 class="display-3 w-75">Our Relationship First Approach Provides:</h3>
+						<h3 class="display-3 w-75 text-center">Our Relationship First Approach Provides:</h3>
 						<div class="borders row w-100 gap-2">
 							<hr class="col-1 border-5 border-primary">
 							<hr class="col-6 border-5 flex-grow-1">

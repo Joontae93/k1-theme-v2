@@ -101,10 +101,7 @@ $content = new Content_Sections();
 			<span class="subheadline text-center">Our founder and CVO explains why now is a pivotal time to give to the health of the American Church.</span>
 		</div>
 		<div class="row justify-content-center">
-			<div class="col-lg-10">
-				<iframe src="https://www.youtube-nocookie.com/embed/FqofY8MMF9o?controls=0" title="YouTube video player" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-			</div>
+			<lite-youtube videoid='IuNv15iBLBc' playlabel='Giving to Kingdom One'></lite-youtube>
 		</div>
 	</div>
 </section>

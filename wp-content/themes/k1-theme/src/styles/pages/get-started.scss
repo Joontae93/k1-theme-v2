@@ -15,3 +15,26 @@
 		color: var(--color-grey);
 	}
 }
+
+.ministry-plan {
+	&__background {
+		@include m.background-layers;
+
+		&--color {
+			background-color: var(--color-primary);
+		}
+
+		&--lower {
+			background-color: var(--color-grey);
+		}
+	}
+
+	&__steps {
+		h3 {
+			color: white;
+		}
+		span {
+			color: white;
+		}
+	}
+}

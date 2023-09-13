@@ -23,7 +23,7 @@ $content = new Content_Sections();
 				$content->cta_button(
 					array(
 						'text'       => 'Learn More',
-						'link'       => '#',
+						'link'       => '/about',
 						'html_class' => 'btn__white--outline mx-0 mx-lg-5',
 					)
 				);

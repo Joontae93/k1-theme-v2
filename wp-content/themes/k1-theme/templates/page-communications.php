@@ -46,8 +46,8 @@ $content = new Content_Sections();
 		</div>
 		<div class="row my-5 py-5 justify-content-center">
 			<div class="col-lg-11">
-				<p class='text-center'><b>Marketing and communication for ministry takes a lot of work.</b><br />Let's avoid appearing desperate and needy by constantly posting event
-					information. Let's showcase your ministry strengths to make an eternal impact on people's lives!</p>
+				<p class='text-center'><b>Marketing and communication for ministry takes a lot of work.</b><br />Let's avoid inconsistency, confusing copy & lack of strategy with a clear
+					communication framework to showcase your ministry strengths to make an eternal impact on people's lives!</p>
 			</div>
 		</div>
 	</div>
@@ -189,6 +189,42 @@ get_template_part(
 		),
 	)
 );
-get_template_part( 'template-parts/content', 'recent-partnerships' );
-get_template_part( 'template-parts/sliders/swiper', 'brands' );
-get_template_part( 'template-parts/final-cta/content', 'daunting' );
+?>
+<section class="recent-partnerships">
+	<?php
+	get_template_part(
+		'template-parts/sliders/swiper',
+		'project-gallery',
+		array(
+			'id'     => 'gallery-1',
+			'slides' => array(
+				'<img src="' . k1_get_image_asset_url( '1-people-first', 'png', 'previous-work/southwest-church', false ) . '" />',
+				'<img src="' . k1_get_image_asset_url( '2-leveling', 'png', 'previous-work/southwest-church', false ) . '" />',
+				'<img src="' . k1_get_image_asset_url( '3-departments', 'png', 'previous-work/southwest-church', false ) . '" />',
+				'<img src="' . k1_get_image_asset_url( '4-leveling-map', 'png', 'previous-work/southwest-church', false ) . '" />',
+				'<img src="' . k1_get_image_asset_url( '5-colors', 'png', 'previous-work/southwest-church', false ) . '" />',
+			),
+			'links'  => array(
+				array(
+					'text'       => 'Total Comp Sample',
+					'link'       => '#',
+					'html_class' => 'btn__primary--fill mt-5',
+				),
+				array(
+					'text'       => 'Leveling Handout Sample',
+					'link'       => '#',
+					'html_class' => 'btn__primary--fill mt-5',
+				),
+				array(
+					'text'       => 'Total Comp Sample',
+					'link'       => '#',
+					'html_class' => 'btn__primary--fill mt-5',
+				),
+			),
+			'logo'   => k1_get_image_asset_url( 'logo-southwest-church', 'png', 'previous-work/southwest-church', false ),
+		)
+	);
+	?>
+</section>
+<?php get_template_part( 'template-parts/final-cta/content', 'daunting' );
+?>

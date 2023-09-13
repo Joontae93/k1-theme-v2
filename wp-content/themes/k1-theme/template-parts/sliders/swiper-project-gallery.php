@@ -49,7 +49,7 @@ if ( ! function_exists( 'k1_generate_the_slides' ) ) {
 			</div>
 		</div>
 		<?php if ( ! empty( $args['links'] ) ) : ?>
-		<div class="row links-row">
+		<div class="row links-row justify-content-around">
 			<?php
 			foreach ( $args['links'] as $link_options ) {
 				$content->cta_button( $link_options );

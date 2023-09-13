@@ -75,7 +75,7 @@ get_template_part(
 	)
 );
 ?>
-<aside>
+<aside class='tools-tips-training'>
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-8 text-lg-center">
@@ -90,29 +90,7 @@ get_template_part(
 		</div>
 	</div>
 </aside>
-<?php get_template_part( 'template-parts/content', 'equipment', array( 'with_header' => false ) ); ?>
-<section>
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-8 text-lg-center">
-				<h2 class='color-grey text-poppins'>Is <span class="text-primary">Kingdom One</span> <br /> The Right Choice For Me?</h2>
-				<p>We understand the sacrifice, dedication, and relational equity it takes to spread the gospel and want to see ministries united in growing the Church
-					together. We're using our experience and learnings from Fortune 100 companies and mega-church ministries to help your ministry become more Courageous,
-					Healthy, & Effective. Why? Because ministries of all sizes should have a chance to grow to their full potential. </p>
-			</div>
-		</div>
-		<div class="row justify-content-center my-5">
-			<pre>video of Steven...</pre>
-		</div>
-		<!-- <div class="row justify-content-center text-lg-center">
-			<div class="col-lg-8">
-				<h2 class="color-grey text-poppins">We have a track record of growth, but you don't have to take our word for it.</h2>
-			</div>
-		</div> -->
-	</div>
-</section>
 <?php
-// get_template_part( 'template-parts/sliders/swiper', 'testimonials' );
 get_template_part(
 	'template-parts/content',
 	'three-steps',
@@ -154,5 +132,25 @@ get_template_part(
 		),
 	)
 );
-get_template_part( 'template-parts/final-cta/content', 'hr' );
 ?>
+<section class='right-choice'>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-8 text-lg-center">
+				<h2 class='color-grey text-poppins'>Is <span class="text-primary">Kingdom One</span> <br /> The Right Choice For Me?</h2>
+				<p>We understand the sacrifice, dedication, and relational equity it takes to spread the gospel and want to see ministries united in growing the Church
+					together. We're using our experience and learnings from Fortune 100 companies and mega-church ministries to help your ministry become more Courageous,
+					Healthy, & Effective. Why? Because ministries of all sizes should have a chance to grow to their full potential. </p>
+			</div>
+		</div>
+		<div class="row justify-content-center my-5">
+			<pre>video of Steven...</pre>
+		</div>
+		<!-- <div class="row justify-content-center text-lg-center">
+			<div class="col-lg-8">
+				<h2 class="color-grey text-poppins">We have a track record of growth, but you don't have to take our word for it.</h2>
+			</div>
+		</div> -->
+	</div>
+</section>
+<?php get_template_part( 'template-parts/final-cta/content', 'hr' ); ?>

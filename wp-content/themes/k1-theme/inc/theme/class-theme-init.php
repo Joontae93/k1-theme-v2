@@ -1,5 +1,15 @@
-<?php // phpcs:ignore
-require_once dirname(__FILE__) . '/class-k1-theme-cleaner.php';
+<?php
+/**
+ * Inits the Theme
+ *
+ * @package KingdomOne
+ */
+
+/** Grab the Cleanup Class */
+require_once __DIR__ . '/class-k1-theme-cleaner.php';
+/**
+ * Theme Init
+ */
 class Theme_Init extends K1_Theme_Cleaner {
 	function __construct() {
 		$this->load_files();
@@ -11,9 +21,9 @@ class Theme_Init extends K1_Theme_Cleaner {
 
 	/** Loads required files */
 	private function load_files() {
-		require_once dirname( __FILE__, 2 ) . '/component-classes/class-content-sections.php';
-		require_once dirname( __FILE__ ) . '/class-k1-nav-walker.php';
-		require_once dirname( __FILE__ ) . '/theme-functions.php';
+		require_once dirname( __DIR__, 1 ) . '/component-classes/class-content-sections.php';
+		require_once __DIR__ . '/class-k1-nav-walker.php';
+		require_once __DIR__ . '/theme-functions.php';
 	}
 
 	/**
@@ -24,14 +34,63 @@ class Theme_Init extends K1_Theme_Cleaner {
 		$modified_scripts = gmdate( 'YmdHi', filemtime( get_stylesheet_directory() . '/dist/global.js' ) );
 
 		// JS
-		wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/dist/vendors/bootstrap.js', array(), $modified_scripts, true );
-		wp_enqueue_script( 'fontawesome', get_template_directory_uri() . '/dist/vendors/fontawesome.js', array(), '1.0', false );
-		wp_enqueue_script( 'main', get_template_directory_uri() . '/dist/global.js', array( 'bootstrap', 'fontawesome' ), $modified_scripts, true );
+		wp_enqueue_script(
+			'lite-youtube',
+			get_template_directory_uri() . '/dist/vendors/lite-youtube.js',
+			array(),
+			$modified_scripts,
+			array( 'strategy' => 'defer' ),
+		);
+
+		wp_enqueue_script(
+			'bootstrap',
+			get_template_directory_uri() . '/dist/vendors/bootstrap.js',
+			array(),
+			$modified_scripts,
+			array( 'strategy' => 'defer' ),
+		);
+
+		wp_enqueue_script(
+			'fontawesome',
+			get_template_directory_uri() . '/dist/vendors/fontawesome.js',
+			array(),
+			'1.0',
+			array( 'strategy' => 'async' ),
+		);
+		wp_enqueue_script(
+			'main',
+			get_template_directory_uri() . '/dist/global.js',
+			array( 'bootstrap', 'fontawesome', 'lite-youtube' ),
+			$modified_scripts,
+			true
+		);
 
 		// CSS
-		wp_enqueue_style( 'vendors', get_template_directory_uri() . '/dist/vendors/vendors.css', array(), '1.0' );
-		wp_enqueue_style( 'main', get_template_directory_uri() . '/dist/global.css', array( 'vendors' ), $modified_styles );
-		wp_localize_script( 'main', 'k1SiteData', array( 'rootUrl' => home_url() ) );
+		wp_enqueue_style(
+			'lite-youtube',
+			get_template_directory_uri() . '/dist/vendors/lite-youtube.css',
+			array(),
+			'1.0'
+		);
+		wp_enqueue_style(
+			'vendors',
+			get_template_directory_uri() . '/dist/vendors/vendors.css',
+			array(),
+			'1.0'
+		);
+
+		wp_enqueue_style(
+			'main',
+			get_template_directory_uri() . '/dist/global.css',
+			array( 'vendors', 'lite-youtube' ),
+			$modified_styles
+		);
+
+		wp_localize_script(
+			'main',
+			'k1SiteData',
+			array( 'rootUrl' => home_url() )
+		);
 
 		$this->remove_wordpress_styles( array( 'classic-theme-styles', 'dashicons', 'global-styles' ) );
 	}

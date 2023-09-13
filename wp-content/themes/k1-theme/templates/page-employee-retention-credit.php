@@ -1,6 +1,8 @@
 <?php
 /**
  * Page: ERC
+ *
+ * @package KingdomOne
  */
 
 $content = new Content_Sections();
@@ -40,16 +42,12 @@ k1_enqueue_page_style( 'employeeRetentionCredit' );
 				<?php
 				$is_second_list = "Others' ERC" === $list_title;
 				$headline_class = $is_second_list ? 'erc-comparisons__list-2--headline' : 'erc-comparisons__list-1--headline';
-				$list_class     = $is_second_list ? 'erc-comparisons__list-2' : 'erc-comparisons__list-1'
+				$list_class     = $is_second_list ? 'erc-comparisons__list-2' : 'erc-comparisons__list-1';
+				$item_class     = 'list-unstyled text-lg-center m-0' . ( $is_second_list ? $list_class . '--item my-5 text-white-50' : $list_class . '--item my-5 text-white' );
+				echo "<p class='{$headline_class} fw-bold'>{$list_title}</p>";
+
+				$content->bulleted_list( $list, $item_class, 'ul', $list_class, true );
 				?>
-				<p class="<?php echo $headline_class; ?> fw-bold"><?php echo $list_title; ?></p>
-				<ul class="<?php echo $list_class; ?> text-white list-unstyled text-lg-center m-0">
-					<?php
-					foreach ( $list as $item ) {
-						echo "<li class='{$list_class}--item my-5'>{$item}</li>";
-					};
-					?>
-				</ul>
 			</div>
 			<?php endforeach; ?>
 		</div>
