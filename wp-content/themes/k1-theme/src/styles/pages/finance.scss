@@ -1,0 +1,130 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+@use '../components/content-sections/core-services';
+@use '../components/content-sections/three-steps';
+
+.problem-solution-swiper {
+	&__background {
+		@include m.background-layers($opacity: 0.5);
+		&--color {
+			background-color: var(--color-primary);
+		}
+	}
+	.swiper-pagination-bullet-active {
+		background-color: white;
+	}
+}
+.problem-solution {
+	&__background {
+		@include m.background-layers();
+
+		&--lower {
+			background-color: var(--color-primary--darkest);
+		}
+	}
+}
+
+#staffing-swiper {
+	--svg-size: 15rem;
+	@include m.media-breakpoint-up(lg) {
+		height: 40vw;
+	}
+	@include m.media-breakpoint-up(xl) {
+		height: 30vw;
+		max-height: 60rem;
+	}
+	.staffing-icon {
+		width: var(--svg-size);
+		height: var(--svg-size);
+		fill: var(--color-primary);
+		margin-bottom: 3rem;
+	}
+
+	.swiper-wrapper {
+		margin: auto 0;
+	}
+
+	.swiper-slide {
+		position: relative;
+		text-align: center;
+
+		@include m.displayFlex(column, center, center);
+
+		#leaves-3 {
+			transform: scaleY(-1) rotate(0deg);
+			stroke: var(--color-primary);
+			width: var(--svg-size);
+			height: var(--svg-size);
+			position: absolute;
+			display: none;
+			@include m.media-breakpoint-up(md) {
+				display: block;
+			}
+			right: 5rem;
+		}
+		&:nth-child(2) {
+			text-align: start;
+			@include m.media-breakpoint-up(md) {
+				text-align: center;
+			}
+
+			#leaves-3 {
+				top: 8rem;
+			}
+		}
+	}
+}
+
+.staffing-stats {
+	.a,
+	.e {
+		fill: none;
+	}
+	.c {
+		fill: white;
+	}
+	.e {
+		stroke: var(--color-primary--dark);
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		stroke-width: 13px;
+	}
+	.f {
+		fill: var(--color-primary);
+		font-size: 49px;
+		font-family: Roie;
+	}
+
+	:where(&#stat-7) {
+		.b {
+			clip-path: url(#a-7);
+		}
+
+		.d {
+			clip-path: url(#b-7);
+		}
+
+		.g {
+			letter-spacing: -0.02em;
+		}
+	}
+
+	:where(&#stat-17) {
+		.b {
+			clip-path: url(#a-17);
+		}
+
+		.d {
+			clip-path: url(#b-17);
+		}
+	}
+	:where(&#stat-37) {
+		.b {
+			clip-path: url(#a-37);
+		}
+
+		.d {
+			clip-path: url(#b-37);
+		}
+	}
+}

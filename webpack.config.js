@@ -22,7 +22,7 @@ const jsFiles = [
 	'pricing',
 	'k1-about',
 	'get-started',
-	'staffing',
+	'finance',
 	'archive',
 ];
 
@@ -36,6 +36,7 @@ const styleSheets = [
 	'employee-retention-credit',
 	'above-reproach',
 	'legal-update',
+	'staffing',
 ]; // for scss only
 
 module.exports = {

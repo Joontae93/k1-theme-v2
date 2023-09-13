@@ -130,30 +130,6 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
-	<?php
-	get_template_part(
-		'template-parts/content',
-		'core-services',
-		array(
-			array(
-				'title' => 'hr',
-				'items' => array( 'Staffing', 'Handbooks', 'Payroll', 'HRIS Implementation', 'Staff Survey', 'Total Rewards', 'Compensation Survey', 'Ministry Assessment', 'Retirement', 'Benefits' ),
-			),
-			array(
-				'title' => 'finance',
-				'items' => array( 'Receivables', 'Payables', 'Expense Tracking', 'Payroll', 'Credit Card Reconciliation', 'Bank Statement Reconciliation', 'Financial Reporting', 'Budgeting', 'Audit Support' ),
-			),
-			array(
-				'title' => 'marcom',
-				'items' => array( 'Graphic Design', 'Web Design', 'Web Development', 'Storybranding', 'Marketing', 'Communications', 'Copy Writing', 'Video Editing' ),
-			),
-			array(
-				'title' => 'staffing',
-				'items' => array( 'Relational Recruiting', 'Culture Fit Interviewing', 'Active Recruiting Methods&mdash;using HR Tech Tools', 'Compelling Job Posting Creation and Candidate Management', 'Micro-site creation for Candidate Bio and Ministry Profile display', 'Onboarding Plan Coordination and Salary Recommendations' ),
-			),
-		)
-	);
-	?>
 	<aside class='text-callout py-5'>
 		<div class="container">
 			<div class="row">
