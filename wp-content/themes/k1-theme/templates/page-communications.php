@@ -46,8 +46,8 @@ $content = new Content_Sections();
 		</div>
 		<div class="row my-5 py-5 justify-content-center">
 			<div class="col-lg-11">
-				<p class='text-center'><b>Marketing and communication for ministry takes a lot of work.</b><br />Let's avoid appearing desperate and needy by constantly posting event
-					information. Let's showcase your ministry strengths to make an eternal impact on people's lives!</p>
+				<p class='text-center'><b>Marketing and communication for ministry takes a lot of work.</b><br />Let's avoid inconsistency, confusing copy & lack of strategy with a clear
+					communication framework to showcase your ministry strengths to make an eternal impact on people's lives!</p>
 			</div>
 		</div>
 	</div>
@@ -189,6 +189,118 @@ get_template_part(
 		),
 	)
 );
-get_template_part( 'template-parts/content', 'recent-partnerships' );
-get_template_part( 'template-parts/sliders/swiper', 'brands' );
-get_template_part( 'template-parts/final-cta/content', 'daunting' );
+?>
+<section class="recent-partnerships">
+	<div class="container">
+		<div class="western my-5">
+			<div class="row justify-content-center my-5">
+				<div class="col-lg-8 text-center">
+					<img class='western-logo w-75' src="<?php k1_get_image_asset_url( 'logo-western', 'png', 'previous-work/western-christian', ); ?>" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 mb-5 mb-lg-0">
+					<?php
+					get_template_part(
+						'template-parts/sliders/swiper',
+						'project-gallery',
+						array(
+							'id'     => 'western-before',
+							'slides' => array(
+								'<img src="' . k1_get_image_asset_url( '1-people-first', 'png', 'previous-work/southwest-church', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( '2-leveling', 'png', 'previous-work/southwest-church', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( '3-departments', 'png', 'previous-work/southwest-church', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( '4-leveling-map', 'png', 'previous-work/southwest-church', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( '5-colors', 'png', 'previous-work/southwest-church', false ) . '" />',
+							),
+						)
+					);
+					?>
+					<h3 class="text-center">Before</h3>
+				</div>
+				<div class="col-lg-6">
+					<?php
+					get_template_part(
+						'template-parts/sliders/swiper',
+						'project-gallery',
+						array(
+							'id'     => 'western-after',
+							'slides' => array(
+								'<img src="' . k1_get_image_asset_url( '1-people-first', 'png', 'previous-work/southwest-church', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( '2-leveling', 'png', 'previous-work/southwest-church', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( '3-departments', 'png', 'previous-work/southwest-church', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( '4-leveling-map', 'png', 'previous-work/southwest-church', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( '5-colors', 'png', 'previous-work/southwest-church', false ) . '" />',
+							),
+						)
+					);
+					?>
+					<h3 class="text-center">After</h3>
+				</div>
+			</div>
+			<div class="row justify-content-around">
+				<?php
+					$buttons = array(
+						array(
+							'text'       => 'Wireframe',
+							'link'       => '#',
+							'html_class' => 'btn__primary--outline mt-5',
+						),
+						array(
+							'text'       => 'Storybrand',
+							'link'       => '#',
+							'html_class' => 'btn__primary--outline mt-5',
+						),
+						array(
+							'text'       => 'Final Site Design',
+							'link'       => '#',
+							'html_class' => 'btn__primary--outline mt-5',
+						),
+					);
+					foreach ( $buttons as $button ) {
+						$content->cta_button( $button );
+					}
+					?>
+			</div>
+		</div>
+
+		<div class="row my-5 py-5">
+			<?php
+			get_template_part(
+				'template-parts/sliders/swiper',
+				'project-gallery',
+				array(
+					'id'     => 'living-hope-church',
+					'logo'   => k1_get_image_asset_url( 'logo-living-hope', 'png', 'previous-work/living-hope', false ),
+					'slides' => array(
+						'<img src="' . k1_get_image_asset_url( '1-people-first', 'png', 'previous-work/southwest-church', false ) . '" />',
+						'<img src="' . k1_get_image_asset_url( '2-leveling', 'png', 'previous-work/southwest-church', false ) . '" />',
+						'<img src="' . k1_get_image_asset_url( '3-departments', 'png', 'previous-work/southwest-church', false ) . '" />',
+						'<img src="' . k1_get_image_asset_url( '4-leveling-map', 'png', 'previous-work/southwest-church', false ) . '" />',
+						'<img src="' . k1_get_image_asset_url( '5-colors', 'png', 'previous-work/southwest-church', false ) . '" />',
+					),
+					'links'  => array(
+						array(
+							'text'       => 'Wireframe',
+							'link'       => '#',
+							'html_class' => 'btn__primary--outline mt-5',
+						),
+						array(
+							'text'       => 'Storybrand',
+							'link'       => '#',
+							'html_class' => 'btn__primary--outline mt-5',
+						),
+						array(
+							'text'       => 'Final Site Design',
+							'link'       => '#',
+							'html_class' => 'btn__primary--outline mt-5',
+						),
+					),
+				)
+			);
+			?>
+		</div>
+	</div>
+</section>
+<?php get_template_part( 'template-parts/final-cta/content', 'daunting' );
+?>

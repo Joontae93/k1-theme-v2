@@ -7,6 +7,29 @@
 
 $content = new Content_Sections();
 k1_enqueue_page_style( 'shareYourStory' );
+
+/** Strips videoId from Youtube Video
+ *
+ * @param string $url the URL
+ */
+function k1_get_youtube_video_id( string $url ): string|false {
+	// Parse the URL to get its components
+	$parsed_url = wp_parse_url( $url );
+
+	// Check if the URL contains a query string
+	if ( isset( $parsed_url['query'] ) ) {
+		// Parse the query string into an associative array
+		parse_str( $parsed_url['query'], $query_parameters );
+
+		// Check if the 'v' parameter is set
+		if ( ! empty( $query_parameters['v'] ) ) {
+			return $query_parameters['v'];
+		}
+	}
+	// If the 'v' parameter was not found, return false
+	return false;
+}
+
 ?>
 <section class="bg-color-primary" id='section-2'>
 	<div class="container">
@@ -97,10 +120,10 @@ $query = new WP_Query(
 				);
 				?>
 				<?php while ( $query->have_posts() ) : ?>
-				<?php $query->the_post(); ?>
+					<?php $query->the_post(); ?>
 				<div class="story col-lg-4 my-5">
 					<div class="story__video">
-						<?php echo get_field( 'video' ); ?>
+						<lite-youtube videoid="<?php the_field( 'video_id' ); ?>"></lite-youtube>
 					</div>
 					<?php the_title( '<h3 class="headline text-white h4 story__title">', '</h3>' ); ?>
 				</div>
@@ -143,8 +166,11 @@ $query = new WP_Query(
 		<div class="row text-center">
 			<small>By sharing your story you give Kingdom One permission to edit, reformat, share or publish your story publicly.</small>
 		</div>
-		<div class="row contact" id='share-form'>
-			<pre>Contact Form 7 Code Here</pre>
+		<div class="row contact justify-content-center my-5 py-5" id='share-form'>
+			<div class="col-10">
+				<h3 class="headline text-center color-primary--dark my-3">ready to share?</h3>
+				<?php echo do_shortcode( '[contact-form-7 id="ff9056a" title="Contact form 1"]' ); ?>
+			</div>
 		</div>
 	</div>
 </section>

@@ -1,0 +1,59 @@
+@use '../abstracts/mixins' as m;
+@use '../components/buttons';
+.wpcf7 {
+	width: 100%;
+
+	.wpcf7-form {
+		width: 100%;
+		@include m.displayFlex(column, $cross: stretch);
+
+		label {
+			width: 100%;
+			margin: 1rem auto;
+
+			input:not(input[type='checkbox']) {
+				padding: 1rem;
+				width: 100%;
+				border-radius: 20px;
+				border: 1px solid var(--color-grey--light);
+
+				&:not(&[type='submit']) {
+					&:focus-visible {
+						outline: var(--color-primary) auto 1px;
+					}
+				}
+			}
+
+			textarea {
+				&:focus-visible {
+					outline: var(--color-primary) auto 1px;
+				}
+			}
+		}
+
+		input[type='submit'] {
+			@extend .btn__primary--fill;
+		}
+
+		.wpcf7-acceptance {
+			label {
+				@include m.displayFlex($cross: center);
+				cursor: pointer;
+
+				input[type='checkbox'] {
+					margin-inline-end: 1rem;
+					width: 2rem;
+					height: 2rem;
+
+					:checked {
+						color: var(--color-primary--dark);
+					}
+
+					&:focus-visible {
+						outline: var(--color-primary) auto 1px;
+					}
+				}
+			}
+		}
+	}
+}

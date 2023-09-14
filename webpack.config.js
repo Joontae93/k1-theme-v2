@@ -22,7 +22,7 @@ const jsFiles = [
 	'pricing',
 	'k1-about',
 	'get-started',
-	'staffing',
+	'finance',
 	'archive',
 ];
 
@@ -36,6 +36,7 @@ const styleSheets = [
 	'employee-retention-credit',
 	'above-reproach',
 	'legal-update',
+	'staffing',
 ]; // for scss only
 
 module.exports = {
@@ -46,6 +47,7 @@ module.exports = {
 				global: `.${THEME_DIR}/src/index.js`,
 				'vendors/fontawesome': `.${THEME_DIR}/src/js/vendors/global/fontawesome.js`,
 				'vendors/bootstrap': `.${THEME_DIR}/src/js/vendors/global/bootstrap.js`,
+				'vendors/lite-youtube': `.${THEME_DIR}/src/js/vendors/global/lite-youtube.js`,
 				'vendors/vendors': `.${THEME_DIR}/src/styles/vendors/vendors.scss`,
 				'layouts/single': `.${THEME_DIR}/src/styles/layouts/single.scss`,
 			};

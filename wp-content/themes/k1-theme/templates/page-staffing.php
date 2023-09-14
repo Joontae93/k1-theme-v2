@@ -1,133 +1,135 @@
 <?php
 /**
- * Page: Share Your Story
+ * Page: Staffing
+ *
+ * @package KingdomOne
  */
 
 $content = new Content_Sections();
 k1_enqueue_page_assets( 'staffing' );
 ?>
-<aside class="callout section-2">
+<section class="quality-candidates">
 	<div class="container">
-		<div class="row justify-content-center">
-			<h2 class="headline text-primary col-lg-8 text-center">
-				How is your ministry's financial visibility & growth?
-			</h2>
+		<div class="row">
+			<div class="col">
+				<h2 class="text-center color-erc-purple">Finding quality candidates that are called, have good chemistry, and are a cultural fit can be difficult to find.</h2>
+			</div>
 		</div>
-	</div>
-</aside>
-<section class="problem-solution-swiper">
-	<?php $content->get_color_background_layers( 'problem-solution-swiper', 'zig-zag-left', array( 'staffing-swiper-bg', 'webp' ) ); ?>
-	<div class="container">
-		<div class="row align-items-center py-5 my-5">
-			<?php get_template_part( 'template-parts/sliders/swiper', 'staffing-problem-solution' ); ?>
+		<div class="row my-5 justify-content-evenly text-center py-5">
+			<div class="col-lg-4 d-flex flex-column align-items-center">
+				<?php k1_get_svg_asset( 'icon-handshake' ); ?>
+				<h3 class="color-grey h4 text-poppins">Relational Recruiting</h3>
+			</div>
+			<div class="col-lg-4 d-flex flex-column align-items-center">
+				<?php k1_get_svg_asset( 'staffing-icon-prescreening' ); ?>
+				<h3 class="color-grey h4 text-poppins">Cultural Fit Pre-screening</h3>
+			</div>
+			<div class="col-lg-4 d-flex flex-column align-items-center">
+				<?php k1_get_svg_asset( 'staffing-icon-onboarding' ); ?>
+				<h3 class="color-grey h4 text-poppins">Onboarding</h3>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="text-center col-lg-10">
+				<span class="fw-bold subheadline fs-3 color-grey">Spark staffing is a search service that gives ministry leaders quality candidates vetted, culturally
+					fit, and ready to join
+					your ministry's mission</span>
+			</div>
 		</div>
 	</div>
 </section>
-<section class="problem-solution">
-	<div class="container">
-		<div class="row justify-content-center" id='section-header'>
-			<div class="col-lg-10 text-center">
-				<h2 class="headline text-primary">The American Church is Struggling</h2>
-				<p class="subheadline ">In 2019, 4,500 churches closed their doors, and that number continues to rise each year. Year after year, fewer people are attending and
-					giving at church services, and this creates so much heartache for ministry leaders.</p>
+<section class="help">
+	<?php $content->get_color_background_layers( 'help', 'right', array( 'k1-conference', 'webp' ) ); ?>
+	<div class="help__content position-relative z-3 my-5 py-5">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-10">
+					<?php k1_get_svg_asset( 'leaves-3' ); ?>
+					<h2 class="color-spark-yellow mb-3">how can we help?</h2>
+					<p class="subheadline text-white">People are our most valuable asset in ministry. If you are experiencing tension in ministry, staff mishandling resources or poor work
+						ethic you need to experience Spark Staffing by Kingdom One. We want to partner with you so you can avoid:</p>
+					<?php
+					$list_items = array( 'Long lead times for candidates', 'Staff that aren\'t called to ministry', 'Staff that aren\'t a cultural fit', 'Staff that don\'t have chemistry with your current team' );
+
+					$content->bulleted_list( $list_items, ' fw-bold my-5 color-erc-blue', 'ul', 'list-unstyled d-flex flex-column justify-content-around align-items-md-center text-md-center m-0' );
+					?>
+				</div>
 			</div>
-		</div>
-		<div class="row text-center justify-content-around gap-5 my-5" id='statistics'>
-			<?php
-			$statistics = array(
-				array(
-					'svg'  => 'staffing-stats-17',
-					'text' => 'When surveyed, only 17% of Americans state that they regularly tithe.',
-				),
-				array(
-					'svg'  => 'staffing-stats-37',
-					'text' => "37% of regular church attendees and Evangelicals don't give money to church.",
-				),
-				array(
-					'svg'  => 'staffing-stats-17',
-					'text' => '17% of American families have reduced the amount that they give to their local church.',
-				),
-				array(
-					'svg'  => 'staffing-stats-7',
-					'text' => '7% of church goers have dropped regular giving by 20% or more.',
-				),
-			);
-			?>
-			<?php foreach ( $statistics as $stat ) : ?>
-			<div class="col-6 col-md-4 col-xxl-2">
-				<?php
-				k1_get_svg_asset( $stat['svg'] );
-				echo "<p class='my-5'>{$stat['text']}</p>";
-				?>
-			</div>
-			<?php endforeach; ?>
-		</div>
-		<div class="row justify-content-center">
-			<div class="col-lg-10 col-xl-8 text-center">
-				<h2 class="headline text-primary">There is Hope!</h2>
-				<p class="subheadline">We understand you may be overwhelmed, but practicing the time-tested principles of stewardship will lead your ministry to financial
-					health.</p>
+			<div class="row justify-content-center">
 				<?php $content->cta_button(); ?>
 			</div>
 		</div>
 	</div>
 </section>
+<aside class="text-callout">
+	<div class="container">
+		<div class="row my-5 py-5">
+			<div class="col text-center">
+				<h2 class="color-spark-yellow">staff health is not optional</h2>
+				<p class="subheadline fw-bold color-grey fs-3">We understand the importance of having a staff that works as a team. Let's work together to make sure that your overall
+					ministry
+					impact is
+					healthy and strong!</p>
+			</div>
+		</div>
+	</div>
+</aside>
 <?php
 get_template_part(
 	'template-parts/content',
 	'core-services',
 	array(
 		array(
-			'title' => null,
-			'items' => array( 'Receivables', 'Payables', 'Expense Tracking' ),
+			'items' => array(
+				'Relational Recruiting',
+				'Culture Fit Interviewing',
+				'Active Recruiting Methods using HR Tech tools',
+			),
 		),
 		array(
-			'title' => null,
-			'items' => array( 'Payroll', 'Credit Card Reconciliation', 'Bank Statement Reconciliation' ),
-		),
-		array(
-			'title' => null,
-			'items' => array( 'Financial Reporting', 'Budgeting', 'Audit Support' ),
-		),
-	)
-);
-get_template_part( 'template-parts/sliders/swiper', 'testimonials' );
-echo "<div class='container'><div class='row justify-content-center'>" . $content->cta_button( array(), false ) . '</div></div>';
-get_template_part(
-	'template-parts/content',
-	'three-steps',
-	array(
-		'headline'           => 'Are You Ready to Make a positive change?',
-		'bg_image_file_name' => 'marcom-three-steps-bg',
-		'rows'               => array(
-			array(
-				'svg'         => 'marcom-assessment-step-1',
-				'headline'    => 'Take a Financial Assessment',
-				'subheadline' => 'Get insights on your strengths and opportunities to grow your finance efforts.',
-				'cta'         => array(
-					'url'  => '',
-					'text' => 'Get STarted',
-				),
-			),
-			array(
-				'svg'         => 'staffing-icon-partner-step-2',
-				'headline'    => 'Meet with a financial ministry partner',
-				'subheadline' => 'Meet with a K1 Ministry Partner to review your assessment and get a plan to get to financial health.',
-				'cta'         => array(
-					'url'  => '',
-					'text' => 'Get Started',
-				),
-			),
-			array(
-				'svg'         => 'staffing-build-step-3',
-				'headline'    => 'Build Towards Health',
-				'subheadline' => 'Work with your Kingdom One ministry partner to work the plan and bring financial clarity, trust, and health back to the ministry you love.',
-				'cta'         => array(
-					'url'  => '',
-					'text' => 'Get Started',
-				),
+			'items' => array(
+				'Create compelling job postings and handle candidate management',
+				'Micro-site creation to present candidate bios and share ministry profiles',
+				'Coordinate Onboarding plan and give salary recommendations.',
 			),
 		),
 	)
 );
-get_template_part( 'template-parts/final-cta/content', 'daunting' );
+?>
+<section class="ministry-plan">
+	<div class="container">
+		<div class="row">
+			<div class="col text-center">
+				<h2 class="color-grey text-poppins">Let's Start Building Your Ministry Team Together!</h2>
+			</div>
+		</div>
+		<?php
+		get_template_part(
+			'template-parts/final-cta/content',
+			'ministry-change'
+		);
+		?>
+	</div>
+</section>
+<section class="final-cta final-cta-about">
+	<?php $content->get_color_background_layers( 'final-cta', 'left-top', array( 'final-cta-bg', 'webp' ) ); ?>
+	<div class="container position-relative z-3">
+		<div class="final-cta__content row justify-content-center">
+			<div class="col-lg-8 text-center py-5">
+				<?php k1_get_svg_asset( 'spark-icon' ); ?>
+				<h2 class="text-white text-poppins">The journey to a healthy staff culture is one step away.</h2>
+				<p class="subheadline white-stroke my-5 d-block">Get started today</p>
+				<p class="text-white">Begin the journey to onboarding quality candidates that are vetted, culturally fit, and ready to join your mission.</p>
+				<?php
+				$content->cta_button(
+					array(
+						'text'       => 'Get Started',
+						'html_class' => 'btn__spark-yellow--fill',
+					)
+				);
+				?>
+			</div>
+		</div>
+
+	</div>
+</section>

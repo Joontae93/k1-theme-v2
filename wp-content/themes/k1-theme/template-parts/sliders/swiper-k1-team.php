@@ -14,17 +14,23 @@ $query = new WP_Query(
 ?>
 
 <?php if ( $query->have_posts() ) : ?>
-<div class="swiper" id="staff-swiper">
-	<div class="swiper-wrapper">
-		<?php while ( $query->have_posts() ) : ?>
-			<?php $query->the_post(); ?>
-		<div class="swiper-slide">
-			<?php the_post_thumbnail( 'medium' ); ?>
+<div class="col-1 position-relative">
+	<div class="swiper-button-staff-prev swiper-button-prev"></div>
+</div>
+<div class="col-10">
+	<div class="swiper" id="staff-swiper">
+		<div class="swiper-wrapper">
+			<?php while ( $query->have_posts() ) : ?>
+				<?php $query->the_post(); ?>
+			<div class="swiper-slide">
+				<?php the_post_thumbnail( 'medium', array( 'class' => 'w-auto h-auto ratio ratio-1x1' ) ); ?>
+			</div>
+			<?php endwhile; ?>
 		</div>
-		<?php endwhile; ?>
 	</div>
-	<div class="swiper-services-pagination"></div>
-	<div class="swiper-button-services-prev swiper-button-prev"></div>
-	<div class="swiper-button-services-next swiper-button-next"></div>
+	<div class="swiper-pagination"></div>
+</div>
+<div class="col-1 position-relative">
+	<div class="swiper-button-staff-next swiper-button-next"></div>
 </div>
 <?php endif; ?>

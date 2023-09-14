@@ -1,4 +1,4 @@
-import '../../styles/pages/staffing.scss';
+import '../../styles/pages/finance.scss';
 import { testimonialsSlider } from '../vendors/swipers/testimonials-slider';
 import { newSlider } from '../vendors/swiper';
 

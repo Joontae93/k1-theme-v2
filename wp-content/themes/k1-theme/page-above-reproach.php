@@ -26,8 +26,8 @@ get_header();
 			<div class="row justify-content-lg-center">
 				<h2 class="headline text-lg-center col-lg-8">finally, an ab-506 training that is biblically-minded</h2>
 			</div>
-			<div class="row">
-				<pre>Stephen Video</pre>
+			<div class="row justify-content-center my-5">
+				<lite-youtube videoid='n14d6Addfas' playlabel='AB-506 Tools'></lite-youtube>
 			</div>
 			<div class="row justify-content-lg-center">
 				<?php

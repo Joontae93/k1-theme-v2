@@ -1,5 +1,4 @@
 @use '../abstracts/functions' as fn;
-@use '../abstracts/variables' as v;
 
 %btn {
 	border: 2px solid transparent;
@@ -19,6 +18,7 @@
 		transform: translateY(-4px);
 	}
 }
+
 %pill-btn {
 	@extend %btn;
 	border-radius: 999px;
@@ -30,8 +30,8 @@
 
 	&__primary {
 		&--fill {
-			@extend .btn;
-			background-color: v.$color-primary;
+			@extend %pill-btn;
+			background-color: var(--color-primary);
 			color: white;
 
 			a {
@@ -42,12 +42,28 @@
 			&:active,
 			&:focus {
 				background-color: transparent;
-				border-color: v.$color-primary;
-				color: v.$color-primary;
+				border-color: var(--color-primary);
+				color: var(--color-primary);
 
 				a {
-					color: v.$color-primary;
+					color: var(--color-primary);
 				}
+			}
+		}
+
+		&--outline {
+			@extend %pill-btn;
+			border-color: var(--color-primary);
+
+			a {
+				color: inherit;
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: var(--color-primary);
+				color: white;
 			}
 		}
 	}
@@ -88,10 +104,10 @@
 			&:focus {
 				background-color: black;
 				border-color: black;
-				color: v.$color-primary;
+				color: var(--color-primary);
 
 				a {
-					color: v.$color-primary;
+					color: var(--color-primary);
 				}
 			}
 		}
@@ -180,7 +196,7 @@ a.btn {
 		&--primary {
 			@extend %pill-btn;
 			color: white;
-			background-color: v.$color-primary;
+			background-color: var(--color-primary);
 		}
 	}
 

@@ -26,7 +26,7 @@ body {
 	color: var(--color-grey);
 	font-family: v.$font-body;
 
-	.text-content {
+	:where(& .text-content) {
 		@extend %base-text;
 	}
 
@@ -34,7 +34,7 @@ body {
 		@extend %base-text;
 	}
 
-	li:not(.text-content li) {
+	:where(li:not(.text-content li)) {
 		@extend %base-text;
 	}
 

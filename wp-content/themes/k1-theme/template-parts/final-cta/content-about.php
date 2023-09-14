@@ -1,6 +1,8 @@
 <?php
 /**
  * Final CTA: About
+ *
+ * @package KingdomOne
  */
 
 $content = new Content_Sections();

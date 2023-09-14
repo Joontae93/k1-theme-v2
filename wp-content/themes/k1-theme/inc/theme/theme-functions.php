@@ -93,7 +93,7 @@ function k1_enqueue_page_script( string $id, ?array $deps = array( 'main' ), ?st
 			"{$file_uri}/{$id}.js",
 			$asset['dependencies'] ?? $deps,
 			$asset['version'],
-			true
+			array( 'strategy' => 'defer' )
 		);
 	} else {
 		wp_enqueue_script(
@@ -101,7 +101,7 @@ function k1_enqueue_page_script( string $id, ?array $deps = array( 'main' ), ?st
 			"{$file_uri}/{$id}.js",
 			$deps,
 			null,
-			true
+			array( 'strategy' => 'defer' )
 		);
 	}
 }

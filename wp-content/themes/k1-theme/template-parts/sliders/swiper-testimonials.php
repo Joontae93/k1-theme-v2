@@ -6,54 +6,35 @@
  * @package KingdomOne
  */
 
-$swiper_slides = array(
+$testimonials = new WP_Query(
 	array(
-		'image'       => k1_get_image_asset_url( 'tim', 'png', '', false ),
-		'quote'       => 'Kingdom One brings a level a professionalism that we need and does so with Christ at the center.',
-		'attribution' => 'Tim Kuhl',
-		'role'        => 'Pastor, Some Church',
-	),
-	array(
-		'image'       => k1_get_image_asset_url( 'tim', 'png', '', false ),
-		'quote'       => 'Kingdom One brings a level a professionalism that we need and does so with Christ at the center.',
-		'attribution' => 'Tim Kuhl',
-		'role'        => 'Pastor, Some Church',
-	),
-	array(
-		'image'       => k1_get_image_asset_url( 'tim', 'png', '', false ),
-		'quote'       => 'Kingdom One brings a level a professionalism that we need and does so with Christ at the center.',
-		'attribution' => 'Tim Kuhl',
-		'role'        => 'Pastor, Some Church',
-	),
-	array(
-		'image'       => k1_get_image_asset_url( 'tim', 'png', '', false ),
-		'quote'       => 'Kingdom One brings a level a professionalism that we need and does so with Christ at the center.',
-		'attribution' => 'Tim Kuhl',
-		'role'        => 'Pastor, Some Church',
-	),
+		'post_type'      => 'testimonial',
+		'posts_per_page' => -1,
+	)
 );
-extract( $args );
-?>
 
+?>
+<?php if ( $testimonials->have_posts() ) : ?>
 <aside class="testimonials text-center py-5">
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
 			<div class="swiper" id="testimonials-swiper">
 				<div class="swiper-wrapper">
-					<?php foreach ( $swiper_slides as $slide ) : ?>
-					<div class="swiper-slide">
-						<img src="<?php echo $slide['image']; ?>">
-						<p class="quote">"<?php echo $slide['quote']; ?>"</p>
-						<div class="quote__attribution">
-							<span class="subheadline quote__attribution--name">
-								<?php echo $slide['attribution']; ?>
-							</span>
-							<span class="subheadline quote__attribution--role">
-								<?php echo $slide['role']; ?>
-							</span>
+					<?php while ( $testimonials->have_posts() ) : ?>
+						<?php $testimonials->the_post(); ?>
+					<div class="swiper-slide d-flex justify-content-center">
+						<div class="internal-slide d-flex flex-column align-items-center border border-2 border-black py-5 w-75">
+							<?php the_post_thumbnail( null, 'post-thumbnail', ); ?>
+							<p class="quote fw-bold mt-5 text-center col-md-6">"<?php echo esc_textarea( get_field( 'quote' ) ); ?>"</p>
+							<div class="quote__attribution">
+								<?php the_title( '<p class="subheadline quote__attribution--name fs-2">', '</p>' ); ?>
+								<p class="subheadline quote__attribution--role fs-5">
+									<?php echo esc_textarea( get_field( 'position' ) ); ?>
+								</p>
+							</div>
 						</div>
 					</div>
-					<?php endforeach; ?>
+					<?php endwhile; ?>
 				</div>
 				<div class="swiper-button-prev swiper-testimonials-button-prev"></div>
 				<div class="swiper-button-next swiper-testimonials-button-next"></div>
@@ -64,3 +45,4 @@ extract( $args );
 		</div>
 	</div>
 </aside>
+<?php endif; ?>

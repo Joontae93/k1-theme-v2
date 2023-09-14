@@ -6,6 +6,7 @@
  */
 
 k1_enqueue_page_assets( 'getStarted' );
+$content = new Content_Sections();
 ?>
 <section class="bg-color-primary" id='section-2'>
 	<div class="container">
@@ -16,8 +17,23 @@ k1_enqueue_page_assets( 'getStarted' );
 	</div>
 </section>
 <section class="contact">
-	<div class="container">
-		<pre>Contact Form 7 Code Here</pre>
+	<div class="container-fluid">
+		<div data-form-slug="3915198875505926" data-env="production" data-path="contact-us/3915198875505926" class="keap-custom-form"></div>
+		<script>
+		(function(a, b) {
+			var c = a.keapForms || {
+					SNIPPET_VERSION: "1.1.0",
+					appId: "hav885"
+				},
+				d = b.createElement("script");
+			d.type = "text/javascript", d.crossOrigin = "anonymous", d.defer = !0, d.src = "https://forms.keap.app/lib/public-form-embed.js?appId=hav885&version=1.1.0", d.onload = function() {
+				var b = a.keapForms;
+				b.renderAllForms ? !b.invoked && (b.invoked = !0, b.renderAllForms()) : console.error("[Keap Forms] Error: could not load")
+			};
+			var e = b.getElementsByTagName("script")[0];
+			e.parentNode.insertBefore(d, e), a.keapForms = c
+		})(window, document);
+		</script>
 	</div>
 </section>
 <?php // get_template_part( 'template-parts/sliders/swiper', 'testimonials' ); ?>
@@ -30,17 +46,11 @@ k1_enqueue_page_assets( 'getStarted' );
 		</div>
 	</div>
 </aside>
-<?php
-	get_template_part(
-		'template-parts/content',
-		'equipment',
-		array(
-			'with_header' => true,
-			'header_args' => array(
-				'headline'    => 'Has ministry gotten complicated for you and your team?
-				',
-				'subheadline' => 'Ministry life is a complicated life! Can we get an "amen"? While industry best practices and guidance is an excellent start, the pursuit of becoming courageous, healthy, and effective is nuanced. Our team is ready to partner with you in a 1:1 capacity to assess and coach you forward thoroughly.',
-			),
-		)
-	);
-	?>
+<section class="ministry-plan">
+	<?php $content->get_color_background_layers( 'ministry-plan', 'left-top' ); ?>
+	<div class="ministry-plan__steps z-3 position-relative">
+		<div class="container">
+			<?php get_template_part( 'template-parts/final-cta/content', 'ministry-change' ); ?>
+		</div>
+	</div>
+</section>

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.8.3
+
+- [Nick Design Punchlist](https://github.com/kingdom-one/k1-theme-v2/issues/83)
+
 ## v0.8.2
 
 - Fix homepage overflow

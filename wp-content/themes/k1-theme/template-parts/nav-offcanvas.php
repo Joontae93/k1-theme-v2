@@ -10,12 +10,7 @@
 ?>
 <div class="offcanvas offcanvas-end px-3" tabindex="-1" id="mobileMainMenu" aria-labelledby="mobileMainMenuLabel">
 	<div class="offcanvas__header">
-		<a class="d-inline-block" href="<?php echo esc_url( site_url() ); ?>" class="logo" aria-label="to Home Page">
-			<figure class="logo-image d-inline-block m-0">
-				<?php echo file_get_contents( 'wp-content/themes/k1-theme/src/assets/K1-Logo-v2.svg' ); ?>
-			</figure>
-		</a>
-		<h5 class="d-none" id="mobileMainMenuLabel">Navigation</h5>
+		<h5 class="visually-hidden" id="mobileMainMenuLabel">Navigation</h5>
 		<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">&times;</button>
 	</div>
 	<div class="offcanvas__body">

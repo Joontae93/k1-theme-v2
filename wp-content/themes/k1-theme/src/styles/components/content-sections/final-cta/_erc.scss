@@ -79,7 +79,7 @@
 }
 
 .erc-icon {
-	fill: var(--color-erc-purple);
+	fill: var(--color-primary--dark);
 	font-size: 33px;
 	font-family: Poppins-Bold, Poppins;
 	font-weight: 700;
@@ -115,7 +115,7 @@
 			fill: #fff;
 		}
 		.d {
-			fill: var(--color-erc-purple);
+			fill: var(--color-primary--dark);
 		}
 		.e {
 			filter: url(#chat-a);

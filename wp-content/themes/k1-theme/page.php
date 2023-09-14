@@ -42,6 +42,9 @@ get_header();
 		case ( 'staffing' ):
 			get_template_part( 'templates/page', 'staffing' );
 			break;
+		case ( 'finance' ):
+			get_template_part( 'templates/page', 'finance' );
+			break;
 		default:
 			the_content();
 	}
