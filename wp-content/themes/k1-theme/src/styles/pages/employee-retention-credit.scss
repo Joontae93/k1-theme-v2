@@ -5,10 +5,13 @@
 
 .erc-comparisons {
 	&__background {
-		@include m.background-layers($opacity: 0.5);
+		@include m.background-layers;
 
 		&--color {
-			background-color: var(--color-erc-purple);
+			background-color: var(--color-primary--dark);
+		}
+		&--upper {
+			mix-blend-mode: multiply;
 		}
 	}
 
@@ -33,7 +36,7 @@
 	&__list-1 {
 		&--headline {
 			@extend %list_headline;
-			color: var(--color-erc-blue);
+			color: var(--color-primary);
 		}
 	}
 

@@ -7,9 +7,6 @@ import { SwiperOptions } from 'swiper/types/swiper-options';
 
 const defaultArgs = {
 	modules: [Navigation, Pagination],
-	direction: 'horizontal',
-	loop: true,
-
 	// If we need pagination
 	pagination: {
 		el: '.swiper-pagination',
@@ -20,6 +17,8 @@ const defaultArgs = {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
+
+	loop: true,
 	spaceBetween: 20,
 	grabCursor: true,
 	autoHeight: true,
@@ -40,8 +39,15 @@ const defaultArgs = {
  * @param {SwiperOptions} args Swiper Options
  * @returns swiper instance
  */
-export function newSlider(el: HTMLElement, args: SwiperOptions = {}): Swiper {
+export function newSlider(
+	el: HTMLElement,
+	args: SwiperOptions = {},
+): Swiper | void {
 	const newArgs = Object.assign({}, defaultArgs, args);
-	const swiper = new Swiper(el, newArgs);
-	return swiper;
+	try {
+		const swiper = new Swiper(el, newArgs);
+		return swiper;
+	} catch (err) {
+		console.error(err);
+	}
 }

@@ -8,6 +8,7 @@
 	--size: 8rem;
 	width: var(--size);
 	height: var(--size);
+
 	@include m.media-breakpoint-up(xxl) {
 		--size: 18rem;
 	}
@@ -213,8 +214,5 @@
 		width: $size;
 		height: $size;
 		stroke: var(--color-primary);
-	}
-	.swiper-pagination-bullet-active {
-		background-color: var(--color-primary);
 	}
 }

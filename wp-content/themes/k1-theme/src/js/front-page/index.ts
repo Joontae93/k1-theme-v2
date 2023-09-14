@@ -24,6 +24,5 @@ if (stakesSwiperContainer) {
 		breakpoints: undefined,
 	});
 }
-
 const projectGallerySlider1 = projectGallerySlider('gallery-1');
 const projectGallerySlider2 = projectGallerySlider('gallery-2');

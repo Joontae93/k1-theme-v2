@@ -171,9 +171,7 @@ $content = new Content_Sections();
 			<?php k1_get_svg_asset( 'leaves-3' ); ?>
 			<h2 class="display-1 w-auto headline text-primary my-5 text-center">our leadership team</h2>
 		</div>
-	</div>
-	<div class="container-fluid">
-		<div class="row my-5 py-5">
+		<div class="row my-5 py-5" style="--swiper-pagination-color: var(--color-primary);--swiper-navigation-color: var(--color-primary);">
 			<?php get_template_part( 'template-parts/sliders/swiper', 'k1-team' ); ?>
 		</div>
 	</div>

@@ -48,8 +48,7 @@ get_header();
 				</div>
 			</div>
 			<div class="row my-5">
-				<iframe src="https://www.youtube-nocookie.com/embed/FqofY8MMF9o?controls=0" title="YouTube video player" class='conference-plan__video' frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				<lite-youtube videoid='a8DQHrhvWyY' class='conference-plan__video' playlabel="About Kingdom One's Legal Update Conference"></lite-youtube>
 			</div>
 			<div class="row justify-content-around my-5">
 				<?php

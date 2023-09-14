@@ -24,10 +24,10 @@ if ( ! function_exists( 'k1_generate_the_slides' ) ) {
 }
 ?>
 <div class="project-gallery-swiper" id='<?php echo $args['id']; ?>'>
-	<?php if ( ! empty( $args['logo'] ) ) : ?>
+	<?php if ( isset( $args['logo'] ) ) : ?>
 	<div class="container">
 		<div class="row justify-content-center my-5">
-			<div class="col-6 d-flex justify-content-center">
+			<div class="col-6 col-lg-4 d-flex justify-content-center logo-container">
 				<?php echo "<img src='{$args['logo']}' class='w-100' />"; ?>
 			</div>
 		</div>
@@ -48,7 +48,7 @@ if ( ! function_exists( 'k1_generate_the_slides' ) ) {
 				</div>
 			</div>
 		</div>
-		<?php if ( ! empty( $args['links'] ) ) : ?>
+		<?php if ( isset( $args['links'] ) ) : ?>
 		<div class="row links-row justify-content-around">
 			<?php
 			foreach ( $args['links'] as $link_options ) {
