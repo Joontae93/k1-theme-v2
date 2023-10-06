@@ -60,7 +60,7 @@ class Theme_Init extends K1_Theme_Cleaner {
 		wp_enqueue_script(
 			'main',
 			get_template_directory_uri() . '/dist/global.js',
-			array( 'bootstrap', 'fontawesome', 'lite-youtube' ),
+			array( 'bootstrap', 'lite-youtube' ),
 			$modified_scripts,
 			true
 		);

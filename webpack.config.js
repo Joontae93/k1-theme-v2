@@ -1,11 +1,11 @@
-const defaultConfig = require('@wordpress/scripts/config/webpack.config.js');
+const defaultConfig = require("@wordpress/scripts/config/webpack.config.js");
 
-const THEME_NAME = 'k1-theme';
+const THEME_NAME = "k1-theme";
 const THEME_DIR = `/wp-content/themes/${THEME_NAME}`;
 
 function snakeToCamel(str) {
 	return str.replace(/([-_][a-z])/g, (group) =>
-		group.toUpperCase().replace('-', '').replace('_', ''),
+		group.toUpperCase().replace("-", "").replace("_", ""),
 	);
 }
 
@@ -16,14 +16,14 @@ function snakeToCamel(str) {
  * NOTE: Make sure to import scss files in TS file and not below.
  */
 const jsFiles = [
-	'front-page',
-	'hr-page',
-	'communications',
-	'pricing',
-	'k1-about',
-	'get-started',
-	'finance',
-	'archive',
+	"front-page",
+	"hr-page",
+	"communications",
+	"pricing",
+	"k1-about",
+	"get-started",
+	"finance",
+	"archive",
 ];
 
 /**
@@ -31,12 +31,12 @@ const jsFiles = [
  * Array of strings modeled after scss names (e.g. 'we-are-kingdom-one')
  *  */
 const styleSheets = [
-	'giving',
-	'share-your-story',
-	'employee-retention-credit',
-	'above-reproach',
-	'legal-update',
-	'staffing',
+	"giving",
+	"share-your-story",
+	"employee-retention-credit",
+	"above-reproach",
+	"legal-update",
+	"staffing",
 ]; // for scss only
 
 module.exports = {
@@ -45,11 +45,11 @@ module.exports = {
 		entry: function () {
 			const entries = {
 				global: `.${THEME_DIR}/src/index.js`,
-				'vendors/fontawesome': `.${THEME_DIR}/src/js/vendors/global/fontawesome.js`,
-				'vendors/bootstrap': `.${THEME_DIR}/src/js/vendors/global/bootstrap.js`,
-				'vendors/lite-youtube': `.${THEME_DIR}/src/js/vendors/global/lite-youtube.js`,
-				'vendors/vendors': `.${THEME_DIR}/src/styles/vendors/vendors.scss`,
-				'layouts/single': `.${THEME_DIR}/src/styles/layouts/single.scss`,
+				"vendors/fontawesome": `.${THEME_DIR}/src/js/vendors/global/fontawesome.js`,
+				"vendors/bootstrap": `.${THEME_DIR}/src/js/vendors/global/bootstrap.js`,
+				"vendors/fonts": `.${THEME_DIR}/src/styles/vendors/_fonts.scss`,
+				"vendors/lite-youtube": `.${THEME_DIR}/src/js/vendors/global/lite-youtube.js`,
+				"layouts/single": `.${THEME_DIR}/src/styles/layouts/single.scss`,
 			};
 
 			if (jsFiles.length > 0) {
