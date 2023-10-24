@@ -30,64 +30,63 @@ class Theme_Init extends K1_Theme_Cleaner {
 	 * Adds scripts with the appropriate dependencies
 	 */
 	public function enqueue_k1_scripts() {
-		$modified_styles  = gmdate( 'YmdHi', filemtime( get_stylesheet_directory() . '/dist/global.css' ) );
-		$modified_scripts = gmdate( 'YmdHi', filemtime( get_stylesheet_directory() . '/dist/global.js' ) );
-
-		// JS
-		wp_enqueue_script(
-			'lite-youtube',
-			get_template_directory_uri() . '/dist/vendors/lite-youtube.js',
-			array(),
-			$modified_scripts,
-			array( 'strategy' => 'defer' ),
-		);
-
-		wp_enqueue_script(
-			'bootstrap',
-			get_template_directory_uri() . '/dist/vendors/bootstrap.js',
-			array(),
-			$modified_scripts,
-			array( 'strategy' => 'defer' ),
-		);
-
-		wp_enqueue_script(
-			'fontawesome',
-			get_template_directory_uri() . '/dist/vendors/fontawesome.js',
-			array(),
-			'1.0',
-			array( 'strategy' => 'async' ),
-		);
-		wp_enqueue_script(
-			'main',
-			get_template_directory_uri() . '/dist/global.js',
-			array( 'bootstrap', 'lite-youtube' ),
-			$modified_scripts,
-			true
-		);
-
-		// CSS
+		$lite_yt = require_once get_template_directory() . '/dist/vendors/lite-youtube.asset.php';
 		wp_enqueue_style(
 			'lite-youtube',
 			get_template_directory_uri() . '/dist/vendors/lite-youtube.css',
 			array(),
-			'1.0'
+			$lite_yt['version'],
 		);
-		wp_enqueue_style(
-			'vendors',
-			get_template_directory_uri() . '/dist/vendors/vendors.css',
+		wp_enqueue_script(
+			'lite-youtube',
+			get_template_directory_uri() . '/dist/vendors/lite-youtube.js',
 			array(),
-			'1.0'
+			$lite_yt['version'],
+			array( 'strategy' => 'defer' ),
 		);
 
+		$bootstrap = require_once get_template_directory() . '/dist/vendors/bootstrap.asset.php';
 		wp_enqueue_style(
-			'main',
+			'bootstrap',
+			get_template_directory_uri() . '/dist/vendors/bootstrap.css',
+			array(),
+			$bootstrap['version'],
+		);
+		wp_enqueue_script(
+			'bootstrap',
+			get_template_directory_uri() . '/dist/vendors/bootstrap.js',
+			array(),
+			$bootstrap['version'],
+			array( 'strategy' => 'defer' ),
+		);
+
+		$fontawesome = require_once get_template_directory() . '/dist/vendors/fontawesome.asset.php';
+		wp_enqueue_script(
+			'fontawesome',
+			get_template_directory_uri() . '/dist/vendors/fontawesome.js',
+			array(),
+			$fontawesome['version'],
+			array( 'strategy' => 'async' ),
+		);
+		$main_asset = require_once get_template_directory() . '/dist/global.asset.php';
+		$location   = get_template_directory_uri() . '/dist/global.js';
+		$k1_script  = wp_enqueue_script(
+			'kingdom-one-global',
+			get_template_directory_uri() . '/dist/global.js',
+			array( 'bootstrap', 'lite-youtube' ),
+			$main_asset['version'],
+			array( 'strategy' => 'defer' ),
+		);
+
+		$k1_style = wp_enqueue_style(
+			'kingdom-one-global',
 			get_template_directory_uri() . '/dist/global.css',
-			array( 'vendors', 'lite-youtube' ),
-			$modified_styles
+			array( 'bootstrap', 'lite-youtube' ),
+			$main_asset['version'],
 		);
 
 		wp_localize_script(
-			'main',
+			'kingdom-one-global',
 			'k1SiteData',
 			array( 'rootUrl' => home_url() )
 		);

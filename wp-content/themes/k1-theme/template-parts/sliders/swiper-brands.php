@@ -2,6 +2,8 @@
 /**
  * Tesimonials Swiper
  * powered by Swiper.js
+ *
+ * @package KingdomOne
  */
 
 $args  = array(
@@ -27,15 +29,9 @@ $content = new Content_Sections();
 							echo "<div class='swiper-slide p-5 text-white d-flex flex-column align-items-stretch'>";
 							$post_thumbnail_id = get_post_thumbnail_id();
 							$url               = get_the_post_thumbnail_url();
-							$alt               = get_post_meta( $post_thumbnail_id, '_wp_attachment_iamge_alt', true );
+							$alt               = empty( get_post_meta( $post_thumbnail_id, '_wp_attachment_image_alt', true ) ) ? get_the_title() . ' logo' : get_post_meta( $post_thumbnail_id, '_wp_attachment_image_alt', true );
 							$srcset            = wp_get_attachment_image_srcset( $post_thumbnail_id );
 							echo "<img class='swiper-slide__logo object-fit-contain' src='{$url}' alt='{$alt}' srcset='{$srcset}'>";
-							echo '<div class="text-content my-5">' . acf_esc_html( get_field( 'slider_points' ) ) . '</div>';
-
-							if ( get_field( 'show_learn_more_button' ) ) {
-								$permalink = get_the_permalink();
-								echo "<a href= '{$permalink}' class='btn__primary--fill mt-auto mb-2 align-self-center'>Learn More</a>";
-							};
 							echo '</div>';
 						}
 					}

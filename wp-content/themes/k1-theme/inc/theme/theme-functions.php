@@ -49,14 +49,14 @@ function k1_get_image_asset_url( string $file, string $extension, string $folder
  * @param ?array  $deps array of dependencies.
  * @param ?string $location the subfolder inside the `dist` to find the file
  */
-function k1_enqueue_page_style( string $id, ?array $deps = array( 'main' ), ?string $location = 'pages' ) {
+function k1_enqueue_page_style( string $id, ?array $deps = array( 'kingdom-one-global' ), ?string $location = 'pages' ) {
 	$file_path  = get_stylesheet_directory() . "/dist/{$location}";
 	$file_uri   = get_stylesheet_directory_uri() . "/dist/{$location}";
 	$asset_file = "{$file_path}/{$id}.asset.php";
 
 	if ( file_exists( $asset_file ) ) {
 		$asset      = include $asset_file;
-		$total_deps = array_merge( $deps, array( 'main' ) );
+		$total_deps = array_merge( $deps, array( 'kingdom-one-global' ) );
 			wp_enqueue_style(
 				$id,
 				"{$file_uri}/{$id}.css",
@@ -80,7 +80,7 @@ function k1_enqueue_page_style( string $id, ?array $deps = array( 'main' ), ?str
  * @param ?array  $deps array of dependencies.
  * @param ?string $location the subfolder inside the `dist` to find the file
  */
-function k1_enqueue_page_script( string $id, ?array $deps = array( 'main' ), ?string $location = 'pages' ) {
+function k1_enqueue_page_script( string $id, ?array $deps = array( 'kingdom-one-global' ), ?string $location = 'pages' ) {
 	$file_path  = get_stylesheet_directory() . "/dist/{$location}";
 	$file_uri   = get_stylesheet_directory_uri() . "/dist/{$location}";
 	$asset_file = "{$file_path}/{$id}.asset.php";
@@ -114,8 +114,8 @@ function k1_enqueue_page_script( string $id, ?array $deps = array( 'main' ), ?st
  */
 function k1_enqueue_page_assets( string $id, ?array $deps = array(), ?string $location = 'pages' ) {
 	$default_deps = array(
-		'styles'  => array( 'main' ),
-		'scripts' => array( 'main' ),
+		'styles'  => array( 'kingdom-one-global' ),
+		'scripts' => array( 'kingdom-one-global' ),
 	);
 
 	$deps = wp_parse_args( $deps, $default_deps );

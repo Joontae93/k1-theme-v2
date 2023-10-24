@@ -4,6 +4,7 @@
  * Like style.css, this should really only be used for quick fixes with notes to refactor later.
  *
  * @since 1.0
+ * @package KingdomOne
  */
 
 // Load Required Files

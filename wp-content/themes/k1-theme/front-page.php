@@ -13,41 +13,6 @@ k1_enqueue_page_assets( 'frontPage' );
 get_header(); ?>
 <main class="site-content">
 	<?php get_template_part( 'template-parts/front-page/section', 'hero' ); ?>
-	<aside class="top-talent-groups">
-		<div class="container">
-			<div class="row justify-content-center">
-				<?php
-				$icons = array(
-					array(
-						'title' => 'H.R.',
-						'file'  => 'hr',
-						'link'  => '/hr',
-					),
-					array(
-						'title' => 'Finance',
-						'file'  => 'finance',
-						'link'  => '/finance',
-					),
-					array(
-						'title' => 'Marketing & <br> Communications',
-						'file'  => 'marcom',
-						'link'  => '/communications',
-					),
-					array(
-						'title' => 'Staffing',
-						'file'  => 'staffing',
-						'link'  => '/staffing',
-					),
-				);
-				foreach ( $icons as $icon ) {
-					$filename = "tg-{$icon['file']}-icon";
-					$svg      = k1_get_svg_asset( $filename, true, false );
-					echo "<div class='icon col-12 col-lg-3 my-5 my-lg-0'><a href='{$icon['link']}' aria-label='{$icon['title']}'><img class='icon__svg' src='{$svg}' alt='{$icon['title']} icon' /></a><span class='icon__label'>{$icon['title']}</span></div>";
-				}
-				?>
-			</div>
-		</div>
-	</aside>
 	<section class="stakes">
 		<?php $content->get_color_background_layers( 'stakes', 'left', array( 'k1-retreat-01', 'webp' ) ); ?>
 		<div class="stakes__content py-5">
@@ -152,76 +117,7 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
-			<div class="mb-5 py-5">
-				<?php
-				get_template_part(
-					'template-parts/sliders/swiper',
-					'project-gallery',
-					array(
-						'id'     => 'gallery-1',
-						'slides' => array(
-							'<img src="' . k1_get_image_asset_url( '1-people-first', 'png', 'previous-work/southwest-church', false ) . '" />',
-							'<img src="' . k1_get_image_asset_url( '2-leveling', 'png', 'previous-work/southwest-church', false ) . '" />',
-							'<img src="' . k1_get_image_asset_url( '3-departments', 'png', 'previous-work/southwest-church', false ) . '" />',
-							'<img src="' . k1_get_image_asset_url( '4-leveling-map', 'png', 'previous-work/southwest-church', false ) . '" />',
-							'<img src="' . k1_get_image_asset_url( '5-colors', 'png', 'previous-work/southwest-church', false ) . '" />',
-						),
-						'links'  => array(
-							array(
-								'text'       => 'Total Comp Sample',
-								'link'       => '#',
-								'html_class' => 'btn__primary--fill mt-5',
-							),
-							array(
-								'text'       => 'Leveling Handout Sample',
-								'link'       => '#',
-								'html_class' => 'btn__primary--fill mt-5',
-							),
-							array(
-								'text'       => 'Total Comp Sample',
-								'link'       => '#',
-								'html_class' => 'btn__primary--fill mt-5',
-							),
-						),
-						'logo'   => k1_get_image_asset_url( 'logo-southwest-church', 'png', 'previous-work/southwest-church', false ),
-					)
-				);
-				?>
-			</div>
-			<div class="my-5 py-5">
-				<?php
-				get_template_part(
-					'template-parts/sliders/swiper',
-					'project-gallery',
-					array(
-						'id'     => 'gallery-2',
-						'slides' => array(
-							'<img src="' . k1_get_image_asset_url( '1-handbook', 'png', 'previous-work/hdc', false ) . '" />',
-							'<img src="' . k1_get_image_asset_url( '2-leveling-groups', 'png', 'previous-work/hdc', false ) . '" />',
-							'<img src="' . k1_get_image_asset_url( '3-purposes', 'png', 'previous-work/hdc', false ) . '" />',
-						),
-						'links'  => array(
-							array(
-								'text'       => 'Total Comp Sample',
-								'link'       => '#',
-								'html_class' => 'btn__primary--fill mt-5',
-							),
-							array(
-								'text'       => 'Leveling Handout Sample',
-								'link'       => '#',
-								'html_class' => 'btn__primary--fill mt-5',
-							),
-							array(
-								'text'       => 'Total Comp Sample',
-								'link'       => '#',
-								'html_class' => 'btn__primary--fill mt-5',
-							),
-						),
-						'logo'   => k1_get_image_asset_url( 'logo-hdc', 'png', 'previous-work/hdc', false ),
-					)
-				);
-				?>
-			</div>
+			<?php get_template_part( 'template-parts/sliders/swiper', 'brands' ); ?>
 		</div>
 	</section>
 	<aside class="video-testimonial">
