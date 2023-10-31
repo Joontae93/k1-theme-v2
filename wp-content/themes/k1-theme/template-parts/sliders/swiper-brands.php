@@ -17,8 +17,7 @@ if ( ! $query->have_posts() ) {
 $content = new Content_Sections();
 ?>
 <aside class="brands py-5 my-5">
-	<?php $content->get_color_background_layers( 'brands', 'left' ); ?>
-	<div class="container-fluid position-relative z-2 py-5">
+	<div class="container position-relative z-2 py-5">
 		<div class="row mt-5">
 			<div class="swiper" id="brands-swiper">
 				<div class="swiper-wrapper">
@@ -26,11 +25,11 @@ $content = new Content_Sections();
 					while ( $query->have_posts() ) {
 						$query->the_post();
 						if ( get_field( 'show_in_slider' ) ) {
-							echo "<div class='swiper-slide p-5 text-white d-flex flex-column align-items-stretch'>";
 							$post_thumbnail_id = get_post_thumbnail_id();
 							$url               = get_the_post_thumbnail_url();
 							$alt               = empty( get_post_meta( $post_thumbnail_id, '_wp_attachment_image_alt', true ) ) ? get_the_title() . ' logo' : get_post_meta( $post_thumbnail_id, '_wp_attachment_image_alt', true );
 							$srcset            = wp_get_attachment_image_srcset( $post_thumbnail_id );
+							echo "<div class='swiper-slide d-flex justify-content-center align-items-center'>";
 							echo "<img class='swiper-slide__logo object-fit-contain' src='{$url}' alt='{$alt}' srcset='{$srcset}'>";
 							echo '</div>';
 						}

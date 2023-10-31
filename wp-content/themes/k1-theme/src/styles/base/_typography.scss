@@ -29,19 +29,18 @@ body {
 	:where(& .text-content) {
 		@extend %base-text;
 	}
+}
+p:where(:not(.text-content p)) {
+	@extend %base-text;
+}
 
-	p:where(:not(.text-content p)) {
-		@extend %base-text;
-	}
+:where(li:not(.text-content li)) {
+	@extend %base-text;
+}
 
-	:where(li:not(.text-content li)) {
-		@extend %base-text;
-	}
-
-	.small,
-	small {
-		font-family: v.$font-body;
-	}
+.small,
+small {
+	font-family: v.$font-body;
 }
 
 h1,

@@ -22,13 +22,12 @@ $content = new Content_Components();
 						<?php
 						$content->bulleted_list(
 							array(
-								'High turnover rate',
-								'Unfruitful staffing search',
-								'Painful leadership transitions, terminations & underperformance',
-								'Unstable work enviornments & unhealthy staff culture',
-								'Poor financial visibility',
-								'Ineffective marketing & communication',
-								'Frustrating piecemeal systems and processes',
+								'Staff culture with unclear vision and direction',
+								'Uncomfortable leadership transitions',
+								'Unstable staff culture',
+								'Frustration due to unclear budget direction',
+								'Poor attendance at ministry events',
+								'Marketing informed by entertainment instead of mission',
 							),
 							'fw-bold mb-2',
 						);
