@@ -12,7 +12,7 @@ k1_enqueue_page_assets( 'finance' );
 	<div class="container">
 		<div class="row justify-content-center">
 			<h2 class="headline text-primary col-lg-8 text-center">
-				How is your ministry's financial visibility & growth?
+				Is your ministry's financial strategy aligned with mission?
 			</h2>
 		</div>
 	</div>
@@ -31,8 +31,8 @@ k1_enqueue_page_assets( 'finance' );
 		<div class="my-5 row justify-content-center" id='section-header'>
 			<div class="col-lg-10 text-center">
 				<h2 class="headline text-primary">The American Church is Struggling</h2>
-				<p class="subheadline text-white">In 2019, 4,500 churches closed their doors, and that number continues to rise each year. Year after year, fewer people are attending and
-					giving at church services, and this creates so much heartache for ministry leaders.</p>
+				<p class="subheadline text-white">In 2019, 4,500 churches closed their doors, and that number continues to rise each year. Year after year, fewer people are giving to ministry, which makes stewardship even more mission critical.
+</p>
 			</div>
 		</div>
 		<div class="row text-center justify-content-around gap-5 my-5" id='statistics'>
@@ -79,9 +79,8 @@ k1_enqueue_page_assets( 'finance' );
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-10 col-xl-8 text-center">
-				<h2 class="headline text-primary">There is Hope!</h2>
-				<p class="subheadline">We understand you may be overwhelmed, but practicing the time-tested principles of stewardship will lead your ministry to financial
-					health.</p>
+				<h2 class="headline text-primary">Put Your Money on Mission</h2>
+				<p class="subheadline">We get it, ministry finances can be a handful. But with the right stewardship moves, we'll get you on track to solid financial health.</p>
 				<?php $content->cta_button(); ?>
 			</div>
 		</div>
@@ -94,15 +93,15 @@ get_template_part(
 	array(
 		array(
 			'title' => null,
-			'items' => array( 'Receivables', 'Payables', 'Expense Tracking' ),
+			'items' => array( 'AP & AR', 'Accounting', 'Policy, Process, and Procedure' ),
 		),
 		array(
 			'title' => null,
-			'items' => array( 'Payroll', 'Credit Card Reconciliation', 'Bank Statement Reconciliation' ),
+			'items' => array( 'Software Implementation', 'Payroll', 'Investment Strategy' ),
 		),
 		array(
 			'title' => null,
-			'items' => array( 'Financial Reporting', 'Budgeting', 'Audit Support' ),
+			'items' => array( 'Dashboards & Reporting', 'Generosity & Stewardship', 'And so much more...' ),
 		),
 	)
 );
@@ -143,4 +142,4 @@ get_template_part(
 		),
 	)
 );
-get_template_part( 'template-parts/final-cta/content', 'daunting' );
+get_template_part( 'template-parts/final-cta/content', 'daunting' );?>
