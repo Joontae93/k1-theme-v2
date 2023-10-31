@@ -13,6 +13,9 @@ export const brandsSlider = () => {
 				nextEl: '.swiper-brands-button-next',
 				prevEl: '.swiper-brands-button-prev',
 			},
+			centeredSlides: true,
+			loop: true,
+			breakpoints: undefined,
 		});
 	}
 };

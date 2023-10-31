@@ -21,7 +21,7 @@ $testimonials = new WP_Query(
 			<div class="swiper" id="testimonials-swiper">
 				<div class="swiper-wrapper">
 					<?php while ( $testimonials->have_posts() ) : ?>
-						<?php $testimonials->the_post(); ?>
+					<?php $testimonials->the_post(); ?>
 					<div class="swiper-slide d-flex justify-content-center">
 						<div class="internal-slide d-flex flex-column align-items-center border border-2 border-black py-5 w-75">
 							<?php the_post_thumbnail( null, 'post-thumbnail', ); ?>

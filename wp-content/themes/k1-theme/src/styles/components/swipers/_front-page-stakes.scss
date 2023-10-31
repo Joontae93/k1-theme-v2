@@ -3,7 +3,6 @@
 	.swiper {
 		max-height: unset;
 		height: auto;
-		overflow-y: visible;
 
 		@include m.media-breakpoint-up(lg) {
 			height: 75rem;

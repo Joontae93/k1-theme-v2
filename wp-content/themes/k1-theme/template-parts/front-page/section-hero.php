@@ -6,7 +6,6 @@
  */
 
 $content = new Content_Sections();
-
 ?>
 <section class="hero position-relative d-flex flex-column justify-content-center" id="hero">
 	<?php
@@ -21,15 +20,6 @@ $content = new Content_Sections();
 			<div class="col-lg-1"></div>
 			<div class="col-lg-11">
 				<?php $content->cta_button(); ?>
-				<?php
-				$content->cta_button(
-					array(
-						'text'       => 'Learn More',
-						'link'       => '/about',
-						'html_class' => 'btn__white--outline mx-0 mx-lg-5',
-					)
-				);
-				?>
 			</div>
 		</div>
 	</div>
@@ -54,15 +44,13 @@ $content = new Content_Sections();
 						'link'  => '/communications',
 					),
 					array(
-						'title' => 'Staffing',
+						'title' => 'Business Administration',
 						'file'  => 'staffing',
 						'link'  => '/staffing',
 					),
 				);
 				foreach ( $icons as $icon ) {
-					$filename = "tg-{$icon['file']}-icon";
-					$svg      = k1_get_svg_asset( $filename, false, false );
-					echo "<div class='icon col-12 col-lg-3 my-5 my-lg-0'><a href='{$icon['link']}' aria-label='{$icon['title']}'>{$svg}</a><span class='icon__label'>{$icon['title']}</span></div>";
+					echo "<div class='icon col-12 col-lg-3 my-5 my-lg-0'>" . get_the_k1_icon($icon['file'],'white') . "<span class='icon__label text-white'>{$icon['title']}</span></div>";
 				}
 				?>
 			</div>

@@ -3,6 +3,7 @@
 @use '../components/content-sections/core-services';
 @use '../components/equipment';
 @use '../components/swipers/front-page-stakes';
+@use '../components/meet-with-us';
 
 @mixin full-size {
 	height: 100%;
@@ -47,6 +48,7 @@
 }
 
 .stakes {
+	margin-top: 8rem;
 	&__background {
 		@include m.background-layers;
 
@@ -86,26 +88,6 @@
 	}
 
 	&__grid {
-		margin-top: -5rem;
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		gap: 2rem;
-		place-items: center;
-		flex: 1 0 100%;
-
-		@include m.media-breakpoint-up(sm) {
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		@include m.media-breakpoint-up(md) {
-			grid-template-columns: repeat(3, 1fr);
-			gap: 1rem;
-		}
-
-		@include m.media-breakpoint-up(md) {
-			gap: 1.5rem;
-		}
-
 		&--container {
 			box-shadow: 0px -10px 8px 1px black;
 			background-color: white;
@@ -117,54 +99,43 @@
 				@include m.displayFlex($main: center);
 			}
 		}
+	}
+}
+.community-grid {
+	margin-top: -5rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 25rem);
+	place-content: center;
+	gap: 2rem;
+	flex: 1 0 100%;
 
-		&--item {
-			@include m.displayFlex(column, center, center);
+	@include m.media-breakpoint-up(lg) {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+
+	&__item {
+		color: var(--color-grey);
+
+		&--container {
+			@include m.displayFlex(column, center, stretch);
 			background-color: white;
 			border: 2px solid var(--color-grey);
 			border-radius: 1rem;
 			padding: 2rem 1rem;
-			width: 25rem;
-			height: 20rem;
-
-			@include m.media-breakpoint-up(lg) {
-				height: 25rem;
-				max-width: unset;
-			}
 		}
 	}
 
-	&__grid-item-content {
-		$content-color: var(--color-grey);
-		color: $content-color;
+	&__list {
+		margin: 0;
+	}
 
-		@include m.displayFlex(column, center, center);
-		gap: 1rem;
+	&__label {
+		font-size: 2.6rem;
+	}
 
-		.front-page-icon {
-			--svg-size: 4rem;
-			width: var(--svg-size);
-			height: var(--svg-size);
-
-			path {
-				fill: $content-color;
-			}
-
-			@include m.media-breakpoint-up(lg) {
-				--svg-size: 6rem;
-				margin-bottom: 2rem;
-			}
-		}
-
-		&--text {
-			font-weight: 700;
-			text-align: center;
-			font-size: 1.1em;
-
-			@include m.media-breakpoint-up(lg) {
-				font-size: 1.2em;
-			}
-		}
+	.k1-icon__container {
+		margin-bottom: 2rem;
 	}
 }
 
@@ -258,15 +229,12 @@
 }
 
 .projects {
+	margin: 6rem auto;
 	&__background {
 		@include m.background-layers;
 
 		&--color {
 			background-color: var(--color-primary);
-		}
-
-		&--lower {
-			background-color: black;
 		}
 	}
 }
@@ -274,15 +242,8 @@
 .ministry-plan {
 	&__background {
 		@include m.background-layers;
-	}
-
-	&__steps {
-		h3 {
-			color: white;
-		}
-
-		span {
-			color: white;
+		&--color {
+			background-color: var(--color-primary);
 		}
 	}
 }
