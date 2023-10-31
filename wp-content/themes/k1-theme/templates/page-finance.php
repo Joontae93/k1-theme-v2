@@ -12,7 +12,7 @@ k1_enqueue_page_assets( 'finance' );
 	<div class="container">
 		<div class="row justify-content-center">
 			<h2 class="headline text-primary col-lg-8 text-center">
-				Is your ministry's financial strategy aligned with mission?
+				How Is Your Ministry's Financial Visibility & Growth?
 			</h2>
 		</div>
 	</div>
@@ -31,8 +31,9 @@ k1_enqueue_page_assets( 'finance' );
 		<div class="my-5 row justify-content-center" id='section-header'>
 			<div class="col-lg-10 text-center">
 				<h2 class="headline text-primary">The American Church is Struggling</h2>
-				<p class="subheadline text-white">In 2019, 4,500 churches closed their doors, and that number continues to rise each year. Year after year, fewer people are giving to ministry, which makes stewardship even more mission critical.
-</p>
+				<p class="subheadline text-white">In 2019, 4,500 churches closed their doors, and that number continues to rise each year. Year after year, fewer people are giving to
+					ministry, which makes stewardship even more mission critical.
+				</p>
 			</div>
 		</div>
 		<div class="row text-center justify-content-around gap-5 my-5" id='statistics'>
@@ -75,17 +76,6 @@ k1_enqueue_page_assets( 'finance' );
 		</div>
 	</div>
 </section>
-<aside class="hope">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-10 col-xl-8 text-center">
-				<h2 class="headline text-primary">Put Your Money on Mission</h2>
-				<p class="subheadline">We get it, ministry finances can be a handful. But with the right stewardship moves, we'll get you on track to solid financial health.</p>
-				<?php $content->cta_button(); ?>
-			</div>
-		</div>
-	</div>
-</aside>
 <?php
 get_template_part(
 	'template-parts/content',
@@ -105,41 +95,18 @@ get_template_part(
 		),
 	)
 );
-get_template_part(
-	'template-parts/content',
-	'three-steps',
-	array(
-		'headline'           => 'Are You Ready to Make a positive change?',
-		'bg_image_file_name' => 'marcom-three-steps-bg',
-		'rows'               => array(
-			array(
-				'svg'         => 'marcom-assessment-step-1',
-				'headline'    => 'Take a Financial Assessment',
-				'subheadline' => 'Get insights on your strengths and opportunities to grow your finance efforts.',
-				'cta'         => array(
-					'url'  => '',
-					'text' => 'Get Started',
-				),
-			),
-			array(
-				'svg'         => 'staffing-icon-partner-step-2',
-				'headline'    => 'Meet with a financial ministry partner',
-				'subheadline' => 'Meet with a K1 Ministry Partner to review your assessment and get a plan to get to financial health.',
-				'cta'         => array(
-					'url'  => '',
-					'text' => 'Get Started',
-				),
-			),
-			array(
-				'svg'         => 'staffing-build-step-3',
-				'headline'    => 'Build Towards Health',
-				'subheadline' => 'Work with your Kingdom One ministry partner to work the plan and bring financial clarity, trust, and health back to the ministry you love.',
-				'cta'         => array(
-					'url'  => '',
-					'text' => 'Get Started',
-				),
-			),
-		),
-	)
-);
+?>
+<aside class="hope">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-10 col-xl-8 text-center">
+				<h2 class="headline text-primary">There is hope!</h2>
+				<p class="subheadline fw-bold mb-5 mt-3">We understand you may be overwhelmed, but practicing the time-tested principles of stewardship will lead your ministry to financial
+					health.</p>
+				<?php $content->cta_button(); ?>
+			</div>
+		</div>
+	</div>
+</aside>
+<?php
 get_template_part( 'template-parts/final-cta/content', 'daunting' );?>

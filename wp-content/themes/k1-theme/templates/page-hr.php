@@ -59,22 +59,56 @@ $content = new Content_Sections();
 		</div>
 	</div>
 </section>
-<?php
-get_template_part(
-	'template-parts/content',
-	'core-services',
-	array(
-		array(
-			'title' => null,
-			'items' => array( 'Staffing', 'Handbooks', 'Payroll', 'HRIS Implementation', 'Staff Survey' ),
-		),
-		array(
-			'title' => null,
-			'items' => array( 'Total Rewards', 'Compensation Survey', 'Ministry Assessment', 'Retirement', 'Benefits' ),
-		),
-	)
-);
-?>
+<section class="hr-services">
+	<?php $content->get_color_background_layers( 'hr-services', 'zig-zag-right');?>
+	<div class="container">
+		<div class="hr-services__grid">
+			<?php
+		$grid_items = array(
+			array(
+				'svg'   => 'hr',
+				'title' => 'HR',
+				'text'  => array( 'Staffing', 'Handbooks', 'Payroll', 'Ministry Cohorts' ),
+			),
+			array(
+				'svg'   => 'strategy',
+				'title' => 'Strategy',
+				'text'  => array( 'Staff Leveling', 'Communications Frameworks', 'Coaching, Advisory, Strategic Planning' ),
+			),
+			array(
+				'svg'   => 'staffing',
+				'title' => 'Business Administration',
+				'text'  => array( 'ChMS Implementation & Optimization', 'Audit & 990 Support', 'Business Process & Procedure Optimization' ),
+			),
+			array(
+				'svg'   => 'spark',
+				'title' => 'Spark',
+				'text'  => array( 'Compensation Reporting', 'Benefits', 'Staffing Searches' ),
+			),
+			array(
+				'svg'   => 'academy',
+				'title' => 'Academy',
+				'text'  => array( 'Trainings', 'Tutorials', 'Templates', 'Tools' ),
+			),
+			array(
+				'svg'   => 'justice',
+				'title' => 'Above Reproach',
+				'text'  => array( 'AB-506 Child Safety Training', 'Harrassment Prevention Training', 'Legal Updates' ),
+			),
+		);
+		foreach ( $grid_items as $item ) {
+			$markup  = "<div class='community-grid__item--container text-center'><div class='community-grid__item'>";
+			$markup .= get_the_k1_icon( $item['svg'] );
+			$markup .= "<h3 class='community-grid__label'>{$item['title']}</h3>";
+			$markup .= $content->bulleted_list($item['text'],'community-grid__list-item','ul','community-grid__list list-unstyled text-center',false);
+			$markup .= '</div></div>';
+			echo $markup;
+		}
+		?>
+		</div>
+	</div>
+
+</section>
 <aside class='tools-tips-training'>
 	<div class="container">
 		<div class="row justify-content-center">
@@ -90,67 +124,4 @@ get_template_part(
 		</div>
 	</div>
 </aside>
-<?php
-get_template_part(
-	'template-parts/content',
-	'three-steps',
-	array(
-		'headline' => "Let's Partner Together To Grow Your Ministry's Capacity!",
-		'rows'     => array(
-			array(
-				'svg'         => 'above-reproach-lady-justice-step-1',
-				'headline'    => 'Commit to creating a safe place for your people - Get Above Reproach.',
-				'subheadline' => 'Above Reproach is our safety ecosystem, geared to equip you with the essentials to provide safe places for your people. When you bundle AB-506
-				Child Abuse Prevention + Mandated Reporting along with Harassment & Bullying Prevention training you double down on your commitment to safety AND enjoy a discounted
-				bundle price.',
-				'cta'         => array(
-					'url'         => 'https://academy.kingdomone.co',
-					'text'        => 'Enroll Now',
-					'is_external' => true,
-				),
-			),
-			array(
-				'svg'         => 'hr-inventory-step-2',
-				'headline'    => 'Take Inventory of Your HR Health.',
-				'subheadline' => 'Make sure you have the right tools, policies, and development necessary to grow your staff and culture.',
-				'cta'         => array(
-					'url'  => '',
-					'text' => 'Get Started',
-				),
-			),
-			array(
-				'svg'         => 'rocket-step-3',
-				'headline'    => 'Get connected. Partner with our HR industry experts to amplify your work at kingdomone.co.',
-				'subheadline' => 'Ministry is complicated. Can we get an “amen”? While industry best practices and guidance is an excellent start, the pursuit of becoming
-				courageous, healthy, and effective is nuanced. Our league of extraordinary gentlemen and women is ready to partner with you in a 1:1 capacity to assess and coach you
-				forward thoroughly.',
-				'cta'         => array(
-					'url'  => '/get-started',
-					'text' => 'Get Started',
-				),
-			),
-		),
-	)
-);
-?>
-<section class='right-choice'>
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-8 text-lg-center">
-				<h2 class='color-grey text-poppins'>Is <span class="text-primary">Kingdom One</span> <br /> The Right Choice For Me?</h2>
-				<p>We understand the sacrifice, dedication, and relational equity it takes to spread the gospel and want to see ministries united in growing the Church
-					together. We're using our experience and learnings from Fortune 100 companies and mega-church ministries to help your ministry become more Courageous,
-					Healthy, & Effective. Why? Because ministries of all sizes should have a chance to grow to their full potential. </p>
-			</div>
-		</div>
-		<div class="row justify-content-center my-5">
-			<pre>video of Steven...</pre>
-		</div>
-		<!-- <div class="row justify-content-center text-lg-center">
-			<div class="col-lg-8">
-				<h2 class="color-grey text-poppins">We have a track record of growth, but you don't have to take our word for it.</h2>
-			</div>
-		</div> -->
-	</div>
-</section>
 <?php get_template_part( 'template-parts/final-cta/content', 'hr' ); ?>

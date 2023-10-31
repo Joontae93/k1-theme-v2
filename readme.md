@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.9.0
+
+- Update pages:
+  - homepage, about, hr, finance,communications
+- New Page: Business Admin
+
 ## v0.8.3
 
 - [Nick Design Punchlist](https://github.com/kingdom-one/k1-theme-v2/issues/83)

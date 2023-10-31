@@ -45,6 +45,9 @@ get_header();
 		case ( 'finance' ):
 			get_template_part( 'templates/page', 'finance' );
 			break;
+		case ( 'business-administration' ):
+			get_template_part( 'templates/page', 'business-administration' );
+			break;
 		default:
 			the_content();
 	}
