@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.9.1
+
+- Update Finance copy
+
 ## v0.9.0
 
 - Update pages:

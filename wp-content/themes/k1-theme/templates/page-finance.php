@@ -12,7 +12,7 @@ k1_enqueue_page_assets( 'finance' );
 	<div class="container">
 		<div class="row justify-content-center">
 			<h2 class="headline text-primary col-lg-8 text-center">
-				How Is Your Ministry's Financial Visibility & Growth?
+				Is your ministry's financial strategy aligned with mission?
 			</h2>
 		</div>
 	</div>
@@ -92,7 +92,7 @@ get_template_part(
 		array(
 			'title' => null,
 			'items' => array( 'Dashboards & Reporting', 'Generosity & Stewardship', 'And so much more...' ),
-		),
+		)
 	)
 );
 ?>
@@ -100,9 +100,8 @@ get_template_part(
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-10 col-xl-8 text-center">
-				<h2 class="headline text-primary">There is hope!</h2>
-				<p class="subheadline fw-bold mb-5 mt-3">We understand you may be overwhelmed, but practicing the time-tested principles of stewardship will lead your ministry to financial
-					health.</p>
+				<h2 class="headline text-primary">Put Your Money on Mission</h2>
+				<p class="subheadline">We get it, ministry finances can be a handful. But with the right stewardship moves, we'll get you on track to solid financial health.</p>
 				<?php $content->cta_button(); ?>
 			</div>
 		</div>
