@@ -47,3 +47,51 @@
 		}
 	}
 }
+
+.hr-services {
+	&__background {
+		@include m.background-layers;
+
+		&--color {
+			background-color: var(--color-primary--darkest);
+		}
+	}
+	&__grid {
+		position: relative;
+		z-index: 5;
+		display: grid;
+		gap: 2rem;
+		place-content: center;
+		place-items: center stretch;
+		grid-template-columns: repeat(1, 1fr);
+
+		@include m.media-breakpoint-up(md) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include m.media-breakpoint-up(lg) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		& > * {
+			@include m.displayFlex(column, center, stretch);
+			height: 100%;
+			border: 2px solid white;
+			border-radius: 2rem;
+			padding: 2rem;
+			background-color: white;
+		}
+
+		svg {
+			margin-bottom: 2rem;
+		}
+
+		h3 {
+			margin-bottom: 2rem;
+		}
+
+		ul {
+			margin: 0;
+		}
+	}
+}

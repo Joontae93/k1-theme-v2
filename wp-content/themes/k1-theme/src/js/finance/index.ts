@@ -1,13 +1,20 @@
 import '../../styles/pages/finance.scss';
-import { testimonialsSlider } from '../vendors/swipers/testimonials-slider';
 import { newSlider } from '../vendors/swiper';
+import { Autoplay, Pagination } from 'swiper/modules';
 
-testimonialsSlider();
 function initStaffingSwiper() {
 	const staffingSwiper = document.getElementById('staffing-swiper');
 	if (!staffingSwiper) throw new Error("Staffing Swiper couldn't be found!");
 	newSlider(staffingSwiper, {
-		breakpoints: undefined,
+		modules: [Pagination, Autoplay],
+		autoplay: {
+			pauseOnMouseEnter: true,
+			delay: 3500,
+		},
+		breakpoints: {
+			767: {},
+		},
+		loop: true,
 	});
 }
 initStaffingSwiper();

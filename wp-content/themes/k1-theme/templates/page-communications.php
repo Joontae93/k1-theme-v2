@@ -46,8 +46,8 @@ $content = new Content_Sections();
 		</div>
 		<div class="row my-5 py-5 justify-content-center">
 			<div class="col-lg-11">
-				<p class='text-center'><b>Marketing and communication for ministry takes a lot of work.</b><br />Let's avoid inconsistency, confusing copy & lack of strategy with a clear
-					communication framework to showcase your ministry strengths to make an eternal impact on people's lives!</p>
+				<p class='text-center'><b>Marketing and communication for ministry takes a lot of work.</b><br />Let’s cut through the noise of social media and busy lives to showcase your
+					ministry strengths and make an eternal impact on people’s souls!</p>
 			</div>
 		</div>
 	</div>
@@ -65,7 +65,10 @@ $content = new Content_Sections();
 			</div>
 		</div>
 		<div class="row">
-			<div class="col">
+			<div class="col-1">
+				<!-- Spacer -->
+			</div>
+			<div class="col-lg-8">
 				<h3 class="h4 text-white">Get a Proven Framework for marketing & communication:</h3>
 				<?php
 				$content->bulleted_list(
@@ -80,21 +83,12 @@ $content = new Content_Sections();
 					'ul',
 					'mt-3 mb-5'
 				);
-				$content->cta_button();
 				?>
 			</div>
 		</div>
+		<div class="row justify-content-center"><?php $content->cta_button();?></div>
 	</div>
 </section>
-<aside class='authority'>
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<h2 class="headline text-center color-grey text-poppins">We are communication strategists with a framework to attract people to your ministry.</h2>
-			</div>
-		</div>
-	</div>
-</aside>
 <?php // get_template_part( 'template-parts/sliders/swiper', 'testimonials' ); ?>
 <section class="empathy">
 	<div class="container">
@@ -152,46 +146,52 @@ get_template_part(
 	</div>
 </section>
 <?php
-get_template_part(
-	'template-parts/content',
-	'three-steps',
-	array(
-		'headline'           => "Let's Partner Together To Grow Your Ministry's Capacity!",
-		'bg_image_file_name' => 'marcom-three-steps-bg',
-		'rows'               => array(
-			array(
-				'svg'         => 'marcom-assessment-step-1',
-				'headline'    => 'Take a Marketing and Communications assessment to evaluate your Marcom efforts.',
-				'subheadline' => 'This free quick assessment is the jump start to help identify where to update your marketing and comms efforts.',
-				'cta'         => array(
-					'url'  => '',
-					'text' => 'Enroll Now',
-				),
-			),
-			array(
-				'svg'         => 'icon-checklist-step-2',
-				'headline'    => 'Create a plan with Kingdom One Marcom',
-				'subheadline' => "Visit the kingdom one get started page and set up a time to meet with a ministry marketing partner and plan for your design, website, social media, and marketing for your ministry! Let's go!",
-				'cta'         => array(
-					'url'  => '',
-					'text' => 'Get Started',
-				),
-			),
-			array(
-				'svg'         => 'rocket-step-3',
-				'headline'    => 'Enjoy your new marketing framework that makes ministry marketing 100x easier.',
-				'subheadline' => 'Moving from a broken marketing system to an effective lead machine is joyful and gives you more capacity to work on the ministry you love. ♥♥♥',
-				'cta'         => array(
-					'url'  => '',
-					'text' => 'Get Started',
-				),
-			),
-		),
-	)
-);
+// get_template_part(
+// 	'template-parts/content',
+// 	'three-steps',
+// 	array(
+// 		'headline'           => "Let's Partner Together To Grow Your Ministry's Capacity!",
+// 		'bg_image_file_name' => 'marcom-three-steps-bg',
+// 		'rows'               => array(
+// 			array(
+// 				'svg'         => 'marcom-assessment-step-1',
+// 				'headline'    => 'Take a Marketing and Communications assessment to evaluate your Marcom efforts.',
+// 				'subheadline' => 'This free quick assessment is the jump start to help identify where to update your marketing and comms efforts.',
+// 				'cta'         => array(
+// 					'url'  => '',
+// 					'text' => 'Enroll Now',
+// 				),
+// 			),
+// 			array(
+// 				'svg'         => 'icon-checklist-step-2',
+// 				'headline'    => 'Create a plan with Kingdom One Marcom',
+// 				'subheadline' => "Visit the kingdom one get started page and set up a time to meet with a ministry marketing partner and plan for your design, website, social media, and marketing for your ministry! Let's go!",
+// 				'cta'         => array(
+// 					'url'  => '',
+// 					'text' => 'Get Started',
+// 				),
+// 			),
+// 			array(
+// 				'svg'         => 'rocket-step-3',
+// 				'headline'    => 'Enjoy your new marketing framework that makes ministry marketing 100x easier.',
+// 				'subheadline' => 'Moving from a broken marketing system to an effective lead machine is joyful and gives you more capacity to work on the ministry you love. ♥♥♥',
+// 				'cta'         => array(
+// 					'url'  => '',
+// 					'text' => 'Get Started',
+// 				),
+// 			),
+// 		),
+// 	)
+// );
 ?>
 <section class="recent-partnerships">
 	<div class="container">
+		<div class="row justify-content-center my-5 py-5">
+			<div class="col-lg-10 text-lg-center">
+				<h2 class='color-grey'>Recent Partnerships</h2>
+				<p>We have had the privilege of partnering with so many amazing ministries. Below is some of the recent work that we have had the opportunity to be a part of.</p>
+			</div>
+		</div>
 		<div class="western my-5">
 			<div class="row justify-content-center my-5">
 				<div class="col-lg-8 text-center">

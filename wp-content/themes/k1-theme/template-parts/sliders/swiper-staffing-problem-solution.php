@@ -15,7 +15,7 @@ $content = new Content_Sections();
 		<div class="swiper-slide">
 			<?php k1_get_svg_asset( 'staffing-icon-strategy' ); ?>
 			<span class="headline text-white h3 text-center col-lg-8">
-				From strategy to execution, Kingdom One bridges the gap, turning your financial vision into actionable steps for ministry growth.
+				Accurate and timely finance reports help avoid frustrating conversations and build trust so that you can accomplish your ministry's goals.
 			</span>
 			<?php k1_get_svg_asset( 'leaves-3' ); ?>
 		</div>

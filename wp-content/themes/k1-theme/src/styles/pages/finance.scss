@@ -4,6 +4,7 @@
 @use '../components/content-sections/three-steps';
 
 .problem-solution-swiper {
+	height: 76rem;
 	&__background {
 		@include m.background-layers($opacity: 0.5);
 		&--color {
@@ -15,9 +16,14 @@
 	}
 }
 .problem-solution {
+	margin-top: 6rem;
+	margin-bottom: -6rem;
 	&__background {
 		@include m.background-layers();
 
+		&--color {
+			background-color: var(--color-primary--dark);
+		}
 		&--lower {
 			background-color: var(--color-primary--darkest);
 		}
