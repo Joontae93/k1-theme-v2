@@ -101,6 +101,7 @@
 		}
 	}
 }
+
 .community-grid {
 	margin-top: -5rem;
 	display: grid;
@@ -244,6 +245,15 @@
 		@include m.background-layers;
 		&--color {
 			background-color: var(--color-primary);
+		}
+	}
+	.meet-with-us {
+		&__headline {
+			color: white;
+		}
+
+		&__subheadline {
+			color: white;
 		}
 	}
 }

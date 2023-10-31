@@ -22,7 +22,9 @@ $content = new Content_Sections();
 				<h2 class="headline">we understand</h2>
 				<div class="subheadline">
 					<p><b>Leading a ministry is complex and high stakes. A few wrong decisions can lead to organizational stall-out and frustration.</b></p>
-					<p>Leading a ministry is complex and high stakes. A few wrong decisions can lead to organizational stall-out and frustration.
+					<p>That’s why we offer HR, Finance, Marketing, Strategy, and Business Administration that help simplify the process for Churches, Christian ministries, schools, and
+						camps. Our approach turns stalled initiatives into momentum to achieve your ministry goals. Start today by clicking the Get Started button to develop a plan with a
+						Kingdom One team member, and watch your ministry grow.
 				</div>
 				<?php $content->cta_button(); ?>
 			</div>
@@ -87,8 +89,9 @@ $content = new Content_Sections();
 				</div>
 				<div class="col position-relative">
 					<h2 class="text-primary">You can only <br class='d-md-none' />choose one.</h2>
-					<p class="text-white">We find that ministry leaders often suffer from overwhelm, exhaustion & lack of clarity. Imagine receiving help from other ministry leaders you
-						trust; how would that shape your ministry? Our people, knowledge, and tools are ministry-tested and pastor approved. </p>
+					<p class="text-white">Imagine receiving community, tools, and knowledge from other ministry leaders you trust; how would that shape your ministry? The Kingdom One team
+						has helped dozens of ministries through challenging seasons. <a href='/stories' class="text-white text-decoration-underline">You can check out some of our
+							stories here.</a></p>
 					<?php k1_get_svg_asset( 'leaves-3' ); ?>
 				</div>
 			</div>
@@ -101,7 +104,9 @@ $content = new Content_Sections();
 			<h2 class='color-grey text-poppins mt-5 text-center'>Your Healthy Ministry Plan <span class="text-primary">Starts Here</span></h2>
 		</div>
 		<div class="ministry-plan__steps row justify-content-evenly my-5">
-			<?php get_template_part( 'template-parts/final-cta/content', 'ministry-change' ); ?>
+			<div class="col-xl-10">
+				<?php get_template_part( 'template-parts/content', 'meet-with-us' ); ?>
+			</div>
 		</div>
 </section>
 <section class="values">
@@ -109,7 +114,7 @@ $content = new Content_Sections();
 	<div class="container py-5 my-5 values__content z-2">
 		<div class="row justify-content-center">
 			<div class="values__content--header text-center position-relative my-5 col">
-				<h2 class="h1 headline text-primary">our values</h2>
+				<h2 class="h1 headline text-white">our values</h2>
 				<?php k1_get_svg_asset( 'leaves-3' ); ?>
 			</div>
 		</div>
@@ -157,11 +162,11 @@ $content = new Content_Sections();
 			<h3 class="text-white">
 				<?php echo $value['headline']; ?>
 			</h3>
-			<span class="h4 text-primary">
+			<span class="h4 text-primary text-poppins fw-normal">
 				<?php echo $value['subheadline']; ?>
 			</span>
 		</div>
-			<?php echo '</div>'; ?>
+		<?php echo '</div>'; ?>
 		<?php endforeach; ?>
 	</div>
 </section>
@@ -176,4 +181,4 @@ $content = new Content_Sections();
 		</div>
 	</div>
 </section>
-<?php get_template_part( 'template-parts/final-cta/content', 'about' ); ?>
+<?php get_template_part( 'template-parts/final-cta/content', 'daunting' ); ?>

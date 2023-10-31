@@ -1,6 +1,7 @@
 @use '../abstracts/mixins' as m;
 @use '../abstracts/variables' as v;
 @use '../components/content-sections/final-cta/about';
+@use '../components/meet-with-us';
 
 %leaves-4_base {
 	stroke: var(--color-primary);
@@ -29,9 +30,10 @@
 	}
 
 	&__image {
+		height: 40rem;
+
 		&--image {
 			aspect-ratio: 1;
-			width: 100%;
 			object-fit: cover;
 			object-position: center bottom;
 		}
@@ -135,6 +137,12 @@
 				left: 58rem;
 			}
 		}
+	}
+}
+
+.meet-with-us {
+	&__headline {
+		color: var(--color-primary--dark);
 	}
 }
 
