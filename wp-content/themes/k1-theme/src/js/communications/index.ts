@@ -1,5 +1,4 @@
 import '../../styles/pages/communications.scss';
-import { brandsSlider } from '../vendors/swipers/brands-slider';
 import { projectGallerySlider } from '../vendors/swipers/project-gallery-slider';
 
 // brandsSlider();

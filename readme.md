@@ -1,8 +1,8 @@
 # Changelog
 
-## v0.9.1
+## v0.9.2
 
-- Update Finance copy
+- fix marcom swipers
 
 ## v0.9.1
 

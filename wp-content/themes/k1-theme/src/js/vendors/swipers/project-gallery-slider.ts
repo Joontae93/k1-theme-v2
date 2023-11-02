@@ -1,6 +1,8 @@
 import '../../../styles/components/swipers/_project-gallery.scss';
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
+import 'swiper/scss';
+import 'swiper/scss/navigation';
 
 /** Call function to init slider
  *
