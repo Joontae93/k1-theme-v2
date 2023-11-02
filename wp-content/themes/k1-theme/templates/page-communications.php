@@ -112,14 +112,18 @@ get_template_part(
 	'template-parts/content',
 	'core-services',
 	array(
-		array(
-			'title' => null,
-			'items' => array( 'Graphic Design', 'Web Design', 'Web Design', 'Web Development' ),
-		),
-		array(
-			'title' => null,
-			'items' => array( 'Marketing', 'Communications', 'Copy Writing', 'Video Production' ),
-		),
+		'title' => 'marcom services',
+		'bg_image' => '',
+		'services' => array(
+			array(
+				'title' => null,
+				'items' => array( 'Graphic Design', 'Web Design', 'Web Design', 'Web Development' ),
+			),
+			array(
+				'title' => null,
+				'items' => array( 'Marketing', 'Communications', 'Copy Writing', 'Video Production' ),
+			),
+		)
 	)
 );
 ?>
