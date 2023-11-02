@@ -14,23 +14,27 @@
  * @package KingdomOne
  */
 
+$service_title = ! empty( $args['title'] ) ? $args['title'] : 'Core Services';
+$bg_image = ! empty( $args['bg_image'] ) ? $args['bg_image'] : 'core-services-bg';
+$services = $args['services'];
+
 $content = new Content_Sections();
 ?>
 <section class="core-services">
 	<div class="core-services__background">
-		<div class="core-services__background--lower" style="background-image:url('<?php k1_get_image_asset_url( 'core-services-bg', 'webp', 'bg-images' ); ?>');"></div>
+		<div class="core-services__background--lower" style="background-image:url('<?php k1_get_image_asset_url( $bg_image, 'webp', 'bg-images' ); ?>');"></div>
 		<div class="core-services__background--upper"></div>
 	</div>
 	<div class="core-services__content container">
 		<div class="row text-center">
 			<div class="col-12">
-				<h2 class="text-white text-roie">core services</h2>
+				<h2 class="text-white text-roie text-lowercase"><?php echo $service_title;?></h2>
 			</div>
 		</div>
 		<div class="row justify-content-lg-evenly my-5">
 			<?php
-			$cols = 12 / count( $args );
-			foreach ( $args as $list ) {
+			$cols = 12 / count( $services );
+			foreach ( $services as $list ) {
 				$list_has_title = ! empty( $list['title'] );
 				$col_class      = $list_has_title ? "core-services__content--column col-md-6 col-lg-{$cols} d-flex flex-column align-items-stretch" : "core-services__content--column col-md-6 col-lg-{$cols} d-flex flex-column align-items-center";
 				echo "<div class='$col_class'>";

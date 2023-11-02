@@ -4,6 +4,11 @@
 
 - Update Finance copy
 
+## v0.9.1
+
+- New Core Services Module
+- New photos
+
 ## v0.9.0
 
 - Update pages:

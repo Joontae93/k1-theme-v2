@@ -18,7 +18,7 @@ k1_enqueue_page_assets( 'finance' );
 	</div>
 </aside>
 <section class="problem-solution-swiper">
-	<?php $content->get_color_background_layers( 'problem-solution-swiper', 'zig-zag-left', array( 'staffing-swiper-bg', 'webp' ) ); ?>
+	<?php $content->get_color_background_layers( 'problem-solution-swiper', 'zig-zag-left', array( 'finance-slider', 'webp', ) ); ?>
 	<div class="container">
 		<div class="row align-items-center py-5 my-5">
 			<?php get_template_part( 'template-parts/sliders/swiper', 'staffing-problem-solution' ); ?>
@@ -81,7 +81,9 @@ get_template_part(
 	'template-parts/content',
 	'core-services',
 	array(
-		array(
+		'title' => 'finance services',
+		'bg_image' => 'finance-services-min',
+		'services' => array(array(
 			'title' => null,
 			'items' => array( 'AP & AR', 'Accounting', 'Policy, Process, and Procedure' ),
 		),
@@ -92,7 +94,7 @@ get_template_part(
 		array(
 			'title' => null,
 			'items' => array( 'Dashboards & Reporting', 'Generosity & Stewardship', 'And so much more...' ),
-		)
+		)),
 	)
 );
 ?>

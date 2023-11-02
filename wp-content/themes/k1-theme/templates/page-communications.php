@@ -89,7 +89,6 @@ $content = new Content_Sections();
 		<div class="row justify-content-center"><?php $content->cta_button();?></div>
 	</div>
 </section>
-<?php // get_template_part( 'template-parts/sliders/swiper', 'testimonials' ); ?>
 <section class="empathy">
 	<div class="container">
 		<div class="row justify-content-lg-center">
@@ -112,14 +111,18 @@ get_template_part(
 	'template-parts/content',
 	'core-services',
 	array(
-		array(
-			'title' => null,
-			'items' => array( 'Graphic Design', 'Web Design', 'Web Design', 'Web Development' ),
-		),
-		array(
-			'title' => null,
-			'items' => array( 'Marketing', 'Communications', 'Copy Writing', 'Video Production' ),
-		),
+		'title' => 'marcom services',
+		'bg_image' => 'marcom-services-min',
+		'services' => array(
+			array(
+				'title' => null,
+				'items' => array( 'Graphic Design', 'Web Design', 'Web Design', 'Web Development' ),
+			),
+			array(
+				'title' => null,
+				'items' => array( 'Marketing', 'Communications', 'Copy Writing', 'Video Production' ),
+			),
+		)
 	)
 );
 ?>
