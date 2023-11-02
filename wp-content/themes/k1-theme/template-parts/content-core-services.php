@@ -14,8 +14,8 @@
  * @package KingdomOne
  */
 
-$service_title = !empty($args['title'])?$args['title']:'Core Services';
-$bg_image = !empty($args['bg_image']) ? $args['bg_image'] : 'core-services-bg';
+$service_title = ! empty( $args['title'] ) ? $args['title'] : 'Core Services';
+$bg_image = ! empty( $args['bg_image'] ) ? $args['bg_image'] : 'core-services-bg';
 $services = $args['services'];
 
 $content = new Content_Sections();
@@ -28,7 +28,7 @@ $content = new Content_Sections();
 	<div class="core-services__content container">
 		<div class="row text-center">
 			<div class="col-12">
-				<h2 class="text-white text-roie text-lowercase"><?php $service_title;?></h2>
+				<h2 class="text-white text-roie text-lowercase"><?php echo $service_title;?></h2>
 			</div>
 		</div>
 		<div class="row justify-content-lg-evenly my-5">

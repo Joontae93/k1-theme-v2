@@ -12,5 +12,10 @@
 	&__content {
 		position: relative;
 		z-index: 5;
+		#leaves-3 {
+			position: absolute;
+			top: -14rem;
+			right: 0;
+		}
 	}
 }
