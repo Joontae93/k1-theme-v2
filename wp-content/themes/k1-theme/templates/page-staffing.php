@@ -107,8 +107,8 @@ get_template_part(
 		</div>
 		<?php
 		get_template_part(
-			'template-parts/final-cta/content',
-			'ministry-change'
+			'template-parts/content',
+			'meet-with-us'
 		);
 		?>
 	</div>

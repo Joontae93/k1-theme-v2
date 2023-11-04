@@ -6,6 +6,8 @@
  * @package KingdomOne
  */
 
+use ChoctawNation\ACF_Image;
+
 $testimonials = new WP_Query(
 	array(
 		'post_type'      => 'testimonial',
@@ -25,7 +27,9 @@ $testimonials = new WP_Query(
 					<div class="swiper-slide d-flex justify-content-center">
 						<div class="internal-slide d-flex flex-column align-items-center border border-2 border-black py-5 w-75">
 							<?php the_post_thumbnail( null, 'post-thumbnail', ); ?>
-							<p class="quote fw-bold mt-5 text-center col-md-6">"<?php echo esc_textarea( get_field( 'quote' ) ); ?>"</p>
+							<p class="quote fw-bold mt-5 text-center col-xl-10">"<?php echo esc_textarea( get_field( 'quote' ) ); ?>"</p>
+							<?php  $image = new ACF_Image(get_field('ministry_logo')); ?>
+							<?php $image->the_image('testimonials__ministry-logo object-fit-contain h-100 my-5'); ?>
 							<div class="quote__attribution">
 								<?php the_title( '<p class="subheadline quote__attribution--name fs-2">', '</p>' ); ?>
 								<p class="subheadline quote__attribution--role fs-5">

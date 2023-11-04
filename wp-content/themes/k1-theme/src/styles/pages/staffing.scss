@@ -1,7 +1,7 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins' as m;
 @use '../components/content-sections/core-services';
-@use '../components/content-sections/three-steps';
+@use '../components/meet-with-us';
 @use '../components/content-sections/final-cta/about';
 
 .btn__primary--fill {
@@ -15,17 +15,6 @@
 
 .k1-icon {
 	&#handshake {
-		.a {
-			fill: none;
-		}
-		.a,
-		.c {
-			stroke: var(--color-spark-yellow);
-			stroke-width: 2px;
-		}
-		.b {
-			clip-path: url(#handshake-a);
-		}
 		.c {
 			fill: var(--color-spark-yellow);
 		}
@@ -94,28 +83,9 @@
 }
 
 .ministry-plan {
-	.three-steps-svg {
-		&#icon-checklist-step-1 {
-			.e {
-				fill: var(--color-spark-yellow);
-			}
-			.b {
-				fill: var(--color-erc-purple);
-			}
-			.c {
-				fill: var(--color-erc-blue);
-				stroke: var(--color-erc-blue);
-			}
-		}
-		&#icon-handshake-step-2,
-		&#icon-growth-step-3 {
-			.d {
-				stroke: var(--color-erc-blue);
-				fill: var(--color-erc-blue);
-			}
-			.f {
-				fill: var(--color-spark-yellow);
-			}
+	#handshake {
+		.c {
+			fill: var(--color-erc-blue);
 		}
 	}
 

@@ -1,8 +1,8 @@
 @use '../../abstracts/mixins' as m;
 .stakes {
 	.swiper {
-		max-height: unset;
-		height: auto;
+		max-height: 80rem;
+		height: 75rem;
 
 		@include m.media-breakpoint-up(lg) {
 			height: 75rem;

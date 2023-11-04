@@ -10,7 +10,7 @@ $content = new Content_Sections();
 <?php
 $args = array(
 	'has_background_image' => false,
-	'alternate_headline'   => 'Free Resources',
+	'alternate_headline'   => 'Blog',
 	'subheadline'          => 'Jumpstart your ministry',
 	'color_direction'      => 'left',
 	'color'                => 'primary',
@@ -31,7 +31,7 @@ $content->hero_section( null, true, $args );
 <div class="container">
 	<ul class="list-unstyled my-5 mx-0 post-container">
 		<?php while ( have_posts() ) : ?>
-			<?php the_post(); ?>
+		<?php the_post(); ?>
 		<li class="post d-flex flex-column" data-permalink="<?php the_permalink(); ?>">
 			<?php
 			if ( has_post_thumbnail() ) {
@@ -57,6 +57,6 @@ $content->hero_section( null, true, $args );
 </div>
 <?php else : ?>
 <p>No posts found!</p>
-	<?php
+<?php
 endif;
 get_footer();

@@ -148,45 +148,6 @@ get_template_part(
 		</div>
 	</div>
 </section>
-<?php
-// get_template_part(
-// 	'template-parts/content',
-// 	'three-steps',
-// 	array(
-// 		'headline'           => "Let's Partner Together To Grow Your Ministry's Capacity!",
-// 		'bg_image_file_name' => 'marcom-three-steps-bg',
-// 		'rows'               => array(
-// 			array(
-// 				'svg'         => 'marcom-assessment-step-1',
-// 				'headline'    => 'Take a Marketing and Communications assessment to evaluate your Marcom efforts.',
-// 				'subheadline' => 'This free quick assessment is the jump start to help identify where to update your marketing and comms efforts.',
-// 				'cta'         => array(
-// 					'url'  => '',
-// 					'text' => 'Enroll Now',
-// 				),
-// 			),
-// 			array(
-// 				'svg'         => 'icon-checklist-step-2',
-// 				'headline'    => 'Create a plan with Kingdom One Marcom',
-// 				'subheadline' => "Visit the kingdom one get started page and set up a time to meet with a ministry marketing partner and plan for your design, website, social media, and marketing for your ministry! Let's go!",
-// 				'cta'         => array(
-// 					'url'  => '',
-// 					'text' => 'Get Started',
-// 				),
-// 			),
-// 			array(
-// 				'svg'         => 'rocket-step-3',
-// 				'headline'    => 'Enjoy your new marketing framework that makes ministry marketing 100x easier.',
-// 				'subheadline' => 'Moving from a broken marketing system to an effective lead machine is joyful and gives you more capacity to work on the ministry you love. ♥♥♥',
-// 				'cta'         => array(
-// 					'url'  => '',
-// 					'text' => 'Get Started',
-// 				),
-// 			),
-// 		),
-// 	)
-// );
-?>
 <section class="recent-partnerships">
 	<div class="container">
 		<div class="row justify-content-center my-5 py-5">
@@ -210,11 +171,8 @@ get_template_part(
 						array(
 							'id'     => 'western-before',
 							'slides' => array(
-								'<img src="' . k1_get_image_asset_url( '1-people-first', 'png', 'previous-work/southwest-church', false ) . '" />',
-								'<img src="' . k1_get_image_asset_url( '2-leveling', 'png', 'previous-work/southwest-church', false ) . '" />',
-								'<img src="' . k1_get_image_asset_url( '3-departments', 'png', 'previous-work/southwest-church', false ) . '" />',
-								'<img src="' . k1_get_image_asset_url( '4-leveling-map', 'png', 'previous-work/southwest-church', false ) . '" />',
-								'<img src="' . k1_get_image_asset_url( '5-colors', 'png', 'previous-work/southwest-church', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'previous-1', 'png', 'previous-work/western-christian', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'previous-2', 'png', 'previous-work/western-christian', false ) . '" />',
 							),
 						)
 					);
@@ -229,11 +187,7 @@ get_template_part(
 						array(
 							'id'     => 'western-after',
 							'slides' => array(
-								'<img src="' . k1_get_image_asset_url( '1-people-first', 'png', 'previous-work/southwest-church', false ) . '" />',
-								'<img src="' . k1_get_image_asset_url( '2-leveling', 'png', 'previous-work/southwest-church', false ) . '" />',
-								'<img src="' . k1_get_image_asset_url( '3-departments', 'png', 'previous-work/southwest-church', false ) . '" />',
-								'<img src="' . k1_get_image_asset_url( '4-leveling-map', 'png', 'previous-work/southwest-church', false ) . '" />',
-								'<img src="' . k1_get_image_asset_url( '5-colors', 'png', 'previous-work/southwest-church', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'after-1', 'png', 'previous-work/western-christian', false ) . '" />',
 							),
 						)
 					);
@@ -243,26 +197,11 @@ get_template_part(
 			</div>
 			<div class="row justify-content-around">
 				<?php
-					$buttons = array(
-						array(
-							'text'       => 'Wireframe',
-							'link'       => '#',
-							'html_class' => 'btn__primary--outline mt-5',
-						),
-						array(
-							'text'       => 'Storybrand',
-							'link'       => '#',
-							'html_class' => 'btn__primary--outline mt-5',
-						),
-						array(
-							'text'       => 'Final Site Design',
-							'link'       => '#',
-							'html_class' => 'btn__primary--outline mt-5',
-						),
-					);
-					foreach ( $buttons as $button ) {
-						$content->cta_button( $button );
-					}
+					$content->cta_button( array(
+						'text'       => 'Final Site Design',
+						'link'       => 'https://westernchristian.org',
+						'html_class' => 'btn__primary--outline mt-5',
+					) );
 					?>
 			</div>
 		</div>
@@ -283,16 +222,6 @@ get_template_part(
 						'<img src="' . k1_get_image_asset_url( '5-colors', 'png', 'previous-work/southwest-church', false ) . '" />',
 					),
 					'links'  => array(
-						array(
-							'text'       => 'Wireframe',
-							'link'       => '#',
-							'html_class' => 'btn__primary--outline mt-5',
-						),
-						array(
-							'text'       => 'Storybrand',
-							'link'       => '#',
-							'html_class' => 'btn__primary--outline mt-5',
-						),
 						array(
 							'text'       => 'Final Site Design',
 							'link'       => '#',
