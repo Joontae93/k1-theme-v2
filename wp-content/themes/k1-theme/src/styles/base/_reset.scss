@@ -1,24 +1,6 @@
 @use '../abstracts/mixins' as m;
 @use '../abstracts/variables' as v;
 
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
-	padding: 0;
-	margin: 0;
-}
-
-html {
-	font-size: 62.5%;
-}
-
-body {
-	box-sizing: border-box;
-	font-size: 1.6rem;
-	overflow-x: hidden;
-}
-
 :root {
 	--font-headings: #{v.$font-roie};
 	--font-body: #{v.$font-poppins};
