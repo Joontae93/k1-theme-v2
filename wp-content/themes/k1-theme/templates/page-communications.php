@@ -197,26 +197,11 @@ get_template_part(
 			</div>
 			<div class="row justify-content-around">
 				<?php
-					$buttons = array(
-						array(
-							'text'       => 'Wireframe',
-							'link'       => '#',
-							'html_class' => 'btn__primary--outline mt-5',
-						),
-						array(
-							'text'       => 'Storybrand',
-							'link'       => '#',
-							'html_class' => 'btn__primary--outline mt-5',
-						),
-						array(
-							'text'       => 'Final Site Design',
-							'link'       => '#',
-							'html_class' => 'btn__primary--outline mt-5',
-						),
-					);
-					foreach ( $buttons as $button ) {
-						$content->cta_button( $button );
-					}
+					$content->cta_button( array(
+						'text'       => 'Final Site Design',
+						'link'       => 'https://westernchristian.org',
+						'html_class' => 'btn__primary--outline mt-5',
+					) );
 					?>
 			</div>
 		</div>
@@ -237,16 +222,6 @@ get_template_part(
 						'<img src="' . k1_get_image_asset_url( '5-colors', 'png', 'previous-work/southwest-church', false ) . '" />',
 					),
 					'links'  => array(
-						array(
-							'text'       => 'Wireframe',
-							'link'       => '#',
-							'html_class' => 'btn__primary--outline mt-5',
-						),
-						array(
-							'text'       => 'Storybrand',
-							'link'       => '#',
-							'html_class' => 'btn__primary--outline mt-5',
-						),
 						array(
 							'text'       => 'Final Site Design',
 							'link'       => '#',
