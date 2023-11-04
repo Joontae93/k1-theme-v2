@@ -106,8 +106,9 @@ class Theme_Init extends K1_Theme_Cleaner {
 		register_nav_menus(
 			array(
 				'primary_menu' => __( 'Primary Menu', 'k1' ),
-				'mobile_menu'  => __( 'Mobile Menu', 'k1' ),
-				'footer_menu'  => __( 'Footer Menu', 'k1' ),
+				'footer_menu_1'  => __( 'Footer Menu 1', 'k1' ),
+				'footer_menu_2'  => __( 'Footer Menu 2', 'k1' ),
+				'footer_menu_3'  => __( 'Footer Menu 3', 'k1' ),
 			)
 		);
 	}

@@ -15,10 +15,10 @@
 	</div>
 	<div class="offcanvas__body">
 		<?php
-		if ( has_nav_menu( 'mobile_menu' ) ) {
+		if ( has_nav_menu( 'primary_menu' ) ) {
 			wp_nav_menu(
 				array(
-					'theme_location'  => 'mobile_menu',
+					'theme_location'  => 'primary_menu',
 					'menu_class'      => 'mobile-navbar__menu p-0 m-0 d-inline-flex flex-column',
 					'container'       => 'nav',
 					'container_class' => 'mobile-navbar d-flex align-items-center',

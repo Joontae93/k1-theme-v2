@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.10.0
+
+### New Menus!
+
+- New Footer menus
+- Removed "mobile" menu in favor of single "primary" menu
+- Updated `single.php` styles
+- ACF Fields updated.
+
 ## v0.9.2
 
 - Bug fixes:
