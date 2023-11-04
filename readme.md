@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.10.1
+
+- Update archive styles & logic:
+  - Blog header is now controlled by the blog page!
+
 ## v0.10.0
 
 ### New Menus!

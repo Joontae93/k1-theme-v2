@@ -6,8 +6,6 @@
 get_header();
 k1_enqueue_page_assets( 'archive' );
 $content = new Content_Sections();
-?>
-<?php
 $args = array(
 	'has_background_image' => false,
 	'alternate_headline'   => 'Blog',
@@ -16,18 +14,27 @@ $args = array(
 	'color'                => 'primary',
 	'has_cta'              => false,
 );
-if ( is_category() ) {
-	$args['alternate_headline'] = single_cat_title( '', false );
-	$args['subheadline']        = single_cat_title( 'viewing posts in the ', false ) . ' category';
-}
-if ( is_tag() ) {
-	$args['alternate_headline'] = single_tag_title( '', false );
-	$args['subheadline']        = single_tag_title( 'viewing posts about ', false );
 
+if ( is_category() ) {
+	 $args['alternate_headline'] = single_cat_title( '', false );
+	 $args['subheadline']        = single_cat_title( 'viewing posts in the ', false ) . ' category';
 }
-$content->hero_section( null, true, $args );
-?>
-<?php if ( have_posts() ) : ?>
+
+if ( is_tag() ) {
+	 $args['alternate_headline'] = single_tag_title( '', false );
+	 $args['subheadline']        = single_tag_title( 'viewing posts about ', false );
+}
+
+if (is_home()) {
+	$blog_page = get_page_by_path('blog');
+	$content->hero_section($blog_page->ID);
+} else {
+	$content->hero_section( null, true, $args );
+}
+
+if ( ! have_posts() ) : ?>
+<p>No posts found!</p>
+<?php else: ?>
 <div class="container">
 	<ul class="list-unstyled my-5 mx-0 post-container">
 		<?php while ( have_posts() ) : ?>
@@ -55,8 +62,6 @@ $content->hero_section( null, true, $args );
 		<?php endwhile; ?>
 	</ul>
 </div>
-<?php else : ?>
-<p>No posts found!</p>
 <?php
 endif;
 get_footer();

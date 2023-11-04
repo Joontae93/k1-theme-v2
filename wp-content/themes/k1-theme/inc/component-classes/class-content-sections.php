@@ -35,6 +35,9 @@ class Content_Sections extends Content_Components {
 			extract( $args );
 		} else {
 			$hero = get_field( 'hero', $post_id );
+			if (!is_array($hero)) {
+				return;
+			}
 			extract( $hero );
 		}
 		$headline = empty( $alternate_headline ) ? get_the_title( $post_id ) : $alternate_headline;
