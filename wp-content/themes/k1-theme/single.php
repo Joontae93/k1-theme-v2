@@ -9,13 +9,12 @@ $content = new Content_Sections();
 k1_enqueue_page_style( 'single', array( 'main' ), 'layouts' );
 get_header();
 
-?>
-<?php
 $content->hero_section(
 	null,
 	true,
 	array(
-		'has_background_image' => false,
+		'has_background_image' => has_post_thumbnail(),
+		'background_image' => get_the_post_thumbnail_url($post,'full'),
 		'subheadline'          => '',
 		'color_direction'      => 'left',
 		'color'                => 'primary',
@@ -25,16 +24,11 @@ $content->hero_section(
 ?>
 <div class="single__container container my-5">
 	<section class="row p-0">
-		<article class="single col-lg-8 p-3">
-			<?php if ( has_post_thumbnail() ) : ?>
-			<figure class="single__featured-image mb-4">
-				<?php the_post_thumbnail( 'large', array( 'class' => 'single__featured-image--image w-100 h-auto' ) ); ?>
-			</figure>
-			<?php endif; ?>
+		<article class="single col-lg-8">
 			<?php the_content(); ?>
 		</article>
-		<aside class="col-lg-4 meta__container">
-			<div class="meta d-flex flex-column">
+		<aside class="col-lg-4 py-0 px-5 meta__container border border-2 border-primary rounded">
+			<div class="meta mt-3 pt-4 d-flex flex-column position-sticky top-0">
 				<?php
 				$author_id      = get_the_author_meta( 'ID' );
 				$author_url     = get_author_posts_url( $author_id );

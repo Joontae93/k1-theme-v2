@@ -42,7 +42,7 @@ class Content_Components {
 
 		$options = array_merge( $default, $args );
 		extract( $options );
-		$headline            = esc_textarea( $headline );
+		$headline            = esc_html( $headline );
 		$markup              = "<{$headline_element} class='{$headline_class}'>{$headline}</{$headline_element}>";
 		$subheadline_content = acf_esc_html( $subheadline_content );
 		if ( ! empty( $subheadline_content ) ) {

@@ -24,33 +24,47 @@ $current_year = gmdate( 'Y' );
 			</div>
 			<div class="my-5 col-md-8">
 				<div class="row">
-					<div class="col-md-4">
-						<nav class="footer-nav" id="footer-nav-1">
-							<ul>
-								<li><a href="/about">About Us</a></li>
-								<li><a href="#">Join the Team</a></li>
-								<li><a href="#">Transparency in Coverage</a></li>
-							</ul>
-						</nav>
-					</div>
-					<div class="col-md-4">
-						<nav class="footer-nav" id="footer-nav-2">
-							<ul>
-								<li><a href="/services">Our Services</a></li>
-								<li><a href="/staffing">Staffing</a></li>
-								<li><a href="https://academy.kingdomone.co" target="_blank" rel="noreferrer noopener">Academy</a></li>
-							</ul>
-						</nav>
-					</div>
-					<div class="col-md-4">
-						<nav class="footer-nav" id="footer-nav-3">
-							<ul>
-								<li><a href="#">Free Resources</a></li>
-								<li><a href="#">Podcast</a></li>
-								<li><a href="#">Go Initiatives</a></li>
-							</ul>
-						</nav>
-					</div>
+					<?php 
+					if ( has_nav_menu( 'footer_menu_1' ) ) {
+						echo '<div class="col-md-4">';
+						wp_nav_menu(
+							array(
+								'theme_location'  => 'footer_menu_1',
+								'container'       => 'nav',
+								'container_id'    => 'footer-nav-1',
+								'container_class' => 'footer-nav',
+								'walker'          => new K1_Nav_Walker(),
+							)
+						);
+						echo "</div>";
+					}
+					if ( has_nav_menu( 'footer_menu_2' ) ) {
+						echo '<div class="col-md-4">';
+						wp_nav_menu(
+							array(
+								'theme_location'  => 'footer_menu_2',
+								'container'       => 'nav',
+								'container_id'    => 'footer-nav-2',
+								'container_class' => 'footer-nav',
+								'walker'          => new K1_Nav_Walker(),
+							)
+						);
+						echo "</div>";
+					}
+					if ( has_nav_menu( 'footer_menu_3' ) ) {
+						echo '<div class="col-md-4">';
+						wp_nav_menu(
+							array(
+								'theme_location'  => 'footer_menu_3',
+								'container'       => 'nav',
+								'container_id'    => 'footer-nav-3',
+								'container_class' => 'footer-nav',
+								'walker'          => new K1_Nav_Walker(),
+							)
+						);
+						echo "</div>";
+					}
+					?>
 				</div>
 			</div>
 		</div>
