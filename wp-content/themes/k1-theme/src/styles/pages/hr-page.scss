@@ -48,6 +48,11 @@
 	}
 }
 
+.problem-areas {
+	.headline {
+		letter-spacing: initial;
+	}
+}
 .hr-services {
 	&__background {
 		@include m.background-layers;

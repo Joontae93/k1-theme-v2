@@ -58,7 +58,7 @@ $content = new Content_Sections();
 		<div class="row my-5">
 			<div class="d-none d-md-block col-1"><?php k1_get_svg_asset( 'icon-growth' ); ?></div>
 			<div class="col">
-				<h2 class="headline text-lg-center text-white">Spark New Growth with Kingdom One's Marketing and Communications Frameworks!</h2>
+				<h2 class="headline text-lg-center text-white text-lowercase">Spark New Growth with Kingdom One's Marketing and Communications Frameworks!</h2>
 			</div>
 			<div class="d-none d-md-block col-1">
 				<?php k1_get_svg_asset( 'leaves-3' ); ?>
@@ -69,7 +69,7 @@ $content = new Content_Sections();
 				<!-- Spacer -->
 			</div>
 			<div class="col-lg-8">
-				<h3 class="h4 text-white">Get a Proven Framework for marketing & communication:</h3>
+				<h3 class="h4 text-white text-poppins">Get a Proven Framework for marketing & communication:</h3>
 				<?php
 				$content->bulleted_list(
 					array(

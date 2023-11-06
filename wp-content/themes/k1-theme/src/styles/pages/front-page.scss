@@ -3,7 +3,7 @@
 @use '../components/content-sections/core-services';
 @use '../components/equipment';
 @use '../components/swipers/front-page-stakes';
-@use '../components/meet-with-us';
+@use '../components/content-sections/final-cta/meet-with-us';
 
 @mixin full-size {
 	height: 100%;
@@ -236,24 +236,6 @@
 
 		&--color {
 			background-color: var(--color-primary);
-		}
-	}
-}
-
-.ministry-plan {
-	&__background {
-		@include m.background-layers;
-		&--color {
-			background-color: var(--color-primary);
-		}
-	}
-	.meet-with-us {
-		&__headline {
-			color: white;
-		}
-
-		&__subheadline {
-			color: white;
 		}
 	}
 }

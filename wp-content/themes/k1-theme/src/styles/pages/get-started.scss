@@ -2,6 +2,7 @@
 @use '../abstracts/mixins' as m;
 @use '../abstracts/variables' as v;
 @use '../components/equipment';
+@use '../components/content-sections/final-cta/meet-with-us';
 
 .hero__background--color {
 	background-color: color.adjust(v.$color-primary, $lightness: 10%) !important;
@@ -13,28 +14,5 @@
 	clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 	.subheadline {
 		color: var(--color-grey);
-	}
-}
-
-.ministry-plan {
-	&__background {
-		@include m.background-layers;
-
-		&--color {
-			background-color: var(--color-primary);
-		}
-
-		&--lower {
-			background-color: var(--color-grey);
-		}
-	}
-
-	&__steps {
-		h3 {
-			color: white;
-		}
-		span {
-			color: white;
-		}
 	}
 }
