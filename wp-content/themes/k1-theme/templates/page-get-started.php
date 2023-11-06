@@ -41,16 +41,9 @@ $content = new Content_Sections();
 	<div class="container">
 		<div class="row d-flex justify-content-center align-items-center">
 			<div class="col-8">
-				<h2 class="headline text-center">Wouldn't it be great to have a coach or support system without breaking the budget?</h2>
+				<h2 class="headline text-center">Wouldn't it be great to have the support you need without breaking the budget?</h2>
 			</div>
 		</div>
 	</div>
 </aside>
-<section class="ministry-plan">
-	<?php $content->get_color_background_layers( 'ministry-plan', 'left-top' ); ?>
-	<div class="ministry-plan__steps z-3 position-relative">
-		<div class="container">
-			<?php get_template_part( 'template-parts/final-cta/content', 'ministry-change' ); ?>
-		</div>
-	</div>
-</section>
+<?php get_template_part( 'template-parts/final-cta/content', 'meet-with-us' ); ?>

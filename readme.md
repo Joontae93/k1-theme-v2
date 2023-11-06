@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.10.2
+
+- Copy edits and some typography style updates
+
 ## v0.10.1
 
 - Update archive styles & logic:

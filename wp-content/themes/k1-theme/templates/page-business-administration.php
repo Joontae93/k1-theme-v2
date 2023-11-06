@@ -11,7 +11,7 @@ k1_enqueue_page_style( 'businessAdmin' );
 <section class="callout section-2">
 	<div class="container">
 		<div class="row justify-content-center">
-			<h2 class="headline text-primary col-lg-8 text-center">
+			<h2 class="headline text-primary col-lg-8 text-center text-lowercase">
 				Why can't there be a business admin framework for ministries that is simple and effective?
 			</h2>
 		</div>
@@ -31,7 +31,7 @@ k1_enqueue_page_style( 'businessAdmin' );
 					<div class="d-none d-lg-block">
 						<?php k1_the_leaf(3,'var(--color-primary)','right');?>
 					</div>
-					<p class="h2 text-white text-lg-center">Business Admins have large responsibilities of keeping the ministry moving forward. </p>
+					<p class="h2 text-white text-lg-center text-lowercase">Business Admins have large responsibilities of keeping the ministry moving forward</p>
 				</div>
 			</div>
 		</div>

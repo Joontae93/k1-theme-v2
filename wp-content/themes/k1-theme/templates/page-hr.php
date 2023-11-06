@@ -53,7 +53,7 @@ $content = new Content_Sections();
 		</div>
 		<div class="row justify-content-center text-center my-5">
 			<div class="col-lg-8 d-flex flex-column justify-content-center align-items-center py-5">
-				<h2 class="headline text-poppins color-grey mb-5">it's time to start a journey to revamping your hr efforts</h2>
+				<h2 class="headline text-roie color-grey mb-5">it's time to start a journey to revamping your staff health</h2>
 				<?php $content->cta_button(); ?>
 			</div>
 		</div>
@@ -107,13 +107,12 @@ $content = new Content_Sections();
 		?>
 		</div>
 	</div>
-
 </section>
 <aside class='tools-tips-training'>
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-8 text-lg-center">
-				<h2 class='text-poppins color-grey'>Tools, Tips, & Training <br /> <span class="text-primary">That Delivers</span></h2>
+				<h2 class='text-poppins color-grey'>Community, Tools, & Knowledge <br /> <span class="text-primary">You Can Trust</span></h2>
 				<p class="mb-5">We are here to come alongside your staff, leadership, and volunteers to make sure you are HR-healthy. Not only can you get strategic work with our HR team,
 					you also have access to Kingdom One Academy for on-demand ministry training. Spark Staffing is a ministry job board that focuses on calling, culture, and
 					connection so you get the best candidates with a stellar experience. Best of all, we are based on a subscription model, meaning no contracts and no

@@ -29,7 +29,7 @@ $content = new Content_Sections();
 				<?php
 				$icons = array(
 					array(
-						'title' => 'H.R.',
+						'title' => 'HR',
 						'file'  => 'hr',
 						'link'  => '/hr',
 					),

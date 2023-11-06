@@ -1,0 +1,20 @@
+@use '../../../abstracts/mixins' as m;
+@use '../../meet-with-us';
+
+.ministry-plan {
+	&__background {
+		@include m.background-layers;
+		&--color {
+			background-color: var(--color-primary);
+		}
+	}
+	.meet-with-us {
+		&__headline {
+			color: white;
+		}
+
+		&__subheadline {
+			color: white;
+		}
+	}
+}
