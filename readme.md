@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.10.3
+
+- Updated Footer social links to be actual footer social links
+
 ## v0.10.2
 
 - Copy edits and some typography style updates

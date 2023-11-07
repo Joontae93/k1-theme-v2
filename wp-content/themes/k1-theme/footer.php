@@ -17,9 +17,16 @@ $current_year = gmdate( 'Y' );
 					</figure>
 				</a>
 				<div class="socials row justify-content-around align-self-stretch">
-					<i class='fa-brands fa-facebook'></i>
-					<i class='fa-brands fa-instagram'></i>
-					<i class='fa-brands fa-linkedin'></i>
+					<a href='https://facebook.com/kingdomoneco' class='text-white text-center col col-md-4' target='_blank' rel='noopener noreferrer' aria-label="Kingdom One Facebook">
+						<i class='fa-brands fa-facebook'></i>
+					</a>
+					<a href='https://instagram.com/kingdomoneco' class='text-white text-center col col-md-4' target='_blank' rel='noopener noreferrer' aria-label="Kingdom One Instagram">
+						<i class='fa-brands fa-instagram'></i>
+					</a>
+					<a href='https://www.linkedin.com/company/38093746' class="text-white text-center col col-md-4" target='_blank' rel='noopener noreferrer'
+					   aria-label="Kingdom One Facebook">
+						<i class='fa-brands fa-linkedin'></i>
+					</a>
 				</div>
 			</div>
 			<div class="my-5 col-md-8">
