@@ -1,6 +1,6 @@
 import '../../../styles/components/swipers/_project-gallery.scss';
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Thumbs } from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 
@@ -15,6 +15,7 @@ export const projectGallerySlider = (id: string) => {
 		sliderContainer?.querySelector('.big-display');
 	const thumbDisplay: HTMLElement | null | undefined =
 		sliderContainer?.querySelector('.thumb-display');
+	console.log(id);
 	if (!sliderContainer || !bigDisplay || !thumbDisplay) {
 		return null;
 	} else {
@@ -24,7 +25,6 @@ export const projectGallerySlider = (id: string) => {
 			prevEl: `.swiper-${id}-button-prev`,
 		};
 		const sliderRowTwo: Swiper = new Swiper(thumbDisplay, {
-			modules: [Navigation],
 			navigation: navigationSelectors,
 			spaceBetween: slideSpacing,
 			slidesPerView: 4,
@@ -32,7 +32,7 @@ export const projectGallerySlider = (id: string) => {
 			watchSlidesProgress: true,
 		});
 		const sliderRowOne: Swiper = new Swiper(bigDisplay, {
-			modules: [Navigation],
+			modules: [Navigation, Thumbs],
 			spaceBetween: slideSpacing,
 			navigation: navigationSelectors,
 			thumbs: {

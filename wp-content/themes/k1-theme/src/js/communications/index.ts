@@ -6,5 +6,6 @@ import { projectGallerySlider } from '../vendors/swipers/project-gallery-slider'
 (function initProjectGalleries() {
 	projectGallerySlider('western-before');
 	projectGallerySlider('western-after');
-	projectGallerySlider('living-hope-church');
+	projectGallerySlider('beachpoint-before');
+	projectGallerySlider('beachpoint-after');
 })();
