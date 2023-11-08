@@ -1,6 +1,0 @@
-[submodule "wp-content/themes/k1-block-theme"]
-	path = wp-content/themes/k1-block-theme
-	url = https://github.com/kingdom-one/k1-block-theme.git
-[submodule "wp-content/plugins/k1-blocks"]
-	path = wp-content/plugins/k1-blocks
-	url = https://github.com/kingdom-one/k1-blocks.git
