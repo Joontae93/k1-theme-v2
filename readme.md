@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.10.4
+
+- Updated Project Gallery Swipers (Content)
+  - Added `{Thumbs}` module into projectGallerySwiper ts file so the thumbnails move properly.
+
 ## v0.10.3
 
 - Updated Footer social links to be actual footer social links
