@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.10.5
+
+- Minor tweaks ([#128](https://github.com/kingdom-one/k1-theme-v2/issues/128))
+
 ## v0.10.4
 
 - Updated Project Gallery Swipers (Content)
