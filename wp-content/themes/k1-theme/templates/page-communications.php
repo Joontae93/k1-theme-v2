@@ -206,9 +206,10 @@ get_template_part(
 				<?php
 				$content->cta_button(
 					array(
-						'text'       => 'Final Site Design',
-						'link'       => 'https://westernchristian.org',
-						'html_class' => 'btn__primary--outline mt-5',
+						'text'        => 'Final Site Design',
+						'link'        => 'https://westernchristian.org',
+						'is_external' => true,
+						'html_class'  => 'btn__primary--outline mt-5',
 					)
 				);
 				?>
@@ -266,9 +267,10 @@ get_template_part(
 			<?php
 			$content->cta_button(
 				array(
-					'text'       => 'Final Site Design',
-					'link'       => '#',
-					'html_class' => 'btn__primary--outline mt-5',
+					'text'        => 'Final Site Design',
+					'link'        => 'https://www.beachpoint.com/',
+					'is_external' => true,
+					'html_class'  => 'btn__primary--outline mt-5',
 				),
 			);
 			?>
