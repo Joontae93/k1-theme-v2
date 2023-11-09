@@ -18,7 +18,7 @@ if ( ! function_exists( 'k1_generate_the_slides' ) ) {
 	 */
 	function k1_generate_the_slides( array $slides ) {
 		foreach ( $slides as $slide ) {
-			echo "<div class='swiper-slide'>{$slide}</div>";
+			echo "<div class='swiper-slide' style='cursor:grab'>{$slide}</div>";
 		}
 	}
 }

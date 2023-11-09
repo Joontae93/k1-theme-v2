@@ -86,7 +86,7 @@ $content = new Content_Sections();
 				?>
 			</div>
 		</div>
-		<div class="row justify-content-center"><?php $content->cta_button();?></div>
+		<div class="row justify-content-center"><?php $content->cta_button(); ?></div>
 	</div>
 </section>
 <section class="empathy">
@@ -111,7 +111,7 @@ get_template_part(
 	'template-parts/content',
 	'core-services',
 	array(
-		'title' => 'marcom services',
+		'title'    => 'marcom services',
 		'bg_image' => 'marcom-services-min',
 		'services' => array(
 			array(
@@ -122,7 +122,7 @@ get_template_part(
 				'title' => null,
 				'items' => array( 'Marketing', 'Communications', 'Copy Writing', 'Video Production' ),
 			),
-		)
+		),
 	)
 );
 ?>
@@ -171,8 +171,10 @@ get_template_part(
 						array(
 							'id'     => 'western-before',
 							'slides' => array(
-								'<img src="' . k1_get_image_asset_url( 'previous-1', 'png', 'previous-work/western-christian', false ) . '" />',
-								'<img src="' . k1_get_image_asset_url( 'previous-2', 'png', 'previous-work/western-christian', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'Before-1-min', 'webp', 'previous-work/western-christian', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'Before-2-min', 'webp', 'previous-work/western-christian', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'Before-3-min', 'webp', 'previous-work/western-christian', false ) . '" />',
+
 							),
 						)
 					);
@@ -187,7 +189,12 @@ get_template_part(
 						array(
 							'id'     => 'western-after',
 							'slides' => array(
-								'<img src="' . k1_get_image_asset_url( 'after-1', 'png', 'previous-work/western-christian', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'After-1-min', 'webp', 'previous-work/western-christian', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'After-2-min', 'webp', 'previous-work/western-christian', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'After-3-min', 'webp', 'previous-work/western-christian', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'After-4-min', 'webp', 'previous-work/western-christian', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'After-5-min', 'webp', 'previous-work/western-christian', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'After-6-min', 'webp', 'previous-work/western-christian', false ) . '" />',
 							),
 						)
 					);
@@ -197,38 +204,72 @@ get_template_part(
 			</div>
 			<div class="row justify-content-around">
 				<?php
-					$content->cta_button( array(
+				$content->cta_button(
+					array(
 						'text'       => 'Final Site Design',
 						'link'       => 'https://westernchristian.org',
 						'html_class' => 'btn__primary--outline mt-5',
-					) );
-					?>
+					)
+				);
+				?>
 			</div>
 		</div>
-
-		<div class="row my-5 py-5">
-			<?php
-			get_template_part(
-				'template-parts/sliders/swiper',
-				'project-gallery',
-				array(
-					'id'     => 'living-hope-church',
-					'logo'   => k1_get_image_asset_url( 'logo-living-hope', 'png', 'previous-work/living-hope', false ),
-					'slides' => array(
-						'<img src="' . k1_get_image_asset_url( '1-people-first', 'png', 'previous-work/southwest-church', false ) . '" />',
-						'<img src="' . k1_get_image_asset_url( '2-leveling', 'png', 'previous-work/southwest-church', false ) . '" />',
-						'<img src="' . k1_get_image_asset_url( '3-departments', 'png', 'previous-work/southwest-church', false ) . '" />',
-						'<img src="' . k1_get_image_asset_url( '4-leveling-map', 'png', 'previous-work/southwest-church', false ) . '" />',
-						'<img src="' . k1_get_image_asset_url( '5-colors', 'png', 'previous-work/southwest-church', false ) . '" />',
-					),
-					'links'  => array(
+		<div class="beachpoint my-5">
+			<div class="row justify-content-center my-5">
+				<div class="col-lg-8 text-center">
+					<img class='western-logo w-75' src="<?php k1_get_image_asset_url( 'beachpoint-logo', 'png', 'previous-work/beachpoint', ); ?>" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 mb-5 mb-lg-0">
+					<?php
+					get_template_part(
+						'template-parts/sliders/swiper',
+						'project-gallery',
 						array(
-							'text'       => 'Final Site Design',
-							'link'       => '#',
-							'html_class' => 'btn__primary--outline mt-5',
-						),
-					),
-				)
+							'id'     => 'beachpoint-before',
+							'slides' => array(
+								'<img src="' . k1_get_image_asset_url( 'Before-1-min', 'webp', 'previous-work/beachpoint', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'Before-2-min', 'webp', 'previous-work/beachpoint', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'Before-3-min', 'webp', 'previous-work/beachpoint', false ) . '" />',
+							),
+						)
+					);
+					?>
+					<h3 class="text-center">Before</h3>
+				</div>
+				<div class="col-lg-6">
+					<?php
+					get_template_part(
+						'template-parts/sliders/swiper',
+						'project-gallery',
+						array(
+							'id'     => 'beachpoint-after',
+							'slides' => array(
+								'<img src="' . k1_get_image_asset_url( 'After-1-min', 'webp', 'previous-work/beachpoint', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'After-2-min', 'webp', 'previous-work/beachpoint', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'After-3-min', 'webp', 'previous-work/beachpoint', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'After-4-min', 'webp', 'previous-work/beachpoint', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'After-5-min', 'webp', 'previous-work/beachpoint', false ) . '" />',
+								'<img src="' . k1_get_image_asset_url( 'After-6-min', 'webp', 'previous-work/beachpoint', false ) . '" />',
+
+							),
+						)
+					);
+					?>
+					<h3 class="text-center">After</h3>
+				</div>
+			</div>
+
+		</div>
+		<div class="row justify-content-around">
+			<?php
+			$content->cta_button(
+				array(
+					'text'       => 'Final Site Design',
+					'link'       => '#',
+					'html_class' => 'btn__primary--outline mt-5',
+				),
 			);
 			?>
 		</div>
