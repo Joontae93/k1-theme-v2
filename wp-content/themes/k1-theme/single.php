@@ -14,7 +14,7 @@ $content->hero_section(
 	true,
 	array(
 		'has_background_image' => has_post_thumbnail(),
-		'background_image' => get_the_post_thumbnail_url($post,'full'),
+		'background_image'     => get_the_post_thumbnail_url( $post, 'full' ),
 		'subheadline'          => '',
 		'color_direction'      => 'left',
 		'color'                => 'primary',
@@ -43,12 +43,15 @@ $content->hero_section(
 				<?php if ( $modified_date && $published_date !== $modified_date ) : ?>
 				<span class="meta__date--modified fw-bold">Last Updated: <?php echo esc_textarea( $modified_date ); ?></span>
 				<?php endif; ?>
+				<?php
+				$categories        = get_the_category();
+				$categories_length = count( $categories );
+				?>
+				<?php if ( ! empty( $categories ) ) : ?>
 				<div class="meta__more">
 					<div class="meta__more--category my-5">
 						<span class="h5 color-grey fw-bold">Read More in:</span>
 						<?php
-						$categories        = get_the_category();
-						$categories_length = count( $categories );
 						if ( 1 < $categories_length ) {
 							echo '<ul>';
 							foreach ( $categories as $post_cat ) {
@@ -75,6 +78,8 @@ $content->hero_section(
 					</div>
 					<?php endif; ?>
 				</div>
+				<?php endif; ?>
+
 			</div>
 		</aside>
 	</section>
