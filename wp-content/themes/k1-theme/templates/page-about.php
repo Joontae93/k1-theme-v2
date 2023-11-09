@@ -90,7 +90,7 @@ $content = new Content_Sections();
 				<div class="col position-relative">
 					<h2 class="text-primary">You can only <br class='d-md-none' />choose one.</h2>
 					<p class="text-white">Imagine receiving community, tools, and knowledge from other ministry leaders you trust; how would that shape your ministry? The Kingdom One team
-						has helped dozens of ministries through challenging seasons. <a href='/stories' class="text-white text-decoration-underline">You can check out some of our
+						has helped dozens of ministries through challenging seasons. <a href='/share-your-story' class="text-white text-decoration-underline">You can check out some of our
 							stories here.</a></p>
 					<?php k1_get_svg_asset( 'leaves-3' ); ?>
 				</div>

@@ -24,7 +24,7 @@ class Theme_Init extends K1_Theme_Cleaner {
 		require_once dirname( __DIR__, 1 ) . '/component-classes/class-content-sections.php';
 		require_once __DIR__ . '/class-k1-nav-walker.php';
 		require_once __DIR__ . '/theme-functions.php';
-		require_once get_theme_file_path('/inc/class-acf-image.php');
+		require_once get_theme_file_path( '/inc/class-acf-image.php' );
 	}
 
 	/**
@@ -44,6 +44,14 @@ class Theme_Init extends K1_Theme_Cleaner {
 			array(),
 			$lite_yt['version'],
 			array( 'strategy' => 'defer' ),
+		);
+
+		$fonts = require_once get_template_directory() . '/dist/vendors/fonts.asset.php';
+		wp_enqueue_style(
+			'fonts',
+			get_template_directory_uri() . '/dist/vendors/fonts.css',
+			array(),
+			$fonts['version'],
 		);
 
 		$bootstrap = require_once get_template_directory() . '/dist/vendors/bootstrap.asset.php';
@@ -70,16 +78,14 @@ class Theme_Init extends K1_Theme_Cleaner {
 			array( 'strategy' => 'async' ),
 		);
 		$main_asset = require_once get_template_directory() . '/dist/global.asset.php';
-		$location   = get_template_directory_uri() . '/dist/global.js';
-		$k1_script  = wp_enqueue_script(
+		wp_enqueue_script(
 			'kingdom-one-global',
 			get_template_directory_uri() . '/dist/global.js',
 			array( 'bootstrap', 'lite-youtube' ),
 			$main_asset['version'],
 			array( 'strategy' => 'defer' ),
 		);
-
-		$k1_style = wp_enqueue_style(
+		wp_enqueue_style(
 			'kingdom-one-global',
 			get_template_directory_uri() . '/dist/global.css',
 			array( 'bootstrap', 'lite-youtube' ),
@@ -105,10 +111,10 @@ class Theme_Init extends K1_Theme_Cleaner {
 	public function register_k1_menus() {
 		register_nav_menus(
 			array(
-				'primary_menu' => __( 'Primary Menu', 'k1' ),
-				'footer_menu_1'  => __( 'Footer Menu 1', 'k1' ),
-				'footer_menu_2'  => __( 'Footer Menu 2', 'k1' ),
-				'footer_menu_3'  => __( 'Footer Menu 3', 'k1' ),
+				'primary_menu'  => __( 'Primary Menu', 'k1' ),
+				'footer_menu_1' => __( 'Footer Menu 1', 'k1' ),
+				'footer_menu_2' => __( 'Footer Menu 2', 'k1' ),
+				'footer_menu_3' => __( 'Footer Menu 3', 'k1' ),
 			)
 		);
 	}
