@@ -33,12 +33,12 @@ $content->hero_section(
 				$author_id      = get_the_author_meta( 'ID' );
 				$author_url     = get_author_posts_url( $author_id );
 				$author_name    = get_the_author_meta( 'display_name' );
-				$author         = "<a href={$author_url}>{$author_name}</a>";
+				$author         = "<a href='{$author_url}'>{$author_name}</a>";
 				$published_date = get_the_date( 'M d, Y' );
 				$modified_date  = get_the_modified_date( 'M d, Y' );
 				?>
 				<span class="h4 text-capitalize text-primary--dark">About this post</span>
-				<span class="meta__author fw-bold">Written By: <?php echo ( empty( $author_name ) ) ? 'Kingdom One' : esc_html( $author ); ?></span>
+				<span class="meta__author fw-bold">Written By: <?php echo ( empty( $author_name ) ) ? 'Kingdom One' : acf_esc_html( $author ); ?></span>
 				<span class="meta__date fw-bold">Published On: <?php echo esc_textarea( $published_date ); ?></span>
 				<?php if ( $modified_date && $published_date !== $modified_date ) : ?>
 				<span class="meta__date--modified fw-bold">Last Updated: <?php echo esc_textarea( $modified_date ); ?></span>

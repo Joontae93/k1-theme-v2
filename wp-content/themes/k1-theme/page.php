@@ -52,7 +52,9 @@ get_header();
 			get_template_part( 'templates/page', 'business-administration' );
 			break;
 		default:
+			echo "<div class='container my-5 py-5'>";
 			the_content();
+			echo '</div>';
 	}
 	?>
 </main>
