@@ -27,6 +27,9 @@ get_header();
 		case ( 'pricing' ):
 			get_template_part( 'templates/page', 'pricing' );
 			break;
+		case ( 'give' ):
+			get_template_part( 'templates/page', 'give' );
+			break;
 		case ( 'giving' ):
 			get_template_part( 'templates/page', 'giving' );
 			break;
