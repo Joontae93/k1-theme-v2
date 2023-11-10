@@ -1,10 +1,13 @@
 # Changelog
 
+## v1.1.0
+
+- BUILT: /give page
+
 ## v1.0.2
 
 - FIXED: /share-your-story leaf svg was causing overflow issues on mobile
 - FIXED: Testimonials slider images have been standardized and set to not overflow their container
-- BUILT: /give page
 
 ## v1.0.1
 
