@@ -11,7 +11,8 @@ require_once __DIR__ . '/class-k1-theme-cleaner.php';
  * Theme Init
  */
 class Theme_Init extends K1_Theme_Cleaner {
-	function __construct() {
+	/** Loads files & hooks callbacks into WP Hooks */
+	public function __construct() {
 		$this->load_files();
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_k1_scripts' ) );
 		add_action( 'after_setup_theme', array( $this, 'k1_theme_supports' ) );
