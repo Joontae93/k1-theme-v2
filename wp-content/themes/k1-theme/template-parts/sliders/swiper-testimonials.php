@@ -1,9 +1,10 @@
 <?php
 /**
- * Brands Swiper
+ * Testimonals Swiper
  * powered by Swiper.js
  *
  * @package KingdomOne
+ * @since 1.0
  */
 
 use ChoctawNation\ACF_Image;
@@ -26,10 +27,10 @@ $testimonials = new WP_Query(
 					<?php $testimonials->the_post(); ?>
 					<div class="swiper-slide d-flex justify-content-center">
 						<div class="internal-slide d-flex flex-column align-items-center border border-2 border-black py-5 w-75">
-							<?php the_post_thumbnail( null, 'post-thumbnail', ); ?>
+							<?php the_post_thumbnail( 'full', array( 'class' => 'testimonials__headshot' ) ); ?>
 							<p class="quote fw-bold mt-5 text-center col-xl-10">"<?php echo esc_textarea( get_field( 'quote' ) ); ?>"</p>
-							<?php  $image = new ACF_Image(get_field('ministry_logo')); ?>
-							<?php $image->the_image('testimonials__ministry-logo object-fit-contain h-100 my-5'); ?>
+							<?php $image = new ACF_Image( get_field( 'ministry_logo' ) ); ?>
+							<?php $image->the_image( 'testimonials__ministry-logo object-fit-contain h-100 my-5' ); ?>
 							<div class="quote__attribution">
 								<?php the_title( '<p class="subheadline quote__attribution--name fs-2">', '</p>' ); ?>
 								<p class="subheadline quote__attribution--role fs-5">

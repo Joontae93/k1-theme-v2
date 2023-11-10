@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.2
+
+- FIXED: /share-your-story leaf svg was causing overflow issues on mobile
+- FIXED: Testimonials slider images have been standardized and set to not overflow their container
+
 ## v1.0.1
 
 - FIXED: Author names were loading html incorrectly
