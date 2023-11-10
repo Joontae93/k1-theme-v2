@@ -1,0 +1,65 @@
+@use '../abstracts/mixins' as m;
+
+%container_styles {
+	position: relative;
+	@include m.displayFlex(column, $cross: stretch);
+}
+
+%header_text {
+	color: var(--color-grey);
+	text-transform: lowercase;
+	font-size: 2.4rem;
+}
+
+.project {
+	@extend %container_styles;
+	background-color: white;
+
+	&--primary {
+		@extend %container_styles;
+		background-color: var(--color-spark-yellow);
+	}
+
+	&__logo {
+		object-fit: contain;
+	}
+
+	&__progress-bar {
+		position: relative;
+		height: 3rem;
+
+		&--bg {
+			z-index: 1;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(white, 0.5);
+		}
+		&--progress {
+			z-index: 2;
+			position: absolute;
+			height: 100%;
+			width: 12%;
+			background-color: var(--color-primary);
+		}
+	}
+
+	&__header {
+		@include m.displayFlex(row, space-between);
+		padding: 0 3rem;
+		margin: 2rem 0;
+	}
+
+	&__headline {
+		@extend %header_text;
+		font-family: var(--font-headings);
+	}
+
+	&__status {
+		@extend %header_text;
+	}
+
+	&__cta-button {
+		margin: 2rem;
+	}
+}

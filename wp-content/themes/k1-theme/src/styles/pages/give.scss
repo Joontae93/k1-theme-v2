@@ -1,5 +1,6 @@
 @use '../abstracts/mixins' as m;
 @use '../components/content-sections/ways-to-give';
+@use '../components/give-projects';
 
 body {
 	// background-color: var(--color-primary--darkest);

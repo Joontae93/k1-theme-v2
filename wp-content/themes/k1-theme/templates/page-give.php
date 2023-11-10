@@ -109,6 +109,17 @@ $content = new Content_Sections();
 
 				If you'd like to speak with someone more about giving to the ministry of Kingdom One, contact us at <a href='mailto:giving@kingdomone.co'>giving@kingdomone.co</a>.</p>
 		</div>
+		<?php
+		get_template_part(
+			'template-parts/give/content',
+			'project-progress',
+			array(
+				'is_primary'    => true,
+				'page_id'       => get_the_ID(),
+				'project_field' => 'giving_tuesday',
+			)
+		);
+		?>
 	</div>
 </section>
 <section class="give-butter">
