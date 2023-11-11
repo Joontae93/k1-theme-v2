@@ -2,11 +2,6 @@
 @use '../components/content-sections/ways-to-give';
 @use '../components/give-projects';
 
-body {
-	// background-color: var(--color-primary--darkest);
-	color: white;
-}
-
 #section-2 {
 	margin-top: -2.3rem;
 	background-color: var(--color-primary--darkest);
@@ -80,6 +75,16 @@ body {
 
 .sponsor-a-project {
 	background-color: var(--color-primary--darkest);
+
+	&__subheadline {
+		a {
+			color: var(--color-spark-yellow);
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
+	}
 }
 
 .give-butter {

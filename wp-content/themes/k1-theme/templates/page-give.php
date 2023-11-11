@@ -103,8 +103,9 @@ $content = new Content_Sections();
 <section class="sponsor-a-project">
 	<div class="container">
 		<div class="row justify-content-center">
-			<h2 class="col-lg-6 sponsor-a-project__headline">sponsor a project</h2>
-			<p class="text-lg-center text-white">When you sponsor a project, you fast forward Kingdom One’s ability to empower ministries to engage with a network of people, gain access to
+			<h2 class="col-lg-6 sponsor-a-project__headline text-center color-spark-yellow">sponsor a project</h2>
+			<p class="sponsor-a-project__subheadline text-lg-center text-white">When you sponsor a project, you fast forward Kingdom One’s ability to empower ministries to engage with a
+				network of people, gain access to
 				tools, and be resourced to learn more.<br />
 
 				If you'd like to speak with someone more about giving to the ministry of Kingdom One, contact us at <a href='mailto:giving@kingdomone.co'>giving@kingdomone.co</a>.</p>
@@ -115,8 +116,35 @@ $content = new Content_Sections();
 			'project-progress',
 			array(
 				'is_primary'    => true,
-				'page_id'       => get_the_ID(),
+				'page_id'       => $post->ID,
 				'project_field' => 'giving_tuesday',
+			)
+		);
+		get_template_part(
+			'template-parts/give/content',
+			'project-progress',
+			array(
+				'is_primary'    => false,
+				'page_id'       => $post->ID,
+				'project_field' => 'above_reproach',
+			)
+		);
+		get_template_part(
+			'template-parts/give/content',
+			'project-progress',
+			array(
+				'is_primary'    => false,
+				'page_id'       => $post->ID,
+				'project_field' => 'leadership_development',
+			)
+		);
+		get_template_part(
+			'template-parts/give/content',
+			'project-progress',
+			array(
+				'is_primary'    => false,
+				'page_id'       => $post->ID,
+				'project_field' => 'leaders_retreat',
 			)
 		);
 		?>
@@ -137,7 +165,7 @@ $content = new Content_Sections();
 				<p class="text-white">Would you prayerfully consider a gift to Kingdom One that would resource ministries to become more courageous, healthy, and effective?
 				</p>
 				<p class="text-white">If you’d like to speak with someone more about giving to the ministry of Kingdom One, contact us at <a
-					   href='mailto:giving@kingdomone.co'>giving@kingdomone.co</a></p>
+						href='mailto:giving@kingdomone.co'>giving@kingdomone.co</a></p>
 			</div>
 			<div class="col-lg-6">
 				<iframe src="https://givebutter.com/embed/c/kingdom-one" class='give-butter__iframe' frameborder="0" scrolling="no" seamless=""></iframe>

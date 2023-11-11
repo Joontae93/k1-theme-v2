@@ -1,3 +1,4 @@
+@use '../abstracts/variables' as v;
 @use '../abstracts/mixins' as m;
 
 %container_styles {
@@ -11,6 +12,11 @@
 	font-size: 2.4rem;
 }
 
+%progress {
+	height: 3.2rem;
+	font-size: 1.6rem;
+	--transparency: 0.35;
+}
 .project {
 	@extend %container_styles;
 	background-color: white;
@@ -18,36 +24,24 @@
 	&--primary {
 		@extend %container_styles;
 		background-color: var(--color-spark-yellow);
+
+		.progress {
+			@extend %progress;
+			background-color: rgba(white, var(--transparency));
+		}
+	}
+
+	.progress {
+		@extend %progress;
+		background-color: rgba(v.$color-spark-yellow, var(--transparency));
+
+		.progress-bar {
+			background-color: var(--color-spark-yellow);
+		}
 	}
 
 	&__logo {
 		object-fit: contain;
-	}
-
-	&__progress-bar {
-		position: relative;
-		height: 3rem;
-
-		&--bg {
-			z-index: 1;
-			position: absolute;
-			height: 100%;
-			width: 100%;
-			background-color: rgba(white, 0.5);
-		}
-		&--progress {
-			z-index: 2;
-			position: absolute;
-			height: 100%;
-			width: 12%;
-			background-color: var(--color-primary);
-		}
-	}
-
-	&__header {
-		@include m.displayFlex(row, space-between);
-		padding: 0 3rem;
-		margin: 2rem 0;
 	}
 
 	&__headline {
@@ -57,6 +51,7 @@
 
 	&__status {
 		@extend %header_text;
+		font-weight: 700;
 	}
 
 	&__cta-button {
