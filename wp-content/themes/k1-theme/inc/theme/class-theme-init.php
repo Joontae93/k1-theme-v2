@@ -25,7 +25,8 @@ class Theme_Init extends K1_Theme_Cleaner {
 		require_once dirname( __DIR__, 1 ) . '/component-classes/class-content-sections.php';
 		require_once __DIR__ . '/class-k1-nav-walker.php';
 		require_once __DIR__ . '/theme-functions.php';
-		require_once get_theme_file_path( '/inc/class-acf-image.php' );
+		require_once get_theme_file_path( '/inc/acf/class-acf-image.php' );
+		require_once get_theme_file_path( '/inc/acf/class-project-progress.php' );
 	}
 
 	/**

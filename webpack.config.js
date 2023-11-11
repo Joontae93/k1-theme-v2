@@ -38,6 +38,7 @@ const styleSheets = [
 	'legal-update',
 	'staffing',
 	'business-admin',
+	'give',
 ]; // for scss only
 
 module.exports = {

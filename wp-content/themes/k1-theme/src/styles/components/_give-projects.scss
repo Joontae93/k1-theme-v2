@@ -1,0 +1,60 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+%container_styles {
+	position: relative;
+	@include m.displayFlex(column, $cross: stretch);
+}
+
+%header_text {
+	color: var(--color-grey);
+	text-transform: lowercase;
+	font-size: 2.4rem;
+}
+
+%progress {
+	height: 3.2rem;
+	font-size: 1.6rem;
+	--transparency: 0.35;
+}
+.project {
+	@extend %container_styles;
+	background-color: white;
+
+	&--primary {
+		@extend %container_styles;
+		background-color: var(--color-spark-yellow);
+
+		.progress {
+			@extend %progress;
+			background-color: rgba(white, var(--transparency));
+		}
+	}
+
+	.progress {
+		@extend %progress;
+		background-color: rgba(v.$color-spark-yellow, var(--transparency));
+
+		.progress-bar {
+			background-color: var(--color-spark-yellow);
+		}
+	}
+
+	&__logo {
+		object-fit: contain;
+	}
+
+	&__headline {
+		@extend %header_text;
+		font-family: var(--font-headings);
+	}
+
+	&__status {
+		@extend %header_text;
+		font-weight: 700;
+	}
+
+	&__cta-button {
+		margin: 2rem;
+	}
+}
