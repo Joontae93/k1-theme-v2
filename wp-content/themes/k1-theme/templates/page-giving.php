@@ -101,7 +101,8 @@ $content = new Content_Sections();
 			<span class="subheadline text-center">Our founder and CVO explains why now is a pivotal time to give to the health of the American Church.</span>
 		</div>
 		<div class="row justify-content-center">
-			<lite-youtube videoid='IuNv15iBLBc' playlabel='Giving to Kingdom One'></lite-youtube>
+			<?php $src = k1_get_image_asset_url( 'Giving-Video-Thumb', 'png', '', false ); ?>
+			<lite-youtube videoid='IuNv15iBLBc' style='background-image:url("<?php echo $src; ?>");' playlabel='Giving to Kingdom One'></lite-youtube>
 		</div>
 	</div>
 </section>

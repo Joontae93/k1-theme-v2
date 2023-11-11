@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.1
+
+- Update Giving Video Thumbnail
+
 ## v1.1.0
 
 - BUILT: /give page
