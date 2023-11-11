@@ -3,6 +3,8 @@
 ## v1.1.0
 
 - BUILT: /give page
+  - Move ACF_Image class to a new `/acf` folder
+  - Built API for the ACF Group Field Project and added acf json to the folder
 
 ## v1.0.2
 
