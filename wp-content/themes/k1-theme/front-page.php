@@ -30,7 +30,7 @@ get_header(); ?>
 			</div>
 		</div>
 	</section>
-	<section class="community">
+	<section class="community overflow-x-hidden">
 		<div class="container py-5">
 			<div class="row">
 				<h2 class="headline mt-5 text-white">Community, Tools &amp; Knowledge</h2>
@@ -95,7 +95,7 @@ get_header(); ?>
 						$markup  = "<div class='community-grid__item--container text-center'><div class='community-grid__item'>";
 						$markup .= get_the_k1_icon( $item['svg'] );
 						$markup .= "<h3 class='community-grid__label'>{$item['title']}</h3>";
-						$markup .= $content->bulleted_list($item['text'],'community-grid__list-item','ul','community-grid__list list-unstyled text-center',false);
+						$markup .= $content->bulleted_list( $item['text'], 'community-grid__list-item', 'ul', 'community-grid__list list-unstyled text-center', false );
 						$markup .= '</div></div>';
 						echo $markup;
 					}
@@ -116,7 +116,7 @@ get_header(); ?>
 	</aside>
 	<?php get_template_part( 'template-parts/sliders/swiper', 'testimonials' ); ?>
 	<section class="projects py-5">
-		<?php $content->get_color_background_layers( 'projects', 'zig-zag-left',array('values-bg','webp') ); ?>
+		<?php $content->get_color_background_layers( 'projects', 'zig-zag-left', array( 'values-bg', 'webp' ) ); ?>
 		<div class="z-3 position-relative py-5 my-5">
 			<div class="container">
 				<div class="row justify-content-center mt-5">
@@ -130,6 +130,6 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/sliders/swiper', 'brands' ); ?>
 		</div>
 	</section>
-	<?php get_template_part('template-parts/final-cta/content','meet-with-us');?>
+	<?php get_template_part( 'template-parts/final-cta/content', 'meet-with-us' ); ?>
 </main>
 <?php get_footer(); ?>

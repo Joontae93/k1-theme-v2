@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.2.0
+
+- Add Archive page for Linktree links
+
 ## v1.1.1
 
 - Update Giving Video Thumbnail

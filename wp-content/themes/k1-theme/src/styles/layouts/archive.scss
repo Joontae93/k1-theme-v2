@@ -1,8 +1,6 @@
 @use '../abstracts/mixins' as m;
 .hero {
 	min-height: unset;
-	// height: 10rem;
-	// max-height: 20rem;
 
 	&__background {
 		&--lower {
