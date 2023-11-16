@@ -13,7 +13,7 @@ $current_year = gmdate( 'Y' );
 			<div class="col-md-4 d-flex justify-content-center align-items-center flex-column">
 				<a href="/" class="h1" aria-label='to Home page'>
 					<figure class="logo">
-						<?php echo file_get_contents( 'wp-content/themes/k1-theme/src/assets/K1-Logo-v2.svg' ); ?>
+						<?php k1_get_svg_asset( 'K1-Logo-v2' ); ?>
 					</figure>
 				</a>
 				<div class="socials row justify-content-around align-self-stretch">
@@ -24,14 +24,14 @@ $current_year = gmdate( 'Y' );
 						<i class='fa-brands fa-instagram'></i>
 					</a>
 					<a href='https://www.linkedin.com/company/38093746' class="text-white text-center col col-md-4" target='_blank' rel='noopener noreferrer'
-					   aria-label="Kingdom One Facebook">
+						aria-label="Kingdom One Facebook">
 						<i class='fa-brands fa-linkedin'></i>
 					</a>
 				</div>
 			</div>
 			<div class="my-5 col-md-8">
 				<div class="row">
-					<?php 
+					<?php
 					if ( has_nav_menu( 'footer_menu_1' ) ) {
 						echo '<div class="col-md-4">';
 						wp_nav_menu(
@@ -43,7 +43,7 @@ $current_year = gmdate( 'Y' );
 								'walker'          => new K1_Nav_Walker(),
 							)
 						);
-						echo "</div>";
+						echo '</div>';
 					}
 					if ( has_nav_menu( 'footer_menu_2' ) ) {
 						echo '<div class="col-md-4">';
@@ -56,7 +56,7 @@ $current_year = gmdate( 'Y' );
 								'walker'          => new K1_Nav_Walker(),
 							)
 						);
-						echo "</div>";
+						echo '</div>';
 					}
 					if ( has_nav_menu( 'footer_menu_3' ) ) {
 						echo '<div class="col-md-4">';
@@ -69,7 +69,7 @@ $current_year = gmdate( 'Y' );
 								'walker'          => new K1_Nav_Walker(),
 							)
 						);
-						echo "</div>";
+						echo '</div>';
 					}
 					?>
 				</div>

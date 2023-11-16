@@ -4,28 +4,8 @@
 @use '../abstracts/mixins' as m;
 
 .header {
-	width: 100%;
-	position: absolute;
-	top: 0;
 	z-index: 5;
-	color: white;
 
-	.row {
-		justify-content: space-between;
-	}
-
-	a {
-		h1 {
-			color: white;
-		}
-	}
-
-	&__social-icon {
-		svg {
-			width: 4rem;
-			height: auto;
-		}
-	}
 	.btn__primary--fill {
 		flex-shrink: 0;
 		margin-right: 55%;

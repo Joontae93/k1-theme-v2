@@ -40,6 +40,7 @@ auth.json
 !/wp-content/plugins/k1-blocks
 /wp-content/mu-plugins
 /wp-content/themes/twenty*/
+/wp-content/db.php
 
 
 # Log files
