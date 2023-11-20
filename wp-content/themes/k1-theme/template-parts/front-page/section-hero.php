@@ -46,7 +46,7 @@ $content = new Content_Sections();
 					array(
 						'title' => 'Business Administration',
 						'file'  => 'staffing',
-						'link'  => '/staffing',
+						'link'  => '/business-administration',
 					),
 				);
 				foreach ( $icons as $icon ) {
