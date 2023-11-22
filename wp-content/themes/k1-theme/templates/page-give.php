@@ -160,7 +160,7 @@ $content = new Content_Sections();
 				<h2 class="text-white my-5">healthy things <span class="text-primary">grow</span></h2>
 			</div>
 		</div>
-		<div class="row justify-content-around">
+		<div class="row justify-content-around" id='give'>
 			<div class="col-lg-4 d-flex flex-column">
 				<p class="text-white">Would you prayerfully consider a gift to Kingdom One that would resource ministries to become more courageous, healthy, and effective?
 				</p>

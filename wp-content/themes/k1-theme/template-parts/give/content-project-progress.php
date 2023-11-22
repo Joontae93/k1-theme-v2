@@ -50,7 +50,7 @@ $container_class = $args['is_primary'] ? 'project--primary' : 'project';
 			array(
 				'text'        => 'Give Now',
 				'link'        => $project->get_the_giving_link(),
-				'is_external' => true,
+				'is_external' => false,
 				'html_class'  => 'project__cta mt-auto btn__primary--fill',
 			)
 		);
