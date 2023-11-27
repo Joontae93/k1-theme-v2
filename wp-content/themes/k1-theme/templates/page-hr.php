@@ -77,8 +77,8 @@ $content = new Content_Sections();
 			),
 			array(
 				'svg'   => 'staffing',
-				'title' => 'Business Administration',
-				'text'  => array( 'ChMS Implementation & Optimization', 'Audit & 990 Support', 'Business Process & Procedure Optimization' ),
+				'title' => 'Compliance',
+				'text'  => array( 'Policy Review', 'Safety Audit', 'Handbooks' ),
 			),
 			array(
 				'svg'   => 'spark',

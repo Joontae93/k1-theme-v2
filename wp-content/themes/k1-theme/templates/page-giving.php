@@ -18,7 +18,7 @@ $content = new Content_Sections();
 			<div class="col-lg-6 col-xl-8">
 				<?php
 				$content->headline(
-					'thousands of ministries in America will close their doors this year.',
+					'Thousands of Ministries in America Will Close Their Doors This Year.',
 					true,
 					array(
 						'subheadline_content' => 'In 2019, 4,500 churches closed their doors, and that number continues to rise each year.',
@@ -28,7 +28,7 @@ $content = new Content_Sections();
 				);
 				?>
 				<div class="lacking d-flex flex-column justify-content-around my-5">
-					<p class="fw-bold">Churches are lacking:</p>
+					<p class="fw-bold">Churches are Lacking:</p>
 					<?php
 					$lacking = array(
 						'the right tools',
@@ -58,16 +58,15 @@ $content = new Content_Sections();
 		<div class="container">
 			<div class="row my-5">
 				<div class="col">
-					<h2 class="headline text-white text-center pt-5">How can you help the American church?</h2>
+					<h2 class="headline text-white text-center pt-5">How Can You Help the American Church?</h2>
 					<span class="subheadline text-primary">We don't have a magic wand to fix the problem now, but we do have resources that will give the church a fighting chance.
-						Giving to
-						Kingdom One will get tools, education & resources back into churches, to grow their health.</span>
+						Giving to Kingdom One will get tools, education & resources back into churches, to grow their health.</span>
 				</div>
 			</div>
 		</div>
 		<div class="container my-5">
 			<div class="row">
-				<h3 class="headline text-sm-center text-white">There are multiple ways to give:</h3>
+				<h3 class="headline text-sm-center text-white">There are Multiple Ways to Give:</h3>
 			</div>
 		</div>
 		<?php get_template_part( 'template-parts/content', 'ways-to-give' ); ?>
@@ -78,7 +77,7 @@ $content = new Content_Sections();
 		<div class="row">
 			<div class="col d-flex justify-content-center">
 				<?php k1_get_svg_asset( 'leaves-3' ); ?>
-				<h2 class="headline my-5">healthy things <span class="text-primary">grow</span></h2>
+				<h2 class="headline my-5">Healthy Things <span class="text-primary">Grow</span></h2>
 			</div>
 		</div>
 		<div class="row justify-content-around">
@@ -97,7 +96,7 @@ $content = new Content_Sections();
 <section class="stephen-video pt-0">
 	<div class="container">
 		<div class="row my-5">
-			<h2 class="headline h1 text-primary text-center">what your giving makes possible</h2>
+			<h2 class="headline h1 text-primary text-center">What Your Giving Makes Possible</h2>
 			<span class="subheadline text-center">Our founder and CVO explains why now is a pivotal time to give to the health of the American Church.</span>
 		</div>
 		<div class="row justify-content-center">
