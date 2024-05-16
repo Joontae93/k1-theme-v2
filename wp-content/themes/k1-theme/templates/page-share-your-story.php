@@ -159,7 +159,7 @@ $query = new WP_Query(
 				<ol>
 					<li>Find a nice, quiet place that's well-lit to record your story</li>
 					<li>Record your story with a smartphone in landscape (horizontal) mode</li>
-					<li>Let us kow you'r eready to share with the form below!</li>
+					<li>Let us kow you're ready to share with the form below!</li>
 				</ol>
 			</div>
 		</div>
