@@ -58,7 +58,7 @@ get_header(); ?>
 						array(
 							'svg'   => 'marcom',
 							'title' => 'Marcom',
-							'text'  => array( 'Grapghic Design', 'Branding', 'Social Media Strategy', 'Video Editing' ),
+							'text'  => array( 'Graphic Design', 'Branding', 'Social Media Strategy', 'Video Editing' ),
 						),
 						array(
 							'svg'   => 'webDev',
