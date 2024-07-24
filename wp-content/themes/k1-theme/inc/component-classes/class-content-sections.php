@@ -35,7 +35,7 @@ class Content_Sections extends Content_Components {
 			extract( $args );
 		} else {
 			$hero = get_field( 'hero', $post_id );
-			if (!is_array($hero)) {
+			if ( ! is_array( $hero ) ) {
 				return;
 			}
 			extract( $hero );

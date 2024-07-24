@@ -21,7 +21,7 @@ $query = new WP_Query(
 	<div class="swiper" id="staff-swiper">
 		<div class="swiper-wrapper">
 			<?php while ( $query->have_posts() ) : ?>
-			<?php $query->the_post(); ?>
+				<?php $query->the_post(); ?>
 			<div class="swiper-slide">
 				<figure class="ratio ratio-1x1 mb-0">
 					<?php

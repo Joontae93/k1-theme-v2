@@ -33,7 +33,7 @@ $ways_to_give = array(
 <ul class="ways-to-give text-white list-unstyled m-0 overflow-x-hidden">
 	<div class="container-fluid">
 		<?php foreach ( $ways_to_give as $index => $step ) : ?>
-		<?php
+			<?php
 			$row_class = 'row';
 			if ( 1 === $index ) {
 				$row_class .= ' bg-color-primary--dark';

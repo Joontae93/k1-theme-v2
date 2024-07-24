@@ -79,22 +79,24 @@ get_template_part(
 	'template-parts/content',
 	'core-services',
 	array(
-		'title' => 'staffing services',
+		'title'    => 'staffing services',
 		'bg_image' => 'staffing-services-min',
-		'services' => array(array(
-			'items' => array(
-				'Relational Recruiting',
-				'Culture Fit Interviewing',
-				'Active Recruiting Methods using HR Tech tools',
+		'services' => array(
+			array(
+				'items' => array(
+					'Relational Recruiting',
+					'Culture Fit Interviewing',
+					'Active Recruiting Methods using HR Tech tools',
+				),
+			),
+			array(
+				'items' => array(
+					'Create compelling job postings and handle candidate management',
+					'Micro-site creation to present candidate bios and share ministry profiles',
+					'Coordinate Onboarding plan and give salary recommendations.',
+				),
 			),
 		),
-		array(
-			'items' => array(
-				'Create compelling job postings and handle candidate management',
-				'Micro-site creation to present candidate bios and share ministry profiles',
-				'Coordinate Onboarding plan and give salary recommendations.',
-			),
-		))
 	)
 );
 ?>

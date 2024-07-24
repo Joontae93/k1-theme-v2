@@ -60,51 +60,51 @@ $content = new Content_Sections();
 	</div>
 </section>
 <section class="hr-services">
-	<?php $content->get_color_background_layers( 'hr-services', 'zig-zag-right');?>
+	<?php $content->get_color_background_layers( 'hr-services', 'zig-zag-right' ); ?>
 	<div class="container">
 		<div class="hr-services__grid">
 			<?php
-		$grid_items = array(
-			array(
-				'svg'   => 'hr',
-				'title' => 'HR',
-				'text'  => array( 'Staffing', 'Handbooks', 'Payroll', 'Ministry Cohorts' ),
-			),
-			array(
-				'svg'   => 'strategy',
-				'title' => 'Strategy',
-				'text'  => array( 'Staff Leveling', 'Communications Frameworks', 'Coaching, Advisory, Strategic Planning' ),
-			),
-			array(
-				'svg'   => 'staffing',
-				'title' => 'Compliance',
-				'text'  => array( 'Policy Review', 'Safety Audit', 'Handbooks' ),
-			),
-			array(
-				'svg'   => 'spark',
-				'title' => 'Spark',
-				'text'  => array( 'Compensation Reporting', 'Benefits', 'Staffing Searches' ),
-			),
-			array(
-				'svg'   => 'academy',
-				'title' => 'Academy',
-				'text'  => array( 'Trainings', 'Tutorials', 'Templates', 'Tools' ),
-			),
-			array(
-				'svg'   => 'justice',
-				'title' => 'Above Reproach',
-				'text'  => array( 'AB-506 Child Safety Training', 'Harrassment Prevention Training', 'Legal Updates' ),
-			),
-		);
-		foreach ( $grid_items as $item ) {
-			$markup  = "<div class='community-grid__item--container text-center'><div class='community-grid__item'>";
-			$markup .= get_the_k1_icon( $item['svg'] );
-			$markup .= "<h3 class='community-grid__label'>{$item['title']}</h3>";
-			$markup .= $content->bulleted_list($item['text'],'community-grid__list-item','ul','community-grid__list list-unstyled text-center',false);
-			$markup .= '</div></div>';
-			echo $markup;
-		}
-		?>
+			$grid_items = array(
+				array(
+					'svg'   => 'hr',
+					'title' => 'HR',
+					'text'  => array( 'Staffing', 'Handbooks', 'Payroll', 'Ministry Cohorts' ),
+				),
+				array(
+					'svg'   => 'strategy',
+					'title' => 'Strategy',
+					'text'  => array( 'Staff Leveling', 'Communications Frameworks', 'Coaching, Advisory, Strategic Planning' ),
+				),
+				array(
+					'svg'   => 'staffing',
+					'title' => 'Compliance',
+					'text'  => array( 'Policy Review', 'Safety Audit', 'Handbooks' ),
+				),
+				array(
+					'svg'   => 'spark',
+					'title' => 'Spark',
+					'text'  => array( 'Compensation Reporting', 'Benefits', 'Staffing Searches' ),
+				),
+				array(
+					'svg'   => 'academy',
+					'title' => 'Academy',
+					'text'  => array( 'Trainings', 'Tutorials', 'Templates', 'Tools' ),
+				),
+				array(
+					'svg'   => 'justice',
+					'title' => 'Above Reproach',
+					'text'  => array( 'AB-506 Child Safety Training', 'Harrassment Prevention Training', 'Legal Updates' ),
+				),
+			);
+			foreach ( $grid_items as $item ) {
+				$markup  = "<div class='community-grid__item--container text-center'><div class='community-grid__item'>";
+				$markup .= get_the_k1_icon( $item['svg'] );
+				$markup .= "<h3 class='community-grid__label'>{$item['title']}</h3>";
+				$markup .= $content->bulleted_list( $item['text'], 'community-grid__list-item', 'ul', 'community-grid__list list-unstyled text-center', false );
+				$markup .= '</div></div>';
+				echo $markup;
+			}
+			?>
 		</div>
 	</div>
 </section>

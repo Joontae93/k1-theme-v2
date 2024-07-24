@@ -20,5 +20,9 @@
     },
     "require-dev": {
         "wp-coding-standards/wpcs": "*"
+    },
+    "scripts": {
+        "phpcbf": "phpcbf wp-content/themes/k1-theme/ --extensions=php --ignore=wp-content/themes/k1-theme/dist/",
+        "phpcs": "phpcs wp-content/themes/k1-theme/ --extensions=php --ignore=wp-content/themes/k1-theme/dist/"
     }
 }

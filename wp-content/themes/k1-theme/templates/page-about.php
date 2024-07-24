@@ -166,7 +166,7 @@ $content = new Content_Sections();
 				<?php echo $value['subheadline']; ?>
 			</span>
 		</div>
-		<?php echo '</div>'; ?>
+			<?php echo '</div>'; ?>
 		<?php endforeach; ?>
 	</div>
 </section>
