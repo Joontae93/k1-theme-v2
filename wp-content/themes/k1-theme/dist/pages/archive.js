@@ -1,1 +1,0 @@
-(()=>{"use strict";document.querySelectorAll("li.post").forEach((e=>{const t=e.dataset.permalink,r=e.querySelector("a");e.addEventListener("click",(({target:e})=>{t&&e!==r&&(window.location.href=t)}))}))})();

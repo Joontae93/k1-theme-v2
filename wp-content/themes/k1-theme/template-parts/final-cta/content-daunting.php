@@ -1,6 +1,8 @@
 <?php
 /**
  * Final CTA: Daunting
+ *
+ * @package KingdomOne
  */
 
 $content = new Content_Sections();
@@ -15,8 +17,8 @@ $content = new Content_Sections();
 			<div class="col-lg-8 text-center py-5">
 				<h2 class="text-white text-lowercase">The first step towards health can feel a little daunting</h2>
 				<span class="subheadline white-stroke my-5 d-block">GET STARTED TODAY</span>
-				<p class="text-white">Getting help is a sign of strength and courage. It helps avoid <br> the heartache of burnout, resignation, and failure. Here's to a brighter
-					ministry future where you are supported, equipped. and encouraged to grow. </p>
+				<p class="text-white">Getting help is a sign of strength and courage. It helps avoid <br /> the heartache of burnout, resignation, and failure. Here's to a brighter ministry
+					future where you are supported, equipped. and encouraged to grow.</p>
 				<?php $content->cta_button(); ?>
 			</div>
 		</div>

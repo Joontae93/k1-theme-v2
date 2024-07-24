@@ -1,9 +1,26 @@
 <?php
+/**
+ * Theme Cleaner
+ * Cleans up the theme by removing unnecessary elements
+ *
+ * @package KingdomOne
+ */
+
+/**
+ * Theme Cleaner
+ */
 class K1_Theme_Cleaner {
+
+	/**
+	 * Constructor
+	 */
 	public function __construct() {
 		$this->disable_discussion();
 	}
 
+	/**
+	 * Alters the post types
+	 */
 	public function alter_post_types() {
 		$post_types = array( 'post', 'page' );
 		foreach ( $post_types as $post_type ) {
@@ -11,6 +28,11 @@ class K1_Theme_Cleaner {
 		}
 	}
 
+	/**
+	 * Disable post type support
+	 *
+	 * @param string $post_type the post type to disable support for
+	 */
 	protected function disable_post_type_support( $post_type ) {
 		$supports = array( 'comments', 'trackbacks', 'revisions' );
 		foreach ( $supports as $support ) {

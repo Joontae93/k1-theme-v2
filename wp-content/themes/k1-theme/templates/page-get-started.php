@@ -36,7 +36,6 @@ $content = new Content_Sections();
 		</script>
 	</div>
 </section>
-<?php // get_template_part( 'template-parts/sliders/swiper', 'testimonials' ); ?>
 <aside>
 	<div class="container">
 		<div class="row d-flex justify-content-center align-items-center">
@@ -46,4 +45,5 @@ $content = new Content_Sections();
 		</div>
 	</div>
 </aside>
-<?php get_template_part( 'template-parts/final-cta/content', 'meet-with-us' ); ?>
+<?php
+get_template_part( 'template-parts/final-cta/content', 'meet-with-us' );

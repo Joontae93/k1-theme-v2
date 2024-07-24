@@ -12,10 +12,10 @@
  * @param bool   $as_image_src base-encode svg or return pure svg code
  * @param bool   $echo echo/return toggle
  */
-function k1_get_svg_asset( string $file, bool $as_image_src = false, bool $echo = true ) {
+function k1_get_svg_asset( string $file, bool $as_image_src = false, bool $echo = true ) { // phpcs:ignore Universal.NamingConventions.NoReservedKeywordParameterNames.echoFound
 	$svg = file_get_contents( get_template_directory() . '/src/assets/svgs/' . $file . '.svg' );
 	if ( $as_image_src ) {
-		$svg = 'data:image/svg+xml;base64,' . base64_encode( $svg );
+		$svg = 'data:image/svg+xml;base64,' . base64_encode( $svg ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
 	}
 
 	if ( $echo ) {
@@ -33,7 +33,7 @@ function k1_get_svg_asset( string $file, bool $as_image_src = false, bool $echo 
  * @param string $folder the folder to add (defaults to empty string). If nested, leave off closing '/'
  * @param bool   $echo echo / return toggle
  */
-function k1_get_image_asset_url( string $file, string $extension, string $folder = '', $echo = true ) {
+function k1_get_image_asset_url( string $file, string $extension, string $folder = '', $echo = true ) { // phpcs:ignore Universal.NamingConventions.NoReservedKeywordParameterNames.echoFound
 	$url = get_template_directory_uri() . '/src/assets/images' . ( empty( $folder ) ? "/{$file}.{$extension}" : "/{$folder}/{$file}.{$extension}" );
 	if ( $echo ) {
 		echo $url;
@@ -68,7 +68,7 @@ function k1_enqueue_page_style( string $id, ?array $deps = array( 'kingdom-one-g
 			$id,
 			"{$file_uri}/{$id}.css",
 			$deps,
-			null,
+			null, // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 		);
 	}
 }
@@ -100,7 +100,7 @@ function k1_enqueue_page_script( string $id, ?array $deps = array( 'kingdom-one-
 			$id,
 			"{$file_uri}/{$id}.js",
 			$deps,
-			null,
+			null, // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 			array( 'strategy' => 'defer' )
 		);
 	}
@@ -109,8 +109,9 @@ function k1_enqueue_page_script( string $id, ?array $deps = array( 'kingdom-one-
 /**
  * Enqueues both the page style and script.
  *
- * @param string $id The id you set in webpack.config.js.
- * @param array  $deps Associative array of dependencies for styles and scripts.
+ * @param string  $id The id you set in webpack.config.js.
+ * @param ?array  $deps Associative array of dependencies for styles and scripts.
+ * @param ?string $location the subfolder inside the `dist` to find the file
  */
 function k1_enqueue_page_assets( string $id, ?array $deps = array(), ?string $location = 'pages' ) {
 	$default_deps = array(
@@ -202,7 +203,7 @@ function k1_get_the_leaf( int $leaf, string $color = '', string $direction = 'le
 }
 
 /**
- * Echoes the value of `k1_get_the_leaft($leaf)`
+ * Echoes the value of `k1_get_the_leaf($leaf)`
  *
  * @param int    $leaf the leaf variant to return
  * @param string $color the leaf color

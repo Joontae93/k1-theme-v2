@@ -5,6 +5,8 @@
 -   Patched security issues with `@wordpress/scripts`
 -   Updated packages
 -   Fix display bug on the team swiper on `/about`
+-   Fixed `phpcs` errors
+-   Added Github Action to build the theme and attach it to the release of the repo
 
 ## v1.2.0
 

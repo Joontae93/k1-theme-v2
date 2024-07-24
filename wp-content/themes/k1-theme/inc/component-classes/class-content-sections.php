@@ -4,6 +4,7 @@
  *
  * @author KJ Roelke
  * @version 1.0.0
+ * @package KingdomOne
  */
 
 /** Get Parent Class */
@@ -30,7 +31,7 @@ class Content_Sections extends Content_Components {
 	 * );
 	 * ```
 	 */
-	public function hero_section( int $post_id = null, $echo = true, array $args = array() ) {
+	public function hero_section( int $post_id = null, $echo = true, array $args = array() ) { // phpcs:ignore Universal.NamingConventions.NoReservedKeywordParameterNames.echoFound
 		if ( empty( $post_id ) ) {
 			extract( $args );
 		} else {
@@ -84,7 +85,7 @@ class Content_Sections extends Content_Components {
 	 *
 	 * @return string The markup for the two-column layout
 	 */
-	public function two_col_text_and_media( array $options, bool $echo = true ) {
+	public function two_col_text_and_media( array $options, bool $echo = true ) { // phpcs:ignore Universal.NamingConventions.NoReservedKeywordParameterNames.echoFound
 		$default = array(
 			'split'            => array( 6, 6 ),
 			'headline'         => '',
@@ -184,7 +185,7 @@ class Content_Sections extends Content_Components {
 	 * 'subheadline_content'     => ?string the subheadline content,
 	 * ```
 	 */
-	public function vertical_card( string $image_src, string $headline, string $excerpt, bool $echo = true, array $args = array() ) {
+	public function vertical_card( string $image_src, string $headline, string $excerpt, bool $echo = true, array $args = array() ) { // phpcs:ignore Universal.NamingConventions.NoReservedKeywordParameterNames.echoFound
 		$headline_args = array(
 			'headline_class'      => 'vertical-card__title',
 			'subheadline_element' => 'p',
@@ -208,20 +209,20 @@ class Content_Sections extends Content_Components {
 	 *
 	 * @link `~/src/styles/abstracts/mixins` see `background-layers` & `clip-path` mixins for associated SCSS params
 	 *
-	 * @param string $class the classname to prefix the CSS BEM-style classes with
+	 * @param string $class_name the class name to prefix the CSS BEM-style classes with
 	 * @param string $direction the direction of the clip path ( "right-bottom", "right-top", "left-bottom", "left-top", "left", "right", "zig-zag-left" )
 	 * @param array  $bg_image args for `k1_get_image_asset_url( string $file, string $extension)`
 	 */
-	public function get_color_background_layers( string $class, string $direction, array $bg_image = array() ) {
-		$layers  = "<div class='{$class}__background clip-color-{$direction}'>";
-		$layers .= "<div class='{$class}__background--color'></div>";
+	public function get_color_background_layers( string $class_name, string $direction, array $bg_image = array() ) {
+		$layers  = "<div class='{$class_name}__background clip-color-{$direction}'>";
+		$layers .= "<div class='{$class_name}__background--color'></div>";
 
 		if ( empty( $bg_image ) ) {
-			$layers .= "<div class='{$class}__background--lower'></div>";
+			$layers .= "<div class='{$class_name}__background--lower'></div>";
 		} else {
 			$url     = k1_get_image_asset_url( $bg_image[0], $bg_image[1], 'bg-images', false );
-			$layers .= "<div class='{$class}__background--lower'" . 'style="background-image:url(' . "'{$url}'" . ')"></div>';
-			$layers .= "<div class='{$class}__background--upper'></div>";
+			$layers .= "<div class='{$class_name}__background--lower'" . 'style="background-image:url(' . "'{$url}'" . ')"></div>';
+			$layers .= "<div class='{$class_name}__background--upper'></div>";
 		}
 		$layers .= '</div>';
 		echo $layers;
