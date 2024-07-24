@@ -21,9 +21,19 @@ $query = new WP_Query(
 	<div class="swiper" id="staff-swiper">
 		<div class="swiper-wrapper">
 			<?php while ( $query->have_posts() ) : ?>
-				<?php $query->the_post(); ?>
+			<?php $query->the_post(); ?>
 			<div class="swiper-slide">
-				<?php the_post_thumbnail( 'medium', array( 'class' => 'w-auto h-auto ratio ratio-1x1' ) ); ?>
+				<figure class="ratio ratio-1x1 mb-0">
+					<?php
+					the_post_thumbnail(
+						'full',
+						array(
+							'class'   => 'w-100 h-auto object-fit-cover',
+							'loading' => 'lazy',
+						)
+					);
+					?>
+				</figure>
 			</div>
 			<?php endwhile; ?>
 		</div>
