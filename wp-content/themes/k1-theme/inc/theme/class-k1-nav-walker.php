@@ -1,4 +1,4 @@
-<?php // phpcs:ignore
+<?php
 /**
  * K1 Nav Walker
  * based on Bootscore's Navwalker
@@ -6,9 +6,25 @@
  * @link https://github.com/bootscore/bootscore/blob/main/inc/class-bootstrap-5-navwalker.php
  * @since 1.2
  * @author KJ Roelke
+ * @package KingdomOne
+ */
+
+/**
+ * K1 Nav Walker
  */
 class K1_Nav_Walker extends Walker_Nav_Menu {
+	/**
+	 * The current item
+	 *
+	 * @var $current_item
+	 */
 	private $current_item;
+
+	/**
+	 * Dropdown menu alignment values
+	 *
+	 * @var $dropdown_menu_alignment_values
+	 */
 	private $dropdown_menu_alignment_values = array(
 		'dropdown-menu-start',
 		'dropdown-menu-end',
@@ -24,7 +40,14 @@ class K1_Nav_Walker extends Walker_Nav_Menu {
 		'dropdown-menu-xxl-end',
 	);
 
-	function start_lvl( &$output, $depth = 0, $args = null ) {
+	/**
+	 * Starts the list before the elements are added.
+	 *
+	 * @param string $output Used to append additional content (passed by reference).
+	 * @param int    $depth  Depth of menu item. Used for padding.
+	 * @param array  $args   An array of arguments.
+	 */
+	public function start_lvl( &$output, $depth = 0, $args = null ) {
 		$dropdown_menu_class[] = 'navbar__sub-menu sub-menu';
 		foreach ( $this->current_item->classes as $class ) {
 			if ( in_array( $class, $this->dropdown_menu_alignment_values ) ) {
@@ -36,7 +59,16 @@ class K1_Nav_Walker extends Walker_Nav_Menu {
 		$output .= "\n$indent<ul class=\"dropdown-menu$submenu " . esc_attr( implode( ' ', $dropdown_menu_class ) ) . " depth_$depth\">\n";
 	}
 
-	function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+	/**
+	 * Start the element output.
+	 *
+	 * @param string $output Used to append additional content (passed by reference).
+	 * @param object $item   Menu item data object.
+	 * @param int    $depth  Depth of menu item. Used for padding.
+	 * @param ?array $args   An array of arguments.
+	 * @param int    $id     Current item ID.
+	 */
+	public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
 		$this->current_item = $item;
 
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';

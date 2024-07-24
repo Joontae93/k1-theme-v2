@@ -1,5 +1,9 @@
 <?php
-/** AB506 Final CTA */
+/**
+ *  AB506 Final CTA
+ *
+ * @package KingdomOne
+ */
 
 $content = new Content_Sections();
 ?>

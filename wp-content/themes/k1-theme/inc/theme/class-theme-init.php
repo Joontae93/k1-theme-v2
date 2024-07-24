@@ -110,6 +110,7 @@ class Theme_Init extends K1_Theme_Cleaner {
 		add_theme_support( 'responsive-embeds' );
 	}
 
+	/** Register Menus */
 	public function register_k1_menus() {
 		register_nav_menus(
 			array(

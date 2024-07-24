@@ -1,6 +1,8 @@
 <?php
 /**
  * Content Part: BG Rolling Hills
+ *
+ * @package KingdomOne
  */
 
 $background_image = k1_get_image_asset_url( 'bg-rolling-hills', 'svg', 'bg-images', false );

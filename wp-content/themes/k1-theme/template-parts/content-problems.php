@@ -1,17 +1,23 @@
+<?php
+/**
+ * Content: Problems
+ *
+ * @package KingdomOne
+ */
+
+?>
 <section class="problems">
-		<div class="container text-center">
-			<div class="row justify-content-center mb-5">
-				<div class="col-10">
-					<h2>Has ministry gotten <span class="text-primary">complicated</span> for you and your team?
-					</h2>
-					<p class="subheadline my-5">Ministry life is a complicated life! Can we get an "amen"? While industry best practices and guidance is an excellent start, the pursuit
-						of
-						becoming courageous,
-						healthy, and effective is nuanced. Our team is ready to partner with you in a 1:1 capacity to assess and coach you forward thoroughly.</p>
-				</div>
+	<div class="container text-center">
+		<div class="row justify-content-center mb-5">
+			<div class="col-10">
+				<h2>Has ministry gotten <span class="text-primary">complicated</span> for you and your team?
+				</h2>
+				<p class="subheadline my-5">Ministry life is a complicated life! Can we get an "amen"? While industry best practices and guidance is an excellent start, the pursuit of
+					becoming courageous, healthy, and effective is nuanced. Our team is ready to partner with you in a 1:1 capacity to assess and coach you forward thoroughly.</p>
 			</div>
-			<div class="row my-5">
-				<?php
+		</div>
+		<div class="row my-5">
+			<?php
 				$steps = array(
 					array(
 						'image'       => k1_get_image_asset_url( 'resources', 'svg', echo: false ),
@@ -30,14 +36,14 @@
 					),
 				);
 				?>
-				<?php foreach ( $steps as $step ) : ?>
-				<div class="col-lg-4">
-					<img src="<?php echo $step['image']; ?>">
-					<h3><?php echo $step['headline']; ?></h3>
-					<p><?php echo $step['subheadline']; ?></p>
-				</div>
-				<?php endforeach; ?>
+			<?php foreach ( $steps as $step ) : ?>
+			<div class="col-lg-4">
+				<img src="<?php echo $step['image']; ?>" loading="lazy" />
+				<h3><?php echo $step['headline']; ?></h3>
+				<p><?php echo $step['subheadline']; ?></p>
 			</div>
-			<a class="pill-btn__fill--primary mt-auto" href="#">Get Started</a>
+			<?php endforeach; ?>
 		</div>
-	</section>
+		<a class="pill-btn__fill--primary mt-auto" href="#">Get Started</a>
+	</div>
+</section>

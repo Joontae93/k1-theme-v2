@@ -1,6 +1,8 @@
 <?php
 /**
- * Standard Page Output
+ * Standard Page Output for Clients Post Type
+ *
+ * @package KingdomOne
  */
 
 get_header();

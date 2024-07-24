@@ -19,10 +19,11 @@
         }
     },
     "require-dev": {
-        "wp-coding-standards/wpcs": "*"
+        "wp-coding-standards/wpcs": "*",
+        "php-stubs/acf-pro-stubs": "^6.2"
     },
     "scripts": {
-        "phpcbf": "phpcbf wp-content/themes/k1-theme/ --extensions=php --ignore=wp-content/themes/k1-theme/dist/",
-        "phpcs": "phpcs wp-content/themes/k1-theme/ --extensions=php --ignore=wp-content/themes/k1-theme/dist/"
+        "phpcbf": "phpcbf wp-content/themes/k1-theme/ --extensions=php --ignore=wp-content/themes/k1-theme/dist/,wp-content/themes/k1-theme/acf/json/",
+        "phpcs": "phpcs wp-content/themes/k1-theme/ --extensions=php --ignore=wp-content/themes/k1-theme/dist/,wp-content/themes/k1-theme/acf/json/"
     }
 }

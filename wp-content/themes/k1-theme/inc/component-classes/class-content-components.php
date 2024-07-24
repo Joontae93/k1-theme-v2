@@ -31,7 +31,7 @@ class Content_Components {
 	 * 'subheadline_content'     => ?string the subheadline content,
 	 * ```
 	 */
-	public function headline( string $headline, bool $echo = true, array $args = array() ) {
+	public function headline( string $headline, bool $echo = true, array $args = array() ) { // phpcs:ignore Universal.NamingConventions.NoReservedKeywordParameterNames.echoFound
 		$default = array(
 			'headline_element'    => 'h2',
 			'headline_class'      => 'headline',
@@ -67,7 +67,7 @@ class Content_Components {
 	 * }
 	 * @param bool  $echo Whether to echo or return the markup (default: true)
 	 */
-	public function cta_button( array $options = array(), bool $echo = true ) {
+	public function cta_button( array $options = array(), bool $echo = true ) { // phpcs:ignore Universal.NamingConventions.NoReservedKeywordParameterNames.echoFound
 		$default = array(
 			'text'        => 'Get Started',
 			'link'        => '/get-started',
@@ -101,7 +101,7 @@ class Content_Components {
 	 * @param ?string $list_class         a string to set list item htmlClass
 	 * @param ?bool   $echo                `echo` or `return` the markup
 	 */
-	public function bulleted_list( array $list_items, string $item_class = '', string $list_type = 'ul', string $list_class = '', bool $echo = true ) {
+	public function bulleted_list( array $list_items, string $item_class = '', string $list_type = 'ul', string $list_class = '', bool $echo = true ) { // phpcs:ignore Universal.NamingConventions.NoReservedKeywordParameterNames.echoFound
 		$markup = empty( $list_class ) ? $markup = "<{$list_type}>" : "<{$list_type} class='{$list_class}'>";
 		foreach ( $list_items as $item ) {
 			$item    = acf_esc_html( $item );

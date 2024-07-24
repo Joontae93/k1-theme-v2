@@ -1,6 +1,8 @@
 <?php
 /**
  * The Hume Video Testimonial
+ *
+ * @package KingdomOne
  */
 
 ?>

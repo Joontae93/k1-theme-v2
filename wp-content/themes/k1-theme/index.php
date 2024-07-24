@@ -1,10 +1,12 @@
 <?php
 /**
  * Standard Archive Output
+ *
+ * @package KingdomOne
  */
 
-get_header();
 k1_enqueue_page_assets( 'archive' );
+get_header();
 $content = new Content_Sections();
 $args    = array(
 	'has_background_image' => false,
@@ -42,7 +44,13 @@ if ( ! have_posts() ) : ?>
 		<li class="post d-flex flex-column" data-permalink="<?php the_permalink(); ?>">
 			<?php
 			if ( has_post_thumbnail() ) {
-				the_post_thumbnail( 'medium', array( 'class' => 'post__image' ) );
+				the_post_thumbnail(
+					'medium',
+					array(
+						'class'   => 'post__image',
+						'loading' => 'lazy',
+					)
+				);
 			}
 			?>
 			<div class="post__content d-flex flex-column h-100">

@@ -1,6 +1,8 @@
 <?php
 /**
  * Recent Partnerships
+ *
+ * @package KingdomOne
  */
 
 $content = new Content_Sections();

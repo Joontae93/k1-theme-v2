@@ -1,6 +1,9 @@
 <?php
 /**
  * Swiper: Staffing Page
+ *
+ * @package KingdomOne
+ * @subpackage Swiper
  */
 
 $content = new Content_Sections();

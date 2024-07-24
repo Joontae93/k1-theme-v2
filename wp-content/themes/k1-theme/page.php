@@ -4,6 +4,7 @@
  *
  * @author KJ Roelke
  * @since 1.0
+ * @package KingdomOne
  */
 
 $content = new Content_Sections();
