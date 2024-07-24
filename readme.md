@@ -1,3 +1,22 @@
+# Getting Started
+
+1. `npm install`
+2. `composer update`
+3. `npm run start` if you're working with scss/js
+
+## Before final push:
+
+1. Run `composer phpcbf` and `composer phpcs` to check for errors. Cleanup if needed.
+2. Run `npm run build`.
+
+## Updating on Live Site
+
+1. Download the repo
+2. Zip the theme folder `k1-theme` (not the enclosing file tree (`wp-content/themes/`))
+3. Install the zip on WordPress as a Theme upload.
+
+---
+
 # Changelog
 
 ## v1.2.3
@@ -6,7 +25,7 @@
 -   Updated packages
 -   Fix display bug on the team swiper on `/about`
 -   Fixed `phpcs` errors
--   Added Github Action to build the theme and attach it to the release of the repo
+-   Added Github Action to check phpcs errors
 
 ## v1.2.0
 
