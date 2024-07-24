@@ -18,7 +18,7 @@ k1_enqueue_page_assets( 'finance' );
 	</div>
 </aside>
 <section class="problem-solution-swiper">
-	<?php $content->get_color_background_layers( 'problem-solution-swiper', 'zig-zag-left', array( 'finance-slider', 'webp', ) ); ?>
+	<?php $content->get_color_background_layers( 'problem-solution-swiper', 'zig-zag-left', array( 'finance-slider', 'webp' ) ); ?>
 	<div class="container">
 		<div class="row align-items-center py-5 my-5">
 			<?php get_template_part( 'template-parts/sliders/swiper', 'staffing-problem-solution' ); ?>
@@ -69,8 +69,8 @@ k1_enqueue_page_assets( 'finance' );
 		<div class="row my-5">
 			<div class="col">
 				<div class="small text-white text-center">From <a
-					   href='https://nonprofitssource.com/online-giving-statistics/church-giving/#:~:text=The%20average%20giving%20by%20adults,giving%20by%2020%25%20or%20more.'
-					   target="_blank" class="text-white" rel='noopener noreferrer'>https://nonprofitssource.com/online-giving-statistics/church-giving/</a>
+						href='https://nonprofitssource.com/online-giving-statistics/church-giving/#:~:text=The%20average%20giving%20by%20adults,giving%20by%2020%25%20or%20more.'
+						target="_blank" class="text-white" rel='noopener noreferrer'>https://nonprofitssource.com/online-giving-statistics/church-giving/</a>
 				</div>
 			</div>
 		</div>
@@ -81,20 +81,22 @@ get_template_part(
 	'template-parts/content',
 	'core-services',
 	array(
-		'title' => 'finance services',
+		'title'    => 'finance services',
 		'bg_image' => 'finance-services-min',
-		'services' => array(array(
-			'title' => null,
-			'items' => array( 'AP & AR', 'Accounting', 'Policy, Process, and Procedure' ),
+		'services' => array(
+			array(
+				'title' => null,
+				'items' => array( 'AP & AR', 'Accounting', 'Policy, Process, and Procedure' ),
+			),
+			array(
+				'title' => null,
+				'items' => array( 'Software Implementation', 'Payroll', 'Investment Strategy' ),
+			),
+			array(
+				'title' => null,
+				'items' => array( 'Dashboards & Reporting', 'Generosity & Stewardship', 'And so much more...' ),
+			),
 		),
-		array(
-			'title' => null,
-			'items' => array( 'Software Implementation', 'Payroll', 'Investment Strategy' ),
-		),
-		array(
-			'title' => null,
-			'items' => array( 'Dashboards & Reporting', 'Generosity & Stewardship', 'And so much more...' ),
-		)),
 	)
 );
 ?>

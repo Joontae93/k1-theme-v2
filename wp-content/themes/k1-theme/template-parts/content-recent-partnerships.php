@@ -1,7 +1,6 @@
 <?php
 /**
  * Recent Partnerships
- *
  */
 
 $content = new Content_Sections();

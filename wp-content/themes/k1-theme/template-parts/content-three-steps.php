@@ -30,7 +30,7 @@ $bg_image_file_name = $bg_image_file_name ?? 'three-steps-bg';
 			</div>
 		</div>
 		<?php foreach ( $rows as $row ) : ?>
-		<?php
+			<?php
 			$headline    = acf_esc_html( $row['headline'] );
 			$subheadline = acf_esc_html( $row['subheadline'] );
 			$href        = esc_url( $row['cta']['url'] );

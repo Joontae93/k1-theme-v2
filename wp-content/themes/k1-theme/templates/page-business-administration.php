@@ -18,18 +18,18 @@ k1_enqueue_page_style( 'businessAdmin' );
 	</div>
 </section>
 <aside class="image-callout">
-	<?php $content->get_color_background_layers('image-callout','zig-zag-right',array('staffing-services-min','webp'));?>
+	<?php $content->get_color_background_layers( 'image-callout', 'zig-zag-right', array( 'staffing-services-min', 'webp' ) ); ?>
 	<div class="image-callout__content">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-6">
-					<?php k1_get_svg_asset('business-admin-graph');?>
+					<?php k1_get_svg_asset( 'business-admin-graph' ); ?>
 				</div>
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-lg-10">
 					<div class="d-none d-lg-block">
-						<?php k1_the_leaf(3,'var(--color-primary)','right');?>
+						<?php k1_the_leaf( 3, 'var(--color-primary)', 'right' ); ?>
 					</div>
 					<p class="h2 text-white text-lg-center text-lowercase">Business Admins have large responsibilities of keeping the ministry moving forward</p>
 				</div>
@@ -59,20 +59,22 @@ get_template_part(
 	'template-parts/content',
 	'core-services',
 	array(
-		'title' => 'business administration services',
+		'title'    => 'business administration services',
 		'bg_image' => 'finance-services-min',
-		'services' => array(array(
-			'title' => null,
-			'items' => array( 'CFO/COO/XP coaching, advisory, strategic planning', 'Finance  and operations staffing evaluation, transition, development', 'Audit and 990 support' ),
+		'services' => array(
+			array(
+				'title' => null,
+				'items' => array( 'CFO/COO/XP coaching, advisory, strategic planning', 'Finance  and operations staffing evaluation, transition, development', 'Audit and 990 support' ),
+			),
+			array(
+				'title' => null,
+				'items' => array( 'Financial system audits, implementation, transition, optimization', 'Business process and procedure optimization and efficiency' ),
+			),
+			array(
+				'title' => null,
+				'items' => array( 'Business operations and Internal controls assessment ', 'Stewardship/advancement advisory & software implementation', 'Nonprofit, real estate, legal, and risk management advisory' ),
+			),
 		),
-		array(
-			'title' => null,
-			'items' => array( 'Financial system audits, implementation, transition, optimization', 'Business process and procedure optimization and efficiency' ),
-		),
-		array(
-			'title' => null,
-			'items' => array( 'Business operations and Internal controls assessment ', 'Stewardship/advancement advisory & software implementation', 'Nonprofit, real estate, legal, and risk management advisory' ),
-		),)
 	)
 );
 ?>

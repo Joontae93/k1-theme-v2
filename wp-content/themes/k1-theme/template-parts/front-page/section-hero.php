@@ -50,7 +50,7 @@ $content = new Content_Sections();
 					),
 				);
 				foreach ( $icons as $icon ) {
-					echo "<div class='icon col-12 col-lg-3 my-5 my-lg-0'><a href='{$icon['link']}' class='text-center d-inline-flex flex-column align-items-center'>" . get_the_k1_icon($icon['file'],'white') . "<span class='icon__label text-white'>{$icon['title']}</span></a></div>";
+					echo "<div class='icon col-12 col-lg-3 my-5 my-lg-0'><a href='{$icon['link']}' class='text-center d-inline-flex flex-column align-items-center'>" . get_the_k1_icon( $icon['file'], 'white' ) . "<span class='icon__label text-white'>{$icon['title']}</span></a></div>";
 				}
 				?>
 			</div>
