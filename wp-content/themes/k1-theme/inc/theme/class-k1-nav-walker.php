@@ -23,9 +23,9 @@ class K1_Nav_Walker extends Walker_Nav_Menu {
 	/**
 	 * Dropdown menu alignment values
 	 *
-	 * @var $dropdown_menu_alignment_values
+	 * @var array $dropdown_menu_alignment_values
 	 */
-	private $dropdown_menu_alignment_values = array(
+	private array $dropdown_menu_alignment_values = array(
 		'dropdown-menu-start',
 		'dropdown-menu-end',
 		'dropdown-menu-sm-start',
@@ -50,7 +50,7 @@ class K1_Nav_Walker extends Walker_Nav_Menu {
 	public function start_lvl( &$output, $depth = 0, $args = null ) {
 		$dropdown_menu_class[] = 'navbar__sub-menu sub-menu';
 		foreach ( $this->current_item->classes as $class ) {
-			if ( in_array( $class, $this->dropdown_menu_alignment_values ) ) {
+			if ( in_array( $class, $this->dropdown_menu_alignment_values, true ) ) {
 				$dropdown_menu_class[] = $class;
 			}
 		}
@@ -74,7 +74,8 @@ class K1_Nav_Walker extends Walker_Nav_Menu {
 		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
 		$li_attributes = '';
-		$class_names   = $value = '';
+		$value         = '';
+		$class_names   = $value;
 
 		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
 

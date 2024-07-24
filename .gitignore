@@ -37,7 +37,6 @@ auth.json
 /wp-content/upgrade/
 /wp-content/upgrade-temp-backup/
 /wp-content/plugins/*
-!/wp-content/plugins/k1-blocks
 /wp-content/mu-plugins
 /wp-content/themes/twenty*/
 /wp-content/db.php
