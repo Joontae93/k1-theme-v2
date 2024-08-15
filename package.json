@@ -1,32 +1,35 @@
 {
-    "name": "kingdom-one-wp-theme",
-    "version": "1.0.1",
-    "description": "An all-new Wordpress theme for Kingdom One",
-    "main": "wp-content/themes/k1-theme/src/index.js",
-    "scripts": {
-        "build": "wp-scripts build",
-        "start": "wp-scripts start",
-        "check-engines": "wp-scripts check-engines",
-        "packages-update": "wp-scripts packages-update"
-    },
-    "author": "Kingdom One",
-    "license": "ISC",
-    "dependencies": {
-        "@fortawesome/fontawesome-svg-core": "^6.4.2",
-        "@fortawesome/free-brands-svg-icons": "^6.4.2",
-        "@fortawesome/free-regular-svg-icons": "^6.4.2",
-        "@fortawesome/free-solid-svg-icons": "^6.4.2",
-        "aos": "^2.3.4",
-        "bootstrap": "^5.3.3",
-        "lite-youtube-embed": "^0.3.0",
-        "swiper": "^11.1.7"
-    },
-    "devDependencies": {
-        "@wordpress/scripts": "^27.9.0"
-    },
-    "overrides": {
-        "lighthouse": "^12.1.0",
-        "puppeteer-core": "^22.13.1",
-        "ws": "^8.18.0"
-    }
+	"name": "kingdom-one-wp-theme",
+	"version": "1.0.2",
+	"description": "An all-new Wordpress theme for Kingdom One",
+	"prettier": "@wordpress/prettier-config",
+	"browserslist": [
+		"extends @wordpress/browserslist-config"
+	],
+	"scripts": {
+		"build": "wp-scripts build",
+		"start": "wp-scripts start",
+		"check-engines": "wp-scripts check-engines",
+		"packages-update": "wp-scripts packages-update"
+	},
+	"author": "Kingdom One",
+	"license": "ISC",
+	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^6.6.0",
+		"@fortawesome/free-brands-svg-icons": "^6.6.0",
+		"@fortawesome/free-regular-svg-icons": "^6.6.0",
+		"@fortawesome/free-solid-svg-icons": "^6.6.0",
+		"aos": "^2.3.4",
+		"bootstrap": "^5.3.3",
+		"lite-youtube-embed": "^0.3.0",
+		"swiper": "^11.1.7"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^28.5.0"
+	},
+	"overrides": {
+		"lighthouse": "^12.1.0",
+		"puppeteer-core": "^22.13.1",
+		"ws": "^8.18.0"
+	}
 }
